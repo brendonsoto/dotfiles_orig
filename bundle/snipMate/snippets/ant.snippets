@@ -1,0 +1,16 @@
+#target without description as indentation
+snippet target
+	<target name="${1}" depends="${2}"
+		 description="${3}">
+#fileset
+snippet file
+	<fileset dir="${1}">
+		<include name="${2}" />
+	</fileset>
+#javac
+snippet javac
+	<javac
+		srcdir="${1}"
+		destdir="${2}"
+		classpathref="${3}"
+		debug="on" />
