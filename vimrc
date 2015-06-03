@@ -56,7 +56,7 @@ map k gk
 
 " Persistent Undo
 set undofile					" Save undo's after file closes
-"set undodir=$HOME/.vim/homeUndo	" where to save undo histories
+set undodir=$HOME/.vim/homeUndo	" where to save undo histories
 set undodir=$HOME/.vim/undo		" undo file for work
 set undolevels=1000				" How many undos
 set undoreload=1000				" How many lines to save for undo
