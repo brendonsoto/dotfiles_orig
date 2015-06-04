@@ -55,8 +55,11 @@ let g:netrw_liststyle=3
 " MapLeader
 let mapleader = "\<Space>"
 
-" Easy open from vim - for Mac external keyboard
+" Easy open file from vim
 map <silent> <F12> :!open %<CR>
+
+" Easy open
+nnoremap <Leader>o :o 
 
 " Easy window Navigation
 nnoremap <Leader>h <C-w>h
