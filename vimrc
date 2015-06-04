@@ -25,20 +25,15 @@ set hidden			" don't have to write before opening new buffer
 set nobackup
 set noswapfile
 
+" Persistent Undo
+set undofile					" Save undo's after file closes
+set undodir=$HOME/.vim/homeUndo	" where to save undo histories
+set undodir=$HOME/.vim/undo		" undo file for work
+set undolevels=1000				" How many undos
+set undoreload=1000				" How many lines to save for undo
+
 " Enable file detection and load any plugins for them
 filetype plugin indent on
-
-" Easy window Navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" use ; instead of ;
-nnoremap ; :
-
-" disable auto commenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " enable mouse for scrolling
 if has("mouse")
@@ -50,19 +45,45 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" Explorer Mode settings
+let g:netrw_liststyle=3
+
+
+"""""""""""""""""""""
+"		Mappings
+"""""""""""""""""""""
+
+" MapLeader
+let mapleader = "\<Space>"
+
+" Easy open from vim - for Mac external keyboard
+map <silent> <F12> :!open %<CR>
+
+" Easy window Navigation
+nnoremap <Leader>h <C-w>h
+nnoremap <Leader>j <C-w>j
+nnoremap <Leader>k <C-w>k
+nnoremap <Leader>l <C-w>l
+
+" Easy save & quit
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+
+" Easy copy & paste
+nnoremap <Leader>y "*Y
+nnoremap <Leader>p "*p
+
 " Move line by line even when the line is wrapped
 map j gj
 map k gk
 
-" Persistent Undo
-set undofile					" Save undo's after file closes
-set undodir=$HOME/.vim/homeUndo	" where to save undo histories
-set undodir=$HOME/.vim/undo		" undo file for work
-set undolevels=1000				" How many undos
-set undoreload=1000				" How many lines to save for undo
-
 noremap gn		:bn<CR>
 noremap gp		:bp<CR>
+
+
+"""""""""""""""""""""
+"		Tools
+"""""""""""""""""""""
 
 " For C Plugin
 let g:C_UseTool_cmake = 'yes'
@@ -85,15 +106,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Tagbar
-" Need exuberant c-tags addition to make tagbar work
-nmap <F8> :TagbarToggle<CR>
-
 " Lightline
 set laststatus=2
 
-" Easy open from vim - for Mac external keyboard
-:map <silent> <F12> :!open %<CR>
-
-" Explorer Mode settings
-let g:netrw_liststyle=3
