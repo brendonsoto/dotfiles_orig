@@ -47,6 +47,8 @@ colorscheme solarized
 " Explorer Mode settings
 let g:netrw_liststyle=3
 
+" Disable auto commenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """""""""""""""""""""
 "		Mappings
@@ -79,8 +81,9 @@ map <Leader>p "*p
 map j gj
 map k gk
 
-noremap gn		:bn<CR>
-noremap gp		:bp<CR>
+" Buffer switching
+noremap gn :bn<CR>
+noremap gp :bp<CR>
 
 
 """""""""""""""""""""
