@@ -59,7 +59,7 @@ let mapleader = "\<Space>"
 map <silent> <F12> :!open %<CR>
 
 " Easy open
-nnoremap <Leader>o :o 
+nnoremap <Leader>e :e 
 
 " Easy window Navigation
 nnoremap <Leader>h <C-w>h
@@ -72,8 +72,8 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 
 " Easy copy & paste
-nnoremap <Leader>y "*Y
-nnoremap <Leader>p "*p
+map <Leader>y "*Y
+map <Leader>p "*p
 
 " Move line by line even when the line is wrapped
 map j gj
