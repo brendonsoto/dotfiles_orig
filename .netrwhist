@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/Dev/Documents/Projects/Merck-WebApp-ConditionTracker/merckengage.com/assets'
 let g:netrw_dirhist_2='/Users/Dev/Documents/Projects/Merck-WebApp-ConditionTracker/merckengage.com/assets/js'
 let g:netrw_dirhist_3='/Users/Dev/Documents/Projects/html-email-boilerplate/antwort-master/single-column'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/Users/Dev/Documents/Projects/html-email-boilerplate/antw
 let g:netrw_dirhist_5='/Users/Dev/Documents/Projects/html-email-boilerplate/antwort-master/single-column'
 let g:netrw_dirhist_6='/Users/Dev/Documents/Projects/html-email-boilerplate/antwort-master'
 let g:netrw_dirhist_7='/Users/Dev/Documents/Projects/html-email-boilerplate/antwort-master/three-cols-images'
+let g:netrw_dirhist_8='/Users/Brendon/Documents/Programming/databases/SQL'
+let g:netrw_dirhist_9='/Users/Brendon'

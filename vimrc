@@ -85,6 +85,9 @@ map k gk
 noremap gn :bn<CR>
 noremap gp :bp<CR>
 
+" Easy file exploration
+map <Leader>x :Ex<CR>
+
 
 """""""""""""""""""""
 "		Tools
