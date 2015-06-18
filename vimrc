@@ -74,20 +74,28 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 
 " Easy copy & paste
-map <Leader>y "*Y
+map <Leader>y "*y
 map <Leader>p "*p
 
 " Move line by line even when the line is wrapped
 map j gj
 map k gk
 
-" Buffer switching
-noremap gn :bn<CR>
-noremap gp :bp<CR>
+" Buffer handling
+map <Leader>n :bn<CR>
+map <Leader>p :bp<CR>
+map <Leader>d :bd<CR>
 
 " Easy file exploration
 map <Leader>x :Ex<CR>
 
+" Easy window splitting
+map <Leader>s :split<CR>
+map <Leader>v :vsplit<CR>
+map <Leader>= <C-w>=
+
+" Easy cancel highlighting
+map <Leader>h :nohl<CR>
 
 """""""""""""""""""""
 "		Tools
