@@ -71,7 +71,7 @@ nnoremap <Leader>l <C-w>l
 
 " Easy save & quit
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
+nnoremap <Leader>q :wq<CR>
 
 " Easy copy & paste
 map <Leader>y "*y
@@ -81,10 +81,11 @@ map <Leader>p "*p
 map j gj
 map k gk
 
-" Buffer handling
-map <Leader>n :bn<CR>
-map <Leader>p :bp<CR>
-map <Leader>d :bd<CR>
+" Buffer switching
+map gn 		:bn<CR>
+map gp 		:bp<CR>
+map gd 		:bd<CR>
+map <Leader>b 	:b
 
 " Easy file exploration
 map <Leader>x :Ex<CR>
@@ -94,8 +95,9 @@ map <Leader>s :split<CR>
 map <Leader>v :vsplit<CR>
 map <Leader>= <C-w>=
 
-" Easy cancel highlighting
-map <Leader>h :nohl<CR>
+" Easy remove highlighting
+map <Leader>/ :nohl
+
 
 """""""""""""""""""""
 "		Tools
