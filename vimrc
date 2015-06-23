@@ -50,6 +50,9 @@ let g:netrw_liststyle=3
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Find from current directory
+set path=$PWD/**
+
 """""""""""""""""""""
 "		Mappings
 """""""""""""""""""""
@@ -97,6 +100,9 @@ map <Leader>= <C-w>=
 
 " Easy remove highlighting
 map <Leader>/ :nohl
+
+" Easy toggle off Syntastic
+map <Leader>s :SyntasticToggleMode<CR>
 
 
 """""""""""""""""""""
