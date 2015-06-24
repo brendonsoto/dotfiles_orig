@@ -74,7 +74,7 @@ nnoremap <Leader>l <C-w>l
 
 " Easy save & quit
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>q :q<CR>
 
 " Easy copy & paste
 map <Leader>y "*y
@@ -85,13 +85,18 @@ map j gj
 map k gk
 
 " Buffer switching
-map gn 		:bn<CR>
-map gp 		:bp<CR>
-map gd 		:bd<CR>
+map gn 			:bn<CR>
+map gp 			:bp<CR>
+map gd 			:bd<CR>
 map <Leader>b 	:b
 
 " Easy file exploration
 map <Leader>x :Ex<CR>
+" with CtrlP
+nnoremap <Leader>. :CtrlPTag<cr>
+
+" Tagbar
+nnoremap <silent> <Leader>t :TagbarToggle<CR>
 
 " Easy window splitting
 map <Leader>s :split<CR>
@@ -102,7 +107,7 @@ map <Leader>= <C-w>=
 map <Leader>/ :nohl
 
 " Easy toggle off Syntastic
-map <Leader>s :SyntasticToggleMode<CR>
+map <Leader>o :SyntasticToggleMode<CR>
 
 
 """""""""""""""""""""
