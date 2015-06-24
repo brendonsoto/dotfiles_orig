@@ -75,6 +75,7 @@ nnoremap <Leader>l <C-w>l
 " Easy save & quit
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>! :q!<CR>
 
 " Easy copy & paste
 map <Leader>y "*y
