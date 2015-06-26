@@ -64,6 +64,9 @@ set path=$PWD/**
 " MapLeader
 let mapleader = "\<Space>"
 
+" set ; to :
+map ; :
+
 " Easy open file from vim
 map <silent> <F12> :!open %<CR>
 
@@ -111,8 +114,9 @@ map <Leader>= <C-w>=
 " Easy remove highlighting
 map <Leader>/ :nohl
 
-" Easy toggle off Syntastic
+" Easy control Syntastic
 map <Leader>o :SyntasticToggleMode<CR>
+map <Leader>c :SyntasticCheck<CR>
 
 
 """""""""""""""""""""
