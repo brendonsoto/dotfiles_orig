@@ -112,7 +112,7 @@ map <Leader>v :vsplit<CR>
 map <Leader>= <C-w>=
 
 " Easy remove highlighting
-map <Leader>/ :nohl
+map <Leader>/ :nohl<CR>
 
 " Easy control Syntastic
 map <Leader>o :SyntasticToggleMode<CR>
