@@ -92,6 +92,10 @@ map <Leader>p "*p
 map j gj
 map k gk
 
+" Easy first and last character of line
+map <Leader>a ^
+map <Leader>z $
+
 " Buffer switching
 map gn 			:bn<CR>
 map gp 			:bp<CR>
@@ -100,6 +104,7 @@ map <Leader>b 	:b
 
 " Easy file exploration
 map <Leader>x :Ex<CR>
+
 " with CtrlP
 nnoremap <Leader>. :CtrlPTag<cr>
 

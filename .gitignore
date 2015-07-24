@@ -1,2 +1,3 @@
-# Ignore undo folders 
+# Ignore folders 
 ./undo/**
+./netrwhist/**
