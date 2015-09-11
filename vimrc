@@ -123,6 +123,9 @@ map <Leader>/ :nohl<CR>
 map <Leader>o :SyntasticToggleMode<CR>
 map <Leader>c :SyntasticCheck<CR>
 
+" Easy copy all
+map <Leader>Y ggv<S-g>"*y
+
 
 """""""""""""""""""""
 "		Tools
@@ -138,6 +141,9 @@ let macvim_skip_colorscheme = 1
 " Pathogen
 call pathogen#infect()
 call pathogen#helptags()
+
+" RBENV
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
 " Syntastic
 set statusline+=%#warningmsg#
