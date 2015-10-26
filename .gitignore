@@ -1,3 +1,4 @@
 # Ignore folders 
 ./undo/**
 ./netrwhist/**
+./bundle/omnisharp-vim/
