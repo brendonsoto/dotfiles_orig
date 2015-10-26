@@ -14,8 +14,8 @@ set ruler			" show the cursor position all the time
 set showcmd			" display incomplete commands
 set incsearch		" do incremental searching
 set number			" display line number
-set tabstop=4		" set tab to 4 spaces
-set shiftwidth=4	" spaces for auto indent
+set tabstop=2		" set tab to 2 spaces
+set shiftwidth=2	" spaces for auto indent
 set expandtab		" maintains # of spaces for a tab in insert mode
 set showmatch 		" show matching parenthesis
 set ignorecase		" ignore case when searching
