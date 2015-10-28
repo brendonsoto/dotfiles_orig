@@ -134,7 +134,7 @@ let g:C_UseTool_cmake = 'yes'
 let g:C_UseTool_doxygen = 'yes'
 
 " Emmet
-let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snippets/snippets.json')), "\n"))
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/extensions/snippets/snippets.json')), "\n"))
 
 " For MacVim
 let macvim_skip_colorscheme = 1

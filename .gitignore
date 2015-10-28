@@ -1,5 +1,5 @@
 # Ignore folders 
-./bundle/omnisharp-vim/
+/bundle/omnisharp-vim/
 /.netrwhist
 ./netrwhist/**
 ./undo/**
