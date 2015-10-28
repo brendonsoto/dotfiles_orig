@@ -67,3 +67,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "bundle/webapi-vim"]
+	path = bundle/webapi-vim
+	url = https://github.com/mattn/webapi-vim

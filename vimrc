@@ -70,8 +70,11 @@ map ; :
 " Easy open file from vim
 map <silent> <F12> :!open %<CR>
 
-" Easy open
-nnoremap <Leader>e :e 
+" Easy open, close, and switch tabs
+nnoremap <Leader>e :tabe 
+nnoremap <Leader>c :tabc
+nnoremap <Leader>n gt
+nnoremap <Leader>p gT
 
 " Easy window Navigation
 nnoremap <Leader>h <C-w>h
@@ -92,14 +95,10 @@ map <Leader>p "*p
 map j gj
 map k gk
 
-" Easy first and last character of line
-map <Leader>a ^
-map <Leader>z $
-
 " Buffer switching
-map gn 			:bn<CR>
-map gp 			:bp<CR>
-map gd 			:bd<CR>
+map gn    			:bn<CR>
+map gp    			:bp<CR>
+map gd    			:bd<CR>
 map <Leader>b 	:b
 
 " Easy file exploration
@@ -121,7 +120,6 @@ map <Leader>/ :nohl<CR>
 
 " Easy control Syntastic
 map <Leader>o :SyntasticToggleMode<CR>
-map <Leader>c :SyntasticCheck<CR>
 
 " Easy copy all
 map <Leader>Y ggv<S-g>"*y
@@ -131,12 +129,18 @@ map <Leader>Y ggv<S-g>"*y
 "		Tools
 """""""""""""""""""""
 
-" For C Plugin
+" C Plugin
 let g:C_UseTool_cmake = 'yes'
 let g:C_UseTool_doxygen = 'yes'
 
+" Emmet
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snippets/snippets.json')), "\n"))
+
 " For MacVim
 let macvim_skip_colorscheme = 1
+
+" Lightline
+set laststatus=2
 
 " Pathogen
 call pathogen#infect()
@@ -154,7 +158,4 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" Lightline
-set laststatus=2
 
