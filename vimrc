@@ -70,22 +70,18 @@ map ; :
 " Easy open file from vim
 map <silent> <F12> :!open %<CR>
 
-" Easy open, close, and switch tabs
-nnoremap <Leader>e :$tabe 
+" Easy open, close, and save
+nnoremap <Leader>e :e
 nnoremap <Leader>Q :qa<CR>
-nnoremap <Leader>n gt
-nnoremap <Leader>p gT
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>! :q!<CR>
 
 " Easy window Navigation
 nnoremap <Leader>h <C-w>h
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
-
-" Easy save & quit
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>! :q!<CR>
 
 " Easy copy & paste
 map <Leader>y "*y
@@ -132,6 +128,13 @@ map <Leader>Y ggv<S-g>"*y
 " C Plugin
 let g:C_UseTool_cmake = 'yes'
 let g:C_UseTool_doxygen = 'yes'
+
+" CtrlP
+" Ignore certain directories and files
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+\}
 
 " Emmet
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/extensions/snippets/snippets.json')), "\n"))
