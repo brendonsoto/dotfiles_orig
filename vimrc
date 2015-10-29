@@ -71,8 +71,8 @@ map ; :
 map <silent> <F12> :!open %<CR>
 
 " Easy open, close, and switch tabs
-nnoremap <Leader>e :tabe 
-nnoremap <Leader>c :tabc
+nnoremap <Leader>e :$tabe 
+nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>n gt
 nnoremap <Leader>p gT
 
