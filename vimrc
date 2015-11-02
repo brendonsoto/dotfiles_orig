@@ -71,7 +71,7 @@ map ; :
 map <silent> <F12> :!open %<CR>
 
 " Easy open, close, and save
-nnoremap <Leader>e :e
+nnoremap <Leader>e :e 
 nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -101,7 +101,10 @@ map <Leader>b 	:b
 map <Leader>x :Ex<CR>
 
 " with CtrlP
-nnoremap <Leader>. :CtrlPTag<cr>
+nnoremap <Leader>. :CtrlPTag<CR>
+
+" NerdTree
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 " Tagbar
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
@@ -144,6 +147,13 @@ let macvim_skip_colorscheme = 1
 
 " Lightline
 set laststatus=2
+let g:lightline = {
+  \ 'active': {
+  \   'right':  [ [ 'lineinfo' ],
+  \               [ 'percent' ],
+  \               [ 'fileencoding' ] ]
+  \ }
+  \ }
 
 " Pathogen
 call pathogen#infect()
@@ -152,7 +162,7 @@ call pathogen#helptags()
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
-" Syntastic
+" Syntastic -- TODO: Add checkers (CSS, PHP)
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
