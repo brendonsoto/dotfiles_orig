@@ -92,9 +92,8 @@ map j gj
 map k gk
 
 " Buffer switching
-map gn    			:bn<CR>
-map gp    			:bp<CR>
-map gd    			:bd<CR>
+nnoremap <Tab>    :bn<CR>
+nnoremap <S-Tab>  :bp<CR>
 map <Leader>b 	:b
 
 " Easy file exploration
