@@ -7,33 +7,33 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " allow backspacing over everything in insert mode
+set autoindent    " allow autoindent by default
 set backspace=indent,eol,start
-
-set history=50		" command line history
-set ruler			" show the cursor position all the time
-set showcmd			" display incomplete commands
-set incsearch		" do incremental searching
-set number			" display line number
-set tabstop=2		" set tab to 2 spaces
-set shiftwidth=2	" spaces for auto indent
-set expandtab		" maintains # of spaces for a tab in insert mode
-set showmatch 		" show matching parenthesis
-set ignorecase		" ignore case when searching
-set smartcase		" search is case-insensitive when keyword is all lowercase
-set hlsearch		" highlight search terms
-set incsearch		" show matches as you type
 set cursorline 		" highlights current line
-set hidden			" don't have to write before opening new buffer
+set expandtab		  " maintains # of spaces for a tab in insert mode
+set hidden			  " don't have to write before opening new buffer
+set history=50		" command line history
+set hlsearch		  " highlight search terms
+set incsearch		  " show matches as you type
+set ignorecase		" ignore case when searching
+set incsearch		  " do incremental searching
+set number			  " display line number
+set ruler			    " show the cursor position all the time
+set shiftwidth=2	" spaces for auto indent
+set showcmd			  " display incomplete commands
+set showmatch 		" show matching parenthesis
+set smartcase		  " search is case-insensitive when keyword is all lowercase
+set tabstop=2		  " set tab to 2 spaces
 
 " no backups
 set nobackup
 set noswapfile
 
 " Persistent Undo
-set undofile					" Save undo's after file closes
+set undofile					        " Save undo's after file closes
 set undodir=$HOME/.vim/undo		" undo file for work
-set undolevels=1000				" How many undos
-set undoreload=1000				" How many lines to save for undo
+set undolevels=1000				    " How many undos
+set undoreload=1000				    " How many lines to save for undo
 
 " Enable file detection and load any plugins for them
 filetype plugin indent on
