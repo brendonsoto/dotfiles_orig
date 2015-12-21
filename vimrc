@@ -94,7 +94,6 @@ map k gk
 " Buffer switching
 nnoremap <Tab>    :bn<CR>
 nnoremap <S-Tab>  :bp<CR>
-map <Leader>b 	:b
 
 " Easy file exploration
 map <Leader>x :Ex<CR>
@@ -102,8 +101,12 @@ map <Leader>x :Ex<CR>
 " with CtrlP
 nnoremap <Leader>. :CtrlPTag<CR>
 
+" miniBufExplr
+nnoremap <Leader>b :MBEOpen<CR>
+
 " NerdTree
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeFocus<CR>
 
 " Tagbar
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
@@ -161,7 +164,7 @@ call pathogen#helptags()
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
-" Syntastic -- TODO: Add checkers (CSS, PHP)
+" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
