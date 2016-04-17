@@ -64,9 +64,6 @@ set path=$PWD/**
 " MapLeader
 let mapleader = "\<Space>"
 
-" set ; to :
-map ; :
-
 " Easy open file from vim
 map <silent> <F12> :!open %<CR>
 
@@ -86,6 +83,7 @@ nnoremap <Leader>l <C-w>l
 " Easy copy & paste
 map <Leader>y "*y
 map <Leader>p "*p
+map <Leader>Y ggv<S-g>$"*y
 
 " Move line by line even when the line is wrapped
 map j gj
@@ -94,9 +92,6 @@ map k gk
 " Buffer switching
 nnoremap <Tab>    :bn<CR>
 nnoremap <S-Tab>  :bp<CR>
-
-" Easy file exploration
-map <Leader>x :Ex<CR>
 
 " with CtrlP
 nnoremap <Leader>. :CtrlPTag<CR>
@@ -122,8 +117,6 @@ map <Leader>/ :nohl<CR>
 " Easy control Syntastic
 map <Leader>o :SyntasticToggleMode<CR>
 
-" Easy copy all
-map <Leader>Y ggv<S-g>"*y
 
 
 """""""""""""""""""""
@@ -137,7 +130,7 @@ let g:C_UseTool_doxygen = 'yes'
 " CtrlP
 " Ignore certain directories and files
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'dir': 'node_modules\|\v[\/](\.(git|hg|svn)|\_site)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
 
