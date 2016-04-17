@@ -202,6 +202,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_html_tidy_ignore_errors = [
   \ '<input> proprietary attribute "role"',
+  \ '<link> proprietary attribute "crossorigin"',
+  \ '<link> proprietary attribute "integrity"',
   \ '<script> proprietary attribute "crossorigin"',
   \ '<script> proprietary attribute "integrity"',
   \ 'trimming empty <span>'
