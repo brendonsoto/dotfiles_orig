@@ -64,3 +64,6 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "bundle/vim-markdown-jekyll"]
+	path = bundle/vim-markdown-jekyll
+	url = https://github.com/PProvost/vim-markdown-jekyll.git
