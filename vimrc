@@ -9,7 +9,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlPTag' }
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': ['json', 'js'] }
-Plug 'fholgado/minibufexpl.vim', { 'on': 'MBEOpen' }
+Plug 'fholgado/minibufexpl.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
@@ -24,6 +24,7 @@ Plug 'tpope/vim-jdaddy', { 'for': ['json', 'js'] }
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-syntastic/syntastic'
+Plug 'vimwiki/vimwiki'
 Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
 
 call plug#end()
@@ -215,3 +216,7 @@ let g:syntastic_html_tidy_ignore_errors = [
   \ '<script> proprietary attribute "integrity"',
   \ 'trimming empty <span>'
   \ ]
+
+" VimWiki
+nmap <Leader>wn <Plug>VimwikiNextLink
+nmap <Leader>wp <Plug>VimwikiPrevLink
