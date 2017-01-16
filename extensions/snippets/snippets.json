@@ -11,7 +11,7 @@
     "profile": "html",
     "snippets": {
       "email": "<table>\n\t<tr>\n\t\t<td>\n\t\t\t${1}\n\t\t</td>\n\t</tr>\n</table>",
-      "link": "<link rel=\"stylesheets\" href=\"${1}.css\" />"
+      "link": "<link rel=\"stylesheet\" href=\"${1}.css\" />"
     }
   }
 }

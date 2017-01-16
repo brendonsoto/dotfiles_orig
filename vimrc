@@ -3,7 +3,7 @@
 set nocompatible
 
 " Pathogen
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 " allow backspacing over everything in insert mode
@@ -182,10 +182,6 @@ endfunction
 function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
-
-" Pathogen
-call pathogen#infect()
-call pathogen#helptags()
 
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
