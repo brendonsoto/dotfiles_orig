@@ -2,9 +2,31 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Pathogen
-call pathogen#infect()
-call pathogen#helptags()
+" Vim-Plug - Manage Plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlPTag' }
+Plug 'easymotion/vim-easymotion'
+Plug 'elzr/vim-json', { 'for': ['json', 'js'] }
+Plug 'fholgado/minibufexpl.vim', { 'on': 'MBEOpen' }
+Plug 'hail2u/vim-css3-syntax'
+Plug 'itchyny/lightline.vim'
+Plug 'mattn/emmet-vim'
+Plug 'mattn/webapi-vim' " Emmet depends on this
+Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
+Plug 'StanAngeloff/php.vim', { 'for': 'php' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tmhedberg/matchit', { 'for': ['html', 'php'] }
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus'] }
+Plug 'tpope/vim-jdaddy', { 'for': ['json', 'js'] }
+Plug 'tpope/vim-surround'
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'vim-syntastic/syntastic'
+Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
+
+call plug#end()
 
 " allow backspacing over everything in insert mode
 set autoindent    " allow autoindent by default
@@ -47,9 +69,6 @@ endif
 syntax enable
 set background=dark
 colorscheme solarized
-
-" Explorer Mode settings
-let g:netrw_liststyle=3
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -103,9 +122,6 @@ nnoremap <Leader>b :MBEOpen<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFocus<CR>
 
-" Tagbar
-nnoremap <silent> <Leader>t :TagbarToggle<CR>
-
 " Easy window splitting
 map <Leader>s :split<CR>
 map <Leader>v :vsplit<CR>
@@ -118,14 +134,9 @@ map <Leader>/ :nohl<CR>
 map <Leader>o :SyntasticToggleMode<CR>
 
 
-
 """""""""""""""""""""
 "		Tools
 """""""""""""""""""""
-
-" C Plugin
-let g:C_UseTool_cmake = 'yes'
-let g:C_UseTool_doxygen = 'yes'
 
 " CtrlP
 " Ignore certain directories and files
