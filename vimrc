@@ -6,21 +6,24 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
-Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlPTag' }
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'elzr/vim-json', { 'for': ['json', 'js'] }
+Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim' " Emmet depends on this
+Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'jsx', 'typescript'] }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
+Plug 'raimondi/delimitmate'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tmhedberg/matchit', { 'for': ['html', 'php'] }
 Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-fugitive', { 'on': ['Gcommit', 'Gstatus'] }
-Plug 'tpope/vim-jdaddy', { 'for': ['json', 'js'] }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vim-syntastic/syntastic'
@@ -113,9 +116,6 @@ map k gk
 nnoremap <Tab>    :bn<CR>
 nnoremap <S-Tab>  :bp<CR>
 
-" with CtrlP
-nnoremap <Leader>. :CtrlPTag<CR>
-
 " miniBufExplr
 nnoremap <Leader>b :MBEOpen<CR>
 
@@ -131,6 +131,9 @@ map <Leader>= <C-w>=
 " Easy remove highlighting
 map <Leader>/ :nohl<CR>
 
+" Ack
+nnoremap <Leader>a :Ack!<Space>
+
 " Easy control Syntastic
 map <Leader>o :SyntasticToggleMode<CR>
 
@@ -138,6 +141,11 @@ map <Leader>o :SyntasticToggleMode<CR>
 """""""""""""""""""""
 "		Tools
 """""""""""""""""""""
+
+" Ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " CtrlP
 " Ignore certain directories and files
