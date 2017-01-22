@@ -15,7 +15,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim' " Emmet depends on this
 Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'jsx', 'typescript'] }
+Plug 'pangloss/vim-javascript', { 'for': ['html', 'javascript', 'jsx', 'typescript'] }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
 Plug 'raimondi/delimitmate'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
