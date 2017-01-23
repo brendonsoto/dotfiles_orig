@@ -12,12 +12,12 @@ Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim' " Emmet depends on this
 Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
-Plug 'pangloss/vim-javascript', { 'for': ['html', 'javascript', 'jsx', 'typescript'] }
+Plug 'pangloss/vim-javascript', { 'for': ['html', 'javascript', 'javascript.jsx', 'typescript'] }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
-Plug 'raimondi/delimitmate'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tmhedberg/matchit', { 'for': ['html', 'php'] }
@@ -79,6 +79,11 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Find from current directory
 set path=$PWD/**
+
+" Source the vimrc file after saving it - vimcasts
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
 """""""""""""""""""""
 "		Mappings
