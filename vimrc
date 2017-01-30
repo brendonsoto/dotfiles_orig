@@ -6,6 +6,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': ['php'] }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
@@ -81,9 +82,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set path=$PWD/**
 
 " Source the vimrc file after saving it - vimcasts
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+autocmd bufwritepost .vimrc source $MYVIMRC
 
 """""""""""""""""""""
 "		Mappings
@@ -139,8 +138,14 @@ map <Leader>/ :nohl<CR>
 " Ack
 nnoremap <Leader>a :Ack!<Space>
 
-" Easy control Syntastic
+" Syntastic
 map <Leader>o :SyntasticToggleMode<CR>
+map <Leader>[ :lprev<CR>
+map <Leader>] :lnext<CR>
+
+" VimWiki
+nmap <Leader>wn <Plug>VimwikiNextLink
+nmap <Leader>wp <Plug>VimwikiPrevLink
 
 
 """""""""""""""""""""
@@ -229,7 +234,3 @@ let g:syntastic_html_tidy_ignore_errors = [
   \ '<script> proprietary attribute "integrity"',
   \ 'trimming empty <span>'
   \ ]
-
-" VimWiki
-nmap <Leader>wn <Plug>VimwikiNextLink
-nmap <Leader>wp <Plug>VimwikiPrevLink
