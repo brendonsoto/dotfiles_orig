@@ -27,8 +27,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'vim-syntastic/syntastic'
 Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
 Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
 
 call plug#end()
@@ -82,7 +82,10 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set path=$PWD/**
 
 " Source the vimrc file after saving it - vimcasts
-autocmd bufwritepost .vimrc source $MYVIMRC
+augroup reload_vimrc " {
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
 
 """""""""""""""""""""
 "		Mappings
@@ -138,10 +141,9 @@ map <Leader>/ :nohl<CR>
 " Ack
 nnoremap <Leader>a :Ack!<Space>
 
-" Syntastic
-map <Leader>o :SyntasticToggleMode<CR>
-map <Leader>[ :lprev<CR>
-map <Leader>] :lnext<CR>
+" Ale
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " VimWiki
 nmap <Leader>wn <Plug>VimwikiNextLink
@@ -215,22 +217,3 @@ endfunction
 
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_html_tidy_ignore_errors = [
-  \ '<input> proprietary attribute "role"',
-  \ '<link> proprietary attribute "crossorigin"',
-  \ '<link> proprietary attribute "integrity"',
-  \ '<script> proprietary attribute "crossorigin"',
-  \ '<script> proprietary attribute "integrity"',
-  \ 'trimming empty <span>'
-  \ ]
