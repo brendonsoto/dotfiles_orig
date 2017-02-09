@@ -17,11 +17,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim' " Emmet depends on this
 Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
+Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'tmhedberg/matchit', { 'for': ['HTML', 'php'] }
+Plug 'tmhedberg/matchit', { 'for': ['HTML', 'php', 'javascript', 'javascript.jsx'] }
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
@@ -87,6 +88,9 @@ augroup reload_vimrc " {
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 
+" Set JSON-like files to use json syntax highlighting
+autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
+
 """""""""""""""""""""
 "		Mappings
 """""""""""""""""""""
@@ -135,6 +139,9 @@ map <Leader>s :split<CR>
 map <Leader>v :vsplit<CR>
 map <Leader>= <C-w>=
 
+" Easy tabs
+map <Leader>t :tab split<CR>
+
 " Easy remove highlighting
 map <Leader>/ :nohl<CR>
 
@@ -168,6 +175,9 @@ let g:ctrlp_custom_ignore = {
 
 " Emmet
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/extensions/snippets/snippets.json')), "\n"))
+
+" JSX
+let g:jsx_ext_required = 0
 
 " For MacVim
 let macvim_skip_colorscheme = 1
@@ -217,3 +227,9 @@ endfunction
 
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
+
+" Ale
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\}
