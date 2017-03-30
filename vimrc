@@ -44,7 +44,6 @@ set history=50		" command line history
 set hlsearch		  " highlight search terms
 set incsearch		  " show matches as you type
 set ignorecase		" ignore case when searching
-set incsearch		  " do incremental searching
 set number			  " display line number
 set ruler			    " show the cursor position all the time
 set shiftwidth=2	" spaces for auto indent
@@ -62,6 +61,13 @@ set undofile					        " Save undo's after file closes
 set undodir=$HOME/.vim/undo		" undo file for work
 set undolevels=1000				    " How many undos
 set undoreload=1000				    " How many lines to save for undo
+
+" Assist with fuzzy find natively
+" Credit to https://gist.github.com/csswizardry/9a33342dace4786a9fee35c73fa5deeb
+set wildmenu
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.jpeg
+set wildignore+=*.pdf,*.psd,*.ai
+set wildignore+=node_modules/*,bower_components/*,.git/*,*log*/*
 
 " Enable file detection and load any plugins for them
 filetype plugin indent on
@@ -102,7 +108,8 @@ let mapleader = "\<Space>"
 map <silent> <F12> :!open %<CR>
 
 " Easy open, close, and save
-nnoremap <Leader>e :e 
+nnoremap <Leader>e :e **/*
+nnoremap <Leader>v :vsp **/*
 nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -136,7 +143,6 @@ nnoremap <Leader>f :NERDTreeFocus<CR>
 
 " Easy window splitting
 map <Leader>s :split<CR>
-map <Leader>v :vsplit<CR>
 map <Leader>= <C-w>=
 
 " Easy tabs
