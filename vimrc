@@ -108,8 +108,9 @@ let mapleader = "\<Space>"
 map <silent> <F12> :!open %<CR>
 
 " Easy open, close, and save
-nnoremap <Leader>e :e **/*
-nnoremap <Leader>v :vsp **/*
+nnoremap <Leader>e :e
+nnoremap <Leader>v :vsplit
+nnoremap <C-e> :e **/*
 nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
