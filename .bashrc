@@ -24,6 +24,9 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 export PATH
 
 
+export FZF_DEFAULT_COMMAND='ag -g ""'
+
+
 ##########################################
 #             Aliases
 ##########################################
@@ -54,4 +57,7 @@ cat /etc/motd
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-export PS1="\[\033[38;5;45m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;178m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
+# Bash Colors
+export PS1="\[\033[38;5;45m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;178m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

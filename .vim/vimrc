@@ -7,13 +7,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': ['php'] }
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim' " Emmet depends on this
 Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
@@ -33,6 +33,8 @@ Plug 'w0rp/ale'
 Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
 
 call plug#end()
+
+set rtp+=/usr/local/opt/fzf
 
 " allow backspacing over everything in insert mode
 set autoindent    " allow autoindent by default
@@ -108,8 +110,8 @@ let mapleader = "\<Space>"
 map <silent> <F12> :!open %<CR>
 
 " Easy open, close, and save
-nnoremap <Leader>e :e 
-nnoremap <Leader>v :vsplit 
+nnoremap <Leader>e :e<Space>
+nnoremap <Leader>v :vsplit<CR>
 nnoremap <C-e> :e **/*
 nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
@@ -159,6 +161,9 @@ nnoremap <Leader>a :Ack!<Space>
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+" FZF
+nnoremap <C-p> :FZF<CR>
+
 " VimWiki
 nmap <Leader>wn <Plug>VimwikiNextLink
 nmap <Leader>wp <Plug>VimwikiPrevLink
@@ -173,15 +178,17 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" CtrlP
-" Ignore certain directories and files
-let g:ctrlp_custom_ignore = {
-  \ 'dir': 'node_modules\|\v[\/](\.(git|hg|svn)|\_site)$',
-  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+" Ale
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
 \}
 
 " Emmet
 let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/extensions/snippets/snippets.json')), "\n"))
+
+" FZF
+let g:fzf_layout = { 'down': '~30%' }
 
 " JSX
 let g:jsx_ext_required = 0
@@ -234,9 +241,3 @@ endfunction
 
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
-
-" Ale
-let g:ale_javascript_eslint_use_global = 1
-let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\}
