@@ -205,11 +205,11 @@ set laststatus=2
 let g:lightline = {
   \ 'active': {
   \   'right':  [ [ 'lineinfo' ],
-  \               [ 'percent' ],
-  \               [ 'fileencoding' ] ],
+  \               [ 'percent' ] ],
   \   'left': [ [ 'mode', 'paste', 'relativepath' ],
-  \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+  \             [ 'fugitive', 'readonly', 'modified' ] ]
   \ },
+  \ 'colorscheme': 'solarized',
   \ 'component_function': {
   \   'fugitive': 'LightLineFugitive',
   \   'readonly': 'LightLineReadonly',
