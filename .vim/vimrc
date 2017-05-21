@@ -22,6 +22,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'ternjs/tern_for_vim'
 Plug 'tmhedberg/matchit', { 'for': ['HTML', 'php', 'javascript', 'javascript.jsx'] }
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
@@ -99,6 +100,14 @@ augroup END " }
 
 " Set JSON-like files to use json syntax highlighting
 autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
+
+" Highlight TODO, FIXME, NOTE
+if has ("autocmd")
+  if v:version > 701
+    autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
+    autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
+  endif
+endif
 
 """""""""""""""""""""
 "		Mappings
