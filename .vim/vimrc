@@ -22,7 +22,6 @@ Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx'
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ternjs/tern_for_vim'
 Plug 'tmhedberg/matchit', { 'for': ['HTML', 'php', 'javascript', 'javascript.jsx'] }
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
