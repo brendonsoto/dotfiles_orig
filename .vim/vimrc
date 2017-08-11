@@ -21,6 +21,7 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
+Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tmhedberg/matchit', { 'for': ['HTML', 'php', 'javascript', 'javascript.jsx'] }
@@ -130,7 +131,6 @@ map <Leader>F :echo expand("%")<CR>
 " Easy open, close, and save
 nnoremap <Leader>e :e<Space>
 nnoremap <Leader>v :vsplit<CR>
-nnoremap <C-e> :e **/*
 nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -154,8 +154,8 @@ map j gj
 map k gk
 
 " Buffer switching
-nnoremap <Tab> :bn<CR>
-nnoremap <S-Tab> :bp<CR>
+" nnoremap <Tab> :bn<CR>
+" nnoremap <S-Tab> :bp<CR>
 
 " miniBufExplr
 nnoremap <Leader>b :MBEToggle<CR>
@@ -264,3 +264,7 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
+
+" UltiSnips
+let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
+let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
