@@ -14,6 +14,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim' " Emmet depends on this
 Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
@@ -75,6 +76,9 @@ set wildignore+=node_modules/*,bower_components/*,.git/*,*log*/*
 " Enable file detection and load any plugins for them
 filetype plugin indent on
 
+" Enable omnicompletion
+set omnifunc=syntaxcomplete#Complete
+
 " enable mouse for scrolling
 if has("mouse")
 	set mouse=a
@@ -101,12 +105,14 @@ augroup END " }
 autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
 
 " Highlight TODO, FIXME, NOTE
-if has ("autocmd")
-  if v:version > 701
-    autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
-    autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
-  endif
-endif
+autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
+autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
+
+" Set Rainbow Parenthesis to always be active
+augroup rainbow
+  autocmd!
+  autocmd FileType c,cpp,java,javascript,json,php,python,ruby,sql RainbowParentheses
+augroup END
 
 """""""""""""""""""""
 "		Mappings
@@ -148,11 +154,11 @@ map j gj
 map k gk
 
 " Buffer switching
-nnoremap <Tab>    :bn<CR>
-nnoremap <S-Tab>  :bp<CR>
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
 
 " miniBufExplr
-nnoremap <Leader>b :MBEOpen<CR>
+nnoremap <Leader>b :MBEToggle<CR>
 
 " NerdTree
 nnoremap <Leader>n :NERDTreeToggle<CR>
@@ -252,6 +258,9 @@ endfunction
 function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
+
+" Rainbow Parenthesis
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
