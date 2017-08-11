@@ -112,7 +112,7 @@ autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
 " Set Rainbow Parenthesis to always be active
 augroup rainbow
   autocmd!
-  autocmd FileType c,cpp,java,javascript,json,php,python,ruby,sql RainbowParentheses
+  autocmd FileType c,cpp,java,javascript,javascript.jsx,json,php,python,ruby,sql RainbowParentheses
 augroup END
 
 """""""""""""""""""""
@@ -154,8 +154,8 @@ map j gj
 map k gk
 
 " Buffer switching
-" nnoremap <Tab> :bn<CR>
-" nnoremap <S-Tab> :bp<CR>
+nnoremap <Leader>] :bn<CR>
+nnoremap <Leader>[ :bp<CR>
 
 " miniBufExplr
 nnoremap <Leader>b :MBEToggle<CR>

@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/Brendon/Documents/Programming/JavaScript/learning/react/react-training/github-battle/app'
-let g:netrw_dirhist_2='/Users/Brendon/Documents/Programming/JavaScript/learning/react/egghead/react-fundamentals/react-app/src/App.css'
-let g:netrw_dirhist_3='/Users/Brendon/Documents/Programming/JavaScript/learning/react/metronome/src'
-let g:netrw_dirhist_4='/Users/Brendon/Documents/Programming/JavaScript/learning/react/modern-react-with-redux/ReduxSimpleStarter/src'
-let g:netrw_dirhist_5='/Users/Brendon/dotfiles'
