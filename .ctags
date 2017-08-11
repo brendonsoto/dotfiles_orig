@@ -3,3 +3,5 @@
 --exclude=.git
 --exclude=node_modules
 --exclude=dist
+--exclude=public
+--exclude=*.bundle.*

@@ -1,4 +1,6 @@
-*.min.js
-node_modules/*
-dist/*
+*.min.*
+*.bundle.*
+node_modules
+dist
+public
 tags

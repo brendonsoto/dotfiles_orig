@@ -23,7 +23,6 @@ eval "$(rbenv init -)"
 PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 export PATH
 
-
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 
@@ -39,14 +38,21 @@ alias mySite="web; cd mySite"
 # Programming Aliases
 alias prog="cd ~/Documents/Programming"
 alias js="prog; cd JavaScript"
-alias rub="prog; cd Ruby"
-alias sql="prog; cd databases/SQL"
 
 # Reload
 alias reload=". ~/.bashrc"
 
 # Useful Commands
 alias ls='ls -aFG' # list hidden files; add colors and file type
+
+
+##########################################
+#             Helpful
+##########################################
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export HISTCONTROL=ignoredups
+
 
 ##########################################
 #             For fun :)
@@ -59,5 +65,3 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Bash Colors
 export PS1="\[\033[38;5;45m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;178m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

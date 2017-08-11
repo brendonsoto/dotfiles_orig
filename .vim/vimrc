@@ -30,7 +30,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
-Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
+" Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
 
 call plug#end()
 
@@ -83,7 +83,7 @@ endif
 " Colorscheme
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -135,6 +135,8 @@ nnoremap <Leader>h <C-w>h
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
+nnoremap <Leader>0 <C-w>t
+nnoremap <Leader>9 <C-w>b
 
 " Easy copy & paste
 map <Leader>y "*y
