@@ -115,6 +115,7 @@ augroup rainbow
   autocmd FileType c,cpp,java,javascript,javascript.jsx,json,php,python,ruby,sql RainbowParentheses
 augroup END
 
+
 """""""""""""""""""""
 "		Mappings
 """""""""""""""""""""
@@ -268,3 +269,5 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims')
 " UltiSnips
 let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
 let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
+let g:UltiSnipsJumpForwardTrigger='<Tab>'
+let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
