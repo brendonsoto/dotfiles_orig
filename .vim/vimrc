@@ -206,7 +206,11 @@ let g:ale_linters = {
 \}
 
 " Emmet
-let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/extensions/snippets/snippets.json')), "\n"))
+let g:user_emmet_settings = {
+      \'javascript.jsx': {
+      \   'extends': 'jsx'
+      \}
+      \}
 
 " FZF
 let g:fzf_layout = { 'down': '~30%' }

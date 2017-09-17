@@ -1,0 +1,11 @@
+[user]
+	name = brendon
+	email = brendon.soto@gmail.com
+[push]
+	default = simple
+[alias]
+  br = branch
+  ci = commit
+	co = checkout
+  hist = log --graph --date=short --name-status
+  st = status

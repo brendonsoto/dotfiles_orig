@@ -24,3 +24,17 @@ endsnippet
 snippet exp
 export default $1
 endsnippet
+
+snippet comp
+class $1 extends React.Component {
+	render() {
+		return (
+
+		);
+	}
+}
+endsnippet
+
+snippet connect
+export default connect(${1:mapStateToProps}${2:,mapDispatchToProps})($3);
+endsnippet
