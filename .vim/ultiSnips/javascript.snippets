@@ -1,3 +1,4 @@
+#===== General JS =====#
 snippet for
 for (let ${1:i} = 0; $1 <= $2; $1++) {
 	$3
@@ -25,6 +26,12 @@ snippet exp
 export default $1
 endsnippet
 
+snippet impexp
+import $1 from './$1';
+export default $1;
+endsnippet
+
+#===== React / Redux =====#
 snippet comp
 class $1 extends React.Component {
 	render() {
@@ -37,4 +44,25 @@ endsnippet
 
 snippet connect
 export default connect(${1:mapStateToProps}${2:,mapDispatchToProps})($3);
+endsnippet
+
+snippet act
+const $1 = ($2) => ({
+	type: actionTypes.$3,
+	payload: {
+		${4:$2}
+	}
+});
+$0
+endsnippet
+
+snippet reducer
+const $1Reducer = (state = $2, action) => {
+	switch (action.type) {
+		case actionTypes.$3:
+			return action.payload.$4;
+		default: return state;
+	}
+}
+$0
 endsnippet
