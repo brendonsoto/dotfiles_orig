@@ -5,8 +5,10 @@
 export EDITOR=vim
 
 # To ensure terminal is using 256 colors
-PATH="/usr/local/bin:$PATH"
-export PATH=/usr/local/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
+
+# FireFox
+export PATH="$HOME/Documents/Programming/open_source/firefox:$PATH"
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
