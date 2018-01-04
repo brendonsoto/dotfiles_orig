@@ -59,7 +59,8 @@ export HISTCONTROL=ignoredups
 ##########################################
 #             For fun :)
 ##########################################
-cat /etc/motd
+# Launch an aquarium on startup!
+asciiquarium
 
 # For better color support
 export CLICOLOR=1

@@ -5,7 +5,7 @@ set nocompatible
 " Vim-Plug - Manage Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
+" Plug 'altercation/vim-colors-solarized'
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': ['php'] }
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
@@ -20,6 +20,7 @@ Plug 'mattn/webapi-vim' " Emmet depends on this
 Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
@@ -38,6 +39,10 @@ call plug#end()
 
 " Add FZF to Vim's runtime path (rtp)
 set rtp+=/usr/local/opt/fzf
+
+" Enable auto sourcing vimrc on save
+autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost vimrc source %
 
 " allow backspacing over everything in insert mode
 set autoindent    " allow autoindent by default
@@ -204,6 +209,10 @@ let g:ale_javascript_eslint_use_global = 1
 let g:ale_linters = {
 \ 'javascript': ['eslint'],
 \}
+let g:ale_fixers = {
+\ 'javascript': ['prettier']
+\}
+let g:ale_fix_on_save = 1
 
 " Emmet
 let g:user_emmet_settings = {
