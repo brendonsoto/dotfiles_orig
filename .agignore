@@ -1,5 +1,6 @@
 *.min.*
 *.bundle.*
+coverage
 node_modules
 dist
 public

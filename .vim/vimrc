@@ -30,6 +30,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
@@ -79,6 +80,9 @@ set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.jpeg
 set wildignore+=*.pdf,*.psd,*.ai
 set wildignore+=node_modules/*,bower_components/*,.git/*,*log*/*
 
+" Diff settings
+set diffopt=filler,vertical
+
 " Enable file detection and load any plugins for them
 filetype plugin indent on
 
@@ -119,6 +123,9 @@ augroup rainbow
   autocmd!
   autocmd FileType c,cpp,java,javascript,javascript.jsx,json,php,python,ruby,sql RainbowParentheses
 augroup END
+
+" Fugitive - auto-clean fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
 
 """""""""""""""""""""
@@ -212,7 +219,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \ 'javascript': ['prettier']
 \}
-let g:ale_fix_on_save = 1
+" let g:ale_fix_on_save = 1
 
 " Emmet
 let g:user_emmet_settings = {
