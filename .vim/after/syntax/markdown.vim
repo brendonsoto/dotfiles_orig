@@ -1,1 +1,1 @@
-set textwidth=80
+colorscheme molokai

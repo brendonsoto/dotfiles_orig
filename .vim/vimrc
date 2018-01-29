@@ -31,6 +31,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'valloric/youcompleteme'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
@@ -289,5 +290,5 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims')
 " UltiSnips
 let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
 let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
-let g:UltiSnipsJumpForwardTrigger='<Tab>'
-let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
+" let g:UltiSnipsJumpForwardTrigger='<Tab>'
+" let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
