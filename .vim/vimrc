@@ -297,6 +297,6 @@ let g:UltiSnipsExpandTrigger='<c-e>'
 
 " Vimwiki
 let g:vimwiki_list = [
-\ {'path': '~/dotfiles/my_wiki'},
-\ {'path': '~/vimwiki'}
+\ {'path': '~/vimwiki'},
+\ {'path': '~/dotfiles/my_wiki'}
 \]
