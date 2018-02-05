@@ -20,7 +20,7 @@ Plug 'mattn/webapi-vim' " Emmet depends on this
 Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
@@ -192,11 +192,14 @@ map <Leader>/ :nohl<CR>
 nnoremap <Leader>a :Ack!<Space>
 
 " Ale
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> [j <Plug>(ale_previous_wrap)
+nmap <silent> ]j <Plug>(ale_next_wrap)
 
 " FZF
 nnoremap <C-p> :FZF<CR>
+
+" JDaddy
+map <Leader>J gqaj
 
 " VimWiki
 nmap <Leader>wn <Plug>VimwikiNextLink
@@ -290,5 +293,10 @@ let g:ruby_path = system('echo $HOME/.rbenv/shims')
 " UltiSnips
 let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
 let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
-" let g:UltiSnipsJumpForwardTrigger='<Tab>'
-" let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
+let g:UltiSnipsExpandTrigger='<c-e>'
+
+" Vimwiki
+let g:vimwiki_list = [
+\ {'path': '~/dotfiles/my_wiki'},
+\ {'path': '~/vimwiki'}
+\]
