@@ -20,6 +20,9 @@ PATH="/usr/local/sbin:$PATH"
 # Ruby - For rbenv
 eval "$(rbenv init -)"
 
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Setting PATH for Python 3.4
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"

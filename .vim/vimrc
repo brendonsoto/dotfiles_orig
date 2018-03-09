@@ -49,7 +49,7 @@ autocmd! bufwritepost vimrc source %
 " allow backspacing over everything in insert mode
 set autoindent    " allow autoindent by default
 set backspace=indent,eol,start
-set cursorline 		" highlights current line
+" set cursorline 		" highlights current line
 set expandtab		  " maintains # of spaces for a tab in insert mode
 set hidden			  " don't have to write before opening new buffer
 set history=50		" command line history
@@ -98,7 +98,8 @@ endif
 " Colorscheme
 syntax enable
 set background=dark
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme space-vim-dark
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -144,7 +145,7 @@ map <Leader>F :echo expand("%")<CR>
 
 " Easy open, close, and save
 nnoremap <Leader>e :e<Space>
-nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>v :vs 
 nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -187,6 +188,9 @@ map <Leader>t :tab split<CR>
 
 " Easy remove highlighting
 map <Leader>/ :nohl<CR>
+
+" Easy diffupdate
+nnoremap du :diffupdate<CR>
 
 " Ack
 nnoremap <Leader>a :Ack!<Space>

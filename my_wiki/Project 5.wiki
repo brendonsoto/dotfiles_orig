@@ -1,0 +1,4 @@
+= Project 5 =
+- [X] [[Memory]]
+- [X] [[CPU]]
+- [X] Computer

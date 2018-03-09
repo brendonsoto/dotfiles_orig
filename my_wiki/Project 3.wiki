@@ -1,0 +1,9 @@
+= Project 3 =
+- [X] Bit 
+- [X] Register
+- [X] Ram8
+- [X] Ram64
+- [X] Ram512
+- [X] Ram4k
+- [X] Ram16k
+- [X] PC
