@@ -1,14 +1,1 @@
 = CPU =
-
-== Reflections ==
-(2018/Mar/9) I finished implementing all of the chips for Chapter/Project 5 and am once again blown away at how so much complexity can be conveyed by 1's and 0's.
-
-Learning about the Von Neumann (NOTE did i spell that right?) architecture was pretty dope. It's not crazy to think most computers follow a similar underlying structure, but it's pretty nuts to me how it can be boiled down to a few components. It makes me reflect on the work I do now wondering if it could be broken up into simpler pieces, if there's a more general framework lying underneath all of this. Of course a lot goes into the individual pieces, as was the case for building these computer chips, but I'm thinking that maybe my current approach to app development is not utilizing abstractions as building blocks in an efficient way. Like I could be building better things by reusing what I'm making.
-
-The Memory chip was like a nice refresher of the previous chapter's projects. Building the CPU was really fun. I followed the recommended approach to building the CPU, as suggested by the book, since I figured it would be easier to debug if anything were to go wrong now or in the future. On second thought, I guess a different approach wouldn't have required much more work since it would be using the same underlying principles.
-
-That's an interesting idea too, debugging on principles. So often I go into debugging by just trying to dive into the code without thinking much about _what_ is supposed to be happening, the big picture. It seems so tough to remember to zoom out when you're so zoomed in!
-
-After putting together the CPU implementing the Computer chip was a sinch! One thing that bothered me afterwards was I didn't think I had a great understanding of the CPU through without really trying to think of an implementation myself or trying to think of what the implementation would like beforehand. That was an error on my part, so to try to avoid walking through a pit of not-understanding in the future I'm going to try to think things through a bit more before just diving in.
-
-Even though it's all in software it's still so exciting to be able to say I've made a computer!
