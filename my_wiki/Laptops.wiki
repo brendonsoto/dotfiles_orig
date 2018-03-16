@@ -59,3 +59,12 @@ Old model, but with 256GB SSD - http://www.dell.com/us/business/p/xps-13-9360-la
 
 
 Just need to make sure the _graphics card is Intel and not NVidia_!!
+
+
+_Update 2018/Mar/16_
+Also, just considering Meltdown and Spectre I'm wondering if I should wait for newer models to be released that help mitigate the security flaws.
+Only resource I could find on the subject is: https://liliputing.com/2018/01/wait-meltdown-spectre-proof-cpus-buying-new-pc-phone.html
+The above article recommends no, as do the people in the comments section, however I found a thread on HN about the subject (https://news.ycombinator.com/item?id=16089890) and they do bring up a good point that the problem will not be fixed in hardware for another few years. Plus, the attacks shouldn't matter much as long as safe browsing is employed (don't download from untrusted people, etc.)
+
+So might as well buy now.
+Annnnd no Zenbooks have AMD processors, so Intel it is!
