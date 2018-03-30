@@ -48,7 +48,8 @@ Going to go with 330UA or 430UA, more towards 330UA. Actually probably 430UA sin
 I just compared the i5-8250U against the i7-8550U and i7-7500U and the i5 is preferrable to the i7-7500U
 
 I'm going to go with the UX330UA (i5-8520U) or UX430UA (i5-8520U -- i7 is reported to have problems).
-[UX330UA]https://www.amazon.com/dp/B072WK2PVP/ref=twister_B077BNJHVJ?_encoding=UTF8&psc=1
+[UX330UA]https://www.amazon.com/Ultra-Slim-13-3-inch-Fingerprint-Anti-Glare-UX330UA-AH55/dp/B075N1YHVK/ref=sr_1_1?s=pc&ie=UTF8&qid=1520464201&sr=1-1&keywords=asus+zenbook&refinements=p_n_feature_four_browse-bin%3A2289793011
+[UX430UQ]https://www.amazon.com/dp/B072WK2PVP/ref=twister_B077BNJHVJ?_encoding=UTF8&psc=1
 [UX4330UA]https://www.newegg.com/Product/Product.aspx?Item=9SIAD6H6M86937
 
 

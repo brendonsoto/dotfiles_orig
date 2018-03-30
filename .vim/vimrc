@@ -18,7 +18,7 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/goyo.vim', { 'for': 'vimwiki' }
+Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'vimwiki'] }
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim' " Emmet depends on this
