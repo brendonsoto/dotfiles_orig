@@ -198,3 +198,5 @@ This is the variable we can and should be using in our game loop funciton.
 
 == Reflections ==
 I AM SO GLAD FOR THE LANGUAGES WE HAVE TODAY! It sucks having to enter return statements everywhere and having separate commands to create and assign variables.
+
+This project's focus was on getting familiar with the language itself which seemed pretty straightforward with the project. I feel like this project wasn't as intense as the other past few, but it makes sense since this is more about creating a program rather than implementing some sort of service/translation part.
