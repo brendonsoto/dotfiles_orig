@@ -1,21 +1,26 @@
                                  = Project 8 =
 
 == Goals ==
-- [O] Add the following syntax types for the parser:
+- [X] Add the following syntax types for the parser:
   - [X] goto
   - [X] if-goto
   - [X] function declaration
-  - [ ] function call
+  - [X] function call
   - [X] function return
-- [O] Add the following functionality to the code writer module:
+- [X] Add the following functionality to the code writer module:
   - [X] jumps
   - [X] conditional jumps
   - [X] function declarations
-  - [ ] function calls?
+  - [X] function calls?
   - [X] function return (similar to a jump?)
 - [X] Extend the main module to take in a directory of .vm files and output a single .asm file
 - [X] Figure out how to include the vm file when writing labels
 - [X] Write initialization code
+- [X] Complete BasicLoop
+- [X] Complete FibonacciSerires
+- [X] Complete SimpleFunction
+- [X] Complete Fibonacci Element
+- [ ] Complete StaticTest
 
 == Gameplan ==
   I'm going to try acting on last project's reflections. To start, I'm going to look at the first VM program to test out and work backwards from there. I'll write the assembly code for the program by hand and try testing the program using the CPUemulator. I figured once I have a handle on what the machine language should look like I'll know what to aim for instead of writing code where I'm uncertain if it'll do what it should.
@@ -211,3 +216,68 @@ YEAHH!!!! I figured out what was wrong! My return functions still were not uniqu
 
 === Mini Reflection ===
 I do think this process went a bit better. I didn't keep count, but I did feel that there were less re-comiplations this time around. It did take longer to step through the code though, but that was okay since I learned some of my previous implementations weren't correct.
+
+
+== StaticTest ==
+At first glance there didn't seem to be much to implement, so I just tried compiling and testing.
+I failed.
+My Stack Pointer was at the correct spot, but one of my values was incorrect.
+This was also without going through any of the above steps. I figured might as well try skipping them since there's nothing new to implement here.
+But now it's time to revisit those steps.
+
+_What is the unknown?_
+Why is the value at RAM[261] incorrect?
+
+_What is the data?_
+Nothing much really. The only knowns are the two VM programs.
+
+_What are the conditions?_
+When the two VM programs are combined into a single ASM file the output should be that of the expected results in the asm test.
+
+_What can help me get a better picture of the unknown?_
+Stepping through the VM programs.
+Additionally, this program is to test `static` values so if anything maybe the problem lies within the `static` implementation in the *code_writer* module.
+
+*Gameplan*
+1. Look at the VM program code -- get an idea of what's going on
+2. Step through the VM code using the VM test -- get the big picture
+3. Look at your `static` implementation -- specifically check how it's implementation with multiple vm_programs
+4. If 3 is flawed, repair it & re-run program
+5. Else compile VM program to ASM and test, stepping through each step
+
+It may also be worthwhile checking the parser to make sure inline comments are removed
+
+=== Considering the VM programs ===
+Looking at the VM code it seems each 'class' sets its own static variables and subtracts them.
+
+=== Considering stepping through the VM code ===
+Just stepped through the program using the VMEmulator. The main thing I see is that the Stack at the end of the program should look as the following:
+| Address | Value |
+| 261     | -2    |
+| 262     | 8     |
+| 267     | 8     |
+| 268     | 15    |
+
+The other values are 0s.
+In consideration of our test, the *addresses should all be subtracted by 5*. This is because the VM test starts the SP at 261.
+
+*Addresses 16-19 should hold the static variables*
+
+I'm willing to bet that my implementation does not work because the static variables are not being set uniquely.
+
+Yup. I just re-executed my code and I see only two slots instead of four of memory for the static variables.
+
+Yes!! I patched that up and now the program works!!
+
+=== Mini Reflection ===
+This has been the easiest subproject to complete, surprisingly enough. I learned my `static` implementation was incorrect, but that was the only thing holding me back. It was surprisingly quick to come to that idea too. Using the `How to Solve it` dialogue with myself was quite helpful here.
+
+
+
+
+== End of Project Reflections ==
+
+  This chapter wasn't as much as a doozy as the last chapter, but still held some important lessons, especially in problem solving. A big aid in all of this was starting George Polya's "How To Solve It" book during the middle of the process. One of my goals was to have less iterations between implementing details and testing solutions and the techniques given in the book definitely helped.
+  One big point I'd like to spend some time on is the actual code itself. It's been getting messier as it's grown. I've realized I had to shoe-horn a few features in. I'd like to spend some time cleaning the program up a bit, but I'm still worried about the adaptibility of it. I realized I didn't give adaptibility that much thought which is a byproduct of not imagining varied conditions against my implementations. I was going to say it's tough to consider these options, but then again I can't really say that if I didn't do so.
+  My code has been developed using a mixture of procedural and functional bits. Overall it is more procedural than functional. I encountered moments where I needed to introduce some new data into my older functions which lead me to thinking maybe the program would be suited to an object-oriented approach. However I'm not a fan of OOP because I don't like the idea of objects being both the data structure and having functions to manipulate the data. It's not as predictable. State seems like it can get complicated rather quickly once inheritance or polymorphism is introduced. Then again, since this program deals with relatively simple data points (vm files) an OOP approach would seem simple enough.
+  A post-book project I would like to do is repeat these programming chapters twice: once with an OOP approach (using Python again) and another with a functional approach (using Haskell). My goal with this is to document the development process and the results and compare my notes. It's a project I'm looking forward to.

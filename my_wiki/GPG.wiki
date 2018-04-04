@@ -74,3 +74,14 @@ I'm still curious as to why it didn't work. Is it a thing like the subkeys where
 So I think the lesson here is, to allow access to a password store from multiple devices use multiple gpg keys (unless mobile in which case use secure transfer to get the secret key). Mobile is really the only exception to making gpg-keys per device.
 
 Additionally, I figured out that the gpg prompt is quite useful. Used it to change the expiration dates on my keys!
+
+
+=== Talk with Greg (NHL) ===
+First I talked with Matt, asking if he knew anything about it. He referred me to Greg.
+I asked Greg about it and he came by to check out the issue. Here's what he did:
+1. Navigate to the .password-store to a specific password
+2. Call `gpg _name-of-file_`
+3. The resulting message displayed the fingerprint of the ID needed to decrypt the password
+
+The fingerprint was different than the one I had so I guess I still had it encrypted with both this gpg key and the other computer's gpg key.
+So the solution would be to get both keys, reset the `.gpg-id` file, reencrypt the password store, then push.
