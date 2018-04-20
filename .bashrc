@@ -50,6 +50,11 @@ alias reload=". ~/.bashrc"
 # Useful Commands
 alias ls='ls -aFG' # list hidden files; add colors and file type
 
+# Git shortcuts
+alias gcm='git co master'
+alias gfam='gcm; git fetch && git merge origin/master'
+alias gp='git push'
+
 
 ##########################################
 #             Helpful
@@ -57,6 +62,12 @@ alias ls='ls -aFG' # list hidden files; add colors and file type
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export HISTCONTROL=ignoredups
+
+findXRecentlyModified() {
+  find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -$1 | cut -f2- -d" "
+}
+
+source /usr/local/etc/bash_completion.d/pass
 
 
 ##########################################
