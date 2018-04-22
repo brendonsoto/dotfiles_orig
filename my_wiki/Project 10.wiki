@@ -558,8 +558,16 @@ Let's try working backwards this time around. Go from Expression, up to Class (s
   - [ ] let
   - [ ] return
   - [ ] while
-- [ ] SubroutineBody
+- [X] SubroutineBody
 - [X] SubroutineDec
 - [X] ClassVarDecs
 - [X] Class -- base
 
+
+I am putting a pause on this because I'm getting quite frustrated with my own ability.
+I started testing this out with the actual project code, but was fumbling all over the place.
+I don't like fumbling.
+I didn't think this out thoroughly enough or something.
+And besides, I've been itching to get to learning Haskell for the longest now.
+I feel like learning more functional stuff will make me more prepared for more dificult stuff like this.
+So, hasta luego
