@@ -279,6 +279,9 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 " RBENV
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
+" SQL -- Reset the Omni Key so I can use CTRL-[ to exit insert mode
+let g:ftplugin_sql_omni_key = '<C-j>'
+
 " UltiSnips
 let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
 let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']

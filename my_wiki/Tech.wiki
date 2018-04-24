@@ -4,3 +4,4 @@
 [[Laptops]]
 [[React Project Generator?]]
 [[GPG]]
+[[Haskell]]

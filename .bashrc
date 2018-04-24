@@ -51,9 +51,10 @@ alias reload=". ~/.bashrc"
 alias ls='ls -aFG' # list hidden files; add colors and file type
 
 # Git shortcuts
-alias gcm='git co master'
+alias gcm='git checkout master'
 alias gfam='gcm; git fetch && git merge origin/master'
 alias gp='git push'
+alias gmap='gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp'
 
 
 ##########################################

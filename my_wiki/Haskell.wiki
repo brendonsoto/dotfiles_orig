@@ -1,0 +1,14 @@
+= Haskell =
+
+Learning from http://learnyouahaskell.com .
+
+Using this for notes.
+
+_2018-Apr-24_
+I've seen `<-` used in *list comprehensions* and I've seen `->` used in *type declarations*.
+Is there a specific difference to the two other than one is for lists and the other types? 
+Are they interchangeable?
+
+OH!! Are `->`s used to signify functions are curried?
+Are all Haskell functions curried since it's a lazy language?
+^ By "since it's a lazy language" I mean, since a function can take multiple arguments, it's kind of like loading the function with them one at a time. Haskell is lazy so it waits until it actually has to use a variable to bring it into memory. As it waits, we can set up the function more and more every time we have a variable/argument provided to the function so we can build a template for the function. The function/compiler/code is filling in the gaps as its function is given more arguments.

@@ -1,11 +1,15 @@
 [alias]
-  br = branch
+  br = branch --sort=-committerdate
   ci = commit
   co = checkout
   # hist = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
   hist = log --graph --date=short --name-status
   lsbr = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
   st = status
+  cm = checkout master
+  p = push
+  m = merge
+  mom = merge origin/master
 [diff]
   tool = vimdiff
 [difftool]
