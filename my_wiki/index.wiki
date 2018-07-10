@@ -11,3 +11,10 @@ Wikiblog? Yeah, I know. I couldn't come up with anything better at the moment. T
 - [ ] Start reading React Native tutorial
 - [ ] Start working on Space Invaders
 - [ ] Start on the NAND2Tetris book (once it comes)
+
+
+== Random Thoughts ==
+Could we learn about scalability from nature?
+A tree grows both vertically (height) and horizontally (branches/width). Plus there are so many branches to a tree, each seemingly going its own way. There must be some system for balancing itself out. How does a tree's branches grow without the tree itself becoming lopsided?
+A tree has leaves to provide nutrition to too. Water soaks in through the roots, up the branches, to the leaves, correct? And there are so many leaves per branch. How is nutrition distributed across the whole tree?
+Does a tree branch ever split into three? like -|- ? Branch splits always seem like one branch is the main while the other is the secondary.

@@ -14,6 +14,7 @@ Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': ['php'] }
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'fholgado/minibufexpl.vim'
+Plug 'godlygeek/tabular'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -26,6 +27,10 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+endif
+Plug 'Shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -35,7 +40,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'valloric/youcompleteme'
+" Plug 'valloric/youcompleteme'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
@@ -54,6 +59,12 @@ autocmd! bufwritepost vimrc source %
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Jump to last known position in a file after opening
+:au BufReadPost *
+ \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+ \ |   exe "normal! g`\""
+ \ | endif
 
 " Set JSON-like files to use json syntax highlighting
 autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
@@ -91,6 +102,7 @@ set hidden " don't have to write before opening new buffer
 set history=50 " command line history
 set hlsearch " highlight search terms
 set ignorecase " ignore case when searching
+set inccommand=split " show changes in a split window for search and replace
 set incsearch " show matches as you type
 set linebreak " enable word-break without inserting an EOL character
 set nobackup " no backups
@@ -177,6 +189,9 @@ map <Leader>/ :nohl<CR>
 " Easy diffupdate
 nnoremap du :diffupdate<CR>
 
+" Easy search for visually selected text
+vnoremap // y/<C-R>"<CR>
+
 " Ack
 nnoremap <Leader>a :Ack!<Space>
 
@@ -189,6 +204,12 @@ nnoremap <C-p> :FZF<CR>
 
 " JDaddy
 map <Leader>J gqaj
+
+" Tabular
+nmap <Leader>T= :Tabularize /=<CR>
+vmap <Leader>T= :Tabularize /=<CR>
+nmap <Leader>T: :Tabularize /:\zs<CR>
+vmap <Leader>T: :Tabularize /:\zs<CR>
 
 " VimWiki
 nmap <Leader>wn <Plug>VimwikiNextLink
@@ -213,6 +234,14 @@ let g:ale_fixers = {
 \ 'javascript': ['prettier']
 \}
 " let g:ale_fix_on_save = 1
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option({
+\ 'auto_complete_delay': 50,
+\ 'auto_refresh_delay': 50,
+\ 'max_list': 20
+\})
 
 " Emmet
 let g:user_emmet_settings = {

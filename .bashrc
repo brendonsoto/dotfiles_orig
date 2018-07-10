@@ -2,31 +2,11 @@
 #             Path Addendums
 ##########################################
 
+# TODO: Conditional to check for nvim and use that
 export EDITOR=vim
 
 # To ensure terminal is using 256 colors
 export PATH="/usr/local/bin:$PATH"
-
-# FireFox
-export PATH="$HOME/Documents/Programming/open_source/firefox:$PATH"
-
-# Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# PHP
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-PATH="/usr/local/sbin:$PATH"
-
-# Ruby - For rbenv
-eval "$(rbenv init -)"
-
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Setting PATH for Python 3.4
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
-export PATH
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
@@ -51,16 +31,24 @@ alias reload=". ~/.bashrc"
 alias ls='ls -aFG' # list hidden files; add colors and file type
 
 # Git shortcuts
+alias gbr='git branch --sort=-committerdate | head -5'
 alias gcm='git checkout master'
 alias gfam='gcm; git fetch && git merge origin/master'
 alias gp='git push'
 alias gmap='gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp'
+alias gcp='git cherry-pick'
 
+# Haskell
+alias ghci='stack ghci'
+
+# Vim => NVim (because I keep typing vim)
+alias vim='nvim'
 
 ##########################################
 #             Helpful
 ##########################################
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
 
 export HISTCONTROL=ignoredups
 
@@ -69,6 +57,16 @@ findXRecentlyModified() {
 }
 
 source /usr/local/etc/bash_completion.d/pass
+
+
+##########################################
+#             Function
+##########################################
+fe() {
+  local files
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
+  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
+}
 
 
 ##########################################

@@ -1,14 +1,34 @@
-= Haskell =
+= Contents =
+    - [[#Questions|Questions]]
+    - [[#Resources|Resources]]
+
 
 Learning from http://learnyouahaskell.com .
 
 Using this for notes.
 
-_2018-Apr-24_
-I've seen `<-` used in *list comprehensions* and I've seen `->` used in *type declarations*.
-Is there a specific difference to the two other than one is for lists and the other types? 
-Are they interchangeable?
 
-OH!! Are `->`s used to signify functions are curried?
-Are all Haskell functions curried since it's a lazy language?
-^ By "since it's a lazy language" I mean, since a function can take multiple arguments, it's kind of like loading the function with them one at a time. Haskell is lazy so it waits until it actually has to use a variable to bring it into memory. As it waits, we can set up the function more and more every time we have a variable/argument provided to the function so we can build a template for the function. The function/compiler/code is filling in the gaps as its function is given more arguments.
+== Questions ==
+_2018-Apr-26_
+
+*?* I was doing some problems from 99 Haskell Problems and I kept running into problems where the cause was a lack of a *class constraint* on a function. Why is a class constraint needed when the language is dynamically typed?
+^ Because the class constraint helps the compiler check for possible errors at compile
+^ Found an actual explanation here: https://en.wikibooks.org/wiki/Haskell/Type_basics#Type_inference
+
+*?* What is the `x:xs` syntax again?
+^ The syntax represents the head and the tail of a list.
+
+*?* Why are lists separated into `x:xs` instead of something like `h:t` (head, tail)
+^ Answer from https://stackoverflow.com/questions/6267735/what-is-the-history-of-the-variable-names-x-and-xs
+"
+x is a common variable name in mathematics. xs is the plural form of x (get it?). In list pattern matching, x is one element, and xs is (generally) several.
+"
+
+
+*?* So Data.Map is different than a list of tuples because its implemented with trees. What is the implementation like? I'm curious.
+
+
+== Resources ==
+[[Learn You A Haskell]]
+[[HaskellBook]]
+[[Raúl Rojas - A Tutorial Introduction to the Lambda Calculus]]
