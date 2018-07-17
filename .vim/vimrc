@@ -27,10 +27,6 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
 Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-endif
-Plug 'Shougo/deoplete.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -40,7 +36,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-" Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
@@ -233,15 +229,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \ 'javascript': ['prettier']
 \}
-" let g:ale_fix_on_save = 1
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-\ 'auto_complete_delay': 50,
-\ 'auto_refresh_delay': 50,
-\ 'max_list': 20
-\})
 
 " Emmet
 let g:user_emmet_settings = {

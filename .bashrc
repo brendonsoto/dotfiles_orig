@@ -4,6 +4,7 @@
 
 # TODO: Conditional to check for nvim and use that
 export EDITOR=vim
+set -o vim
 
 # To ensure terminal is using 256 colors
 export PATH="/usr/local/bin:$PATH"
