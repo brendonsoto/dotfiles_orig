@@ -30,3 +30,8 @@ _On initial Vim launch_
 ```shell
 brew install fzf
 ```
+
+### TODO
+* Make some sort of install script for external stuff (i.e. FZF, Ag, etc.)
+* Make a script to auto ln -s everything
+  * For bashrc, double check for an existing bashrc to append to

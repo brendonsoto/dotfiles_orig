@@ -3,8 +3,8 @@
 ##########################################
 
 # TODO: Conditional to check for nvim and use that
-export EDITOR=vim
-set -o vim
+export EDITOR=nvim
+set -o vi
 
 # To ensure terminal is using 256 colors
 export PATH="/usr/local/bin:$PATH"
@@ -29,7 +29,7 @@ alias js="prog; cd JavaScript"
 alias reload=". ~/.bashrc"
 
 # Useful Commands
-alias ls='ls -aFG' # list hidden files; add colors and file type
+alias ls='ls -aFG --color' # list hidden files; add colors and file type
 
 # Git shortcuts
 alias gbr='git branch --sort=-committerdate | head -5'
@@ -57,7 +57,7 @@ findXRecentlyModified() {
   find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -$1 | cut -f2- -d" "
 }
 
-source /usr/local/etc/bash_completion.d/pass
+# source /usr/local/etc/bash_completion.d/pass
 
 
 ##########################################
