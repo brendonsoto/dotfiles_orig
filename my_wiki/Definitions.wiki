@@ -1,0 +1,2 @@
+== Catamorphism ==
+A fancy way of saying a fold. Something that reduces a list of stuff into a single/different value.
