@@ -25,3 +25,10 @@ _Note this requires the `monad.hs` and `xmonad.desktop` files in your `dotfiles`
    - *Preferred Applications* = set Terminal to whatever (default in xfce is xfce4-terminal)
 12. While still in the *Xfce Settings Manager* go to *Session and Startup -> Application Autostart* (it's a tab) and add an entry for xmonad with the command `xmonad --replace` (make sure it's checked)
 13. Run `xmonad --replace` and you should be set!
+
+== Resources ==
+In no order
+- Basic guide :: https://wiki.haskell.org/Xmonad/Using_xmonad_in_XFCE#Configuring_XMonad_to_work_with_Xfce
+- xfce4-session-logout problem :: https://forum.xfce.org/extern.php?action=feed&tid=10099&type=rss
+- More straightforward basic guide :: http://arjuna.deltoso.net/index.html%3Fp=242.html
+- xmobar :: https://archives.haskell.org/projects.haskell.org/xmobar/#running-xmobar
