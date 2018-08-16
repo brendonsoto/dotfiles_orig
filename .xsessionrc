@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Load resources
+
+xrdb -merge .Xresources
+
+# Set up an icon tray
+stalonetray &
+
+# Set up battery icon
+xfce4-power-manager &
+
+# Fire up apps
+
+xscreensaver -no-splash &
+
+if [ -x /usr/bin/nm-applet ] ; then
+   nm-applet --sm-disable &
+fi
+
+exec xmonad
