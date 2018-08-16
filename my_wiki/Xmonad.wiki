@@ -2,6 +2,9 @@ I GOT IT WORKING!!! (with xfce)
 
 [[Gnome Tryouts]]
 
+= TODO =
+- *Received error while trying to log out* Could not get owner of name 'org.xfce.SessionManager': no such name
+
 = Xfce =
 My "for-dummy (me)" listing
 _Note this requires the `monad.hs` and `xmonad.desktop` files in your `dotfiles` repo_
