@@ -42,6 +42,10 @@ Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
 
+" Colors!!
+Plug 'liuchengxu/space-vim-dark'
+Plug 'morhetz/gruvbox'
+
 call plug#end()
 
 
