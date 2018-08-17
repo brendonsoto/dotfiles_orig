@@ -69,6 +69,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Set JSON-like files to use json syntax highlighting
 autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
 
+" Set .Xmonad-related files to use Haskell syntax highlighting
+autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
+
 " Highlight TODO, FIXME, NOTE
 autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
 autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')

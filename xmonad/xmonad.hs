@@ -10,7 +10,7 @@ main = do
 
     xmonad $ xfceConfig
         { terminal = "xfce4-terminal"
-	, manageHook = manageDocks <+> manageHook xfceConfig
+        , manageHook = manageDocks <+> manageHook xfceConfig
         , layoutHook = avoidStruts $ layoutHook xfceConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
