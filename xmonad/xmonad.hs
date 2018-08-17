@@ -9,7 +9,7 @@ main = do
     xmproc <- spawnPipe "xmobar"
 
     xmonad $ xfceConfig
-        { terminal = "xfce4-terminal"
+        { terminal = "urxvt"
         , manageHook = manageDocks <+> manageHook xfceConfig
         , layoutHook = avoidStruts $ layoutHook xfceConfig
         , logHook = dynamicLogWithPP $ xmobarPP

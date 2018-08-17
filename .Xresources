@@ -1,5 +1,5 @@
 URxvt.font: xft:Monospace Regular:pixelsize=14
-URxvt.letterSpace: -1
+URxvt.letterSpace: -3
 
 URxvt*foreground: white
 URxvt*background: black
