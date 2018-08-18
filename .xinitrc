@@ -38,43 +38,44 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-get_session(){
-	local dbus_args=(--sh-syntax --exit-with-session)
-	case "$SESSION" in
-		xmonad) dbus_args+=(xmonad) ;;
-		awesome) dbus_args+=(awesome) ;;
-		bspwm) dbus_args+=(bspwm-session) ;;
-		budgie) dbus_args+=(budgie-desktop) ;;
-		cinnamon) dbus_args+=(cinnamon-session) ;;
-		deepin) dbus_args+=(startdde) ;;
-		enlightenment) dbus_args+=(enlightenment_start) ;;
-		fluxbox) dbus_args+=(startfluxbox) ;;
-		gnome) dbus_args+=(gnome-session) ;;
-		i3|i3wm) dbus_args+=(i3 --shmlog-size 0) ;;
-		jwm) dbus_args+=(jwm) ;;
-		kde) dbus_args+=(startkde) ;;
-		lxde) dbus_args+=(startlxde) ;;
-		lxqt) dbus_args+=(lxqt-session) ;;
-		mate) dbus_args+=(mate-session) ;;
-		xfce) dbus_args+=(xfce4-session) ;;
-		openbox) dbus_args+=(openbox-session) ;;
-		*) dbus_args+=("$SESSION") ;;
-	esac
-
-	echo "dbus-launch ${dbus_args[*]}"
-}
-
-exec $(get_session)
+# get_session(){
+# 	local dbus_args=(--sh-syntax --exit-with-session)
+# 	case "$SESSION" in
+# 		xmonad) dbus_args+=(xmonad) ;;
+# 		awesome) dbus_args+=(awesome) ;;
+# 		bspwm) dbus_args+=(bspwm-session) ;;
+# 		budgie) dbus_args+=(budgie-desktop) ;;
+# 		cinnamon) dbus_args+=(cinnamon-session) ;;
+# 		deepin) dbus_args+=(startdde) ;;
+# 		enlightenment) dbus_args+=(enlightenment_start) ;;
+# 		fluxbox) dbus_args+=(startfluxbox) ;;
+# 		gnome) dbus_args+=(gnome-session) ;;
+# 		i3|i3wm) dbus_args+=(i3 --shmlog-size 0) ;;
+# 		jwm) dbus_args+=(jwm) ;;
+# 		kde) dbus_args+=(startkde) ;;
+# 		lxde) dbus_args+=(startlxde) ;;
+# 		lxqt) dbus_args+=(lxqt-session) ;;
+# 		mate) dbus_args+=(mate-session) ;;
+# 		xfce) dbus_args+=(xfce4-session) ;;
+# 		openbox) dbus_args+=(openbox-session) ;;
+# 		*) dbus_args+=("$SESSION") ;;
+# 	esac
+#
+# 	echo "dbus-launch ${dbus_args[*]}"
+# }
+#
+# exec $(get_session)
+exec xmonad
 
 # launch the external 60 second clock, and launch the workspace status bar
-FG='#a8a3f7' 
-BG='#3f3c6d' 
-xmonad-clock | dzen2 -e '' -x 400 -w 1200 -ta r -fg $FG -bg $BG &
-
-xmonad &
-
-# wait for xmonad
-wait $!
-pkill -HUP dzen2
-pkill -HUP -f xmonad-clock
-wait
+# FG='#a8a3f7' 
+# BG='#3f3c6d' 
+# xmonad-clock | dzen2 -e '' -x 400 -w 1200 -ta r -fg $FG -bg $BG &
+#
+# xmonad &
+#
+# # wait for xmonad
+# wait $!
+# pkill -HUP dzen2
+# pkill -HUP -f xmonad-clock
+# wait
