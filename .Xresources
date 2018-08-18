@@ -1,10 +1,8 @@
-URxvt.font: xft:Monospace Regular:pixelsize=14
-URxvt.letterSpace: -3
-
+! Colors!
 URxvt*foreground: white
 URxvt*background: black
 
-! Gruvbox
+! Colors -- Gruvbox
 *color0:  #282828
 *color1:  #cc241d
 *color2:  #98971a
@@ -21,3 +19,10 @@ URxvt*background: black
 *color13: #d3869b
 *color14: #8ec07c
 *color15: #ebdbb2
+
+! Font
+URxvt.font: xft:Monospace Regular:pixelsize=14
+URxvt.letterSpace: -3
+
+! Scroll
+URxvt.scrollBar: False

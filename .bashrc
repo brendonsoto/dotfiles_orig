@@ -30,6 +30,7 @@ alias reload=". ~/.bashrc"
 
 # Useful Commands
 alias ls='ls -aFG --color' # list hidden files; add colors and file type
+alias rm='rm -i' # always ask, just in case
 
 # Git shortcuts
 alias gbr='git branch --sort=-committerdate | head -5'

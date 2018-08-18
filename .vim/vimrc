@@ -146,7 +146,7 @@ map <Leader>F :echo expand("%")<CR>
 
 " Easy open, close, and save
 nnoremap <Leader>e :e<Space>
-nnoremap <Leader>v :vs 
+nnoremap <Leader>v :vs
 nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -171,6 +171,9 @@ map k gk
 " Buffer switching
 nnoremap <Leader>] :bn<CR>
 nnoremap <Leader>[ :bp<CR>
+
+" Remove trailing whitespace
+nmap <Leader>W :%s/ \+$//<CR>
 
 " miniBufExplr
 nnoremap <Leader>b :MBEToggle<CR>

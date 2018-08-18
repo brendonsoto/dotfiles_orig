@@ -66,16 +66,3 @@ fi
 #
 # exec $(get_session)
 exec xmonad
-
-# launch the external 60 second clock, and launch the workspace status bar
-# FG='#a8a3f7' 
-# BG='#3f3c6d' 
-# xmonad-clock | dzen2 -e '' -x 400 -w 1200 -ta r -fg $FG -bg $BG &
-#
-# xmonad &
-#
-# # wait for xmonad
-# wait $!
-# pkill -HUP dzen2
-# pkill -HUP -f xmonad-clock
-# wait
