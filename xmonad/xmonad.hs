@@ -19,4 +19,8 @@ main = do
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         } `additionalKeys`
-        [ ((mod4Mask, xK_p), spawn "dmenu_run") ]
+        [ ((mod4Mask, xK_p), spawn "dmenu_run")
+        , ((0       , 0x1008FF13), spawn "pulseaudio-ctl up")
+        , ((0       , 0x1008FF11), spawn "pulseaudio-ctl down")
+        , ((0       , 0x1008FF12), spawn "pulseaudio-ctl mute")
+        ]

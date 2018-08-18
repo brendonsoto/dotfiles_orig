@@ -16,8 +16,9 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                      , Run StdinReader
                      , Run Swap [] 10
                      -- , Run ThermalZone 0 [] 10
+                     , Run Com "pulseaudio-ctl" ["current"] "vol" 10
                      ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% } %cpu% | %memory% * %swap% | %wlp4s0% | %locks% { %battery% | <fc=#ee9a00>%date%</fc>"
+        , template = "%StdinReader% } %cpu% | %memory% * %swap% | %wlp4s0% | %locks% { %vol% | %battery% | <fc=#ee9a00>%date%</fc>"
         }
