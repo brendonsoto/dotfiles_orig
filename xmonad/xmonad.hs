@@ -15,7 +15,7 @@ main = do
         , layoutHook = avoidStruts $ layoutHook xfceConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "green" "" . shorten 50
+                        , ppTitle = xmobarColor "lightblue" "" . shorten 50
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         } `additionalKeys`

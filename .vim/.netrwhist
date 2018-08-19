@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/bsoto/development/workarea/_scripts'
-let g:netrw_dirhist_2='/Users/bsoto/development/workarea/lmextractors'
-let g:netrw_dirhist_3='/Users/bsoto/development/workarea/lmextractors/grb'
-let g:netrw_dirhist_4='/Users/bsoto/development/workarea/grb/grb-migrations/target/classes/com/nhl/grb/migrations/v1_17'
-let g:netrw_dirhist_5='/Users/bsoto/development/workarea/grb/grb-migrations/src/main/resources/com/nhl/grb/migrations/v1_17'
-let g:netrw_dirhist_6='/Users/bsoto/development/workarea/lmextractors/grb'
-let g:netrw_dirhist_7='/Users/bsoto/development/workarea/grb/grb-migrations/src/main/resources/com/nhl/grb/migrations/v1_17'
-let g:netrw_dirhist_8='/Users/bsoto/development/workarea/ITS/WebServer/www/projects/ice3-stats/views/layouts/statsDisplay/components/toolbar/components/reportOptions/components/gameTypeSelect'
-let g:netrw_dirhist_9='/Users/bsoto/development/workarea/ITS/WebServer/www/projects/ice3-stats/views/layouts/statsDisplay/components/toolbar/components/reportOptions/components'
+let g:netrw_dirhist_cnt =0
