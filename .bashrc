@@ -16,14 +16,11 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 #             Aliases
 ##########################################
 
-# Web 
-alias web="cd ~/Sites"
-alias apache="cd /usr/local/apache2"
-alias mySite="web; cd mySite"
 
 # Programming Aliases
-alias prog="cd ~/Documents/Programming"
+alias prog="cd ~/Programming"
 alias js="prog; cd JavaScript"
+alias hs="prog; cd Haskell"
 
 # Reload
 alias reload=". ~/.bashrc"
