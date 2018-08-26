@@ -1,4 +1,3 @@
-! Colors!
 URxvt*foreground: white
 URxvt*background: black
 
@@ -21,8 +20,8 @@ URxvt*background: black
 *color15: #ebdbb2
 
 ! Font
-URxvt.font: xft:Monospace Regular:pixelsize=14
-URxvt.letterSpace: -3
+URxvt.font: xft:Terminus:pixelsize=18
+! URxvt.letterSpace: -3
 
 ! Scroll
 URxvt.scrollBar: False
