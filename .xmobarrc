@@ -4,7 +4,7 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
         , bgColor = "black"
         , fgColor = "grey"
         , position = TopW L 100
-        , commands = [ Run Battery ["-L","15","--normal","green","-l","red","-t","Batt: <watts>W : <left>% : <timeleft>"] 10
+        , commands = [ Run Battery ["-L","15","--normal","green","-l","red","-t","Batt: <left>% == TimeLeft: <timeleft>"] 10
                      -- , Run Brightness ["-t", "Brightness: <percent>%"] 60
                      -- , Run Brightness [ "-t", "<ipat>" , "--" , "--brightness-icon-pattern", "<icon=bright_%%.xpm/>" ] 30
                      , Run Cpu ["-L","15","-H","50","--normal","green","--high","red","-w","3"] 10
@@ -12,7 +12,7 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                      , Run Date "%a %b %_d %Y %I:%M:%S %p" "date" 10
                      , Run Locks
                      , Run Memory ["-t","Mem: <usedratio>%"] 10
-                     , Run Network "wlp4s0" ["-L","0","-H","32","--normal","green","--high","red","-w","3"] 10
+                     , Run Network "wlp2s0" ["-L","0","-H","32","--normal","green","--high","red","-w","3"] 10
                      , Run StdinReader
                      , Run Swap [] 10
                      -- , Run ThermalZone 0 [] 10
@@ -20,5 +20,5 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                      ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% } %cpu% | %memory% * %swap% | %wlp4s0% | %locks% { %vol% | %battery% | <fc=#ee9a00>%date%</fc>"
+        , template = "%StdinReader% } %cpu% | %memory% * %swap% | %wlp2s0% | %locks% { %vol% | %battery% | <fc=#ee9a00>%date%</fc>"
         }

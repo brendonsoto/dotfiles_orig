@@ -2,8 +2,10 @@ I GOT IT WORKING!!! (with xfce)
 
 [[Gnome Tryouts]]
 
-= TODO =
-- *Received error while trying to log out* Could not get owner of name 'org.xfce.SessionManager': no such name
+= FIXME =
+Apparently I've been doing it the wrong way according to [this]( https://wiki.archlinux.org/index.php/Xfce#Use_a_different_window_manager ).
+
+
 
 = Xfce =
 My "for-dummy (me)" listing
