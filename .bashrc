@@ -17,17 +17,11 @@ export PATH="${PATH}:/home/brendon/.yarn/bin"
 #             Aliases
 ##########################################
 
-
-# Programming Aliases
-alias prog="cd ~/Programming"
-alias js="prog; cd JavaScript"
-alias hs="prog; cd Haskell"
-
 # Reload
 alias reload=". ~/.bashrc"
 
 # Useful Commands
-alias ls='ls -aFG --color' # list hidden files; add colors and file type
+alias ls='ls -aFG' # list hidden files; add colors and file type
 alias rm='rm -i' # always ask, just in case
 alias wifiSearch='sudo iw dev wlp2s0 scan | less -pSSID'
 
