@@ -10,9 +10,9 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                      , Run Cpu ["-L","15","-H","50","--normal","green","--high","red","-w","3"] 10
                      -- , Run CpuFreq [] 10
                      , Run Date "%a %b %_d %Y %I:%M:%S %p" "date" 10
-                     , Run Locks
+                     -- , Run Locks
                      , Run Memory ["-t","Mem: <usedratio>%"] 10
-                     , Run Network "wlp2s0" ["-L","0","-H","32","--normal","green","--high","red","-w","3"] 10
+                     -- , Run Network "wlp2s0" ["-L","0","-H","32","--normal","green","--high","red","-w","3"] 10
                      , Run StdinReader
                      , Run Swap [] 10
                      -- , Run ThermalZone 0 [] 10
@@ -20,5 +20,5 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
                      ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% } %cpu% | %memory% * %swap% | %wlp2s0% | %locks% { %vol% | %battery% | <fc=#ee9a00>%date%</fc>"
+        , template = "%StdinReader% } %cpu% | %memory% * %swap% { %vol% | %battery% | <fc=#ee9a00>%date%</fc>"
         }

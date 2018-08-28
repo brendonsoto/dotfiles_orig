@@ -1,7 +1,5 @@
 # Ignore folders 
 .DS_Store
-/.netrwhist
-./netrwhist/**
+.netrwhist
 ./undo/**
 plugged
-./.vim/.netrwhist
