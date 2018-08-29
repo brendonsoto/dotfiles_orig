@@ -21,6 +21,7 @@ Apparently I've been doing it the wrong way according to [this]( https://wiki.ar
 11. Log in
 12. If xmonad is running feel free to re-enable saving sessions
 
+- Adding a quick note: talked with Greg about `dbus`. He mentions its not worth looking into as its in X-land (the window system)
 
 = Xfce + xmonad without Xfce as display manager =
 _This is to have just xmonad, no display manager_
