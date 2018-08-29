@@ -1,0 +1,21 @@
+= What am I looking for =
+- Tenkeyless or 60%
+  - I think I like 60% more, but tenkeyless is definitely more versatile unless if it's a programmable one where I can make something like Fn + h/j/k/l = up/down/left/right
+  - On second thought, while 60% would be cool I don't want to deal with having to memorize new configuration/key commands. I do that enough with vim
+
+= Options =
+I like this one a lot [Varmilo VA87M]( https://shopkey.doyustudio.com/7l1wlsw-bb )
+^I like the key caps on it a lot. That's the only thing. 
+
+Pok3r looks nice too. Supports OS X, Linux, & Windows. Seems *programmable* too!
+Like this one: https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3633
+
+There's also [this]( https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3684 ) for $100.
+^Apparently it's *programmable* as well
+
+[This] ( https://www.amazon.com/Filco-Majestouch-2-Tenkeyless-FKBN87M-EFB2/dp/B004ZJPSGI/ref=lp_7936803011_1_2?srs=7936803011&ie=UTF8&qid=1535552224&sr=8-2 )
+also looks appealing. Tenkeyless, cherry mx brown, but price is meh, Got a lot of good reviews on amazon & reddit though
+
+I like this one a lot. Cherry mx, tkl, from US
+https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=914
+^^^ Go with this one. 
