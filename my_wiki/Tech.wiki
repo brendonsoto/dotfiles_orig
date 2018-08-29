@@ -7,7 +7,8 @@
 [[Haskell]]
 [[Xmonad]]
 [[X11]]
+[[Keyboards]]
 
 == Keyboards ==
 I like this one a lot [Varmilo VA87M]( https://shopkey.doyustudio.com/7l1wlsw-bb )
-Pok3r looks nice too
+Pok3r looks nice too. Supports OS X, Linux, & Windows
