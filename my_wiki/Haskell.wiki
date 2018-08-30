@@ -4,6 +4,7 @@
 = Learning Guide For Myself =
 - [ ] Go through HaskellBook
 - [ ] Try some of the Elements of Computing System bits with Haskell
+- [ ] Learn Linux better
 - [ ] Learn Nix
 - [ ] Maybe check out NixOS
 - [ ] Learn Math
