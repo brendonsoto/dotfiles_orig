@@ -2,7 +2,7 @@ import XMonad
 import XMonad.Config.Xfce
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Util.Run(spawnPipe)
 import System.IO
 
@@ -18,9 +18,13 @@ main = do
                         , ppTitle = xmobarColor "lightblue" "" . shorten 50
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
-        } `additionalKeys`
-        [ ((mod4Mask, xK_p), spawn "dmenu_run")
-        , ((0       , 0x1008FF13), spawn "pulseaudio-ctl up")
-        , ((0       , 0x1008FF11), spawn "pulseaudio-ctl down")
-        , ((0       , 0x1008FF12), spawn "pulseaudio-ctl mute")
-        ]
+        } `additionalKeysP` myKeys
+        
+
+myKeys = [ ("M-p", spawn "dmenu_run")
+         , ("M-<F10>", spawn "pulseaudio-ctl mute")
+         , ("M-<F11>", spawn "pulseaudio-ctl down")
+         , ("M-<F12>", spawn "pulseaudio-ctl up")
+         , ("M-<F5>", spawn "light -U 5")
+         , ("M-<F6>", spawn "light -A 5")
+         ]

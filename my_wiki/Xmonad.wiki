@@ -2,7 +2,7 @@ I GOT IT WORKING!!! (with xfce)
 
 [[Gnome Tryouts]]
 
-= FIXME =
+= Xmonad on XFCE (no display manager) =
 Apparently I've been doing it the wrong way according to [this]( https://wiki.archlinux.org/index.php/Xfce#Use_a_different_window_manager ).
 1. Download:
    - GHC
@@ -23,11 +23,8 @@ Apparently I've been doing it the wrong way according to [this]( https://wiki.ar
 
 - Adding a quick note: talked with Greg about `dbus`. He mentions its not worth looking into as its in X-land (the window system)
 
-= Xfce + xmonad without Xfce as display manager =
-_This is to have just xmonad, no display manager_
 
-
-= Xfce-OLD =
+= Xfce managing xmonad =
 My "for-dummy (me)" listing
 _Note this requires the `monad.hs` and `xmonad.desktop` files in your `dotfiles` repo_
 1. Download:
@@ -51,9 +48,17 @@ _Note this requires the `monad.hs` and `xmonad.desktop` files in your `dotfiles`
 12. While still in the *Xfce Settings Manager* go to *Session and Startup -> Application Autostart* (it's a tab) and add an entry for xmonad with the command `xmonad --replace` (make sure it's checked)
 13. Run `xmonad --replace` and you should be set!
 
+
+= Getting media keys to work =
+On Xfce look in _/usr/include/X11/XF86keysym.h_ for the keycodes for media keys.
+Rather, check this out! https://hackage.haskell.org/package/xmonad-contrib-0.13/docs/XMonad-Util-EZConfig.html#v:mkKeymap
+Actually, even better: https://hackage.haskell.org/package/xmonad-contrib-0.13/docs/XMonad-Util-EZConfig.html#g:3 
+
+
 == Resources ==
 In no order
 - Basic guide :: https://wiki.haskell.org/Xmonad/Using_xmonad_in_XFCE#Configuring_XMonad_to_work_with_Xfce
 - xfce4-session-logout problem :: https://forum.xfce.org/extern.php?action=feed&tid=10099&type=rss
 - More straightforward basic guide :: http://arjuna.deltoso.net/index.html%3Fp=242.html
 - xmobar :: https://archives.haskell.org/projects.haskell.org/xmobar/#running-xmobar
+- Right way to do it w/o display manager https://wiki.archlinux.org/index.php/Xfce#Use_a_different_window_manager
