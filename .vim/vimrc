@@ -94,7 +94,7 @@ filetype plugin indent on " Enable file detection and load any plugins for them
 
 " Colorscheme
 syntax enable
-colorscheme space-vim-dark
+colorscheme gruvbox
 
 set autoindent " allow autoindent by default
 set background=dark
@@ -240,8 +240,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \ 'javascript': ['prettier']
 \}
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 0
 
 " Emmet
 let g:user_emmet_settings = {
