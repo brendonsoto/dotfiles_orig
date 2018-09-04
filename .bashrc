@@ -47,6 +47,9 @@ alias gp='git push'
 alias gm="git merge"
 alias gmap='gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp'
 alias gcp='git cherry-pick'
+mergeOrigin() {
+  git merge origin/$1
+}
 
 # Haskell
 alias ghci='stack ghci'
