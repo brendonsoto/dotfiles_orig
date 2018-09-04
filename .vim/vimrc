@@ -10,41 +10,51 @@ set nocompatible
 " Vim-Plug - Manage Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': ['php'] }
-Plug 'easymotion/vim-easymotion'
-Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
-Plug 'fholgado/minibufexpl.vim'
-Plug 'godlygeek/tabular'
-Plug 'hail2u/vim-css3-syntax'
-Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'vimwiki'] }
-Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'mattn/emmet-vim'
-Plug 'mattn/webapi-vim' " Emmet depends on this
-Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
-Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
-Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
-Plug 'PProvost/vim-markdown-jekyll', { 'for': ['markdown', 'yaml'] }
-Plug 'SirVer/ultisnips'
-Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'tmhedberg/matchit', { 'for': ['HTML', 'php', 'javascript', 'javascript.jsx'] }
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-jdaddy', { 'for': ['json', 'javascript'] }
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'valloric/youcompleteme'
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'vimwiki/vimwiki'
-Plug 'w0rp/ale'
-Plug 'WolfgangMehner/c-support', { 'for': ['c', 'c++'] }
-
 " Colors!!
 Plug 'liuchengxu/space-vim-dark'
 Plug 'morhetz/gruvbox'
+
+" CSS
+Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'javascript', 'javascript.jsx'] }
+
+" External plugin support
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+
+" Javascript & related
+Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
+Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
+Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
+
+" Markdown
+Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'vimwiki'] }
+
+" Ruby
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+
+" Web general
+Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
+Plug 'mattn/emmet-vim', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
+
+" Vim general
+Plug 'easymotion/vim-easymotion'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'godlygeek/tabular'
+Plug 'itchyny/lightline.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'SirVer/ultisnips'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'valloric/youcompleteme'
+Plug 'vimwiki/vimwiki'
+Plug 'w0rp/ale'
 
 call plug#end()
 

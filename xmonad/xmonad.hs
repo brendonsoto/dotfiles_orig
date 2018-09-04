@@ -25,6 +25,6 @@ myKeys = [ ("M-p", spawn "dmenu_run")
          , ("M-<F10>", spawn "pulseaudio-ctl mute")
          , ("M-<F11>", spawn "pulseaudio-ctl down")
          , ("M-<F12>", spawn "pulseaudio-ctl up")
-         , ("M-<F5>", spawn "light -U 5")
-         , ("M-<F6>", spawn "light -A 5")
+         , ("M-<F1>", spawn "light -U 5")
+         , ("M-<F2>", spawn "light -A 5")
          ]

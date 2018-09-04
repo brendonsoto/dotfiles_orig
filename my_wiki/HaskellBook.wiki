@@ -7,3 +7,4 @@
 [[Chapter 7 - More functional patterns]]
 [[Chapter 8 - Recursion]]
 [[Chapter 9 - Lists]]
+[[Chapter 14 - Testing]]

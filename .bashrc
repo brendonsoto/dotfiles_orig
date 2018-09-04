@@ -32,10 +32,15 @@ alias rm='rm -i' # always ask, just in case
 # Git shortcuts
 alias gbr='git branch --sort=-committerdate | head -5'
 alias gcm='git checkout master'
+alias gf='git fetch'
 alias gfam='gcm; git fetch && git merge origin/master'
 alias gp='git push'
+alias gm='git merge'
 alias gmap='gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp'
 alias gcp='git cherry-pick'
+mergeOrigin() {
+  git merge origin/$1
+}
 
 # Haskell
 alias ghci='stack ghci'
