@@ -40,6 +40,7 @@ Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 
 " Vim general
+Plug 'autozimu/LanguageClient-neovim', { 'for': 'haskell', 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'easymotion/vim-easymotion'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'godlygeek/tabular'

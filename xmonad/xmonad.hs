@@ -11,11 +11,14 @@ main = do
 
     xmonad $ xfceConfig
         { terminal = "urxvt"
+        , borderWidth = 2
+        , focusedBorderColor = "#6fc3df"
+        , normalBorderColor = "#14191f"
         , manageHook = manageDocks <+> manageHook xfceConfig
         , layoutHook = avoidStruts $ layoutHook xfceConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "lightblue" "" . shorten 50
+                        , ppTitle = xmobarColor "#aec2e0" "" . shorten 50
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         } `additionalKeysP` myKeys
