@@ -13,6 +13,8 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # NHL
 export NHL_ROOT="$HOME/development/workarea"
+export GRB_HOME="$NHL_ROOT/grb"
+export GRB_HOME_UI="$NHL_ROOT/grb-ui"
 export PATH="${PATH}:$NHL_ROOT/de/bin:/usr/local/mysql/bin"
 export NODE_EXTRA_CA_CERTS="$HOME/certs/nhl_rootca_bundle.pem"
 export PATH="${PATH}:$NHL_ROOT/_scripts"
