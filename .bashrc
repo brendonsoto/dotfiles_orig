@@ -6,9 +6,7 @@
 export EDITOR=nvim
 set -o vi
 
-# To ensure terminal is using 256 colors
-export PATH="/usr/local/bin:$PATH"
-
+# TODO Replace with ripgrep
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 
@@ -28,6 +26,7 @@ alias reload=". ~/.bashrc"
 # Useful Commands
 alias ls='ls -aFG --color' # list hidden files; add colors and file type
 alias rm='rm -i' # always ask, just in case
+alias wifiSearch='sudo iw dev wlp2s0 scan | less -pSSID'
 
 # Git shortcuts
 alias gbr='git branch --sort=-committerdate | head -5'
@@ -38,7 +37,7 @@ alias gp='git push'
 alias gm='git merge'
 alias gmap='gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp'
 alias gcp='git cherry-pick'
-mergeOrigin() {
+gmo() {
   git merge origin/$1
 }
 
@@ -53,14 +52,13 @@ alias vim='nvim'
 ##########################################
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
+[ -f /usr/share/bash-completion/completions/pass ] && source /usr/share/bash-completion/completions/pass
 
 export HISTCONTROL=ignoredups
 
 findXRecentlyModified() {
   find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -$1 | cut -f2- -d" "
 }
-
-# source /usr/local/etc/bash_completion.d/pass
 
 
 ##########################################
@@ -78,10 +76,6 @@ fe() {
 ##########################################
 # Launch an aquarium on startup!
 asciiquarium
-
-# For better color support
-export CLICOLOR=1
-# export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Bash Colors
 export PS1="\[\033[38;5;45m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput sgr0)\]\[\033[38;5;178m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"

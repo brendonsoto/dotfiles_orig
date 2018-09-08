@@ -5,7 +5,7 @@ Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
         , fgColor = "#6fc3df"
         , position = TopW L 100
         , commands = [ Run Battery ["-L","15","-l","#cc4455","-t","<fc=#aec2e0>Batt:</fc> <left>% <fc=#aec2e0>== TimeLeft:</fc> <timeleft>"] 60
-                     , Run Com "light" ["-H","80","-h","#cc4455"] "light" 10
+                     , Run Com "light" [] "light" 10
                      , Run Com "pulseaudio-ctl" ["current","-H","80","-h","#cc4455"] "vol" 10
                      , Run Cpu ["-L","15","-H","50","--high","#cc4455","-w","3","-t","<fc=#aec2e0>Cpu:</fc> <total><fc=#aec2e0>%</fc>"] 10
                      , Run Date "%a %b %_d %Y %I:%M:%S %p" "date" 10

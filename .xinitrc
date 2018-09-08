@@ -30,3 +30,4 @@ if [ -f "$usermodmap" ]; then
 fi
 
 exec xmonad
+pgrep redshift &> /dev/null || redshift &> /dev/null &
