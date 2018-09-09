@@ -1,21 +1,18 @@
-Config { font = "-misc-fixed-*-*-*-*-13-*-*-*-*-*-*-*"
-        , borderColor = "black"
+Config { font = "xft:xos4 Terminus:size=12"
+        , borderColor = "#282828"
         , border = TopB
-        , bgColor = "#14191f"
-        , fgColor = "#6fc3df"
+        , bgColor = "#282828"
+        , fgColor = "#ebdbb2"
         , position = TopW L 100
-        , commands = [ Run Battery ["-L","15","-l","#cc4455","-t","<fc=#aec2e0>Batt:</fc> <left>% <fc=#aec2e0>== TimeLeft:</fc> <timeleft>"] 60
-                     , Run Com "light" [] "light" 10
-                     , Run Com "pulseaudio-ctl" ["current","-H","80","-h","#cc4455"] "vol" 10
-                     , Run Cpu ["-L","15","-H","50","--high","#cc4455","-w","3","-t","<fc=#aec2e0>Cpu:</fc> <total><fc=#aec2e0>%</fc>"] 10
+        , commands = [ Run Battery ["-L","15","-l","#fb4934","-t","Batt: <fc=#d3896b><left></fc>%"] 60
+                     , Run Com "pulseaudio-ctl" ["current","-H","80","-h","#fb4934"] "vol" 10
+                     , Run Cpu ["-L","15","-H","50","--high","#fb4934","-w","3","-t","Cpu: <fc=#d3896b><total></fc>%"] 10
                      , Run Date "%a %b %_d %Y %I:%M:%S %p" "date" 10
-                     , Run Memory ["-H","80","-h","#cc4455","-t","<fc=#aec2e0>Mem:</fc> <usedratio><fc=#aec2e0>%</fc>"] 10
-                     , Run Network "wlp2s0" ["-L","0","-H","32","--high","#cc4455","-w","3","-t","<fc=#aec2e0><dev>:</fc> <rx><fc=#aec2e0>KB</fc>|<tx><fc=#aec2e0>KB</fc>"] 10
+                     , Run Memory ["-H","80","-h","#fb4934","-t","Mem: <fc=#d3896b><usedratio></fc>%"] 10
+                     , Run Network "wlp2s0" ["-L","0","-H","32","--high","#fb4934","-w","3","-t","<fc=#d3896b><dev></fc>: <fc=#d3896b><rx></fc>KB|<fc=#d3896b><tx></fc>KB"] 10
                      , Run StdinReader
-                     , Run Swap ["-H","80","-h","#cc4455","-t","<fc=#aec2e0>Swap:</fc> <usedratio><fc=#aec2e0>%</fc>"] 10
-                     , Run ThermalZone 0 ["-H","32","-h","#cc4455","-t","<temp><fc=#aec2e0>C</fc>"] 30
                      ]
         , sepChar = "$"
         , alignSep = "}{"
-        , template = "$StdinReader$ } $cpu$ | $memory$ * $swap$ | $thermal0$ | $wlp2s0$ { <fc=#aec2e0>Brightness:</fc> $light$% | <fc=#aec2e0>Vol:</fc> $vol$ | $battery$ | <fc=#aec2e0>$date$</fc>"
+        , template = "$cpu$ | $memory$ | $wlp2s0$ } $StdinReader$ { Vol: <fc=#d3896b>$vol$</fc> | $battery$ | $date$"
         }

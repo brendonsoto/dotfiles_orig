@@ -10,15 +10,15 @@ main = do
     xmproc <- spawnPipe "xmobar"
 
     xmonad $ xfceConfig
-        { terminal = "urxvt"
+        { terminal = "alacritty"
         , borderWidth = 2
-        , focusedBorderColor = "#6fc3df"
-        , normalBorderColor = "#14191f"
+        , focusedBorderColor = "#83a598"
+        , normalBorderColor = "#282828"
         , manageHook = manageDocks <+> manageHook xfceConfig
         , layoutHook = avoidStruts $ layoutHook xfceConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "#aec2e0" "" . shorten 50
+                        , ppTitle = xmobarColor "#83a598" "" . shorten 50
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         } `additionalKeysP` myKeys
