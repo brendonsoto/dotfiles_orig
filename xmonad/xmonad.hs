@@ -1,7 +1,8 @@
 import XMonad
-import XMonad.Config.Xfce
+import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Layout.NoBorders (smartBorders)
 import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Util.Run(spawnPipe)
 import System.IO
@@ -9,13 +10,13 @@ import System.IO
 main = do
     xmproc <- spawnPipe "xmobar"
 
-    xmonad $ xfceConfig
+    xmonad $ desktopConfig
         { terminal = "alacritty"
         , borderWidth = 2
         , focusedBorderColor = "#83a598"
         , normalBorderColor = "#282828"
-        , manageHook = manageDocks <+> manageHook xfceConfig
-        , layoutHook = avoidStruts $ layoutHook xfceConfig
+        , manageHook = manageDocks <+> manageHook desktopConfig
+        , layoutHook = smartBorders . avoidStruts $ layoutHook desktopConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "#83a598" "" . shorten 50
