@@ -29,5 +29,6 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+redshift &
+pulseaudio --start &
 exec xmonad
-pgrep redshift &> /dev/null || redshift &> /dev/null &
