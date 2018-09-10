@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 " Colors!!
 Plug 'liuchengxu/space-vim-dark'
-Plug 'morhetz/gruvbox'
+Plug 'brendonsoto/gruvbox'
 
 " CSS
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'javascript', 'javascript.jsx'] }
@@ -23,6 +23,11 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+" Plug 'autozimu/LanguageClient-neovim', {
+"       \ 'for': 'haskell',
+"       \ 'branch': 'next',
+"       \ 'do': './install.sh'
+"       \}
 
 " Javascript & related
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
@@ -40,7 +45,6 @@ Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 
 " Vim general
-Plug 'autozimu/LanguageClient-neovim', { 'for': 'haskell', 'branch': 'next', 'do': 'bash install.sh' }
 Plug 'easymotion/vim-easymotion'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'godlygeek/tabular'
@@ -101,10 +105,12 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 "		General Settings
 """""""""""""""""""""
 
+set termguicolors
 filetype plugin indent on " Enable file detection and load any plugins for them
 
 " Colorscheme
 syntax enable
+let g:gruvbox_italic=1
 colorscheme gruvbox
 
 set autoindent " allow autoindent by default
@@ -262,11 +268,12 @@ let g:user_emmet_settings = {
 " FZF
 let g:fzf_layout = { 'down': '~30%' }
 
+" Haskell IDE Engine
+" set rtp+=/.vim/plugged/LanguageClient-neovim
+" let g:LanguageClient_serverCommands = { 'haskell': ['hie','--lsp'] }
+
 " JSX
 let g:jsx_ext_required = 0
-
-" For MacVim
-let macvim_skip_colorscheme = 1
 
 " Lightline
 set laststatus=2
@@ -277,7 +284,7 @@ let g:lightline = {
   \   'left': [ [ 'mode', 'paste', 'relativepath' ],
   \             [ 'fugitive', 'readonly', 'modified' ] ]
   \ },
-  \ 'colorscheme': 'solarized',
+  \ 'colorscheme': 'gruvbox',
   \ 'component_function': {
   \   'fugitive': 'LightLineFugitive',
   \   'readonly': 'LightLineReadonly',

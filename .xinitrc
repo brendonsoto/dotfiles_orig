@@ -29,4 +29,6 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+redshift &
+pulseaudio --start &
 exec xmonad

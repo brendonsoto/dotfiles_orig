@@ -1,7 +1,8 @@
 import XMonad
-import XMonad.Config.Xfce
+import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Layout.NoBorders (smartBorders)
 import XMonad.Util.EZConfig(additionalKeysP)
 import XMonad.Util.Run(spawnPipe)
 import System.IO
@@ -9,16 +10,16 @@ import System.IO
 main = do
     xmproc <- spawnPipe "xmobar"
 
-    xmonad $ xfceConfig
-        { terminal = "urxvt"
+    xmonad $ desktopConfig
+        { terminal = "alacritty"
         , borderWidth = 2
-        , focusedBorderColor = "#6fc3df"
-        , normalBorderColor = "#14191f"
-        , manageHook = manageDocks <+> manageHook xfceConfig
-        , layoutHook = avoidStruts $ layoutHook xfceConfig
+        , focusedBorderColor = "#83a598"
+        , normalBorderColor = "#282828"
+        , manageHook = manageDocks <+> manageHook desktopConfig
+        , layoutHook = smartBorders . avoidStruts $ layoutHook desktopConfig
         , logHook = dynamicLogWithPP $ xmobarPP
                         { ppOutput = hPutStrLn xmproc
-                        , ppTitle = xmobarColor "#aec2e0" "" . shorten 50
+                        , ppTitle = xmobarColor "#83a598" "" . shorten 50
                         }
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
         } `additionalKeysP` myKeys
