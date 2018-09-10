@@ -23,11 +23,10 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-" Plug 'autozimu/LanguageClient-neovim', {
-"       \ 'for': 'haskell',
-"       \ 'branch': 'next',
-"       \ 'do': './install.sh'
-"       \}
+Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': './install.sh'
+      \}
 
 " Javascript & related
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
@@ -150,6 +149,7 @@ endif
 
 """""""""""""""""""""
 "		Mappings
+" TODO Move plugin mappings to be with plugin configs
 """""""""""""""""""""
 
 " MapLeader
@@ -318,11 +318,24 @@ function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 
+" LSP - LanguageServerProtocol, not LumpySpacePrincess
+" kudos to https://fortes.com/2017/language-server-neovim/
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_serverCommands = {}
+if executable('javascript-typescript-stdio')
+  let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
+  autocmd FileType javascript setlocal omnifunc=LanguageClient#complete
+else
+  echo "javascript-typescript-stdio not installed!\n"
+  :cq
+endif
+
+nnoremap <leader>lt :call LanguageClient_textDocument_hover()<CR>
+nnoremap <leader>ld :call LanguageClient_textDocument_definition()<CR>
+nnoremap <leader>lr :call LanguageClient_textDocument_rename()<CR>
+
 " Rainbow Parenthesis
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-
-" RBENV
-let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
 " SQL -- Reset the Omni Key so I can use CTRL-[ to exit insert mode
 let g:ftplugin_sql_omni_key = '<C-j>'
