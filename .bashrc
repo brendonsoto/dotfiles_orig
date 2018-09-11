@@ -12,6 +12,9 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 # Yarn
 export PATH="${PATH}:/home/brendon/.yarn/bin"
 
+# Rust
+export PATH="${PATH}:$HOME/.cargo/bin"
+
 
 ##########################################
 #             Aliases
