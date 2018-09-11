@@ -9,6 +9,9 @@ set -o vi
 # TODO Replace with ripgrep
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
+# Yarn
+export PATH="${PATH}:/home/brendon/.yarn/bin"
+
 
 ##########################################
 #             Aliases
