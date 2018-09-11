@@ -4,6 +4,7 @@
 
 # TODO: Conditional to check for nvim and use that
 export EDITOR=nvim
+export PATH="${PATH}:/usr/local/bin"
 set -o vi
 
 # TODO Replace with ripgrep
@@ -45,7 +46,7 @@ gmo() {
 alias ghci='stack ghci'
 
 # Vim => NVim (because I keep typing vim)
-alias vim='nvim'
+# alias vim='nvim'
 
 ##########################################
 #             Helpful
