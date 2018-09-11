@@ -9,35 +9,49 @@ set -o vi
 # TODO Replace with ripgrep
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
+# Rust
+export PATH="${PATH}:$HOME/.cargo/bin"
+
 # Yarn
 export PATH="${PATH}:/home/brendon/.yarn/bin"
+
+# NHL
+export NHL_ROOT="$HOME/development/workarea"
+export GRB_HOME="$NHL_ROOT/grb"
+export GRB_HOME_UI="$NHL_ROOT/grb-ui"
+export PATH="${PATH}:$NHL_ROOT/de/bin:/usr/local/mysql/bin"
+export NODE_EXTRA_CA_CERTS="$HOME/certs/nhl_rootca_bundle.pem"
+export PATH="${PATH}:$NHL_ROOT/_scripts"
 
 
 ##########################################
 #             Aliases
 ##########################################
 
-
-# Programming Aliases
-alias prog="cd ~/Programming"
-alias js="prog; cd JavaScript"
-alias hs="prog; cd Haskell"
+# Shortcuts
+alias nhl="cd $NHL_ROOT"
+alias grb="cd $NHL_ROOT/grb/grb-site/src/main/java/com/nhl/grb/site/"
+alias grbui="cd $NHL_ROOT/grb-ui/grb-site-ui/src/main/client"
+alias sl="cd $NHL_ROOT/scoring-lite/scoring-lite-site/src/main"
+alias slui="cd $NHL_ROOT/scoring-lite-ui/scoring-lite-ui/src/main/client"
+alias stats="cd $NHL_ROOT/ITS/Java/ice3-stats/src/main"
+alias statsui="cd $NHL_ROOT/ITS/WebServer/www/projects/ice3-stats"
 
 # Reload
 alias reload=". ~/.bashrc"
 
 # Useful Commands
-alias ls='ls -aFG --color' # list hidden files; add colors and file type
+alias ls='ls -aFG' # list hidden files; add colors and file type
 alias rm='rm -i' # always ask, just in case
 alias wifiSearch='sudo iw dev wlp2s0 scan | less -pSSID'
 
 # Git shortcuts
 alias gbr='git branch --sort=-committerdate | head -5'
 alias gcm='git checkout master'
-alias gf='git fetch'
+alias gf="git fetch"
 alias gfam='gcm; git fetch && git merge origin/master'
 alias gp='git push'
-alias gm='git merge'
+alias gm="git merge"
 alias gmap='gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp'
 alias gcp='git cherry-pick'
 gmo() {
