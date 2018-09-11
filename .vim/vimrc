@@ -24,6 +24,7 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'autozimu/LanguageClient-neovim', {
+      \ 'for': ['javascript', 'javascript.jsx', 'haskell'],
       \ 'branch': 'next',
       \ 'do': './install.sh'
       \}
