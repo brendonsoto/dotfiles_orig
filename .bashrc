@@ -9,6 +9,9 @@ set -o vi
 # TODO Replace with ripgrep
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
+# Rust
+export PATH="${PATH}:$HOME/.cargo/bin"
+
 # NHL
 export NHL_ROOT="$HOME/development/workarea"
 export GRB_HOME="$NHL_ROOT/grb"
