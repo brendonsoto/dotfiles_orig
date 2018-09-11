@@ -24,6 +24,7 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'autozimu/LanguageClient-neovim', {
+      \ 'for': ['javascript', 'javascript.jsx', 'haskell'],
       \ 'branch': 'next',
       \ 'do': './install.sh'
       \}
@@ -328,7 +329,6 @@ if executable('javascript-typescript-stdio')
   autocmd FileType javascript setlocal omnifunc=LanguageClient#complete
 else
   echo "javascript-typescript-stdio not installed!\n"
-  :cq
 endif
 
 nnoremap <leader>lt :call LanguageClient_textDocument_hover()<CR>
