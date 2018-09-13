@@ -1,13 +1,15 @@
 = Tech =
-[[React Native]]
-[[WebdriverIO]]
-[[Laptops]]
-[[React Project Generator?]]
 [[GPG]]
 [[Haskell]]
-[[Xmonad]]
-[[X11]]
+[[JavaScript]]
 [[Keyboards]]
+[[Laptops]]
+[[React Native]]
+[[React Project Generator?]]
+[[Webpack]]
+[[WebdriverIO]]
+[[X11]]
+[[Xmonad]]
 
 == Keyboards ==
 I like this one a lot [Varmilo VA87M]( https://shopkey.doyustudio.com/7l1wlsw-bb )

@@ -331,9 +331,9 @@ else
   echo "javascript-typescript-stdio not installed!\n"
 endif
 
-nnoremap <leader>lt :call LanguageClient_textDocument_hover()<CR>
-nnoremap <leader>ld :call LanguageClient_textDocument_definition()<CR>
-nnoremap <leader>lr :call LanguageClient_textDocument_rename()<CR>
+nnoremap <leader>gh :call LanguageClient_textDocument_hover()<CR>
+nnoremap <leader>gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <leader>gr :call LanguageClient_textDocument_rename()<CR>
 
 " Rainbow Parenthesis
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
