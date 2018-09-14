@@ -1,5 +1,6 @@
 [[Definitions]]
 [[Questions]]
+[[Stack]]
 
 = Learning Guide For Myself =
 - [ ] Go through HaskellBook
