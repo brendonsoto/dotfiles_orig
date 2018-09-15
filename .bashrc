@@ -1,14 +1,28 @@
+# Set bash to use vi commands
+set -o vi
+
 ##########################################
 #             Path Addendums
 ##########################################
 
-# TODO: Conditional to check for nvim and use that
-export EDITOR=nvim
 export PATH="${PATH}:/usr/local/bin"
-set -o vi
 
-# TODO Replace with ripgrep
-export FZF_DEFAULT_COMMAND='ag -g ""'
+# Set editor to either neovim or vim
+if command -v nvim >/dev/null 2>&1
+then
+  export EDITOR=nvim
+else
+  echo "neovim not installed!"
+  export EDITOR=vim
+fi
+
+# Set fzf to use rg
+if command -v rg >/dev/null 2>&1
+then
+  export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob'
+else
+  echo "ripgrep not installed!"
+fi
 
 # Yarn
 export PATH="${PATH}:/home/brendon/.yarn/bin"
@@ -25,9 +39,16 @@ export PATH="${PATH}:$HOME/.cargo/bin"
 alias reload=". ~/.bashrc"
 
 # Useful Commands
-alias ls='ls -aFG' # list hidden files; add colors and file type
 alias rm='rm -i' # always ask, just in case
-alias wifiSearch='sudo iw dev wlp2s0 scan | less -pSSID'
+
+# ls with colors!
+if [ $OSTYPE = "linux-gnu" ]
+then
+  alias ls='ls -aF --color' # list hidden files; add colors and file type
+  alias wifiSearch='sudo iw dev wlp2s0 scan | less -pSSID'
+else
+  alias ls='ls -aFG' # list hidden files; add colors and file type
+fi
 
 # Git shortcuts
 alias gbr='git branch --sort=-committerdate | head -5'
@@ -45,8 +66,6 @@ gmo() {
 # Haskell
 alias ghci='stack ghci'
 
-# Vim => NVim (because I keep typing vim)
-# alias vim='nvim'
 
 ##########################################
 #             Helpful

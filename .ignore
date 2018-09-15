@@ -4,5 +4,6 @@ coverage
 node_modules
 dist
 public
+.stack-work
 tags
 target
