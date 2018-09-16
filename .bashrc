@@ -24,11 +24,11 @@ else
   echo "ripgrep not installed!"
 fi
 
-# Yarn
-export PATH="${PATH}:/home/brendon/.yarn/bin"
-
 # Rust
 export PATH="${PATH}:$HOME/.cargo/bin"
+
+# Yarn
+export PATH="${PATH}:/home/brendon/.yarn/bin"
 
 
 ##########################################

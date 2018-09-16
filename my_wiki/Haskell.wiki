@@ -1,3 +1,4 @@
+[[Cabal]]
 [[Definitions]]
 [[Questions]]
 [[Stack]]
