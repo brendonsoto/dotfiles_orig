@@ -24,7 +24,6 @@ Plug 'mileszs/ack.vim', { 'on' : 'Ack' }
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'autozimu/LanguageClient-neovim', {
-      \ 'for': ['javascript', 'javascript.jsx', 'haskell'],
       \ 'branch': 'next',
       \ 'do': './install.sh'
       \}
@@ -246,8 +245,8 @@ nmap <Leader>wp <Plug>VimwikiPrevLink
 """""""""""""""""""""
 
 " Ack
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('gg')
+  let g:ackprg = 'rg --vimgrep'
 endif
 
 " Ale
@@ -268,10 +267,6 @@ let g:user_emmet_settings = {
 
 " FZF
 let g:fzf_layout = { 'down': '~30%' }
-
-" Haskell IDE Engine
-" set rtp+=/.vim/plugged/LanguageClient-neovim
-" let g:LanguageClient_serverCommands = { 'haskell': ['hie','--lsp'] }
 
 " JSX
 let g:jsx_ext_required = 0
@@ -322,13 +317,26 @@ endfunction
 " LSP - LanguageServerProtocol, not LumpySpacePrincess
 " kudos to https://fortes.com/2017/language-server-neovim/
 let g:LanguageClient_autoStart = 1
+let g:LanguageClient_loggingFile = '/tmp/langClient.log'
+let g:LanguageClient_loggingLevel = 'ERROR'
+let g:LanguageClient_serverStderr = '/tmp/langClient_serverErr.log'
 let g:LanguageClient_serverCommands = {}
+
+" JS/TS detection
 if executable('javascript-typescript-stdio')
-  let g:LanguageClient_serverCommands.javascript = ['javascript-typescript-stdio']
+  let g:LanguageClient_serverCommands['javascript'] = ['javascript-typescript-stdio']
   let g:LanguageClient_serverCommands['javascript.jsx'] = ['javascript-typescript-stdio']
   autocmd FileType javascript setlocal omnifunc=LanguageClient#complete
+  autocmd FileType javascript.jsx setlocal omnifunc=LanguageClient#complete
 else
-  echo "javascript-typescript-stdio not installed!\n"
+  echo 'javascript-typescript-stdio not installed!\n'
+endif
+
+" Haskell detection
+if executable('hie')
+  let g:LanguageClient_serverCommands['haskell'] = ['hie-wrapper']
+else
+  echo 'haskell-ide-engine not installed!\n'
 endif
 
 nnoremap <leader>gh :call LanguageClient_textDocument_hover()<CR>

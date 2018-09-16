@@ -24,6 +24,12 @@ else
   echo "ripgrep not installed!"
 fi
 
+# local bin
+if [ -d "$HOME/.local" ]
+then
+  export PATH="${PATH}:$HOME/.local/bin"
+fi
+
 # Rust
 export PATH="${PATH}:$HOME/.cargo/bin"
 
