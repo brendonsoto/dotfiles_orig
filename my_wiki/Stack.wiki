@@ -1,4 +1,6 @@
-= Stack =
+[[2018-09-15| Stack - A Personal Exploration]]
+
+= Stack -- User Guide =
 _Going through the [User Guide](https://docs.haskellstack.org/en/stable/GUIDE/#stack-test))bj) here..._
 
 == Stack's functions ==
@@ -45,5 +47,3 @@ What's the difference between the extra dependencies and package settings betwee
 `package.yaml` is built upon the `hpack` library
 
 The resolver downloads a `snapshot` which has a version of GHC and a bunch of packages (check stackage.org for more).
-
-
