@@ -19,7 +19,7 @@ fi
 # Set fzf to use rg
 if command -v rg >/dev/null 2>&1
 then
-  export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob'
+  export FZF_DEFAULT_COMMAND='rg --files --follow --ignore-file ~/dotfiles/.ignore'
 else
   echo "ripgrep not installed!"
 fi
@@ -98,16 +98,6 @@ export HISTCONTROL=ignoredups
 
 findXRecentlyModified() {
   find . -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -$1 | cut -f2- -d" "
-}
-
-
-##########################################
-#             Function
-##########################################
-fe() {
-  local files
-  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0))
-  [[ -n "$files" ]] && ${EDITOR:-vim} "${files[@]}"
 }
 
 
