@@ -22,7 +22,6 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Haskell
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'autozimu/LanguageClient-neovim', {
   \ 'for': ['javascript', 'javascript.jsx', 'haskell'],
   \ 'branch': 'next',
@@ -31,7 +30,6 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'parsonsmatt/intero-neovim', { 'for': 'haskell' }
 
 " Javascript & related
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
