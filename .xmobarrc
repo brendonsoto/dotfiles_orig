@@ -4,7 +4,7 @@ Config { font = "xft:xos4 Terminus:size=12"
         , bgColor = "#282828"
         , fgColor = "#ebdbb2"
         , position = TopW L 100
-        , commands = [ Run Battery ["-L","15","-l","#fb4934","-t","Batt: <fc=#d3896b><left></fc>%"] 60
+        , commands = [ Run Battery ["-L","42","-l","#fb4934","-t","Batt: <fc=#d3896b><left></fc>%"] 60
                      , Run Com "pulseaudio-ctl" ["current","-H","80","-h","#fb4934"] "vol" 10
                      , Run Cpu ["-L","15","-H","50","--high","#fb4934","-w","3","-t","Cpu: <fc=#d3896b><total></fc>%"] 10
                      , Run Date "%a %b %_d %Y %I:%M:%S %p" "date" 10
