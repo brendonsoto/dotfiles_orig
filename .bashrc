@@ -50,11 +50,6 @@ export PATH="${PATH}:$NHL_ROOT/de/bin:/usr/local/mysql/bin"
 export NODE_EXTRA_CA_CERTS="$HOME/certs/nhl_rootca_bundle.pem"
 export PATH="${PATH}:$NHL_ROOT/_scripts"
 
-if command -v most > /dev/null 2>&1;
-then
-  export PAGER="most"
-fi
-
 
 ##########################################
 #             Aliases
