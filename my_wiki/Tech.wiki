@@ -10,6 +10,7 @@
 [[WebdriverIO]]
 [[X11]]
 [[Xmonad]]
+[[Zsh Themes]]
 
 == Keyboards ==
 I like this one a lot [Varmilo VA87M]( https://shopkey.doyustudio.com/7l1wlsw-bb )

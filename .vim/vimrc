@@ -221,7 +221,7 @@ nmap <silent> ]j <Plug>(ale_next_wrap)
 nmap <Leader>? <Plug>(ale_detail)
 
 " FZF
-nnoremap <C-a> :Rg<CR>
+nnoremap <Leader>a :Rg<CR>
 nnoremap <C-p> :Files<CR>
 
 " JDaddy
@@ -243,7 +243,6 @@ nmap <Leader>wp <Plug>VimwikiPrevLink
 """""""""""""""""""""
 
 " Ale
-let g:ale_javascript_eslint_use_global = 1
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \}
