@@ -330,11 +330,11 @@ else
 endif
 
 " Haskell detection -- NOTE Disabling for now since it uses up WAY too much cpu power
-" if executable('hie')
-"   let g:LanguageClient_serverCommands['haskell'] = ['hie-wrapper']
-" else
-"   echo 'haskell-ide-engine not installed!\n'
-" endif
+if executable('hie')
+  let g:LanguageClient_serverCommands['haskell'] = ['hie-wrapper']
+else
+  echo 'haskell-ide-engine not installed!\n'
+endif
 
 nnoremap <leader>gh :call LanguageClient_textDocument_hover()<CR>
 nnoremap <leader>gd :call LanguageClient_textDocument_definition()<CR>
