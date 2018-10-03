@@ -56,7 +56,12 @@ export PATH="${PATH}:$NHL_ROOT/_scripts"
 ##########################################
 
 # Reload
-alias reload=". ~/.bashrc"
+if [ -n "$ZSH_VERSION" ]
+then
+  alias reload=". ~/.zshrc"
+else
+  alias reload=". ~/.bashrc"
+fi
 
 # Useful Commands
 alias rm='rm -i' # always ask, just in case
