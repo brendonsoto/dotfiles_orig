@@ -1,4 +1,5 @@
 [[Cabal]]
+[[Confusing Problems]]
 [[Definitions]]
 [[Questions]]
 [[Stack]]
