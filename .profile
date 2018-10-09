@@ -11,9 +11,11 @@ export PATH="${PATH}:/usr/local/bin"
 if command -v nvim >/dev/null 2>&1
 then
   export EDITOR=nvim
+  alias vpu='nvim +PlugUpgrade +PlugUpdate +qa'
 else
   echo "neovim not installed!"
   export EDITOR=vim
+  alias vpu='vim +PlugUpgrade +PlugUpdate +qa'
 fi
 
 # Set fzf to use rg

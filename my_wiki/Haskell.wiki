@@ -18,6 +18,10 @@
 [[Learn You A Haskell]]
 [[HaskellBook]]
 [[Raúl Rojas - A Tutorial Introduction to the Lambda Calculus]]
+[[Soupi's haskell study plan]]
+
+= Articles =
+[[Haskell For All -- Detailed walkthrough...]]
 
 = Project Ideas =
 Text Editor
