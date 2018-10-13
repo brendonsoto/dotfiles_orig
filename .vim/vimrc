@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
 
 " Colors!!
 Plug 'liuchengxu/space-vim-dark'
-Plug 'brendonsoto/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " CSS
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'javascript', 'javascript.jsx'] }
@@ -121,6 +121,8 @@ set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
 set history=50 " command line history
 set hlsearch " highlight search terms
+" modified search based off of gruvbox for readability
+hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
 set ignorecase " ignore case when searching
 set inccommand=split " show changes in a split window for search and replace
 set incsearch " show matches as you type
