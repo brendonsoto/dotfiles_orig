@@ -56,7 +56,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'valloric/youcompleteme'
+Plug 'valloric/youcompleteme', { 'do': 'python3 install.py' }
 Plug 'vimwiki/vimwiki'
 Plug 'w0rp/ale'
 
