@@ -67,6 +67,7 @@ fi
 
 # Useful Commands
 alias rm='rm -i' # always ask, just in case
+alias rg='rg --ignore-file ~/dotfiles/.ignore'
 
 # ls with colors!
 if [ $OSTYPE = "linux-gnu" ]
