@@ -11,17 +11,17 @@ export PATH="${PATH}:/usr/local/bin"
 if command -v nvim >/dev/null 2>&1
 then
   export EDITOR=nvim
-  alias vpu='nvim +PlugUpgrade +PlugUpdate +qa'
+  alias vpu="nvim +PlugUpgrade +PlugUpdate +qa"
 else
   echo "neovim not installed!"
   export EDITOR=vim
-  alias vpu='vim +PlugUpgrade +PlugUpdate +qa'
+  alias vpu="vim +PlugUpgrade +PlugUpdate +qa"
 fi
 
 # Set fzf to use rg
 if command -v rg >/dev/null 2>&1
 then
-  export FZF_DEFAULT_COMMAND='rg --files --follow --ignore-file ~/dotfiles/.ignore'
+  export FZF_DEFAULT_COMMAND="rg --files --follow --ignore-file ~/dotfiles/.ignore"
 else
   echo "ripgrep not installed!"
 fi
@@ -58,6 +58,7 @@ export PATH="${PATH}:$NHL_ROOT/_scripts"
 ##########################################
 
 # Keyboard -- colemak or other
+alias setReg="setxbmap us"
 alias setColemak="xmodmap $HOME/dotfiles/.Xmodmap-colemak"
 alias unsetColemak="xmodmap $HOME/dotfiles/.Xmodmap"
 
@@ -70,38 +71,39 @@ else
 fi
 
 # Useful Commands
-alias rm='rm -i' # always ask, just in case
+alias rm="rm -i" # always ask, just in case
+alias rg="rg --ignore-file ~/dotfiles/.ignore"
 
 # ls with colors!
 if [ $OSTYPE = "linux-gnu" ]
 then
-  alias ls='ls -aF --color' # list hidden files; add colors and file type
-  alias wifiSearch='sudo iw dev wlp2s0 scan | less -pSSID'
+  alias ls="ls -aF --color" # list hidden files; add colors and file type
+  alias wifiSearch="sudo iw dev wlp2s0 scan | less -pSSID"
 else
-  alias ls='ls -aFG' # list hidden files; add colors and file type
+  alias ls="ls -aFG" # list hidden files; add colors and file type
 fi
 
 # Git shortcuts
-alias gbr='git branch --sort=-committerdate | head -5'
-alias gcm='git checkout master'
+alias gbr="git branch --sort=-committerdate | head -5"
+alias gcm="git checkout master"
 alias gf="git fetch"
-alias gfam='gcm; git fetch && git merge origin/master'
-alias gp='git push'
+alias gfam="gcm; git fetch && git merge origin/master"
+alias gp="git push"
 alias gm="git merge"
-alias gmap='gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp'
-alias gcp='git cherry-pick'
+alias gmap="gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp"
+alias gcp="git cherry-pick"
 gmo() {
   git merge origin/$1
 }
 
 # Haskell
-alias ghci='stack ghci'
+alias ghci="stack ghci"
 
 
 ##########################################
 #             Helpful
 ##########################################
-# If zsh is available, assume that's being used
+# If zsh is available, assume that"s being used
 if [ -n "$ZSH_VERSION" ]
 then
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
