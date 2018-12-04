@@ -32,3 +32,4 @@ fi
 redshift &
 pulseaudio --start &
 exec xmonad
+xset r rate 660 25

@@ -29,3 +29,4 @@ Text Editor
   - Christ Penner's Rasa uses it
 Tmux Session Manager
 - basically a way to create scripts to launch tmux in predefined configs
+MIDI Sequencer to interface with your hardware!!
