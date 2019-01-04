@@ -21,12 +21,13 @@ Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'javascript', 'javascrip
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
-" Haskell
+" Multi-lang
 Plug 'autozimu/LanguageClient-neovim', {
   \ 'for': ['javascript', 'javascript.jsx', 'haskell'],
   \ 'branch': 'next',
-  \ 'do': './install.sh'
+  \ 'do': 'bash install.sh'
   \}
+Plug 'w0rp/ale', { 'for': ['haskell', 'javascript'] }
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
@@ -46,7 +47,6 @@ Plug 'mattn/emmet-vim', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 " Vim general
 Plug 'easymotion/vim-easymotion'
 Plug 'fholgado/minibufexpl.vim'
-Plug 'godlygeek/tabular'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -58,7 +58,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'valloric/youcompleteme', { 'do': 'python3 install.py' }
 Plug 'vimwiki/vimwiki'
-Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -327,15 +326,11 @@ if executable('javascript-typescript-stdio')
   let g:LanguageClient_serverCommands['javascript.jsx'] = ['javascript-typescript-stdio']
   autocmd FileType javascript setlocal omnifunc=LanguageClient#complete
   autocmd FileType javascript.jsx setlocal omnifunc=LanguageClient#complete
-else
-  echo 'javascript-typescript-stdio not installed!\n'
 endif
 
 " Haskell detection -- NOTE Disabling for now since it uses up WAY too much cpu power
 if executable('hie')
   let g:LanguageClient_serverCommands['haskell'] = ['hie-wrapper']
-else
-  echo 'haskell-ide-engine not installed!\n'
 endif
 
 nnoremap <leader>gh :call LanguageClient_textDocument_hover()<CR>
