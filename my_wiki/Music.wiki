@@ -1,0 +1,16 @@
+= Studio Setup =
+
+*Interface:*
+Apollo Arrow Interface
+$500
+https://www.uaudio.com/audio-interfaces/arrow.htm://www.uaudio.com/audio-interfaces/arrow.html
+^Need to check if compatible with mac mini
+
+Computer:
+Mac Mini
+$1500
+- 3.0GHz 6‑core 8th‑generation Intel Core i5 (Turbo Boost up to 4.1GHz)
+- 16GB
+- 512 GB SSD
+
+

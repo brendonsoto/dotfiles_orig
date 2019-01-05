@@ -4,6 +4,7 @@ Wikiblog? Yeah, I know. I couldn't come up with anything better at the moment. T
 
 == Categories ==
 [[Tech]]
+[[Music]]
 [[Books And Courses]]
 [[Blog Stuff]]
 [[Ideas]]

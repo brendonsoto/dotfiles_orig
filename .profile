@@ -58,7 +58,7 @@ export PATH="${PATH}:$NHL_ROOT/_scripts"
 ##########################################
 
 # Keyboard -- colemak or other
-alias setReg="setxbmap us"
+alias resetKeyboard="setxkbmap us && xmodmap $HOME/dotfiles/.Xmodmap"
 alias setColemak="xmodmap $HOME/dotfiles/.Xmodmap-colemak"
 alias unsetColemak="xmodmap $HOME/dotfiles/.Xmodmap"
 
