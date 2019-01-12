@@ -1,6 +1,10 @@
 # Set bash to use vi commands
 set -o vi
 
+# NVM
+source /usr/share/nvm/init-nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+
 ##########################################
 #             Path Addendums
 ##########################################

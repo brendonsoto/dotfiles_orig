@@ -29,6 +29,9 @@ Plug 'autozimu/LanguageClient-neovim', {
   \}
 Plug 'w0rp/ale', { 'for': ['haskell', 'javascript'] }
 
+" Elm
+Plug 'ElmCast/elm-vim', { 'for': 'elm' }
+
 " Haskell
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 

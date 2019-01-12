@@ -31,7 +31,7 @@ window:
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: true
+  decorations: 'full'
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 4
@@ -93,12 +93,6 @@ font:
     x: 0
     y: 0
 
-  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
-  # screens and make reading text a little easier.
-  # On X11 it is possible to change the DPI for each instance of alacritty by using
-  # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
-  scale_with_dpi: true
-
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
@@ -106,10 +100,6 @@ font:
 
 # Should display the render timer
 render_timer: false
-
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -165,30 +155,8 @@ colors:
     cyan:    '0x66cccc'
     white:   '0xdddddd'
 
-# visual bell
-#
-# any time the bel code is received, alacritty "rings" the visual bell. once
-# rung, the terminal background will be set to white and transition back to the
-# default background color. you can control the rate of this transition by
-# setting the `duration` property (represented in milliseconds). you can also
-# configure the transition function by setting the `animation` property.
-#
-# possible values for `animation`
-# `ease`
-# `easeout`
-# `easeoutsine`
-# `easeoutquad`
-# `easeoutcubic`
-# `easeoutquart`
-# `easeoutquint`
-# `easeoutexpo`
-# `easeoutcirc`
-# `linear`
-#
-# to completely disable the visual bell, set its duration to 0.
-#
 visual_bell:
-  animation: easeoutexpo
+  animation: EaseOutExpo
   duration: 0
 
 # background opacity
@@ -210,7 +178,7 @@ background_opacity: 1.0
 # - pasteselection
 # - copy (todo)
 mouse_bindings:
-  - { mouse: middle, action: pasteselection }
+  - { mouse: Middle, action: PasteSelection }
 
 mouse:
   # click settings
@@ -229,14 +197,20 @@ mouse:
   # scrolling for applications like `man`.
   #
   # to disable this completely, set `faux_scrollback_lines` to 0.
-  faux_scrollback_lines: 1
+  faux_scrolling_lines: 1
+
+scrolling:
+  history: 1000
+  multiplier: 3
+  faux_multiplier: 3
+  auto_scroll: false
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
+mouse.hide_when_typing: false
 
 # style of the cursor
 #
@@ -244,10 +218,10 @@ hide_cursor_when_typing: false
 # - block
 # - underline
 # - beam
-cursor_style: block
+cursor.style: Block
 
 # whether the cursor should be a hollow block on window focus loss
-unfocused_hollow_cursor: true
+unfocused_hollow: true
 
 # live config reload (changes require restart)
 live_config_reload: true
@@ -304,6 +278,8 @@ live_config_reload: true
 key_bindings:
   - { key: V,        mods: Control|Alt,    action: Paste                 }
   - { key: C,        mods: Control|Alt,    action: Copy                  }
+  - { key: D,        mods: Control|Alt,    action: ScrollPageDown        }
+  - { key: U,        mods: Control|Alt,    action: ScrollPageUp          }
   - { key: Paste,                   action: Paste                        }
   - { key: Copy,                    action: Copy                         }
   - { key: Q,        mods: Command, action: Quit                         }

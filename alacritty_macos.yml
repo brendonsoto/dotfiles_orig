@@ -210,6 +210,12 @@ mouse:
   # To disable this completely, set `faux_scrollback_lines` to 0.
   faux_scrollback_lines: 1
 
+scrolling:
+  history: 1000
+  multiplier: 3
+  faux_multiplier: 3
+  auto_scroll: false
+
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
@@ -279,6 +285,8 @@ live_config_reload: true
 key_bindings:
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
+  - { key: D,        mods: Control|Alt,    action: ScrollPageDown        }
+  - { key: U,        mods: Control|Alt,    action: ScrollPageUp          }
   - { key: Paste,                   action: Paste                        }
   - { key: Copy,                    action: Copy                         }
   - { key: H,        mods: Command, action: Hide                         }
