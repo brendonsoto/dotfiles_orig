@@ -1,0 +1,21 @@
+= Thoughts =
+== Core Language ==
+Are type annotations not a thing? Or is it like Haskell?
+
+From the *List* section, I noticed the functions on lists were prefixed with `List`.
+This is different than Haskell where we would either have the function available by default (via Prelude imports) or import the function itself, not referencing the whole module, although I guess you can still do that.
+
+At the bottom the author mentions Elm's way of making new objects/things as updates instead of destructively updating an object/thing is efficient through "sharing as much content as possible" I wonder what that means...
+
+== The Elm Architecture ==
+People refere to the Elm architecture as TEA. It consists of the following three pieces:
+- Model
+- A system for updating the model
+- view 
+So it's similar to MVC, definitely letter wise (badum-tsst!).
+
+=== Buttons ===
+I see and appreciate the value of having types representing actions. The exercise of adding a "Reset" feature displayed how trivial this is. Sure, it's a small example, but imagine in a bigger context! And the readability!
+
+=== Form ===
+One bit that was tripping me up is how a type can seem like a function itself. For instance, the onChange events are handled by what seems like half a type (i.e. `Name`). This then takes whatever input and returns the full `Name String` bit. 

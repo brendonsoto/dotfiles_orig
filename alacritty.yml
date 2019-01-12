@@ -1,6 +1,5 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 
-
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty it self.
@@ -61,19 +60,19 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: xos4 Terminus # should be "Menlo" or something on macOS.
+    family: xos4 Terminus
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: xos4 Terminus # should be "Menlo" or something on macOS.
+    family: xos4 Terminus
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: xos4 Terminus # should be "Menlo" or something on macOS.
+    family: xos4 Terminus
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -168,35 +167,34 @@ background_opacity: 1.0
 # be specified.
 #
 # values for `mouse`:
-# - middle
-# - left
-# - right
-# - numeric identifier such as `5`
-#
+# - Middle
+# - Left
+# - Right
+# - Numeric identifier such as `5`
 # values for `action`:
-# - paste
-# - pasteselection
-# - copy (todo)
+# - Paste
+# - PasteSelection
+# - Copy (TODO)
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
 mouse:
-  # click settings
+  # Click settings
   #
-  # the `double_click` and `triple_click` settings control the time
+  # The `double_click` and `triple_click` settings control the time
   # alacritty should wait for accepting multiple clicks as one double
   # or triple click.
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
 
-  # faux scrollback
+  # Faux Scrollback
   #
-  # the `faux_scrollback_lines` setting controls the number
+  # The `faux_scrollback_lines` setting controls the number
   # of lines the terminal should scroll when the alternate
-  # screen buffer is active. this is used to allow mouse
+  # screen buffer is active. This is used to allow mouse
   # scrolling for applications like `man`.
   #
-  # to disable this completely, set `faux_scrollback_lines` to 0.
+  # To disable this completely, set `faux_scrollback_lines` to 0.
   faux_scrolling_lines: 1
 
 scrolling:
@@ -212,64 +210,64 @@ dynamic_title: true
 
 mouse.hide_when_typing: false
 
-# style of the cursor
+# Style of the cursor
 #
-# values for 'cursor_style':
-# - block
-# - underline
-# - beam
+# Values for 'cursor_style':
+# - Block
+# - Underline
+# - Beam
 cursor.style: Block
 
-# whether the cursor should be a hollow block on window focus loss
+# Whether the cursor should be a hollow block on window focus loss
 unfocused_hollow: true
 
-# live config reload (changes require restart)
+# Live config reload (changes require restart)
 live_config_reload: true
 
-# shell
+# Shell
 #
-# you can set shell.program to the path of your favorite shell, e.g. /bin/fish.
-# entries in shell.args are passed unmodified as arguments to the shell.
+# You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
+# Entries in shell.args are passed unmodified as arguments to the shell.
 #
 # shell:
 #   program: /bin/bash
 #   args:
 #     - --login
 
-# key bindings
+# Key bindings
 #
-# each binding is defined as an object with some properties. most of the
-# properties are optional. all of the alphabetical keys should have a letter for
-# the `key` value such as `v`. function keys are probably what you would expect
-# as well (f1, f2, ..). the number keys above the main keyboard are encoded as
-# `key1`, `key2`, etc. keys on the number pad are encoded `number1`, `number2`,
-# etc.  these all match the glutin::virtualkeycode variants.
+# Each binding is defined as an object with some properties. Most of the
+# properties are optional. All of the alphabetical keys should have a letter for
+# the `key` value such as `V`. Function keys are probably what you would expect
+# as well (F1, F2, ..). The number keys above the main keyboard are encoded as
+# `Key1`, `Key2`, etc. Keys on the number pad are encoded `Number1`, `Number2`,
+# etc.  These all match the glutin::VirtualKeyCode variants.
 #
-# a list with all available `key` names can be found here:
-# https://docs.rs/glutin/*/glutin/enum.virtualkeycode.html#variants
+# A list with all available `key` names can be found here:
+# https://docs.rs/glutin/*/glutin/enum.VirtualKeyCode.html#variants
 #
-# possible values for `mods`
-# `command`, `super` refer to the super/command/windows key
-# `control` for the control key
-# `shift` for the shift key
-# `alt` and `option` refer to alt/option
+# Possible values for `mods`
+# `Command`, `Super` refer to the super/command/windows key
+# `Control` for the control key
+# `Shift` for the Shift key
+# `Alt` and `Option` refer to alt/option
 #
-# mods may be combined with a `|`. for example, requiring control and shift
+# mods may be combined with a `|`. For example, requiring control and shift
 # looks like:
 #
-# mods: control|shift
+# mods: Control|Shift
 #
-# the parser is currently quite sensitive to whitespace and capitalization -
+# The parser is currently quite sensitive to whitespace and capitalization -
 # capitalization must match exactly, and piped items must not have whitespace
 # around them.
 #
-# either an `action`, `chars`, or `command` field must be present.
-#   `action` must be one of `paste`, `pasteselection`, `copy`, or `quit`.
+# Either an `action`, `chars`, or `command` field must be present.
+#   `action` must be one of `Paste`, `PasteSelection`, `Copy`, or `Quit`.
 #   `chars` writes the specified string every time that binding is activated.
-#     these should generally be escape sequences, but they can be configured to
+#     These should generally be escape sequences, but they can be configured to
 #     send arbitrary strings of bytes.
 #   `command` must be a map containing a `program` string, and `args` array of
-#     strings. for example:
+#     strings. For example:
 #     - { ... , command: { program: "alacritty", args: ["-e", "vttest"] } }
 #
 # want to add a binding (e.g. "pageup") but are unsure what the X sequence

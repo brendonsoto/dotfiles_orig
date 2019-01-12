@@ -15,6 +15,7 @@ env:
 
 window:
   # Window dimensions in character columns and lines
+  # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
   dimensions:
     columns: 80
@@ -29,7 +30,7 @@ window:
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: true
+  decorations: 'full'
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 4
@@ -38,6 +39,24 @@ tabspaces: 4
 draw_bold_text_with_bright_colors: true
 
 # Font configuration (changes require restart)
+#
+# Important font attributes like antialiasing, subpixel aa, and hinting can be
+# controlled through fontconfig. Specifically, the following attributes should
+# have an effect:
+#
+# * hintstyle
+# * antialias
+# * lcdfilter
+# * rgba
+#
+# For instance, if you wish to disable subpixel antialiasing, you might set the
+# rgba property to "none". If you wish to completely disable antialiasing, you
+# can set antialias to false.
+#
+# Please see these resources for more information on how to use fontconfig
+#
+# * https://wiki.archlinux.org/index.php/font_configuration#Fontconfig_configuration
+# * file:///usr/share/doc/fontconfig/fontconfig-user.html
 font:
   # The normal (roman) font face to use.
   normal:
@@ -73,10 +92,6 @@ font:
     x: 0
     y: 0
 
-  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
-  # screens and make reading text a little easier.
-  scale_with_dpi: true
-
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
@@ -84,10 +99,6 @@ font:
 
 # Should display the render timer
 render_timer: false
-
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -143,48 +154,24 @@ colors:
     cyan:    '0x66cccc'
     white:   '0xdddddd'
 
-
-# Visual Bell
-#
-# Any time the BEL code is received, Alacritty "rings" the visual bell. Once
-# rung, the terminal background will be set to white and transition back to the
-# default background color. You can control the rate of this transition by
-# setting the `duration` property (represented in milliseconds). You can also
-# configure the transition function by setting the `animation` property.
-#
-# Possible values for `animation`
-# `Ease`
-# `EaseOut`
-# `EaseOutSine`
-# `EaseOutQuad`
-# `EaseOutCubic`
-# `EaseOutQuart`
-# `EaseOutQuint`
-# `EaseOutExpo`
-# `EaseOutCirc`
-# `Linear`
-#
-# To completely disable the visual bell, set its duration to 0.
-#
 visual_bell:
   animation: EaseOutExpo
   duration: 0
 
-# Background opacity
+# background opacity
 background_opacity: 1.0
 
-# Mouse bindings
+# mouse bindings
 #
-# Currently doesn't support modifiers. Both the `mouse` and `action` fields must
+# currently doesn't support modifiers. both the `mouse` and `action` fields must
 # be specified.
 #
-# Values for `mouse`:
+# values for `mouse`:
 # - Middle
 # - Left
 # - Right
 # - Numeric identifier such as `5`
-#
-# Values for `action`:
+# values for `action`:
 # - Paste
 # - PasteSelection
 # - Copy (TODO)
@@ -208,7 +195,7 @@ mouse:
   # scrolling for applications like `man`.
   #
   # To disable this completely, set `faux_scrollback_lines` to 0.
-  faux_scrollback_lines: 1
+  faux_scrolling_lines: 1
 
 scrolling:
   history: 1000
@@ -221,7 +208,7 @@ selection:
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
+mouse.hide_when_typing: false
 
 # Style of the cursor
 #
@@ -229,10 +216,10 @@ hide_cursor_when_typing: false
 # - Block
 # - Underline
 # - Beam
-cursor_style: Block
+cursor.style: Block
 
 # Whether the cursor should be a hollow block on window focus loss
-unfocused_hollow_cursor: true
+unfocused_hollow: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
@@ -282,6 +269,10 @@ live_config_reload: true
 #   `command` must be a map containing a `program` string, and `args` array of
 #     strings. For example:
 #     - { ... , command: { program: "alacritty", args: ["-e", "vttest"] } }
+#
+# want to add a binding (e.g. "pageup") but are unsure what the X sequence
+# (e.g. "\x1b[5~") is? Open another terminal (like xterm) without tmux,
+# then run `showkey -a` to get the sequence associated to a key combination.
 key_bindings:
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
