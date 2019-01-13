@@ -19,3 +19,24 @@ I see and appreciate the value of having types representing actions. The exercis
 
 === Form ===
 One bit that was tripping me up is how a type can seem like a function itself. For instance, the onChange events are handled by what seems like half a type (i.e. `Name`). This then takes whatever input and returns the full `Name String` bit. 
+
+== Types ==
+=== Type Aliases ===
+Just like in Haskell!
+
+=== Custom Types ===
+Elm treats types like Haskell which is pretty awesome! You can make `custom types` which is Elm's name for `algebraic datatypes (ADT)`.
+
+=== Pattern Matching ===
+Here Elm is a bit different than Haskell. They use `case` syntax which is similar to Haskell. Here's a snippet from the guide:
+`
+toName : User -> String
+toName user =
+  case user of
+    Regular name _ ->
+      name
+      
+    Visitor name ->
+      name
+`
+
