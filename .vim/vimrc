@@ -13,6 +13,8 @@ call plug#begin('~/.vim/plugged')
 " Colors!!
 Plug 'liuchengxu/space-vim-dark'
 Plug 'morhetz/gruvbox'
+Plug 'fenetikm/falcon'
+Plug 'joshdick/onedark.vim'
 
 " CSS
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'javascript', 'javascript.jsx'] }
@@ -27,7 +29,7 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ 'branch': 'next',
   \ 'do': 'bash install.sh'
   \}
-Plug 'w0rp/ale', { 'for': ['haskell', 'javascript'] }
+Plug 'w0rp/ale', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 
 " Elm
 Plug 'ElmCast/elm-vim', { 'for': 'elm' }
@@ -228,9 +230,6 @@ nmap <Leader>? <Plug>(ale_detail)
 nnoremap <Leader>a :Rg<CR>
 nnoremap <C-p> :Files<CR>
 
-" JDaddy
-map <Leader>J gqaj
-
 " Tabular
 nmap <Leader>T= :Tabularize /=<CR>
 vmap <Leader>T= :Tabularize /=<CR>
@@ -247,21 +246,14 @@ nmap <Leader>wp <Plug>VimwikiPrevLink
 """""""""""""""""""""
 
 " Ale
-let g:airline#extensions#ale#enabled = 0
-let g:ale_echo_cursor = 0
-let g:ale_echo_delay = 100
-let g:ale_completion_delay = 200
-let g:ale_history_enabled = 0
-let g:ale_history_log_output = 0
+let g_ale_completion_enabled = 1
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \}
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-      \ 'smart_case': v:true
-      \ })
+call deoplete#custom#option('smart_case', v:true)
 
 " Emmet
 let g:user_emmet_settings = {
@@ -336,8 +328,8 @@ let g:LanguageClient_serverCommands = {}
 if executable('javascript-typescript-stdio')
   let g:LanguageClient_serverCommands['javascript'] = ['javascript-typescript-stdio']
   let g:LanguageClient_serverCommands['javascript.jsx'] = ['javascript-typescript-stdio']
-  autocmd FileType javascript setlocal omnifunc=LanguageClient#complete
-  autocmd FileType javascript.jsx setlocal omnifunc=LanguageClient#complete
+  autocmd FileType javascript setlocal completefunc=LanguageClient#complete
+  autocmd FileType javascript.jsx setlocal completefunc=LanguageClient#complete
 endif
 
 " Haskell detection -- NOTE Disabling for now since it uses up WAY too much cpu power
@@ -379,6 +371,3 @@ let g:vimwiki_list = [
   \ {'path': '~/vimwiki'},
   \ {'path': '~/dotfiles/my_wiki'}
   \]
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_completion = 1
