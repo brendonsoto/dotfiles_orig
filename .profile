@@ -63,8 +63,7 @@ export PATH="${PATH}:$NHL_ROOT/_scripts"
 
 # Keyboard -- colemak or other
 alias resetKeyboard="setxkbmap us && xmodmap $HOME/dotfiles/.Xmodmap"
-alias setColemak="xmodmap $HOME/dotfiles/.Xmodmap-colemak"
-alias unsetColemak="xmodmap $HOME/dotfiles/.Xmodmap"
+alias setColemak="setxkbmap us && xmodmap $HOME/dotfiles/.Xmodmap-colemak"
 
 # Reload
 if [ -n "$ZSH_VERSION" ]
