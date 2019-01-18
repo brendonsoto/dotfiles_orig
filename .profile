@@ -2,8 +2,9 @@
 set -o vi
 
 # NVM
-source /usr/share/nvm/init-nvm.sh
-[[ -r $NVM_DIR/bash_completion ]] && \. $NVM_DIR/bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s /usr/local/opt/nvm/nvm.sh ] && source /usr/local/opt/nvm/nvm.sh 
+[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
 
 ##########################################
 #             Path Addendums
@@ -15,10 +16,12 @@ export PATH="${PATH}:/usr/local/bin"
 if command -v nvim >/dev/null 2>&1
 then
   export EDITOR=nvim
+  alias v="nvim"
   alias vpu="nvim +PlugUpgrade +PlugUpdate +qa"
 else
   echo "neovim not installed!"
   export EDITOR=vim
+  alias v="vim"
   alias vpu="vim +PlugUpgrade +PlugUpdate +qa"
 fi
 
