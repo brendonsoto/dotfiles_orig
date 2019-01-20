@@ -29,6 +29,7 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ 'branch': 'next',
   \ 'do': 'bash install.sh'
   \}
+Plug 'godlygeek/tabular', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 Plug 'w0rp/ale', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 
 " Elm
@@ -38,30 +39,30 @@ Plug 'ElmCast/elm-vim', { 'for': 'elm' }
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 
 " Javascript & related
+Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
-Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 
 " Markdown
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'vimwiki'] }
 
 " Web general
-Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'mattn/emmet-vim', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
+Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 
 " Vim general
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips'
 Plug 'easymotion/vim-easymotion'
 Plug 'fholgado/minibufexpl.vim'
+Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'SirVer/ultisnips'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vimwiki/vimwiki'
 
 call plug#end()
@@ -84,24 +85,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
  \ |   exe "normal! g`\""
  \ | endif
 
-" Set JSON-like files to use json syntax highlighting
-autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
-
-" Set .Xmonad-related files to use Haskell syntax highlighting
-autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
-
 " Highlight TODO, FIXME, NOTE
 autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
 autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
-
-" Set Rainbow Parenthesis to always be active
-augroup rainbow
-  autocmd!
-  autocmd FileType c,cpp,java,javascript,javascript.jsx,json,php,python,ruby,sql RainbowParentheses
-augroup END
-
-" Fugitive - auto-clean fugitive buffers
-autocmd BufReadPost fugitive://* set bufhidden=delete
 
 
 """""""""""""""""""""
@@ -113,8 +99,11 @@ filetype plugin indent on " Enable file detection and load any plugins for them
 
 " Colorscheme
 syntax enable
-let g:gruvbox_italic=1
-colorscheme gruvbox
+" Gruvbox specifics
+" let g:gruvbox_italic=1
+" modified search based off of gruvbox for readability
+" hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
+colorscheme onedark
 
 set autoindent " allow autoindent by default
 set background=dark
@@ -125,8 +114,6 @@ set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
 set history=50 " command line history
 set hlsearch " highlight search terms
-" modified search based off of gruvbox for readability
-hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
 set ignorecase " ignore case when searching
 set inccommand=split " show changes in a split window for search and replace
 set incsearch " show matches as you type
@@ -155,7 +142,6 @@ endif
 
 """""""""""""""""""""
 "		Mappings
-" TODO Move plugin mappings to be with plugin configs
 """""""""""""""""""""
 
 " MapLeader
@@ -163,9 +149,6 @@ let mapleader = "\<Space>"
 
 " Easy open file from vim
 map <silent> <F12> :!open %<CR>
-
-" Easy show relative path
-map <Leader>F :echo expand("%")<CR>
 
 " Easy open, close, and save
 nnoremap <Leader>e :e<Space>
@@ -179,8 +162,6 @@ nnoremap <Leader>h <C-w>h
 nnoremap <Leader>j <C-w>j
 nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
-nnoremap <Leader>0 <C-w>t
-nnoremap <Leader>9 <C-w>b
 
 " Easy copy & paste
 map <Leader>y "+y
@@ -201,10 +182,6 @@ nmap <Leader>W :%s/ \+$//<CR>
 " miniBufExplr
 nnoremap <Leader>b :MBEToggle<CR>
 
-" NerdTree
-nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>f :NERDTreeFocus<CR>
-
 " Easy window splitting
 map <Leader>s :split<CR>
 map <Leader>= <C-w>=
@@ -221,24 +198,22 @@ nnoremap du :diffupdate<CR>
 " Easy search for visually selected text
 vnoremap // y/<C-R>"<CR>
 
-" Ale
-nmap <silent> [j <Plug>(ale_previous_wrap)
-nmap <silent> ]j <Plug>(ale_next_wrap)
-nmap <Leader>? <Plug>(ale_detail)
 
-" FZF
-nnoremap <Leader>a :Rg<CR>
-nnoremap <C-p> :Files<CR>
+"""""""""""""""""""""
+"		Language specific stuff
+"""""""""""""""""""""
 
-" Tabular
-nmap <Leader>T= :Tabularize /=<CR>
-vmap <Leader>T= :Tabularize /=<CR>
-nmap <Leader>T: :Tabularize /:\zs<CR>
-vmap <Leader>T: :Tabularize /:\zs<CR>
+" Set .Xmonad-related files to use Haskell syntax highlighting
+autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
 
-" VimWiki
-nmap <Leader>wn <Plug>VimwikiNextLink
-nmap <Leader>wp <Plug>VimwikiPrevLink
+" Set JSON-like files to use json syntax highlighting
+autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
+
+" JSX
+let g:jsx_ext_required = 0
+
+" SQL -- Reset the Omni Key so I can use CTRL-[ to exit insert mode
+let g:ftplugin_sql_omni_key = '<C-j>'
 
 
 """""""""""""""""""""
@@ -250,6 +225,9 @@ let g_ale_completion_enabled = 1
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \}
+nmap <silent> [j <Plug>(ale_previous_wrap)
+nmap <silent> ]j <Plug>(ale_next_wrap)
+nmap <Leader>? <Plug>(ale_detail)
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
@@ -262,16 +240,12 @@ let g:user_emmet_settings = {
   \}
   \}
 
-" FZF
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case --ignore-file ~/dotfiles/.ignore '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
+" Fugitive - auto-clean fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
-" JSX
-let g:jsx_ext_required = 0
+" FZF
+nnoremap <Leader>a :Rg<CR>
+nnoremap <C-p> :Files<CR>
 
 " Lightline
 set laststatus=2
@@ -282,7 +256,7 @@ let g:lightline = {
   \   'left': [ [ 'mode', 'paste', 'relativepath' ],
   \             [ 'fugitive', 'readonly', 'modified' ] ]
   \ },
-  \ 'colorscheme': 'gruvbox',
+  \ 'colorscheme': 'one',
   \ 'component_function': {
   \   'fugitive': 'LightLineFugitive',
   \   'readonly': 'LightLineReadonly',
@@ -356,10 +330,21 @@ augroup LSP
 augroup END
 
 " Rainbow Parenthesis
+" Set Rainbow Parenthesis to always be active
+augroup rainbow
+  autocmd!
+  autocmd FileType c,cpp,java,javascript,javascript.jsx,json,php,python,ruby,sql RainbowParentheses
+augroup END
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
-" SQL -- Reset the Omni Key so I can use CTRL-[ to exit insert mode
-let g:ftplugin_sql_omni_key = '<C-j>'
+" Ranger
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+
+" Tabular
+nmap <Leader>T= :Tabularize /=<CR>
+vmap <Leader>T= :Tabularize /=<CR>
+nmap <Leader>T: :Tabularize /:\zs<CR>
+vmap <Leader>T: :Tabularize /:\zs<CR>
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
@@ -371,3 +356,5 @@ let g:vimwiki_list = [
   \ {'path': '~/vimwiki'},
   \ {'path': '~/dotfiles/my_wiki'}
   \]
+nmap <Leader>wn <Plug>VimwikiNextLink
+nmap <Leader>wp <Plug>VimwikiPrevLink
