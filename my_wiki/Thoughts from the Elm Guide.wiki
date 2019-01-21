@@ -58,3 +58,16 @@ type Result error value
   | Err error
 `
 This is a way to add messages to errors to provide more detailed errors or different messages based on the type of error.
+I am a bit confused on the type definition of Result. Why would you have the `Ok` value as the last param? Why not just make a custom type of two bits, similar to `Maybe`? I guess I am confused as to why would this be better than `Maybe` in some situations. So would an `Ok` value look like `Result _ value`?
+
+== Commands and Subscriptions ==
+=== HTTP ===
+There's `Browser.sandbox` and `Browser.element`. The former allows you to only create HTML while the latter allows you create HTML and set up `commands` and `subscriptions` to issue interactions with external things like *network requests, time, and random numbers*.
+
+I wonder why there is both `sandbox` and `element` instead of just `element`.
+
+=== JSON ===
+The `elm/json` package provides the `Decoder` type which takes in the name of the field you want to access and the type the data should be (i.e. int, string, bool). This is then applied to a JSON object to get the data. For nested data just nest the `Decoder`s.
+
+=== Random ===
+Randomness has its own class and generates values through the `Random.generate` function. You specify via the `Generator` type what type the value will be and then provide a range for possible values. You can also weight it so one value appears more than the other.
