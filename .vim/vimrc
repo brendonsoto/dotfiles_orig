@@ -30,6 +30,7 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ 'do': 'bash install.sh'
   \}
 Plug 'godlygeek/tabular', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
+Plug 'tpope/vim-dispatch', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 Plug 'w0rp/ale', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 
 " Elm
@@ -52,7 +53,7 @@ Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 
 " Vim general
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'easymotion/vim-easymotion'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'francoiscabrol/ranger.vim'
@@ -94,7 +95,13 @@ autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
 "		General Settings
 """""""""""""""""""""
 
+" color "
 set termguicolors
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
 filetype plugin indent on " Enable file detection and load any plugins for them
 
 " Colorscheme
@@ -209,6 +216,9 @@ autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
 " Set JSON-like files to use json syntax highlighting
 autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
 
+" Javascript / JSX
+autocmd FileType javascript,javascript.jsx let b:dispatch = 'npx jest % --colors'
+
 " JSX
 let g:jsx_ext_required = 0
 
@@ -232,6 +242,9 @@ nmap <Leader>? <Plug>(ale_detail)
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option('smart_case', v:true)
+
+" Dispatch
+nmap <Leader>D :Dispatch<CR>
 
 " Emmet
 let g:user_emmet_settings = {
@@ -346,10 +359,10 @@ vmap <Leader>T= :Tabularize /=<CR>
 nmap <Leader>T: :Tabularize /:\zs<CR>
 vmap <Leader>T: :Tabularize /:\zs<CR>
 
-" UltiSnips
-let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
-let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
-let g:UltiSnipsExpandTrigger='<c-e>'
+" " UltiSnips
+" let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
+" let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
+" let g:UltiSnipsExpandTrigger='<c-e>'
 
 " Vimwiki
 let g:vimwiki_list = [
@@ -358,3 +371,4 @@ let g:vimwiki_list = [
   \]
 nmap <Leader>wn <Plug>VimwikiNextLink
 nmap <Leader>wp <Plug>VimwikiPrevLink
+nmap <Leader>x <Plug>VimwikiToggleListItem
