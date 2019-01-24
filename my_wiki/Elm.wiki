@@ -1,1 +1,2 @@
 [[Thoughts from the Elm Guide]]
+[[The Tutorial I Wish I Had]]
