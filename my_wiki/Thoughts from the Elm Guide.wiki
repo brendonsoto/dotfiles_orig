@@ -71,3 +71,10 @@ The `elm/json` package provides the `Decoder` type which takes in the name of th
 
 === Random ===
 Randomness has its own class and generates values through the `Random.generate` function. You specify via the `Generator` type what type the value will be and then provide a range for possible values. You can also weight it so one value appears more than the other.
+
+== Web Apps ==
+This seems to be more of what I was looking for.
+`Browser.Element` is useful for introducing Elm to a team via a single element (surprise!), element here meaning DOM node. 
+
+=== Navigation ===
+Use `Browser.application` for SPAs.

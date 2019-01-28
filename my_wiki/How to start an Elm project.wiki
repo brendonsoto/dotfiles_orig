@@ -1,8 +1,0 @@
-= How to Start an Elm Project =
-Oddly enough, the documentation does not tell you how to start an Elm project. Luckily, it's as easy as running in `elm init` and clicking `enter` right after the prompt! I kid you not!
-
-When `elm init` is first run a message will appear providing a link that provides more information on the command. I find it a bit odd that the info isn't provided in the command itself, but it doesn't matter. Basically the documentation lets you know the command will create an `elm.json` file that specifies key packages and a `src` directory. Nothing more, nothing less. 
-
-From there you can create `.elm` files within `src` and use `elm reactor` to spin up a local server to check out your work. As an example you can use the [example in the Elm guide](https://guide.elm-lang.org/), putting the code in `src/Main.elm`, run that with `elm reactor` to see the output.
-
-If you want to compile the output to a file that can be hosted, use `elm make src/Main.elm`. This will result in creating an `index.html` page that has the code in `src/Main.elm`, but in JavaScript! Or if you want just JavaScript instead of that with HTML, you can run `elm make src/Main.elm --output=main.js` to compile the code into a file named `main.js`.
