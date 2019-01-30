@@ -1,5 +1,6 @@
 = Tech =
 [[Elm]]
+[[Firefox]]
 [[GPG]]
 [[Haskell]]
 [[JavaScript]]
