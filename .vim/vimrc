@@ -55,7 +55,7 @@ Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'SirVer/ultisnips'
 Plug 'easymotion/vim-easymotion'
-Plug 'fholgado/minibufexpl.vim'
+" Plug 'fholgado/minibufexpl.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -158,14 +158,14 @@ map j gj
 map k gk
 
 " Buffer switching
-nnoremap <Leader>] :bn<CR>
-nnoremap <Leader>[ :bp<CR>
+" nnoremap <Leader>] :bn<CR>
+" nnoremap <Leader>[ :bp<CR>
 
 " Remove trailing whitespace
 nmap <Leader>W :%s/ \+$//<CR>
 
 " miniBufExplr
-nnoremap <Leader>b :MBEToggle<CR>
+" nnoremap <Leader>b :MBEToggle<CR>
 
 " Easy window splitting
 map <Leader>s :split<CR>
@@ -277,6 +277,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " FZF
 nnoremap <Leader>a :Rg<CR>
+nnoremap <Leader>b :Buffers<CR>
 nnoremap <C-p> :Files<CR>
 
 " Lightline
