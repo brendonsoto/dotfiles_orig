@@ -85,10 +85,10 @@ filetype plugin indent on " Enable file detection and load any plugins for them
 " Colorscheme
 syntax enable
 " Gruvbox specifics
-" let g:gruvbox_italic=1
+let g:gruvbox_italic=1
 " modified search based off of gruvbox for readability
-" hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
-colorscheme onedark
+hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
+colorscheme gruvbox
 
 set autoindent " allow autoindent by default
 set background=dark

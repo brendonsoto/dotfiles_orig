@@ -1,0 +1,47 @@
+= Software Requirements and Specifications =
+"a lexicon of practice, principles and prejudices"
+by Michael Jackson
+
+There are multiple paths to take when reading the book, all suggested by the author. I have been more focused on solutions rather than spending more thought on the problem so I will go about the "Overview" path first and see where that takes me.
+
+Therefore this section will be organized primarily by suggested path and then by section/chapter. I will have a separate primary section, an "Other" section, at the end for if/when I decide to read chapters outside of any of the suggestions.
+
+Actually, I don't see the above as necessary. I'm just going to write about the chapters as I go along.
+
+== Introduction ==
+Skimming the chapter, but my initial thoughts are this section will discuss an overview of the medium of the problems we solve, how to talk about said problems, and then how to plan for said problems.
+
+In the intro paragraph, the author talks about finding the engineering aspect of software, building useful things, to be what interests him most within software development. So hopefully the emphasis will be on useful concepts that can be applied immediately?
+
+=== The Machine and the World ===
+The end of this section provides an excellent summary:
+
+"The problem is in the application domain. The solution is the solution."
+
+This also glazes over another software/problem solving concept of "What and How". The "What" talks about the problem itself, what the author calls the *application domain*, where the "How" is the solution, how the problem is resolved.
+
+=== Focusing on Problems ===
+The author brings up a flaw within the community regarding discussing and exploring problems. He believes most current attempts on talking about problems are really talks on solutions instead. What does it mean then to talk about the problem? Would it be simply talking about the players involved, the desired outcomes, possible edge cases, side-effects, etc.?
+
+=== Domain Descriptions ===
+Don't assume. State and write down the obvious to ensure everyone is on the same page.
+
+Don't think of the system as simply input/output because that doesn't help specify the application domain, the problem itself.
+
+Instead, see the system as a coordination of processes which will allow you then think of the application domain in terms of when should things start within the system. In otherwords, this allows the application domain to actually exist within the system.
+
+=== Modelling ===
+The author argues that it is not suffice to lump the description of the application domain in with the description of the machine. This is how most of us know modelling. We "model" the application domain within the machine domain and call it a day. The reason why this does not work is because information is always lost. There are descriptions that only belong to one or the other, and some that belong to both.
+
+The author argues  to describe the application domain, then the machine, and then the commonalities. So like a venn diagram.
+
+=== Description Technique ===
+Requirements = details on the application domain
+Specificatiosn = details on the machine
+
+The author is big on descriptions stating it's the most important part to software. He talks at a high level on ways to be more descriptive when talking about problems and solutions. Here are what he lists:
+
+Definitions:
+Documenting definitions helps to determine new and existing ideas to clarify when talking about the real-world/application domain or abstractions that deal with the real-world/application domain.
+
+Description Scope and Span:
