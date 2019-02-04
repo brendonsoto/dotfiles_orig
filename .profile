@@ -96,6 +96,7 @@ alias gf="git fetch"
 alias gfam="gcm; git fetch && git merge origin/master"
 alias gp="git push"
 alias gm="git merge"
+alias gmm="git merge master"
 # alias gmap="gcm; git merge $(git branch --sort=-committerdate | head -1 | xargs); gp"
 alias gcp="git cherry-pick"
 gmo() {
