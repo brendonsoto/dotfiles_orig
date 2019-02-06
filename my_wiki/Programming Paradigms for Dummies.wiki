@@ -1,0 +1,15 @@
+= Programming Paradigms for Dummies =
+**What Every Programmer Should Know** by Peter Van Roy
+
+The intro says how the paper will go over different programming paradigms and their uses.
+
+== Introduction ==
+Different problems call for different concepts in the solutions, thus an ideal programming language should allow for multiple paradigms to be used. Each paradigm is best for a certain application, so that should be used when solving programming problems!
+
+== Languages, paradigms, and concepts ==
+There's a graphic that shows multiple paradigms, each connected by arrows representing the addition of a concept, and the programming languages featuring the paradigms. It is really interesting seeing this overlay, but this graph is the work of the author's. I am a bit skeptical on some claims, like how some paradigms that are perceived as radically different are often different in one concept. He uses the example of functional vs object oriented programming for this. On the graphic, they differ only by OOP having the concept of cell/state (I guess that means individual state?) involved.
+
+Within the same section, just before Observable nondeterminism, the author mentions "The language's kernel language should support the paradigm". What does *kernel language* mean?
+
+=== Observable nondeterminism ===
+*Nondeterminism* only different in one 

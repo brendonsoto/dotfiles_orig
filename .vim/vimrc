@@ -53,13 +53,13 @@ Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 
 " Vim general
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'SirVer/ultisnips'
 Plug 'easymotion/vim-easymotion'
-" Plug 'fholgado/minibufexpl.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
+" Below is needed with Ranger
+Plug 'rbgrouleff/bclose.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -204,25 +204,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Highlight TODO, FIXME, NOTE
 autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
 autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
-
-function! OnTermClose()
-    " Try to move the cursor to the last line containing text
-    try
-        $;?.
-    catch
-        " The buffer is empty here. This shouldn't ever happen
-        return
-    endtry
-    " Is the last line an error message?
-    if match(getline('.'), 'make: \*\*\* \[[^\]]\+] Error ') == -1
-        call feedkeys('a ')
-    endif
-endfunction
-
-augroup MY_TERM_AUGROUP
-    autocmd!
-    au TermClose * silent call OnTermClose()
-augroup END
 
 
 """""""""""""""""""""

@@ -87,6 +87,12 @@ Randomness has its own class and generates values through the `Random.generate` 
 
 === Time ===
 
+== JavaScript Interop ==
+=== Flags ===
+Flags are variables passed to Elm via the `init` function on Elm's side. When creating the HTML from an Elm file using `elm make`, there's a snippet of code calling a function called `Elm.Main.init` that's passed an object. Within that object can be a property called `flags` which has whatever data you pass into it. This data, `flags`, can be referenced in the `init` function. Error handling happens on Elm's side and fails immediately if the type of data passed into it isn't what is expected.
+
+=== Ports ===
+I skimmed through this portion, but its purpose is for passing data back and forth between Elm and JavaScript.
 
 == Web Apps ==
 This seems to be more of what I was looking for.
