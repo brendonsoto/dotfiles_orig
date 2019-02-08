@@ -104,3 +104,14 @@ Additionally, having multiple descriptions is the groundwork for *separation of 
 
 The section of *Descriptions* ends with a really great example of finding the real problem within a definition with a lot of scope and span details. The problem itself is unimportant, but what is is knowing that scope and span, the details, can very easily get in the way of understanding the problem and thinking of it in simpler terms. Perhaps it would do well to write the main problem at the top of a document in simple and concise language and then provide scope and span underneath. Then by re-reading the document one can see if too much information is given or perhaps the brevity could inspire new simple solutions!
 
+
+== What and How ==
+A micro discussion on separating the purpose and implementation aspects to a problem.
+The *What* describes the purpose for a system or problem, the application domain, what use the problem aims to provide. The *How* is all about the gears under the hood that make the *what* happen.
+
+
+== The Problem Context ==
+The problem context is everything involved in the problem. This includes both the application domain and the solution/machine, but the solution is still high level. The context is like a bird's eye view of the problem, identifying all of the pieces that may be involved in the problem. It is a means to exploring the problem.
+
+== Problem Frames ==
+
