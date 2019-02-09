@@ -27,11 +27,11 @@ I won't be doing all of the videos, but select ones.
 
 Start with:
 *David MacKenzie*
-- [ ] Lesson 5: Speed and Coordination
-- [ ] Lesson 6: Chord Exercises
-- [ ] Lesson 7: Practice and Discipline
-- [ ] Lesson 8: Double Stops
-- [ ] Lesson 9: The Major Chords
+- [X] Lesson 5: Speed and Coordination
+- [X] Lesson 6: Chord Exercises
+- [X] Lesson 7: Practice and Discipline
+- [ ] Lesson 8: Double Stops << I didn't think the concept was explained adequately
+- [X] Lesson 9: The Major Chords << Non-barre forms.
 - [ ] Lesson 10: The Minor Chords
 - [ ] Lesson 11: Major Scales
 - [ ] Lesson 12: Major Scale Jam
@@ -106,7 +106,7 @@ More stuff with:
 - [ ] Lesson 27: E7(#9) Chord
 - [ ] Lesson 28: 5 Scale Positions
 - [ ] Lesson 29: Faster Chord Changes
-- [ ] *Lesson 30: Organizing a Practice Session*
+- [X] *Lesson 30: Organizing a Practice Session* << REVISIT MULTIPLE TIMES
 - [ ] Lesson 33: Barre Chord Concepts
 - [ ] Lesson 34: Barre Chords in a Blues Progression
 - [ ] Lesson 35: Octave Shapes
