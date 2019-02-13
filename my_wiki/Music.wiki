@@ -15,7 +15,10 @@ $1500
 
 = Guitar =
 == Gear ==
-- Joyo Zombie Head
+Actually, think about what I really want... a nice studio option, but also a portable option
+- Joyo Mjolnir Head
+- Joyo Zombie Head << Would require an attenuator for multiple settings
+- DV Mark Little 50 << Solid state, but did sound pretty good and cheaper than the rest
 - Orange 1x8
 
 == Lesson Plan ==
@@ -32,16 +35,17 @@ Start with:
 - [X] Lesson 7: Practice and Discipline
 - [ ] Lesson 8: Double Stops << I didn't think the concept was explained adequately
 - [X] Lesson 9: The Major Chords << Non-barre forms.
-- [ ] Lesson 10: The Minor Chords
-- [ ] Lesson 11: Major Scales
-- [ ] Lesson 12: Major Scale Jam
-- [ ] Lesson 13: The Minor Scales
-- [ ] Lesson 14: Minor Scale Jam
-- [ ] Lesson 15: One String Exercise
-- [ ] Lesson 21: Practicing Bends
-- [ ] Lesson 22: Basic Vibrato
-- [ ] Lesson 23: Pentatonic Scale
-- [ ] Lesson 24: Minor Pentatonic Scale
+- [X] Lesson 10: The Minor Chords
+- [ ] Lesson 11: Major Scales << Saw the first half, stopped midway. Just showed a different way to play the scale on the low 3 strings.
+      ^ Even though I didn't go through it, I do see the value of the other form and that makes me think I should look into practicing different forms on the same starting notes
+- [ ] Lesson 12: Major Scale Jam << Skipped/Watched half. Just iterating through the diff major scale patterns up the neck (i.e. E, F, G, A, B, C, D)
+- [ ] Lesson 13: The Minor Scales << Skipping based on Major scale lesson
+- [ ] Lesson 14: Minor Scale Jam << Skipping based on Major scale lesson
+- [ ] Lesson 15: One String Exercise << Skipping. Just practicing minor scale on high e in triplets
+- [ ] Lesson 21: Practicing Bends << Skipped. Confirms what I know
+- [X] Lesson 22: Basic Vibrato << Nice, but little vague, summary of bend styles
+- [X] Lesson 23: Pentatonic Scale << Similar to Major/Minor scale demos. Just 3 string pattern starting at low E
+- [X] Lesson 24: Minor Pentatonic Scale
 - [ ] Lesson 26: Full Minor Scale
 - [ ] Lesson 27: Full Major Pentatonic Scale
 - [ ] Lesson 28: Full Minor Pentatonic Scale
