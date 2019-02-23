@@ -46,11 +46,11 @@ Start with:
 - [X] Lesson 22: Basic Vibrato << Nice, but little vague, summary of bend styles
 - [X] Lesson 23: Pentatonic Scale << Similar to Major/Minor scale demos. Just 3 string pattern starting at low E
 - [X] Lesson 24: Minor Pentatonic Scale
-- [ ] Lesson 26: Full Minor Scale
-- [ ] Lesson 27: Full Major Pentatonic Scale
-- [ ] Lesson 28: Full Minor Pentatonic Scale
-- [ ] Lesson 30: Rhythm Basics
-- [ ] Lesson 31: Power Chord Variations
+- [X] Lesson 26: Full Minor Scale << Different presentation of the scale. Not much different from what i know.
+- [X] Lesson 27: Full Major Pentatonic Scale
+- [X] Lesson 28: Full Minor Pentatonic Scale
+- [X] Lesson 30: Rhythm Basics
+- [X] Lesson 31: Power Chord Variations
 - [ ] Lesson 33: Tapping Exercise
 - [ ] Lesson 34: Tapping Exercise #2
 - [ ] Lesson 35: Tapping #3: Adding Open Strings
