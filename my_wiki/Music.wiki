@@ -13,4 +13,148 @@ $1500
 - 16GB
 - 512 GB SSD
 
+= Guitar =
+== Gear ==
+Actually, think about what I really want... a nice studio option, but also a portable option
+- Joyo Mjolnir Head
+- Joyo Zombie Head << Would require an attenuator for multiple settings
+- DV Mark Little 50 << Solid state, but did sound pretty good and cheaper than the rest
+- Orange 1x8
 
+== Lesson Plan ==
+Using Jamplay...
+
+=== Beginner track ===
+We're starting at the basiscs again just to be sure we've got the foundation down.
+I won't be doing all of the videos, but select ones.
+
+Start with:
+*David MacKenzie*
+- [X] Lesson 5: Speed and Coordination
+- [X] Lesson 6: Chord Exercises
+- [X] Lesson 7: Practice and Discipline
+- [ ] Lesson 8: Double Stops << I didn't think the concept was explained adequately
+- [X] Lesson 9: The Major Chords << Non-barre forms.
+- [X] Lesson 10: The Minor Chords
+- [ ] Lesson 11: Major Scales << Saw the first half, stopped midway. Just showed a different way to play the scale on the low 3 strings.
+      ^ Even though I didn't go through it, I do see the value of the other form and that makes me think I should look into practicing different forms on the same starting notes
+- [ ] Lesson 12: Major Scale Jam << Skipped/Watched half. Just iterating through the diff major scale patterns up the neck (i.e. E, F, G, A, B, C, D)
+- [ ] Lesson 13: The Minor Scales << Skipping based on Major scale lesson
+- [ ] Lesson 14: Minor Scale Jam << Skipping based on Major scale lesson
+- [ ] Lesson 15: One String Exercise << Skipping. Just practicing minor scale on high e in triplets
+- [ ] Lesson 21: Practicing Bends << Skipped. Confirms what I know
+- [X] Lesson 22: Basic Vibrato << Nice, but little vague, summary of bend styles
+- [X] Lesson 23: Pentatonic Scale << Similar to Major/Minor scale demos. Just 3 string pattern starting at low E
+- [X] Lesson 24: Minor Pentatonic Scale
+- [X] Lesson 26: Full Minor Scale << Different presentation of the scale. Not much different from what i know.
+- [X] Lesson 27: Full Major Pentatonic Scale
+- [X] Lesson 28: Full Minor Pentatonic Scale
+- [X] Lesson 30: Rhythm Basics
+- [X] Lesson 31: Power Chord Variations
+- [ ] Lesson 33: Tapping Exercise
+- [ ] Lesson 34: Tapping Exercise #2
+- [ ] Lesson 35: Tapping #3: Adding Open Strings
+- [ ] Lesson 36: Tapping #4: Diminished Lick
+- [ ] Lesson 37: Tapping #5
+- [ ] Lesson 39: Tapping #6
+- [ ] Lesson 40: Chord Structures
+- [ ] Lesson 41: Octaves
+
+Reference then with:
+*Mark Brennan*
+- [ ] Lesson 7: The C Major Scale - 1st Position
+- [ ] Lesson 8: Chords in C major - Part 1
+- [ ] Lesson 9: Chords in C major - Part 2
+- [ ] Lesson 15: The Key of G Major
+- [ ] Lesson 16: Chords of G Major
+- [ ] Lesson 17: The Key of D Major
+- [ ] Lesson 18: Chords of D Major
+- [ ] Lesson 22: Blues Boogie Shuffle
+- [ ] Lesson 24: Introduction to Improvisation
+- [ ] Lesson 25: The Key of A Minor
+- [ ] Lesson 28: Movable Dominant 7th Chord Forms
+- [ ] Lesson 29: MOvable Minor and Minor 7th Chord forms
+
+Next, mostly chords with:
+*Brad Henecke*
+- [ ] Lesson 13: The A7 Chord
+- [ ] Lesson 14: The D7 Chord
+- [ ] Lesson 15: The E7 Chord
+- [ ] Lesson 16: The G7 Chord
+- [ ] Lesson 17: The B7 Chord
+- [ ] Lesson 18: The C7 Chord
+- [ ] Lesson 19: The F Major Chord
+
+More stuff with:
+*Chris Liepe*
+- [ ] Lesson 3: 3 New CHords: Complete the CAGED Method
+- [ ] Lesson 6: Barre and Minor Chords
+- [ ] Lesson 7: Strum Patterns and Time Signatures
+- [ ] Lesson 8: All About Intervals
+- [ ] Lesson 20: Palm Muting
+- [ ] Lesson 21: Hybrid Picking
+
+*Lisa Pursell*
+- [ ] Lesson 6: Hybrid Picking
+- [ ] Lesson 8: Travis Picking
+- [ ] Lesson 9: Triads and Fingerstyle
+- [ ] Lesson 10: THe Blues Shuffle
+- [ ] Lesson 14: Syncopated Rhythm
+- [ ] Lesson 16: Syncopated Rhythm Revisited
+- [ ] Lesson 17: Single String Technique
+- [ ] Lesson 21: Some Blues / Jazz Chords
+- [ ] Lesson 22: 6th Intervals
+- [ ] Lesson 24: Tool Box Tips
+- [ ] Lesson 25: Minor Blues Scale
+- [ ] Lesson 26: Texas Style Shuffle Rhythm
+- [ ] Lesson 27: E7(#9) Chord
+- [ ] Lesson 28: 5 Scale Positions
+- [ ] Lesson 29: Faster Chord Changes
+- [X] *Lesson 30: Organizing a Practice Session* << REVISIT MULTIPLE TIMES
+- [ ] Lesson 33: Barre Chord Concepts
+- [ ] Lesson 34: Barre Chords in a Blues Progression
+- [ ] Lesson 35: Octave Shapes
+- [ ] Lesson 36: Improvising with Intervals
+- [ ] Lesson 37: 5th and 6th Intervals
+- [ ] Lesson 38: Major Scale
+- [ ] Lesson 40: Syncopated Rhythm
+- [ ] Lesson 41: Chords and Patterns
+- [ ] Lesson 45: Scale Application
+- [ ] Lesson 48: Adding the Blue Note
+- [ ] Lesson 49: Understanding Vibrato
+- [ ] Lesson 50: Sweep Picking Technique
+- [ ] Lesson 51: Shell Voicings
+- [ ] Lesson 52: Blues Turnaround Ideas
+- [ ] Lesson 53: Harmonizing the Majro Scale
+- [ ] Lesson 54: 8 Bar Blues
+- [ ] Lesson 55: Harmonizing with Diatonic Triads
+- [ ] Lesson 56: Connecting Patterns via Sequencing
+- [ ] Lesson 58: Full Neck Harmonization
+- [ ] Lesson 59: The F#m7(b5) Chord
+- [ ] Lesson 60: Extensions
+- [ ] Lesson 61: Passing Tones
+- [ ] Lesson 62: Creating a Solo
+- [ ] *Lesson 65: Using a Metronome*
+- [ ] Lesson 66: Rhythmic Chord Playing
+- [ ] Lesson 67: Creative Double Stop Ideas
+
+*Will Ripley*
+- [ ] Lesson 22: Muting Techniques
+- [ ] Lesson 26: Sus and Slash Chords
+- [ ] Lesson 28: The Secret to Changing Chords
+- [ ] Lesson 28: Rhythmic Subdivisions
+- [ ] Lesson 37: Chop Builders
+- [ ] Lesson 41: Precursor to Barre Chords
+- [ ] Lesson 42: Four Shapes of Barre Chords
+- [ ] Lesson 43: Barre Chord Song
+
+
+=== Gear Lessons ===
+*Mark Brennan*
+- [ ] Lesson 23: Amplification Part Two
+
+*Chris Liepe*
+- [ ] Lesson 11: Effect Pedal Mini Series
+- [ ] Lesson 12: Effect Pedal: Compression
+- [ ] Lesson 13: Gain Stacking with Overdrive and Distortion
+- [ ] Lesson 14: Effect Pedal: Delay

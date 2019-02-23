@@ -1,4 +1,5 @@
 = Tech =
+[[Elixir]]
 [[Elm]]
 [[Firefox]]
 [[GPG]]
