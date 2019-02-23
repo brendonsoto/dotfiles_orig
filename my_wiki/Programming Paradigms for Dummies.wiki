@@ -79,4 +79,68 @@ I'm still a bit uncertain of the usefulness of named state. I don't understand t
 
 
 == Data abstraction ==
+Think of data abstractions as containers for data structures with only a few openings to tinker with the inner structures. This is ideal because 1) it can guarantee safety by limiting the operations possible on the structures, 2) make the program easier to understand and build since you're separating out functionality, and 3) possible to use as a building block for larger programs.
 
+Polymorphism and inheritance are two means of data abstraction.
+
+=== Objects and abstract data types ===
+The author states "[t]here are four main ways to to organize data abstractions, organized along two axes. The first axis is *state*... The second axis is *bundling*: does the abstraction fuse data and operations into a single entity [objects]".
+
+At the quadrant of state + bundling is an object where at stateless + no bundling is an abstract data type.
+
+=== Polymorphism and the responsability principle ===
+Polymorphism is described as usual: an entity/function that's able to take in arguments of different types.
+
+=== Inheritance and the substitution principle ===
+I need to be aware of my bias because I think inheritance is evil.
+
+I do have to give the author kudos. He highlights the advantage of sharing commonalities via inheritance, but goes one further by saying to use inheritance with care and then goes even another one further by saying composition is a viable alternative.
+
+The substitution principle is if inheritance is to be used, any function that uses the extended class must also work for the inherited/parent class too.
+
+
+== Deterministic concurrent programming ==
+=== Avoiding nondeterminism in a concurrent program ===
+Isolate the nondeterministic parts and then make the language deterministic.
+
+There are paradigms that achieve this:
+
+==== Declarative concurrency (monotonic dataflow) ====
+Declarative concurrency is where the inputs and outputs are all deterministic. Guess this means everything has to be known about the I/O and that all has to be communicated in the code.
+
+==== Functional reactive programming (continuous synchronous programming) ====
+In FRP, the program is still a function, but the arguments are nondeterministic and are the only nondeterministic parts of the program. The program recalculates the changes and then propogates the changes to the output.
+
+==== Discrete synchronous programming ====
+Discrete synchronous programming is very similar to FRP with the main difference being the former treats time as discrete steps instead of a continuous stream, which is what FRP does. This makes programming concurrency simpler as everything is contained within discrete steps. It's like digital circuits versus analog circuits.
+
+==== Deterministic concurrency and computer music ====
+Deterministic concurrency can involve the following features:
+- lazy evaluation
+- demand driven (seems like event-driven, i.e. you press a thing and that triggers other things to happen)
+- continuous instead of discrete representation of time
+- Max/MSP is an example!
+
+=== Declarative concurrency [6.2, not part of Avoiding nondet...] ===
+So declarative programming has a foundation in functional programming, but adds threads, independent sequences of instructions to be executed, and dataflow variables, which acts as a signal manager for the threads.
+
+Threads have the basic blueprint consisting of just a function to create a thread.
+
+Dataflow variables have three functions in their blueprint:
+- Instantiate the variable to a value
+- Bind the variable to a value
+- A wait command that tells a thread to wait for the variable to be assigned before continuing
+
+This enables programs to wait until data is available to them and then execute.
+
+==== Lazy declarative concurrency ====
+Laziness can be implemented by adding by-need synchronization to the previous paradigm. The by-need part just enables functions to only execute when they need to by using the dataflow variable "wait" function to explicitly state in the function to wait until a variable is bound.
+
+==== Declarative concurrency and multi-core processors ====
+With multiple processors parallel programming is now mainstream. It's impossible to simply make a process a parallel process without the programmer stating so. It is up to the language to make this process easy. Shared-state languages like Java and C++ unfortunately fall flat of this. This is where declarative/functional programming shines.
+
+
+== Constraint programming ==
+Constraint programming is defining boundaries for a problem in terms of variables and telling the computer to find the variables that solve for x. There is an emphasis on the programmer to *model* the situation rather than the solution.
+
+I skimmed over the rest of the section because constraint programming seems cool, but the explanation and application kind of goes over my head.

@@ -11,10 +11,10 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Colors!!
-Plug 'liuchengxu/space-vim-dark'
+" Plug 'liuchengxu/space-vim-dark'
 Plug 'morhetz/gruvbox'
-Plug 'fenetikm/falcon'
-Plug 'joshdick/onedark.vim'
+" Plug 'fenetikm/falcon'
+" Plug 'joshdick/onedark.vim'
 
 " CSS
 Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'javascript', 'javascript.jsx'] }
@@ -30,7 +30,6 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ 'do': 'bash install.sh'
   \}
 Plug 'godlygeek/tabular', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
-Plug 'tpope/vim-dispatch', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 Plug 'w0rp/ale', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 
 " Elm
@@ -326,16 +325,16 @@ if executable('hie')
 endif
 
 function SetLSPShortcuts()
-  nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
-  nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
-  nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
-  nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
-  nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
-  nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
-  nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
-  nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
-  nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
+  nnoremap <leader><S-L>d :call LanguageClient#textDocument_definition()<CR>
+  nnoremap <leader><S-L>r :call LanguageClient#textDocument_rename()<CR>
+  nnoremap <leader><S-L>f :call LanguageClient#textDocument_formatting()<CR>
+  nnoremap <leader><S-L>t :call LanguageClient#textDocument_typeDefinition()<CR>
+  nnoremap <leader><S-L>x :call LanguageClient#textDocument_references()<CR>
+  nnoremap <leader><S-L>a :call LanguageClient_workspace_applyEdit()<CR>
+  nnoremap <leader><S-L>c :call LanguageClient#textDocument_completion()<CR>
+  nnoremap <leader><S-L>h :call LanguageClient#textDocument_hover()<CR>
+  nnoremap <leader><S-L>s :call LanguageClient_textDocument_documentSymbol()<CR>
+  nnoremap <leader><S-L>m :call LanguageClient_contextMenu()<CR>
 endfunction()
 
 augroup LSP
