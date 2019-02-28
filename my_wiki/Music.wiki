@@ -51,48 +51,18 @@ Start with:
 - [X] Lesson 28: Full Minor Pentatonic Scale
 - [X] Lesson 30: Rhythm Basics
 - [X] Lesson 31: Power Chord Variations
-- [ ] Lesson 33: Tapping Exercise
-- [ ] Lesson 34: Tapping Exercise #2
-- [ ] Lesson 35: Tapping #3: Adding Open Strings
-- [ ] Lesson 36: Tapping #4: Diminished Lick
+- [X] Lesson 33: Tapping Exercise << skimmed most since its just intro to tapping
+- [X] Lesson 34: Tapping Exercise #2 << skimmed to since it was just based off on the other
+- [ ] Lesson 35: Tapping #3: Adding Open Strings << Skipped since seems similar to other
+- [ ] Lesson 36: Tapping #4: Diminished Lick << Skipped since seems similar to other
 - [ ] Lesson 37: Tapping #5
-- [ ] Lesson 39: Tapping #6
-- [ ] Lesson 40: Chord Structures
-- [ ] Lesson 41: Octaves
+- [X] Lesson 39: Tapping #6 << Was very similar to others, but just with more strings
+- [X] Lesson 40: Chord Structures << * This was actually neat. Showed the same chord with different chord structures. I.e. using F-chord at the 12th to get another D 
+- [X] Lesson 41: Octaves
 
-Reference then with:
-*Mark Brennan*
-- [ ] Lesson 7: The C Major Scale - 1st Position
-- [ ] Lesson 8: Chords in C major - Part 1
-- [ ] Lesson 9: Chords in C major - Part 2
-- [ ] Lesson 15: The Key of G Major
-- [ ] Lesson 16: Chords of G Major
-- [ ] Lesson 17: The Key of D Major
-- [ ] Lesson 18: Chords of D Major
-- [ ] Lesson 22: Blues Boogie Shuffle
-- [ ] Lesson 24: Introduction to Improvisation
-- [ ] Lesson 25: The Key of A Minor
-- [ ] Lesson 28: Movable Dominant 7th Chord Forms
-- [ ] Lesson 29: MOvable Minor and Minor 7th Chord forms
+Summary:
+I thought this was a great different perspective on what I know. Although I knew most of the material, a lot of it was presented in a different perspective. I guess a better way of putting is, I knew the material one way, but the parts I didn't skip in this lesson provided an alternate way to doing whatever material the lesson was on. The biggest takeaway I think I have here is to start small and really make sure I've got the concept down. This insight came from the Full Major Pentatonic lesson. I know the minor pentatonic scale, not the major, but still wanted to make sure I got it down. It was a simple two-octave scale run, but instead of just learning the pattern, being able to go up and down it, I made a backing track with the scale and just goof'd solo'd over it. I feel pretty confident with it.
 
-Next, mostly chords with:
-*Brad Henecke*
-- [ ] Lesson 13: The A7 Chord
-- [ ] Lesson 14: The D7 Chord
-- [ ] Lesson 15: The E7 Chord
-- [ ] Lesson 16: The G7 Chord
-- [ ] Lesson 17: The B7 Chord
-- [ ] Lesson 18: The C7 Chord
-- [ ] Lesson 19: The F Major Chord
-
-More stuff with:
-*Chris Liepe*
-- [ ] Lesson 3: 3 New CHords: Complete the CAGED Method
-- [ ] Lesson 6: Barre and Minor Chords
-- [ ] Lesson 7: Strum Patterns and Time Signatures
-- [ ] Lesson 8: All About Intervals
-- [ ] Lesson 20: Palm Muting
-- [ ] Lesson 21: Hybrid Picking
 
 *Lisa Pursell*
 - [ ] Lesson 6: Hybrid Picking
@@ -137,6 +107,41 @@ More stuff with:
 - [ ] *Lesson 65: Using a Metronome*
 - [ ] Lesson 66: Rhythmic Chord Playing
 - [ ] Lesson 67: Creative Double Stop Ideas
+
+
+Reference then with:
+*Mark Brennan*
+- [ ] Lesson 7: The C Major Scale - 1st Position
+- [ ] Lesson 8: Chords in C major - Part 1
+- [ ] Lesson 9: Chords in C major - Part 2
+- [ ] Lesson 15: The Key of G Major
+- [ ] Lesson 16: Chords of G Major
+- [ ] Lesson 17: The Key of D Major
+- [ ] Lesson 18: Chords of D Major
+- [ ] Lesson 22: Blues Boogie Shuffle
+- [ ] Lesson 24: Introduction to Improvisation
+- [ ] Lesson 25: The Key of A Minor
+- [ ] Lesson 28: Movable Dominant 7th Chord Forms
+- [ ] Lesson 29: MOvable Minor and Minor 7th Chord forms
+
+Next, mostly chords with:
+*Brad Henecke*
+- [ ] Lesson 13: The A7 Chord
+- [ ] Lesson 14: The D7 Chord
+- [ ] Lesson 15: The E7 Chord
+- [ ] Lesson 16: The G7 Chord
+- [ ] Lesson 17: The B7 Chord
+- [ ] Lesson 18: The C7 Chord
+- [ ] Lesson 19: The F Major Chord
+
+More stuff with:
+*Chris Liepe*
+- [ ] Lesson 3: 3 New CHords: Complete the CAGED Method
+- [ ] Lesson 6: Barre and Minor Chords
+- [ ] Lesson 7: Strum Patterns and Time Signatures
+- [ ] Lesson 8: All About Intervals
+- [ ] Lesson 20: Palm Muting
+- [ ] Lesson 21: Hybrid Picking
 
 *Will Ripley*
 - [ ] Lesson 22: Muting Techniques

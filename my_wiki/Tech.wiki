@@ -15,6 +15,7 @@
 [[WebdriverIO]]
 [[X11]]
 [[Xmonad]]
+[[Yubikey]]
 [[Zsh Themes]]
 
 == Keyboards ==
