@@ -1,12 +1,30 @@
 = Studio Setup =
 
+*GOAL:*
+Attempt to get a linux DAW working
+
+Steps:
+- Install JACK
+- Figure out either:
+  - An alternative to PulseAudio
+  - How to turn off PulseAudio when JACK is running
+- Install Ardour
+- Try riggint up Zoom interface to it.
+
+
 *Interface:*
+Scarlett i18
+RME Babyface Pro
+
 Apollo Arrow Interface
 $500
 https://www.uaudio.com/audio-interfaces/arrow.htm://www.uaudio.com/audio-interfaces/arrow.html
 ^Need to check if compatible with mac mini
 
 Computer:
+It might be worthwhile looking into https://www.intel.com/content/www/us/en/products/boards-kits/nuc/mini-pcs/nuc7i7bnkq.html
+
+
 Mac Mini
 $1500
 - 3.0GHz 6‑core 8th‑generation Intel Core i5 (Turbo Boost up to 4.1GHz)
