@@ -10,11 +10,25 @@ Wikiblog? Yeah, I know. I couldn't come up with anything better at the moment. T
 [[Ideas]]
 
 
-== To Do ==
-- [ ] Start reading React Native tutorial
-- [ ] Start working on Space Invaders
-- [ ] Start on the NAND2Tetris book (once it comes)
-
+== Goals ==
+*Big Time:*
+- Become proficient at guitar:
+  - Be able to perform clean sweeps
+  - Be able to do multi-finger tapping (Sarah Longfield style) at XXX Bpm
+  - Be able to perform polyrhythms fingerstyle
+  - Improve my knowledge of chords:
+    - All main Major chords
+    - All main Minor chords
+    - Movable chord figures to get the sharps/flats
+    - All main Major 7th chords
+    - All main Minor 7th chords
+    - Some diminished chords
+    - Some augmented chords
+  - Be able to play flamenco << Needs more deets
+- Become proficient at programming: << All needs more deets
+  - Create the Edu-suite for Courtney
+  - Get through SICP
+  - Get through the Haskell Book
 
 == Random Thoughts ==
 Could we learn about scalability from nature?
