@@ -8,6 +8,7 @@ Wikiblog? Yeah, I know. I couldn't come up with anything better at the moment. T
 [[Books, Articles, and Papers]]
 [[Blog Stuff]]
 [[Ideas]]
+[[Project with Courtney]]
 
 
 == Goals ==
@@ -29,6 +30,15 @@ Wikiblog? Yeah, I know. I couldn't come up with anything better at the moment. T
   - Create the Edu-suite for Courtney
   - Get through SICP
   - Get through the Haskell Book
+
+== Monthly Goals ==
+- Make a track with Guitarix & Linux
+- Be able to make stub pages for a SPA app using Elm
+
+== Weekly goals ==
+- Check out Hydrogen drums
+- Read through chapter 2 of https://elmprogramming.com/
+
 
 == Random Thoughts ==
 Could we learn about scalability from nature?
