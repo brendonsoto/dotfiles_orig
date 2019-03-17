@@ -1,7 +1,12 @@
 = The Tutorial I Wish I Had -- v2 =
-This is a guide without strict guidance on how to use Elm.
+This is a guide without strict guidance on how to use Elm version 0.19.
+Why was this created? Because I prefer learning in a different way than the elm guide. The guide's great and if it works for you, great! I became frustrated with it because I felt some of the basics weren't covered. For instance, an explanation on the `init` function.
+
+[[Alternative approach]]
+
 
 == How to Start an Elm project ==
+In the terminal create a directory for our code and `cd` to it.
 Type `elm` in the command line.
 
 Brings up a bunch of stuff right? I always get a bit anxious seeing a bunch of text pop up on my screen, but I try to frame it as a little surprise (party horn emoji) to make it fun. Take a breath and read through it. It is really helpful.
@@ -35,11 +40,31 @@ If you want to compile the output to a file that can be hosted, use `elm make sr
 One thing I think is helpful in learning things is repitition. Spaced repitition works wonders, but unfortunately I haven't thought of a way to bring that to this guide. Why am I bringing up repitition? To help us learn better! "Where is this going?" you might ask. We're going to use our knowledge from the previous section to segway into producting markup.
 ^*NOTE* Perhaps use only the top sentence and include the rest as a footnote?
 
-So let's start by creating a project using `elm init`.
+So let's start small by creating a single page using `elm init`.
 
 Now we have our `elm.json` file and an empty `src` directory. Let's go ahead and make a `Main.elm` file in `src`.
 
-Now what?
+Let's look at the package docs for anything that talks about creating a page.
+
+Checking the packages, one of the first on the list is *browser*. Looking inside we see the following:
+- sandbox
+- element
+- document
+- application
+
+The third looks exactly like what we need! Clicking on it though shows what may seem as a confusing piece of code. This is a description of the *document type*. Whenever you see the colon symbol, think of it as a description for a type with the leftside being the type name and the right side being whatever stuff makes up the type.
+
+Here we see the type name is *document*, but the right side, or the underside to be more specific, is a bunch of stuff surrounded by curly brackets.
+
+The brackets indicate a *record* which is like an object in most other languages. We see what looks like types inside, but since this is a record the keywords to the left of the colons are the record's *properties*. They're like types, but specfic to the record.
+
+There are four record properties here:
+- init
+- view
+- update
+- subscriptions
+
+Every Elm program needs a *main* function. This is what starts it out. So we can start up Elm with `main = Browser.document...`.
 
 
 == How to add event handlers ==
