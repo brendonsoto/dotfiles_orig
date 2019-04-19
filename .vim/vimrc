@@ -24,13 +24,10 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Multi-lang
-Plug 'autozimu/LanguageClient-neovim', {
-  \ 'for': ['javascript', 'javascript.jsx', 'haskell'],
-  \ 'branch': 'next',
-  \ 'do': 'bash install.sh'
-  \}
 Plug 'godlygeek/tabular', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
-Plug 'w0rp/ale', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
+Plug 'sirver/UltiSnips', { 'for': ['haskell', 'html', 'javascript', 'javascript.jsx'] } 
+" Plug 'w0rp/ale', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
+Plug 'w0rp/ale'
 
 " Elm
 Plug 'ElmCast/elm-vim', { 'for': 'elm' }
@@ -42,6 +39,8 @@ Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
+Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
+Plug 'tpope/vim-jdaddy', { 'for': 'json' }
 
 " Markdown
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'vimwiki'] }
@@ -156,10 +155,6 @@ map <Leader>Y ggv<S-g>$"*y
 map j gj
 map k gk
 
-" Buffer switching
-" nnoremap <Leader>] :bn<CR>
-" nnoremap <Leader>[ :bp<CR>
-
 " Remove trailing whitespace
 nmap <Leader>W :%s/ \+$//<CR>
 
@@ -230,13 +225,18 @@ let g:ftplugin_sql_omni_key = '<C-j>'
 """""""""""""""""""""
 
 " Ale
-let g_ale_completion_enabled = 1
+let g:ale_completion_enabled = 1
 let g:ale_linters = {
-  \ 'javascript': ['eslint'],
+  \ 'javascript': ['eslint', 'tsserver'],
   \}
+let g:ale_lint_on_text_changed = 'normal'
+" let g:ale_lint_on_insert_leave = 1 -- uncomment this if still getting mallocs
 nmap <silent> [j <Plug>(ale_previous_wrap)
 nmap <silent> ]j <Plug>(ale_next_wrap)
 nmap <Leader>? <Plug>(ale_detail)
+nmap gd <Plug>(ALEGoToDefinition)
+nmap gr <Plug>(ALEFindReferences)
+nmap gh <Plug>(ALEHover)
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
@@ -303,45 +303,6 @@ function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 
-" LSP - LanguageServerProtocol, not LumpySpacePrincess
-" kudos to https://fortes.com/2017/language-server-neovim/
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_loggingFile = '/tmp/langClient.log'
-let g:LanguageClient_loggingLevel = 'ERROR'
-let g:LanguageClient_serverStderr = '/tmp/langClient_serverErr.log'
-let g:LanguageClient_serverCommands = {}
-
-" JS/TS detection
-if executable('javascript-typescript-stdio')
-  let g:LanguageClient_serverCommands['javascript'] = ['javascript-typescript-stdio']
-  let g:LanguageClient_serverCommands['javascript.jsx'] = ['javascript-typescript-stdio']
-  autocmd FileType javascript setlocal completefunc=LanguageClient#complete
-  autocmd FileType javascript.jsx setlocal completefunc=LanguageClient#complete
-endif
-
-" Haskell detection -- NOTE Disabling for now since it uses up WAY too much cpu power
-if executable('hie')
-  let g:LanguageClient_serverCommands['haskell'] = ['hie-wrapper']
-endif
-
-function SetLSPShortcuts()
-  nnoremap <leader><S-L>d :call LanguageClient#textDocument_definition()<CR>
-  nnoremap <leader><S-L>r :call LanguageClient#textDocument_rename()<CR>
-  nnoremap <leader><S-L>f :call LanguageClient#textDocument_formatting()<CR>
-  nnoremap <leader><S-L>t :call LanguageClient#textDocument_typeDefinition()<CR>
-  nnoremap <leader><S-L>x :call LanguageClient#textDocument_references()<CR>
-  nnoremap <leader><S-L>a :call LanguageClient_workspace_applyEdit()<CR>
-  nnoremap <leader><S-L>c :call LanguageClient#textDocument_completion()<CR>
-  nnoremap <leader><S-L>h :call LanguageClient#textDocument_hover()<CR>
-  nnoremap <leader><S-L>s :call LanguageClient_textDocument_documentSymbol()<CR>
-  nnoremap <leader><S-L>m :call LanguageClient_contextMenu()<CR>
-endfunction()
-
-augroup LSP
-  autocmd!
-  autocmd FileType javascript,javascript.jsx call SetLSPShortcuts()
-augroup END
-
 " Rainbow Parenthesis
 " Set Rainbow Parenthesis to always be active
 augroup rainbow
@@ -360,10 +321,10 @@ vmap <Leader>T= :Tabularize /=<CR>
 nmap <Leader>T: :Tabularize /:\zs<CR>
 vmap <Leader>T: :Tabularize /:\zs<CR>
 
-" " UltiSnips
-" let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
-" let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
-" let g:UltiSnipsExpandTrigger='<c-e>'
+" UltiSnips
+let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
+let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
+let g:UltiSnipsExpandTrigger='<c-e>'
 
 " Vimwiki
 let g:vimwiki_list = [
