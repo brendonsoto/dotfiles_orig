@@ -39,15 +39,14 @@ Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
 Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
-Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
 Plug 'tpope/vim-jdaddy', { 'for': 'json' }
 
 " Markdown
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'vimwiki'] }
 
 " Web general
-Plug 'mattn/emmet-vim', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
-Plug 'tmhedberg/matchit', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'javascript.jsx'] }
+Plug 'tmhedberg/matchit', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 
 " Vim general
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -244,6 +243,17 @@ call deoplete#custom#option('smart_case', v:true)
 
 " Dispatch
 nmap <Leader>D :Dispatch<CR>
+
+" Elm - elm-vim
+let g:elm_jump_to_error = 0
+let g:elm_make_output_file = 'elm.js'
+let g:elm_make_show_warnings = 0
+let g:elm_syntastic_show_warnings = 0
+let g:elm_browser_command = ''
+let g:elm_detailed_complete = 0
+let g:elm_format_autosave = 1
+let g:elm_format_fail_silently = 0
+let g:elm_setup_keybindings = 1
 
 " Emmet
 let g:user_emmet_settings = {

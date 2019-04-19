@@ -30,3 +30,9 @@ or
 - Find networks to connect to: `nmcli device wifi`
 - Connect to a network: `nmcli dev connect <network>`
 ^Wayyyy easier
+
+
+= Using nmcli to turn off networking =
+`nmcli device status` -- get device name
+`nmcli device disconnect wlp2s0`
+`nmcli device connect wlp2s0`

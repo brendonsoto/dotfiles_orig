@@ -1,3 +1,6 @@
+[[Ardour]]
+[[Recording Days]]
+
 = Studio Setup =
 
 *GOAL:*
@@ -86,24 +89,25 @@ I thought this was a great different perspective on what I know. Although I knew
 
 
 *Lisa Pursell*
-- [ ] Lesson 6: Hybrid Picking
-- [ ] Lesson 8: Travis Picking
-- [ ] Lesson 9: Triads and Fingerstyle
-- [ ] Lesson 10: THe Blues Shuffle
-- [ ] Lesson 14: Syncopated Rhythm
-- [ ] Lesson 16: Syncopated Rhythm Revisited
-- [ ] Lesson 17: Single String Technique
-- [ ] Lesson 21: Some Blues / Jazz Chords
-- [ ] Lesson 22: 6th Intervals
-- [ ] Lesson 24: Tool Box Tips
-- [ ] Lesson 25: Minor Blues Scale
-- [ ] Lesson 26: Texas Style Shuffle Rhythm
-- [ ] Lesson 27: E7(#9) Chord
-- [ ] Lesson 28: 5 Scale Positions
-- [ ] Lesson 29: Faster Chord Changes
+- [ ] Lesson 6: Hybrid Picking << Skipped since I'm not interested in picking with both pick & fingers
+- [ ] Lesson 8: Travis Picking << Skipped too
+- [X] Lesson 9: Triads and Fingerstyle
+- [X] Lesson 10: THe Blues Shuffle << Probably didn't need to watch all of this
+- [ ] Lesson 13: Barre chords << Watched halfway through and then skipped since its major/minor barre
+- [ ] Lesson 14: Syncopated Rhythm << Skipped because its just a 1-e-and-uh scratching pattern with chords on and-uh
+- [X] Lesson 16: Syncopated Rhythm Revisited << coud've skipped
+- [ ] Lesson 17: Single String Technique << Skipped -- intro on alternate picking
+- [X] Lesson 21: Some Blues / Jazz Chords
+- [ ] Lesson 22: 6th Intervals << Skipped halfway through because didn't really talk about the application of 6ths
+- [ ] Lesson 24: Tool Box Tips << Watched 3/4ths of it. Stopped at the third since it seemed to kind of wander off
+- [ ] Lesson 25: Minor Blues Scale << Skipping since it's the blues minor pentatonic scale
+- [X] Lesson 26: Texas Style Shuffle Rhythm << IT'S STEVIE!! SRV!!!
+- [X] Lesson 27: E7(#9) Chord << Jimi Hendrix style chord!
+- [X] Lesson 28: 5 Scale Positions << Penatonic scale
+- [X] Lesson 29: Faster Chord Changes
 - [X] *Lesson 30: Organizing a Practice Session* << REVISIT MULTIPLE TIMES
-- [ ] Lesson 33: Barre Chord Concepts
-- [ ] Lesson 34: Barre Chords in a Blues Progression
+- [X] Lesson 33: Barre Chord Concepts
+- [X] Lesson 34: Barre Chords in a Blues Progression << Was just I-IV-V progressions with barre chords starting at the 6th and 5th strings
 - [ ] Lesson 35: Octave Shapes
 - [ ] Lesson 36: Improvising with Intervals
 - [ ] Lesson 37: 5th and 6th Intervals
