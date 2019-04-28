@@ -2,17 +2,39 @@
 [[Recording Days]]
 
 = Studio Setup =
+*GOAL:*
+Attempt to get a linux DAW working
 
-*Interface:*
-Audient - iD44 / iD14 / iD22
-Scarlett i18
-RME Babyface Pro
+Steps:
+- Install JACK
+- Figure out either:
+  - An alternative to PulseAudio
+  - How to turn off PulseAudio when JACK is running
+- Install Ardour
+- Try riggint up Zoom interface to it.
 
-Mac Mini
-$1500
-- 3.0GHz 6‑core 8th‑generation Intel Core i5 (Turbo Boost up to 4.1GHz)
-- 16GB
-- 512 GB SSD
+*Ideal Rig:*
+Power
+- Furman basic 8 power conditioner
+Interface
+- Scarlett 18i20
+Reverb/Delay/Fx
+- Lexicon mx400
+Preamp
+- If Guitarix:
+  - FMR Audio Really Nice Preamp (~500$)
+  - a Rackmount preamp << need research
+  - ART Tube ?
+- If not Guitarix:
+  - Cheap - Line6 pod HDx (~350-500$) << Go with this one! Ola did a video on it with just POD > Logic 9 and it sounded sick so some post-prod should help clean it up!
+  - More - used Axe Fx Ultra (~750$)
+  - Morer - DV Mark Multiamp?
+  - Moreer - used Axe Fx II (~1300$)
+  - Morer2 - kemper profiler head
+  - I could get something like a DV Micro 50 and cab simulation software
+
+Drums:
+Roland TD-1k
 
 == TO BUY ==
 === Base ===
