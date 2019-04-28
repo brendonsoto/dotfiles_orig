@@ -1,6 +1,9 @@
 # Set bash to use vi commands
 set -o vi
 
+# PASS
+export PASSWORD_STORE_CHARACTER_SET="[:alnum:]#%="
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s /usr/local/opt/nvm/nvm.sh ] && source /usr/local/opt/nvm/nvm.sh 

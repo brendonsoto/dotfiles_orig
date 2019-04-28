@@ -3,36 +3,45 @@
 
 = Studio Setup =
 
-*GOAL:*
-Attempt to get a linux DAW working
-
-Steps:
-- Install JACK
-- Figure out either:
-  - An alternative to PulseAudio
-  - How to turn off PulseAudio when JACK is running
-- Install Ardour
-- Try riggint up Zoom interface to it.
-
-
 *Interface:*
+Audient - iD44 / iD14 / iD22
 Scarlett i18
 RME Babyface Pro
-
-Apollo Arrow Interface
-$500
-https://www.uaudio.com/audio-interfaces/arrow.htm://www.uaudio.com/audio-interfaces/arrow.html
-^Need to check if compatible with mac mini
-
-Computer:
-It might be worthwhile looking into https://www.intel.com/content/www/us/en/products/boards-kits/nuc/mini-pcs/nuc7i7bnkq.html
-
 
 Mac Mini
 $1500
 - 3.0GHz 6‑core 8th‑generation Intel Core i5 (Turbo Boost up to 4.1GHz)
 - 16GB
 - 512 GB SSD
+
+== TO BUY ==
+=== Base ===
+- [ ] Mac Mini (start off w/ 6-core i5, 8gb ram, 512gb storage) - $1300
+- [ ] Monitor - $200
+- [ ] 5 String bass guitar - G&L LB-100 - $500
+
+=== Upgrades ===
+- [ ] Audient iD14 or iD22 << wait to see how the computer handles reverb + compression - $300-500
+- [ ] Ormsby Goliath - $1600 << 7 or 8 string?
+- [ ] Furman Power Station?
+
+=== Extra ===
+- [ ] Mackie 4 way headphone jack - $39
+- [ ] Softube Console 1 - $500
+
+=== Maybe ===
+- [ ] Drums:
+  - [ ] Roland V-drum - $500
+  - [ ] Studio Drummer or EZDrummer2 (but leaning more towards Studio since it's NI and the mics & kits are high qual)
+- [ ] Outboard compressor:
+  - [ ] ($180) FMR Really Nice Compressor
+  - [ ] ($400) Klark Teknik KT-2A
+- [ ] Outboard reverb:
+  - [ ] ($100) TC Electronic M100 (maybe x2 - one for delay, other for reverb)
+  - [ ] ($400) Lexicon MX400XL
+- [ ] Mini patchbay?
+
+I'm thinking of going with the FMR + 2 TC Electronic for Desktop setup
 
 = Guitar =
 == Gear ==
@@ -41,6 +50,7 @@ Actually, think about what I really want... a nice studio option, but also a por
 - Joyo Zombie Head << Would require an attenuator for multiple settings
 - DV Mark Little 50 << Solid state, but did sound pretty good and cheaper than the rest
 - Orange 1x8
+- Went with the Blackstar HT-1RH mk II and I dig it!!
 
 == Lesson Plan ==
 Using Jamplay...
@@ -105,30 +115,29 @@ I thought this was a great different perspective on what I know. Although I knew
 - [X] *Lesson 30: Organizing a Practice Session* << REVISIT MULTIPLE TIMES
 - [X] Lesson 33: Barre Chord Concepts
 - [X] Lesson 34: Barre Chords in a Blues Progression << Was just I-IV-V progressions with barre chords starting at the 6th and 5th strings
-- [ ] Lesson 35: Octave Shapes
-- [ ] Lesson 36: Improvising with Intervals
-- [ ] Lesson 37: 5th and 6th Intervals
-- [ ] Lesson 38: Major Scale
-- [ ] Lesson 40: Syncopated Rhythm
-- [ ] Lesson 41: Chords and Patterns
-- [ ] Lesson 45: Scale Application
-- [ ] Lesson 48: Adding the Blue Note
-- [ ] Lesson 49: Understanding Vibrato
-- [ ] Lesson 50: Sweep Picking Technique
-- [ ] Lesson 51: Shell Voicings
-- [ ] Lesson 52: Blues Turnaround Ideas
-- [ ] Lesson 53: Harmonizing the Majro Scale
-- [ ] Lesson 54: 8 Bar Blues
-- [ ] Lesson 55: Harmonizing with Diatonic Triads
-- [ ] Lesson 56: Connecting Patterns via Sequencing
-- [ ] Lesson 58: Full Neck Harmonization
+- [X] Lesson 35: Octave Shapes
+- [X] Lesson 36: Improvising with Intervals
+- [X] Lesson 37: 5th and 6th Intervals
+- [X] Lesson 38: Major Scale
+- [X] Lesson 40: Syncopated Rhythm
+- [X] Lesson 41: Chords and Patterns << Very insightful
+- [X] Lesson 45: Scale Application
+- [X] Lesson 48: Adding the Blue Note << Blue note = flat 5 in minor pentatonic
+- [X] Lesson 49: Understanding Vibrato
+- [X] Lesson 50: Sweep Picking Technique << This was more about raking
+- [X] Lesson 51: Shell Voicings << This was cool! Basis: Shell voicing = 1+3+b7th of a chord
+- [ ] Lesson 52: Blues Turnaround Ideas << Did the first part but then stopped since its all about a particular type of bules riff
+- [ ] Lesson 53: Harmonizing the Majro Scale << Did 3/4s since its just about the chords per scale
+- [X] Lesson 54: 8 Bar Blues
+- [X] Lesson 55: Harmonizing with Diatonic Triads
+- [ ] Lesson 56: Connecting Patterns via Sequencing << Did about half of it. Mostly 1/4 and triplet sequencing patterns ascending and descending linearly
+- [ ] Lesson 58: Full Neck Harmonization << Cool info, mostly different shapes for the chords corresponding with a G Major scale
 - [ ] Lesson 59: The F#m7(b5) Chord
 - [ ] Lesson 60: Extensions
 - [ ] Lesson 61: Passing Tones
 - [ ] Lesson 62: Creating a Solo
-- [ ] *Lesson 65: Using a Metronome*
+- [X] *Lesson 65: Using a Metronome*
 - [ ] Lesson 66: Rhythmic Chord Playing
-- [ ] Lesson 67: Creative Double Stop Ideas
 
 
 Reference then with:
