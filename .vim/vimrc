@@ -16,9 +16,6 @@ Plug 'morhetz/gruvbox'
 " Plug 'fenetikm/falcon'
 " Plug 'joshdick/onedark.vim'
 
-" CSS
-Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'html', 'javascript', 'javascript.jsx'] }
-
 " External plugin support
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -26,7 +23,6 @@ Plug 'junegunn/fzf.vim'
 " Multi-lang
 Plug 'godlygeek/tabular', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 Plug 'sirver/UltiSnips', { 'for': ['haskell', 'html', 'javascript', 'javascript.jsx'] } 
-" Plug 'w0rp/ale', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
 Plug 'w0rp/ale'
 
 " Elm
@@ -55,13 +51,14 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
-" Below is needed with Ranger
-Plug 'rbgrouleff/bclose.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vimwiki/vimwiki'
+
+" Below is needed with Ranger
+Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()
 
