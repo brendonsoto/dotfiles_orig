@@ -46,6 +46,7 @@ Roland TD-1k
 - [ ] Audient iD14 or iD22 << wait to see how the computer handles reverb + compression - $300-500
 - [ ] Ormsby Goliath - $1600 << 7 or 8 string?
 - [ ] Furman Power Station?
+- [ ] Look into Laney Ironheart IRT Studio?
 
 === Extra ===
 - [ ] Mackie 4 way headphone jack - $39
