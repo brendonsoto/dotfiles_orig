@@ -45,7 +45,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 Plug 'tmhedberg/matchit', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 
 " Vim general
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'easymotion/vim-easymotion'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
@@ -88,6 +88,7 @@ set autoindent " allow autoindent by default
 set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard+=unnamedplus
+set completeopt+=noinsert
 set diffopt=filler,vertical " Diff settings
 set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
@@ -227,6 +228,7 @@ let g:ale_linters = {
   \}
 let g:ale_lint_on_text_changed = 'normal'
 " let g:ale_lint_on_insert_leave = 1 -- uncomment this if still getting mallocs
+let g:ale_completion_enabled = 1
 nmap <silent> [j <Plug>(ale_previous_wrap)
 nmap <silent> ]j <Plug>(ale_next_wrap)
 nmap <Leader>? <Plug>(ale_detail)
@@ -235,8 +237,8 @@ nmap gr <Plug>(ALEFindReferences)
 nmap gh <Plug>(ALEHover)
 
 " Deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('smart_case', v:true)
+" let g:deoplete#enable_at_startup = 1
+" call deoplete#custom#option('smart_case', v:true)
 
 " Dispatch
 nmap <Leader>D :Dispatch<CR>
