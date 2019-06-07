@@ -45,7 +45,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 Plug 'tmhedberg/matchit', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 
 " Vim general
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'easymotion/vim-easymotion'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
@@ -88,17 +88,17 @@ set autoindent " allow autoindent by default
 set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard+=unnamedplus
-set completeopt+=noinsert
+" set completeopt=menu,preview,noinsert
 set diffopt=filler,vertical " Diff settings
 set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
 set history=50 " command line history
 set hlsearch " highlight search terms
 set ignorecase " ignore case when searching
-set inccommand=split " show changes in a split window for search and replace
 set incsearch " show matches as you type
 set linebreak " enable word-break without inserting an EOL character
 set nobackup " no backups
+set nomodeline " For a security thing - https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
 set noswapfile " no backups
 set number " display line number
 set omnifunc=syntaxcomplete#Complete " Enable omnicompletion
@@ -119,6 +119,11 @@ if has("mouse")
 	set mouse=a
 endif
 
+" nvim specific stuff
+if (has("nvim"))
+  set inccommand=split " show changes in a split window for search and replace
+endif
+
 
 """""""""""""""""""""
 "		Mappings
@@ -133,9 +138,9 @@ map <silent> <F12> :!open %<CR>
 " Easy open, close, and save
 nnoremap <Leader>e :e<Space>
 nnoremap <Leader>v :vs
-nnoremap <Leader>Q :qa<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q<CR>
 
 " Easy window Navigation
 nnoremap <Leader>h <C-w>h
@@ -152,15 +157,8 @@ map <Leader>Y ggv<S-g>$"*y
 map j gj
 map k gk
 
-" Remove trailing whitespace
-nmap <Leader>W :%s/ \+$//<CR>
-
-" miniBufExplr
-" nnoremap <Leader>b :MBEToggle<CR>
-
 " Easy window splitting
 map <Leader>s :split<CR>
-map <Leader>= <C-w>=
 
 " Easy tabs
 map <Leader>t :tab split<CR>
@@ -222,26 +220,20 @@ let g:ftplugin_sql_omni_key = '<C-j>'
 """""""""""""""""""""
 
 " Ale
-let g:ale_completion_enabled = 1
 let g:ale_linters = {
   \ 'javascript': ['eslint', 'tsserver'],
   \}
 let g:ale_lint_on_text_changed = 'normal'
-" let g:ale_lint_on_insert_leave = 1 -- uncomment this if still getting mallocs
 let g:ale_completion_enabled = 1
-nmap <silent> [j <Plug>(ale_previous_wrap)
-nmap <silent> ]j <Plug>(ale_next_wrap)
+nmap [j <Plug>(ale_previous_wrap)
+nmap ]j <Plug>(ale_next_wrap)
 nmap <Leader>? <Plug>(ale_detail)
-nmap gd <Plug>(ALEGoToDefinition)
-nmap gr <Plug>(ALEFindReferences)
-nmap gh <Plug>(ALEHover)
+nmap <Leader>d <Plug>(ale_go_to_definition)
+nmap <Leader>r <Plug>(ale_find_references)
 
 " Deoplete
-" let g:deoplete#enable_at_startup = 1
-" call deoplete#custom#option('smart_case', v:true)
-
-" Dispatch
-nmap <Leader>D :Dispatch<CR>
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('smart_case', v:true)
 
 " Elm - elm-vim
 let g:elm_jump_to_error = 0
@@ -340,6 +332,4 @@ let g:vimwiki_list = [
   \ {'path': '~/vimwiki'},
   \ {'path': '~/dotfiles/my_wiki'}
   \]
-nmap <Leader>wn <Plug>VimwikiNextLink
-nmap <Leader>wp <Plug>VimwikiPrevLink
 nmap <Leader>x <Plug>VimwikiToggleListItem
