@@ -1,5 +1,15 @@
 = Project with Courtney =
 
+Why not just do the things you know how to do and do things one step at a time?
+i.e. 
+- Create `server` and `client` dirs
+- Create SQL for creating tables
+- Create SQL for adding dummy data
+- Create basic Flask app (hello world)
+- Add DB to Flask
+- Add a route to POST data
+- Add a route to GET data
+- Add login
 
 == Description ==
 The goal is to produce a web app to manage the workload and progress of students.
