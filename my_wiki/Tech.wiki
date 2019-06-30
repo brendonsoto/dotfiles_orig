@@ -9,6 +9,7 @@
 [[Laptops]]
 [[Linux]]
 [[OSX]]
+[[Python]]
 [[React Native]]
 [[React Project Generator?]]
 [[Webpack]]

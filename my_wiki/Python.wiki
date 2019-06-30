@@ -1,0 +1,11 @@
+= Python =
+
+== Problems & Solutions ==
+Pip not working due to self signed cert
+
+Solution:
+https://stackoverflow.com/questions/39356413/how-to-add-a-custom-ca-root-certificate-to-the-ca-store-used-by-pip-in-windows
+
+tl;dr
+Find the self signed cert and add it to pip via
+`pip3 config set global.cert $HOME/certs/root-bundle.crt/pem`
