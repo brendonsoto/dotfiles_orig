@@ -5,9 +5,12 @@ set -o vi
 export PASSWORD_STORE_CHARACTER_SET="[:alnum:]#%="
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s /usr/local/opt/nvm/nvm.sh ] && source /usr/local/opt/nvm/nvm.sh 
-[ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+if command -v nvm >/dev/null 2>&1
+then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s /usr/local/opt/nvm/nvm.sh ] && source /usr/local/opt/nvm/nvm.sh 
+  [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+fi
 
 ##########################################
 #             Path Addendums
@@ -47,21 +50,6 @@ export PATH="${PATH}:$HOME/.cargo/bin"
 
 # Yarn
 export PATH="${PATH}:/home/brendon/.yarn/bin"
-
-# Rust
-export PATH="${PATH}:$HOME/.cargo/bin"
-
-# Yarn
-export PATH="${PATH}:/home/brendon/.yarn/bin"
-
-# NHL
-export NHL_ROOT="$HOME/development/workarea"
-export GRB_HOME="$NHL_ROOT/grb"
-export GRB_HOME_UI="$NHL_ROOT/grb-ui"
-export PATH="${PATH}:$NHL_ROOT/de/bin:/usr/local/mysql/bin"
-export NODE_EXTRA_CA_CERTS="$HOME/certs/nhl_rootca_bundle.pem"
-export PATH="${PATH}:$NHL_ROOT/_scripts"
-
 
 ##########################################
 #             Aliases
