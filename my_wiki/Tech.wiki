@@ -12,6 +12,7 @@
 [[Python]]
 [[React Native]]
 [[React Project Generator?]]
+[[SQLite]]
 [[Webpack]]
 [[WebdriverIO]]
 [[X11]]

@@ -1,4 +1,6 @@
 = Yubikey =
+
+== Setup ==
 I tried making separate keys for Encryption and Authentication, but that did not work
 
 Here's what I did to get the Yubikey 5c to work with Pass.
@@ -23,3 +25,13 @@ I'm goign to try going the subkey route, but I got a way to work and here's how:
 11. `gpg --card-status`
 
 You're done!
+
+== Getting Yubikey + Pass working on a new computer ==
+
+1. Enter yubikey into computer
+2. Open a terminal
+3. `gpg --edit-card`
+4. `fetch`
+5. Fetch the pass
+
+Should be good!
