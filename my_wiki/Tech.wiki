@@ -9,6 +9,7 @@
 [[Laptops]]
 [[Linux]]
 [[OSX]]
+[[Planck]]
 [[Python]]
 [[React Native]]
 [[React Project Generator?]]
