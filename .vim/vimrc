@@ -88,7 +88,7 @@ set autoindent " allow autoindent by default
 set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard+=unnamedplus
-" set completeopt=menu,preview,noinsert
+set completeopt=menu,preview,noinsert
 set diffopt=filler,vertical " Diff settings
 set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
