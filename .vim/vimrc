@@ -140,7 +140,7 @@ nnoremap <Leader>e :e<Space>
 nnoremap <Leader>v :vs
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
-nnoremap <Leader>Q :q<CR>
+nnoremap <Leader>Q :qa<CR>
 
 " Easy window Navigation
 nnoremap <Leader>h <C-w>h
