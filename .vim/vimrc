@@ -21,37 +21,49 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Multi-lang
-Plug 'godlygeek/tabular', { 'for': ['haskell', 'javascript', 'javascript.jsx'] }
-Plug 'sirver/UltiSnips', { 'for': ['haskell', 'html', 'javascript', 'javascript.jsx'] } 
+Plug 'godlygeek/tabular'
+Plug 'sirver/UltiSnips'
 Plug 'w0rp/ale'
 
 " Elm
-Plug 'ElmCast/elm-vim', { 'for': 'elm' }
+Plug 'ElmCast/elm-vim'
 
 " Haskell
-Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
+Plug 'neovimhaskell/haskell-vim'
 
-" Javascript & related
-Plug 'elzr/vim-json', { 'for': ['json', 'javascript'] }
-Plug 'mxw/vim-jsx', { 'for': ['HTML', 'javascript', 'javascript.jsx'] }
-Plug 'pangloss/vim-javascript', { 'for': ['HTML', 'javascript', 'javascript.jsx', 'typescript'] }
-Plug 'tpope/vim-jdaddy', { 'for': 'json' }
+" Javascript
+Plug 'pangloss/vim-javascript'
+
+"JSON
+Plug 'elzr/vim-json'
+Plug 'tpope/vim-jdaddy'
+
+" JSX
+Plug 'mxw/vim-jsx'
 
 " Markdown
-Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'vimwiki'] }
+Plug 'junegunn/goyo.vim'
+
+" TypeScript
+Plug 'leafgarland/typescript-vim'
 
 " Web general
-Plug 'mattn/emmet-vim', { 'for': ['html', 'javascript', 'javascript.jsx'] }
-Plug 'tmhedberg/matchit', { 'for': ['html', 'javascript', 'javascript.jsx'] }
+Plug 'mattn/emmet-vim'
+Plug 'tmhedberg/matchit'
 
 " Vim general
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'majutsushi/tagbar'
+Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-startify'
 Plug 'tomtom/tcomment_vim'
+" Plug 'tpope/vim-cucumber/'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -87,8 +99,9 @@ colorscheme gruvbox
 set autoindent " allow autoindent by default
 set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set clipboard+=unnamedplus
-set completeopt=menu,preview,noinsert
+set clipboard+=unnamedplus " Use the clipboard register + in addition to the default
+" Use a popup menu, even if there's one match, show extra info, do not auto-select or auto-insert
+set completeopt=menu,menuone,preview,noselect,noinsert
 set diffopt=filler,vertical " Diff settings
 set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
@@ -161,7 +174,7 @@ map k gk
 map <Leader>s :split<CR>
 
 " Easy tabs
-map <Leader>t :tab split<CR>
+map <Leader>ts :tab split<CR>
 
 " Easy remove highlighting
 map <Leader>/ :nohl<CR>
@@ -222,9 +235,15 @@ let g:ftplugin_sql_omni_key = '<C-j>'
 " Ale
 let g:ale_linters = {
   \ 'javascript': ['eslint', 'tsserver'],
+  \ 'typescript': ['eslint', 'tsserver', 'typecheck'],
   \}
-let g:ale_lint_on_text_changed = 'normal'
-let g:ale_completion_enabled = 1
+let g:ale_fixers = {
+      \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \ 'javascript': ['prettier']
+      \}
+let g:ale_fix_on_save = 1
+let g:ale_cucumber_cucumber_options = '--require /Users/bsoto/work/e2e-test-suite/cypress/integration/steps'
+" let g:ale_lint_on_text_changed = 'normal'
 nmap [j <Plug>(ale_previous_wrap)
 nmap ]j <Plug>(ale_next_wrap)
 nmap <Leader>? <Plug>(ale_detail)
@@ -257,9 +276,11 @@ let g:user_emmet_settings = {
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " FZF
-nnoremap <Leader>a :Rg<CR>
-nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>B :Buffers<CR>
 nnoremap <C-p> :Files<CR>
+
+" Grepper
+nnoremap <Leader>a :Grepper -tool rg<CR>
 
 " Lightline
 set laststatus=2
@@ -318,9 +339,29 @@ let g:ranger_replace_netrw = 1
 
 " Tabular
 nmap <Leader>T= :Tabularize /=<CR>
-vmap <Leader>T= :Tabularize /=<CR>
-nmap <Leader>T: :Tabularize /:\zs<CR>
 vmap <Leader>T: :Tabularize /:\zs<CR>
+
+" Tagbar
+nmap <Leader>tt :TagbarToggle<CR>
+let g:tagbar_type_typescript = {
+  \ 'ctagsbin' : 'tstags',
+  \ 'ctagsargs' : '-f-',
+  \ 'kinds': [
+  \ 'e:enums:0:1',
+  \ 'f:function:0:1',
+  \ 't:typealias:0:1',
+  \ 'M:Module:0:1',
+  \ 'I:import:0:1',
+  \ 'i:interface:0:1',
+  \ 'C:class:0:1',
+  \ 'm:method:0:1',
+  \ 'p:property:0:1',
+  \ 'v:variable:0:1',
+  \ 'c:const:0:1',
+  \ ],
+  \ 'sort' : 0
+  \ }
+
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
@@ -329,7 +370,7 @@ let g:UltiSnipsExpandTrigger='<c-e>'
 
 " Vimwiki
 let g:vimwiki_list = [
-  \ {'path': '~/vimwiki'},
-  \ {'path': '~/dotfiles/my_wiki'}
-  \]
+      \ {'path': '~/vimwiki'},
+      \ {'path': '~/dotfiles/my_wiki'}
+      \]
 nmap <Leader>x <Plug>VimwikiToggleListItem
