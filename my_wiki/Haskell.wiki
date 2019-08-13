@@ -30,3 +30,11 @@ Text Editor
 Tmux Session Manager
 - basically a way to create scripts to launch tmux in predefined configs
 MIDI Sequencer to interface with your hardware!!
+
+
+= Other =
+I'm going through the Acronym problem on the Haskell exercism.io track.
+It introduced me to the `Data.Text` type which is really handy for manipulating text.
+There are functions in it to justify/pad strings along side natively titleCasing or lower casing for comparison purposes.
+It's really neat.
+

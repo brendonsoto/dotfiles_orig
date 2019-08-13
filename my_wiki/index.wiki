@@ -3,12 +3,14 @@
 Wikiblog? Yeah, I know. I couldn't come up with anything better at the moment. This is just a space to record my thoughts and reflections on tech/code stuff.
 
 == Categories ==
-[[Tech]]
-[[Music]]
-[[Books, Articles, and Papers]]
 [[Blog Stuff]]
+[[Books, Articles, and Papers]]
 [[Ideas]]
+[[Music]]
 [[Project with Courtney]]
+[[Presentation Skills]]
+[[Tech]]
+[[Work Notes]]
 
 
 == Goals ==
