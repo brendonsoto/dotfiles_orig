@@ -371,7 +371,7 @@ let g:UltiSnipsExpandTrigger='<c-e>'
 
 " Vimwiki
 let g:vimwiki_list = [
-      \ {'path': '~/vimwiki'},
+      \ {'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
       \ {'path': '~/dotfiles/my_wiki'}
       \]
 nmap <Leader>x <Plug>VimwikiToggleListItem
