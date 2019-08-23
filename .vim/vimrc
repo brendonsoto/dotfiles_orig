@@ -338,6 +338,9 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 let g:ranger_replace_netrw = 1
 
+" Startify
+let g:startify_bookmarks = [ {'w': '~/vimwiki/index.md'} ]
+
 " Tabular
 nmap <Leader>T= :Tabularize /=<CR>
 vmap <Leader>T: :Tabularize /:\zs<CR>
