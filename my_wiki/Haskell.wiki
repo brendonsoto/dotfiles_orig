@@ -3,6 +3,7 @@
 [[Definitions]]
 [[Questions]]
 [[Stack]]
+[[TypeClasses]]
 
 = Learning Guide For Myself =
 - [ ] Go through HaskellBook
@@ -37,4 +38,3 @@ I'm going through the Acronym problem on the Haskell exercism.io track.
 It introduced me to the `Data.Text` type which is really handy for manipulating text.
 There are functions in it to justify/pad strings along side natively titleCasing or lower casing for comparison purposes.
 It's really neat.
-

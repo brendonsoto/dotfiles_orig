@@ -17,16 +17,18 @@ Plug 'morhetz/gruvbox'
 " Plug 'joshdick/onedark.vim'
 
 " External plugin support
-Plug '/usr/local/opt/fzf'
+" Conditional loading of the directory for fzf
+if (findfile("fzf", "/usr/local/opt"))
+  Plug '/usr/local/opt/fzf'
+elseif (findfile("fzf","/usr/bin"))
+  Plug '/usr/bin/fzf'
+endif
 Plug 'junegunn/fzf.vim'
 
 " Multi-lang
 Plug 'godlygeek/tabular'
 Plug 'sirver/UltiSnips'
 Plug 'w0rp/ale'
-
-" Elm
-Plug 'ElmCast/elm-vim'
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -36,7 +38,6 @@ Plug 'pangloss/vim-javascript'
 
 "JSON
 Plug 'elzr/vim-json'
-Plug 'tpope/vim-jdaddy'
 
 " JSX
 Plug 'mxw/vim-jsx'
@@ -52,7 +53,6 @@ Plug 'mattn/emmet-vim'
 Plug 'tmhedberg/matchit'
 
 " Vim general
-Plug 'Shougo/deoplete.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'francoiscabrol/ranger.vim'
@@ -60,10 +60,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'majutsushi/tagbar'
-Plug 'mhinz/vim-grepper'
 Plug 'mhinz/vim-startify'
 Plug 'tomtom/tcomment_vim'
-" Plug 'tpope/vim-cucumber/'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -243,28 +241,12 @@ let g:ale_fixers = {
       \ 'javascript': ['prettier']
       \}
 let g:ale_fix_on_save = 1
-let g:ale_cucumber_cucumber_options = '--require /Users/bsoto/work/e2e-test-suite/cypress/integration/steps'
-" let g:ale_lint_on_text_changed = 'normal'
+let g:ale_completion_enabled = 1
 nmap [j <Plug>(ale_previous_wrap)
 nmap ]j <Plug>(ale_next_wrap)
 nmap <Leader>? <Plug>(ale_detail)
 nmap <Leader>d <Plug>(ale_go_to_definition)
 nmap <Leader>r <Plug>(ale_find_references)
-
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('smart_case', v:true)
-
-" Elm - elm-vim
-let g:elm_jump_to_error = 0
-let g:elm_make_output_file = 'elm.js'
-let g:elm_make_show_warnings = 0
-let g:elm_syntastic_show_warnings = 0
-let g:elm_browser_command = ''
-let g:elm_detailed_complete = 0
-let g:elm_format_autosave = 1
-let g:elm_format_fail_silently = 0
-let g:elm_setup_keybindings = 1
 
 " Emmet
 let g:user_emmet_settings = {
@@ -277,11 +259,9 @@ let g:user_emmet_settings = {
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " FZF
+nnoremap <Leader>a :Rg<CR>
 nnoremap <Leader>B :Buffers<CR>
 nnoremap <C-p> :Files<CR>
-
-" Grepper
-nnoremap <Leader>a :Grepper -tool rg<CR>
 
 " Lightline
 set laststatus=2
