@@ -18,10 +18,10 @@ Plug 'morhetz/gruvbox'
 
 " External plugin support
 " Conditional loading of the directory for fzf
-if (findfile("fzf", "/usr/local/opt"))
-  Plug '/usr/local/opt/fzf'
-elseif (findfile("fzf","/usr/bin"))
+if (findfile("fzf","/usr/bin"))
   Plug '/usr/bin/fzf'
+else
+  Plug '/usr/local/opt/fzf'
 endif
 Plug 'junegunn/fzf.vim'
 
