@@ -1,6 +1,7 @@
 [[Cabal]]
 [[Confusing Problems]]
 [[Definitions]]
+[MyBook](MyBook)
 [[Questions]]
 [[Stack]]
 [[TypeClasses]]
