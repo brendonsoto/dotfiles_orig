@@ -5,11 +5,11 @@ set -o vi
 export PASSWORD_STORE_CHARACTER_SET="[:alnum:]#%="
 
 # NVM
-if command -v nvm >/dev/null 2>&1
+if [ -f /usr/share/nvm/init-nvm.sh ]
 then
   export NVM_DIR="$HOME/.nvm"
-  [ -s /usr/local/opt/nvm/nvm.sh ] && source /usr/local/opt/nvm/nvm.sh 
-  [ -f /usr/share/nvm/init-nvm.sh ] && source /usr/share/nvm/init-nvm.sh
+  source /usr/share/nvm/init-nvm.sh
+  [ -s /usr/local/opt/nvm/nvm.sh ] && source /usr/local/opt/nvm/nvm.sh
 fi
 
 ##########################################
@@ -107,7 +107,7 @@ then
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
   # Git completion
-  autoload -Uz compinit && compinit 
+  autoload -Uz compinit && compinit
 
 # Assume Bash
 else
