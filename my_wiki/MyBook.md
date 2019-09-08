@@ -13,6 +13,9 @@ What I know as I learn it.
 *What background knowledge is necessary?*
 None. I will assume I will forget a lot because I do, for better and for worse.
 
+*What version of GHC was this written with?*
+8.4.3
+
 *How esoteric will you get?*
 I will try to stick to what's most known within the community. Anything else will be noted.
 
@@ -62,4 +65,40 @@ You did it! You did the thing every programmer does in beginning to learn a lang
 
 ## Common datatypes
 TODO -- pickup from here
-BOOL
+This will be in alphabetical order because why not?
+
+[]
+Bool
+Char
+*Num
+
+*Starting out, numbers are a little confusing in Haskell. Least I found them confusing. Sometimes I would try to do simple arithmetic, but would always mix up the types `Num`, `Int`, `Integer`, `Integral`, and `Float`. There are more, but my brain was fixated on those five types for some reason and maybe you're encountering the same problem.
+
+Fear not! I'm not going to tell you what to use for what since what I say now may not be valid in the future. Instead, here's how to derive it.
+```
+stack ghci
+> :i (+)
+> :i (*)
+> :i (/)
+> ...
+```
+*What does `:i` mean?*
+It's a way to ask GHC for info about the given datatype or function.
+
+Noticed how the first two report back `class Num a where` and then more stuff underneath? That word next to `class` is our datatype.
+
+Division throws us for a loop with `class Num a => Fractional a where`. Is it `Num` or is it `Fractional`? Why are there two? Why are there multiple numbers to begin with? This is making my mind `Num` (badum tsst!).
+
+
+
+
+## Semigroups and Monoids
+These are two rad type classes. Why they're rad is explained in their individual sections. What are they for? For combining values of the same type. You know how you can concat Strings using the `++` function? Or even just addition. Semigroups and monoids provide the same functionality, but for any other type!
+
+### Semigroups
+A semigroup is a really cool type class that is used to join multiple values of the same data type. Basically addition, with its law of associativity, but for types. It does this joining using the following syntax: `<>` (i.e. [1,2] <> [3,4]).
+
+### Monoids
+A monoid is very similar to a semigroup with the same goal. The main difference is that it requires a property called `mempty` to be set. The idea behind `mempty` is that any value joined with `mempty` should return just that value itself. So it's like the *identity function*. A more concrete example is how anything plus zero is itself. Same deal with multiplying by one.
+
+Why is `mempty` important? Because it provides a transparent base for `fold`s allowing you to join lists together with predictible results. We're going back to the idea of *referential transparency* here!

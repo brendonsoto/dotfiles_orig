@@ -52,3 +52,16 @@ Could we learn about scalability from nature?
 A tree grows both vertically (height) and horizontally (branches/width). Plus there are so many branches to a tree, each seemingly going its own way. There must be some system for balancing itself out. How does a tree's branches grow without the tree itself becoming lopsided?
 A tree has leaves to provide nutrition to too. Water soaks in through the roots, up the branches, to the leaves, correct? And there are so many leaves per branch. How is nutrition distributed across the whole tree?
 Does a tree branch ever split into three? like -|- ? Branch splits always seem like one branch is the main while the other is the secondary.
+
+
+## Scratchpad
+
+### Express REST API tut
+For reference: https://developerhowto.com/2018/12/29/build-a-rest-api-with-node-js-and-express-js/
+
+First part is basic setup of the project and Express.
+
+THe rest of it was setting up standard CRUD routes.
+It was an informational start, but I am sad to see the author has not continued the series.
+
+Thus, I have brief experience with the api, but now I should think of a gameplan for the app
