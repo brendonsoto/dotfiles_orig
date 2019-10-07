@@ -14,6 +14,7 @@
 [[React Native]]
 [[React Project Generator?]]
 [[SQLite]]
+[TypeScript](TypeScript)
 [[Webpack]]
 [[WebdriverIO]]
 [[X11]]

@@ -65,3 +65,78 @@ THe rest of it was setting up standard CRUD routes.
 It was an informational start, but I am sad to see the author has not continued the series.
 
 Thus, I have brief experience with the api, but now I should think of a gameplan for the app
+
+
+
+## with Dennis
+We-Will-For
+"We Will"  = list action items
+
+Rationale for why to make tickets out of Problems/Refactor moments instead of just doing it in the moment:
+- If you have to roll back, you don't have to worry about the rollback removing more than just the intended code
+- Incremental releases
+
+Github pull request template,
+
+add certain sections, mor eso for the developer, to make them aware of what they have to check for
+
+
+IF you're the sole owner of some information, next time a ticket comes up for said information, pair with someone who *does not* kno wit
+
+mob pr = scheduling a PR review session with multiple people for the team. The person who writes it talks through the mindset used in creating the commit/diff
+
+Hour befoer morning team meet, do a PR
+
+An interesting dynamic between dev and product,
+prior info: their board consists of an "icebox" which are things the devs noticed that need to get done
+Produce looks at stuff in th eicebox, asks Dev how important is the said ticket is it important, and mor edetails on it
+"The manager manages time"
+
+
+
+
+
+
+
+
+
+knowns:
+- feature flags are a thing
+- Multiple states per item (x8)
+
+Tile Structure:
+- Loading state (Takes up all tile)
+- Head (Optional)
+- Body
+- Footer (OPtional - 1 or 2 CTAS)
+
+Feature:
+Redesign of Tiles on the homepage
+- Foundation:
+  - add flag
+  - add base "styling"
+- P1:
+  - state 1 -- 4:
+- P2:
+  - State 5 -- 8
+
+
+
+
+
+
+- Foundation: << has to be QA'd + merged to master
+  - s1
+  - s2
+  - ...
+  - s8
+
+For Styling ... use BEM, and make a class per state/different thing. If things are similar between the same mixins.
+
+"I get the idea of using React components... but we're building an experience and an experience requiers things to be universal"
+
+
+
+Sass stuff/ styling
+IN sass you can make sutt /variables to be exported by javascript
+Look into SASS maps
