@@ -319,7 +319,11 @@ let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 let g:ranger_replace_netrw = 1
 
 " Startify
-let g:startify_bookmarks = [ {'w': '~/vimwiki/index.md'}, {'m': '~/dotfiles/my_wiki/index.md'} ]
+let g:startify_bookmarks = [
+      \ {'w': '~/vimwiki/index.md'},
+      \ {'m': '~/dotfiles/my_wiki/index.md'},
+      \ {'z': '~/dotfiles/meine_zettlekasten/index.md'},
+      \ ]
 
 " Tabular
 nmap <Leader>T= :Tabularize /=<CR>
@@ -355,6 +359,7 @@ let g:UltiSnipsExpandTrigger='<c-e>'
 " Vimwiki
 let g:vimwiki_list = [
       \ {'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
-      \ {'path': '~/dotfiles/my_wiki', 'syntax': 'markdown', 'ext': '.md'}
+      \ {'path': '~/dotfiles/my_wiki', 'syntax': 'markdown', 'ext': '.md'},
+      \ {'path': '~/dotfiles/meine_zettlekasten', 'syntax': 'markdown', 'ext': '.md'}
       \]
 nmap <Leader>x <Plug>VimwikiToggleListItem
