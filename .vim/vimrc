@@ -18,7 +18,7 @@ Plug 'morhetz/gruvbox'
 
 " External plugin support
 " Conditional loading of the directory for fzf
-if (findfile("fzf","/usr/bin"))
+if (executable("fzf"))
   Plug '/usr/bin/fzf'
 else
   Plug '/usr/local/opt/fzf'
@@ -47,6 +47,7 @@ Plug 'junegunn/goyo.vim'
 
 " TypeScript
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Web general
 Plug 'mattn/emmet-vim'

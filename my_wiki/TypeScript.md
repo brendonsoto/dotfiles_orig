@@ -469,11 +469,19 @@ All is well now!
 We never discussed what was being sold.
 Cryptocurrencies!
 Why?
-Because it's surprisingly difficult to find shopping APIs that do not require keys.
-We'll be using the CoinGecko API to get a list of coins.
+Because it's surprisingly difficult to find shopping APIs that do not require registering for a key.
+We'll be using the CoinGecko API to get a list of coins compared to the USD.
+More specifically: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
+
+While the example is strange it was chosen because the API has the following types we can explore:
+- String (name, symbol, url reference)
+- Number (price)
+- Date (last_update)
+Even though dates are represented by strings in the API we can get creative and try working with it as a Date object.
+
+
 
 TODO:
-- Talk about the important bits for the api
 - talk about how to set up dynamic filters by:
   - name (like, choosing starting letter?)
   - price
