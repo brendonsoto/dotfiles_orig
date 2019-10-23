@@ -19,9 +19,14 @@ Plug 'morhetz/gruvbox'
 " External plugin support
 " Conditional loading of the directory for fzf
 if (executable("fzf"))
-  Plug '/usr/bin/fzf'
-else
-  Plug '/usr/local/opt/fzf'
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Mac stuff
+    Plug '/usr/local/opt/fzf'
+  else
+    " Linux stuff
+    Plug '/usr/bin/fzf'
+  endif
 endif
 Plug 'junegunn/fzf.vim'
 
