@@ -45,6 +45,9 @@ then
   export PATH="${PATH}:$HOME/.local/bin"
 fi
 
+# my scripts
+export PATH="${PATH}:$HOME/dotfiles/scripts"
+
 # Rust
 export PATH="${PATH}:$HOME/.cargo/bin"
 
