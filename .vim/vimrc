@@ -11,10 +11,10 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 
 " Colors!!
-" Plug 'liuchengxu/space-vim-dark'
-Plug 'morhetz/gruvbox'
 " Plug 'fenetikm/falcon'
 " Plug 'joshdick/onedark.vim'
+" Plug 'liuchengxu/space-vim-dark'
+Plug 'morhetz/gruvbox'
 
 " External plugin support
 " Conditional loading of the directory for fzf

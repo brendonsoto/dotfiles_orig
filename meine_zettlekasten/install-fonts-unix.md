@@ -1,0 +1,7 @@
+# Install Fonts Unix
+
+## Manjaro
+The directory to add fonts in is `/usr/share/fonts/`
+There are subdirectories for the different formats
+
+:unix:fonts:

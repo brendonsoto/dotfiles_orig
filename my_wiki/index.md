@@ -14,9 +14,7 @@ Wikiblog? Yeah, I know. I couldn't come up with anything better at the moment. T
 
 
 # Todo
-- Read up on `:h rtp`
-- Fix markdown settings on vimwiki
-
+- experiment with `Intersection` and `Union` types in TypeScript
 
 ## Goals
 *Big Time:*
@@ -56,17 +54,6 @@ Does a tree branch ever split into three? like -|- ? Branch splits always seem l
 
 ## Scratchpad
 
-### Express REST API tut
-For reference: https://developerhowto.com/2018/12/29/build-a-rest-api-with-node-js-and-express-js/
-
-First part is basic setup of the project and Express.
-
-THe rest of it was setting up standard CRUD routes.
-It was an informational start, but I am sad to see the author has not continued the series.
-
-Thus, I have brief experience with the api, but now I should think of a gameplan for the app
-
-
 
 ## with Dennis
 We-Will-For
@@ -92,14 +79,6 @@ prior info: their board consists of an "icebox" which are things the devs notice
 Produce looks at stuff in th eicebox, asks Dev how important is the said ticket is it important, and mor edetails on it
 "The manager manages time"
 
-
-
-
-
-
-
-
-
 knowns:
 - feature flags are a thing
 - Multiple states per item (x8)
@@ -120,11 +99,6 @@ Redesign of Tiles on the homepage
 - P2:
   - State 5 -- 8
 
-
-
-
-
-
 - Foundation: << has to be QA'd + merged to master
   - s1
   - s2
@@ -135,8 +109,15 @@ For Styling ... use BEM, and make a class per state/different thing. If things a
 
 "I get the idea of using React components... but we're building an experience and an experience requiers things to be universal"
 
-
-
 Sass stuff/ styling
 IN sass you can make sutt /variables to be exported by javascript
 Look into SASS maps
+
+
+## Psychiatrists
+- https://www.psychologytoday.com/us/psychiatrists/aetna/ny/new-york/448719?sid=5d9a350f529d6&ref=12&rec_next=41&tr=ResultsName
+- https://www.psychologytoday.com/us/psychiatrists/aetna/ny/new-york/701164?sid=5d9a350f529d6&ref=20&rec_next=21&tr=ResultsName
+- https://www.psychologytoday.com/us/psychiatrists/aetna/ny/new-york/351386?sid=5d9a350f529d6&ref=7&rec_next=21&tr=ResultsName
+- https://www.psychologytoday.com/us/psychiatrists/aetna/ny/new-york/90212?sid=5d9a350f529d6&ref=9&rec_next=21&tr=ResultsName
+- https://www.psychologytoday.com/us/psychiatrists/aetna/ny/new-york/467411?sid=5d9a350f529d6&ref=18&tr=ResultsName
+-
