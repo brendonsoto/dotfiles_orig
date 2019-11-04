@@ -14,6 +14,14 @@ https://zettelkasten.de/posts/overview/
 
   - [[install-fonts-unix#fonts]]
 
+## haskell
+
+  - [[haskell#haskell]]
+
+## languages
+
+  - [[haskell#languages]]
+
 ## mental-models
 
   - [[effective-mental-models-for-code-and-systems#mental-models]]
