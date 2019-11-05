@@ -6,6 +6,14 @@ https://zettelkasten.de/posts/overview/
 
 # Generated Tags
 
+## algebraic-data-types
+
+  - [[algebraic-data-types#Algebraic Data Types]]
+
+## cardinality
+
+  - [[cardinality#Cardinality]]
+
 ## cognitive-load
 
   - [[effective-mental-models-for-code-and-systems#cognitive-load]]
@@ -18,6 +26,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[haskell#haskell]]
 
+## ideas
+
+  - [[megaman-tribute#Megaman Tribute]]
+
 ## languages
 
   - [[haskell#languages]]
@@ -25,6 +37,10 @@ https://zettelkasten.de/posts/overview/
 ## mental-models
 
   - [[effective-mental-models-for-code-and-systems#mental-models]]
+
+## product-types
+
+  - [[product-types#Product Types]]
 
 ## programming
 
@@ -34,6 +50,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[typescript#programming-languages]]
 
+## sum-types
+
+  - [[sum-types#Sum Types]]
+
 ## systems
 
   - [[effective-mental-models-for-code-and-systems#systems]]
@@ -41,3 +61,7 @@ https://zettelkasten.de/posts/overview/
 ## unix
 
   - [[install-fonts-unix#unix]]
+
+## video-game
+
+  - [[megaman-tribute#Megaman Tribute]]

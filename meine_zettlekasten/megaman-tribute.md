@@ -1,0 +1,27 @@
+# Megaman Tribute
+:ideas:video-game:
+
+I want to make a Megaman game!
+This would be based off of the X series primarily.
+You know how there are capsules that give you power ups?
+What if the player got the power ups from certain bosses?
+It would be like a Megaman and Metroid cross over!
+Some of the bosses wouldn't have any elemental weapons, but they would have the abilities, like boosting, and when defeated the player would then get the ability.
+
+
+## Bosses
+
+### Elemental / Special Weapons
+#### EarthQuaker (Earth man?)
+This boss's ability is they can attack with a wave or pillar of earth/rock.
+They're buster would be on the ground (think Burstman MM7) and then pillars would appear like a wave and move outward from the enemy.
+It would be similar to Flame man's attack.
+
+
+### Special Abilities
+#### Dash (I know, generic name :/)
+This boss would grant the speed boost ability.
+When the player has an ability active and boosts, maybe do a special attack with it?
+The boss would be like Quickman and/or the Flash.
+They would just zoom around the place and try to collide with you.
+As they zoom, maybe they leave slight trails that hurt the player if touched.

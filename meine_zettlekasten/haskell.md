@@ -1,6 +1,35 @@
 # Haskell
 
 
+
+## Creating Data Types
+Outside of the basic data types you can create your own types!
+These types are called [[algebraic-data-types|algebraic data types]].
+
+There are three pieces involved to create a data type:
+- `data` keyword which acts as the data constructor
+- `=` sign
+- Type constructors
+
+The `data` keyword is used to indicate a data type is being created.
+The `=` sign is used to signify what makes up the new type.
+Type constructors are like templates to show what makes up the new data type.
+
+Type constructors have a name that is not a currently used data type and can be followed by other types like so: `data Example = Example String`.
+
+Type constructors are interesting because they have their own names which can be the same as the data type, as seen above, or different, like this fake Bool data type: `data Bool' = True' | False'`.
+
+One note though is that you can't use the same type constructor name for multiple type constructors. For instance, this won't compile: `data Contact = Contact String | Contact Number`.
+
+Lastly, type variables can be used in data constructors too!
+`data Contact a = Phone a | Address a`.
+
+
+## Type Classes
+Type classes are contracts describing available functions that within the data types that implement them.
+See [[haskell#How are type classes different than interfaces?|here]] for more info.
+
+
 ## Questions
 
 
