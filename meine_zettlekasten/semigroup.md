@@ -1,0 +1,12 @@
+# Semigroup
+:semigroup:
+
+A semigroup is a type class used to describe how to combine data types.
+Think of it as addition in mathematics.
+
+An important part of the semigroup is that an instance of semigroup should adhere to the associative law.
+This is the law that says 1 + (2 + 3) = (1 + 2) + 3.
+Why is this important?
+Because it gives programmers the ability to reason about types.
+It allows one to combine types safely without having to think about the order of combining them.
+If you were to make a library and introduce a data type that implements the semigroup type class then users of your library will believe the data type will adhere to the associative law and thus will be combinable and predictable no matter the order.

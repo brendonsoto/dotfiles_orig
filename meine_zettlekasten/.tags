@@ -3,13 +3,16 @@ algebraic-data-types	algebraic-data-types.md	2;"	vimwiki:algebraic-data-types\ta
 cardinality	cardinality.md	2;"	vimwiki:cardinality\tcardinality#Cardinality
 cognitive-load	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#cognitive-load
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
-haskell	haskell.md	54;"	vimwiki:haskell\thaskell#haskell
+haskell	haskell.md	52;"	vimwiki:haskell\thaskell#haskell
+haskell	type-classes.md	2;"	vimwiki:type-classes\ttype-classes#Type Classes
 ideas	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute
-languages	haskell.md	54;"	vimwiki:haskell\thaskell#languages
+languages	haskell.md	52;"	vimwiki:haskell\thaskell#languages
 mental-models	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#mental-models
+monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
 product-types	product-types.md	2;"	vimwiki:product-types\tproduct-types#Product Types
 programming	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#programming
 programming-languages	typescript.md	42;"	vimwiki:typescript\ttypescript#programming-languages
+semigroup	semigroup.md	2;"	vimwiki:semigroup\tsemigroup#Semigroup
 sum-types	sum-types.md	2;"	vimwiki:sum-types\tsum-types#Sum Types
 systems	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#systems
 unix	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#unix

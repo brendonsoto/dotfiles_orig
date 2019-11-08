@@ -22,3 +22,14 @@ For common data types the cardinality might depend on the hardware.
 For instance, `data Grade = Char Int` would be the cardinality of `Char` times the cardinality of `Int`.
 Let's say the program is running on a 64-bit computer and that there are only 26 values for `Char`.
 The cardinality would be 26 * 2^64.
+
+Product types are also the most common way to combine types in most programming languages.
+In OOP product types assist in inheritance.
+You take the common things between types, make a class/interface out of that, and then inherit that in children types that expand on that.
+So it's parent class types _and_ child class types.
+
+Where this is problematic is the mindset involved in organizing your thoughts.
+You have to find commonalites and make an abstraction around that.
+In addition, if you change something in the root abstraction, it changes everything.
+It's not easily adaptible to change.
+One addition from the book is that this reasoning is very top-down driven.

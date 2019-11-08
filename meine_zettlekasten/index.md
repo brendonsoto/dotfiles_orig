@@ -25,6 +25,7 @@ https://zettelkasten.de/posts/overview/
 ## haskell
 
   - [[haskell#haskell]]
+  - [[type-classes#Type Classes]]
 
 ## ideas
 
@@ -38,6 +39,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[effective-mental-models-for-code-and-systems#mental-models]]
 
+## monoid
+
+  - [[monoid#Monoid]]
+
 ## product-types
 
   - [[product-types#Product Types]]
@@ -49,6 +54,10 @@ https://zettelkasten.de/posts/overview/
 ## programming-languages
 
   - [[typescript#programming-languages]]
+
+## semigroup
+
+  - [[semigroup#Semigroup]]
 
 ## sum-types
 
