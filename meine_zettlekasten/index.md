@@ -18,6 +18,11 @@ https://zettelkasten.de/posts/overview/
 
   - [[effective-mental-models-for-code-and-systems#cognitive-load]]
 
+## datatypes
+
+  - [[newtype#Newtype]]
+  - [[type-alias#Type Alias]]
+
 ## fonts
 
   - [[install-fonts-unix#fonts]]
@@ -25,10 +30,13 @@ https://zettelkasten.de/posts/overview/
 ## haskell
 
   - [[haskell#haskell]]
+  - [[newtype#Newtype]]
+  - [[type-alias#Type Alias]]
   - [[type-classes#Type Classes]]
 
 ## ideas
 
+  - [[command-line-dictionary#Command Line Dictionary]]
   - [[megaman-tribute#Megaman Tribute]]
 
 ## languages
