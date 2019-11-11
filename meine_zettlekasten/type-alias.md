@@ -1,0 +1,7 @@
+# Type Alias
+:haskell:datatypes:
+
+A type alias is a way to refer to a datatype by another name.
+So it's like giving datatypes nicknames.
+For instance, `type Coordinate = (Integer, Integer)` is a way to have a value of type `Tuple Integer Integer`, but refer to it by the name `Coordinate`.
+It can make it easier to refer to types at times.
