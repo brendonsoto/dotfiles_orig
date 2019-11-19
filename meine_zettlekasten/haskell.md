@@ -1,5 +1,5 @@
 # Haskell
-
+:haskell:programming-languages:
 
 
 ## Creating Data Types
@@ -46,7 +46,3 @@ The two differ in the details.
   - An example of this would be how you can `derive` a type class to gain some sort of default behavior.
 
 One other note: I've seen multiple instances of people saying type classes were invented as a way to address "ad-hoc polymorphism".
-
-
-
-:haskell:languages:

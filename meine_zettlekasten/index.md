@@ -21,6 +21,7 @@ https://zettelkasten.de/posts/overview/
 ## datatypes
 
   - [[newtype#Newtype]]
+  - [[parameterized-types#Parameterized Types]]
   - [[type-alias#Type Alias]]
 
 ## fonts
@@ -29,8 +30,9 @@ https://zettelkasten.de/posts/overview/
 
 ## haskell
 
-  - [[haskell#haskell]]
+  - [[haskell#Haskell]]
   - [[newtype#Newtype]]
+  - [[parameterized-types#Parameterized Types]]
   - [[type-alias#Type Alias]]
   - [[type-classes#Type Classes]]
 
@@ -38,10 +40,6 @@ https://zettelkasten.de/posts/overview/
 
   - [[command-line-dictionary#Command Line Dictionary]]
   - [[megaman-tribute#Megaman Tribute]]
-
-## languages
-
-  - [[haskell#languages]]
 
 ## mental-models
 
@@ -61,6 +59,7 @@ https://zettelkasten.de/posts/overview/
 
 ## programming-languages
 
+  - [[haskell#Haskell]]
   - [[typescript#programming-languages]]
 
 ## semigroup
