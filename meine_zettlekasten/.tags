@@ -13,6 +13,7 @@ haskell	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
 haskell	type-classes.md	2;"	vimwiki:type-classes\ttype-classes#Type Classes
 ideas	command-line-dictionary.md	2;"	vimwiki:command-line-dictionary\tcommand-line-dictionary#Command Line Dictionary
 ideas	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute
+kinds	kinds.md	2;"	vimwiki:kinds\tkinds#Kinds
 mental-models	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#mental-models
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
 product-types	product-types.md	2;"	vimwiki:product-types\tproduct-types#Product Types

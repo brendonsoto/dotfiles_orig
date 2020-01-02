@@ -1,0 +1,69 @@
+# Kinds
+:kinds:
+
+A "kind" in [Haskell](haskell) is a type of a type.
+It is represented by an asterisk `*`.
+I know, it's a bit confusing.
+If we have types, why do we have types for types?
+
+Think about what a type can do for a reader.
+A type tells you the characteristics of the variable/s being worked with.
+It gives you information about *context*.
+Context is key.
+
+Types give you contextual clues.
+Kinds are just like that, contextual clues.
+Kinds tell you the context of a type.
+Here's a more concrete example.
+The _kind_ for the `Bool` data type is `*`.
+You can verify this in ghci using `:k Bool`.
+
+Notice how it's a _singular_ asterisk.
+Booleans tell you whether something is true or false.
+That's it.
+It tells you _one_ thing.
+
+The same can be said with the `Num` data type.
+It's kind is also `*`.
+The `Num` data type is concerned with one thing, a numerical value.
+
+Now think about the `Maybe` type.
+It's a type that _either_ returns `Nothing` or `Just something` (where something can be any datatype).
+It tells you whether you have a thing or nothing.
+In ghci it's constructor is `data Maybe a = Nothing | Just a`.
+It is a [sum-type](sum-type).
+And it has a type parameter: `a`.
+This type parameter can be _any other_ data type and is _only_ on one part of the type constructors.
+
+So now consider this,
+If `Bool` can be represented by the kind `*` and is a data type concerned with one thing...
+And `Maybe` has a type parameter that could be any type, including `Bool`...
+How would `Maybe` be represented by types?
+
+Like so: `* -> *`
+A kind that returns another kind.
+
+If it's still a little weird, think about it like this:
+The context of the `Maybe` type is whether or not something exists.
+You get either `Nothing` or `Just` with some other type.
+You get either one singular thing (`Nothing`), or a thing with another thing attached to it (`Just a`).
+The context of `Bool` is true or false, yes or no.
+If you mix those two contexts together (`Maybe Bool`) you get either `Nothing` or `Maybe True` or `Maybe False`.
+More abstractly you get either nothing or something with another thing in it.
+A wrapper.
+
+This isn't to say that all sum-types will have the kind `* -> *`.
+`Bool` itself is a sum type (`data Bool = True | False`).
+But `Bool` doesn't have the kind `* -> *` because it does not have a parameterized type within its type signature.
+If you had a type like `data ThisOrThat a = This a | That a` then the kind would be `* -> *`.
+A type like `data Brand a = Brand a` (let's pretend `a` is a placeholder for other weird types like `Shoe` or `Shirt`, etc) would have the kind `* -> *` because it has a parameterized type in its signature.
+
+`Maybe` is a wrapper for the presence of another type.
+It's kind is `* -> *` to tell you it cannot exist by itself.
+It needs another type to wrap in it's own types.
+
+Thus, kinds are the types of types.
+They provide context for types.
+They can be important.
+And weird.
+And that's ok.

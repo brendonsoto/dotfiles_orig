@@ -20,7 +20,6 @@ Type constructors have a name that is not a currently used data type and can be 
 Type constructors are interesting because they have their own names which can be the same as the data type, as seen above, or different, like this fake Bool data type: `data Bool' = True' | False'`.
 
 One note though is that you can't use the same type constructor name for multiple type constructors. For instance, this won't compile: `data Contact = Contact String | Contact Number`.
-
 Lastly, type variables can be used in data constructors too!
 `data Contact a = Phone a | Address a`.
 
@@ -28,6 +27,20 @@ Lastly, type variables can be used in data constructors too!
 ## Type Classes
 Type classes are contracts describing available functions that within the data types that implement them.
 See [[haskell#How are type classes different than interfaces?|here]] for more info.
+
+
+## IO
+I/O in Haskell is a bit weird.
+Haskell uses types for everything, including I/O.
+The type for I/O is `IO`.
+Usually it's followed up with another type representing the type of data involved.
+For instance, the `getLine` function has the type `IO String` because it gets a string using I/O.
+The only exception is the `main` function which would usually have a type of `IO ()` (read "IO empty tuple").
+The empty tuple is to signify nothing, that the function doesn't really return anything.
+
+The `do` keyword is not an `IO` only thing.
+`do` is a function that belongs to the *monad* typeclass.
+This means anything that use the monad typeclass, such as `Maybe`, can use `do` notation.
 
 
 ## Questions
@@ -46,3 +59,7 @@ The two differ in the details.
   - An example of this would be how you can `derive` a type class to gain some sort of default behavior.
 
 One other note: I've seen multiple instances of people saying type classes were invented as a way to address "ad-hoc polymorphism".
+
+
+## Related
+[kinds](kinds)
