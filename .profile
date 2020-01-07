@@ -73,6 +73,7 @@ fi
 # Useful Commands
 alias rm="rm -i" # always ask, just in case
 alias rg="rg --ignore-file ~/dotfiles/.ignore"
+alias cg="curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET"
 
 # ls with colors!
 if [ $OSTYPE = "linux-gnu" ]
@@ -129,5 +130,7 @@ export HISTCONTROL=ignoredups
 ##########################################
 #             For fun :)
 ##########################################
-# Launch an aquarium on startup!
-asciiquarium
+# Launch an aquarium on startup on non tmux!
+if ! { [ -n "$TMUX" ]; } then
+  asciiquarium
+fi
