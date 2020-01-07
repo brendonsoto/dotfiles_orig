@@ -10,6 +10,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[algebraic-data-types#Algebraic Data Types]]
 
+## book
+
+  - [[docker-in-practice#Docker in Practice, Second Edition]]
+
 ## cardinality
 
   - [[cardinality#Cardinality]]
@@ -23,6 +27,10 @@ https://zettelkasten.de/posts/overview/
   - [[newtype#Newtype]]
   - [[parameterized-types#Parameterized Types]]
   - [[type-alias#Type Alias]]
+
+## docker
+
+  - [[docker-in-practice#Docker in Practice, Second Edition]]
 
 ## fonts
 
@@ -40,6 +48,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[command-line-dictionary#Command Line Dictionary]]
   - [[megaman-tribute#Megaman Tribute]]
+
+## kinds
+
+  - [[kinds#Kinds]]
 
 ## mental-models
 

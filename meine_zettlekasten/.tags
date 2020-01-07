@@ -1,10 +1,12 @@
 !_TAG_FILE_SORTED	1	
 algebraic-data-types	algebraic-data-types.md	2;"	vimwiki:algebraic-data-types\talgebraic-data-types#Algebraic Data Types
+book	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 cardinality	cardinality.md	2;"	vimwiki:cardinality\tcardinality#Cardinality
 cognitive-load	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#cognitive-load
 datatypes	newtype.md	2;"	vimwiki:newtype\tnewtype#Newtype
 datatypes	parameterized-types.md	2;"	vimwiki:parameterized-types\tparameterized-types#Parameterized Types
 datatypes	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
+docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
 haskell	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
 haskell	newtype.md	2;"	vimwiki:newtype\tnewtype#Newtype
