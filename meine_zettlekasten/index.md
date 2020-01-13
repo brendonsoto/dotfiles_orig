@@ -30,14 +30,20 @@ https://zettelkasten.de/posts/overview/
 
 ## docker
 
+  - [[docker#Docker]]
   - [[docker-in-practice#Docker in Practice, Second Edition]]
 
 ## fonts
 
   - [[install-fonts-unix#fonts]]
 
+## handle
+
+  - [[handle#Handle]]
+
 ## haskell
 
+  - [[handle#Handle]]
   - [[haskell#Haskell]]
   - [[newtype#Newtype]]
   - [[parameterized-types#Parameterized Types]]

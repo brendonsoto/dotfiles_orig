@@ -83,7 +83,7 @@ call plug#end()
 "		General Settings
 """""""""""""""""""""
 
-" color "
+" color
 set termguicolors
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -313,11 +313,6 @@ function! LightLineFugitive()
 endfunction
 
 " Rainbow Parenthesis
-" Set Rainbow Parenthesis to always be active
-augroup rainbow
-  autocmd!
-  autocmd FileType c,cpp,java,javascript,javascript.jsx,json,php,python,ruby,sql RainbowParentheses
-augroup END
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " Ranger

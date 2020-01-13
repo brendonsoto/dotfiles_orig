@@ -7,7 +7,10 @@ datatypes	newtype.md	2;"	vimwiki:newtype\tnewtype#Newtype
 datatypes	parameterized-types.md	2;"	vimwiki:parameterized-types\tparameterized-types#Parameterized Types
 datatypes	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
 docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
+docker	docker.md	2;"	vimwiki:docker\tdocker#Docker
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
+handle	handle.md	2;"	vimwiki:handle\thandle#Handle
+haskell	handle.md	2;"	vimwiki:handle\thandle#Handle
 haskell	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
 haskell	newtype.md	2;"	vimwiki:newtype\tnewtype#Newtype
 haskell	parameterized-types.md	2;"	vimwiki:parameterized-types\tparameterized-types#Parameterized Types
