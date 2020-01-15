@@ -10,6 +10,37 @@ The overall flow is:
 OS -> Layer(s) -> Image -> Container
 
 
+## Problems and Solutions
+### Linux - "cannot connect to the Docker daemon"
+The error looks like this:
+ERRO[0000] failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory
+error during connect: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&session=xppvzl7662a4o9r51badkyo1n&shmsize=0&target=&ulimits=null&version=1: context canceled
+
+This error is due to a missing file (/var/run/docker.sock).
+Now how do you create this file?
+Through the docker service!
+
+I know what you're thinking, "Great! So helpful! Much wow!"
+It's like running a program that creates a config file that's needed to run other scripts.
+Like npm!!!
+If you don't have a `package.json` file then running `npm run <your-script>` will absolutely fail.
+So to get around it you need to create `package.json` which you can do with `npm init`.
+The analogy falls short since you can manually create the file, but you know what I mean.
+
+So, what's needed to create the file? What needs to be run?
+`sudo systemctl start docker` (This works for Manjaro and anything using *systemd*)
+
+
+### Opening a Docker port to share with the world (Linux)
+The [Docker in Practice](docker-in-practice.md) book, in chapter 2 section 2.2 technique 1, mentions this command to allow others with access to your host machine access to docker running on that machine: `sudo docker daemon -H tcp://0.0.0.0:2375`
+This did not work.
+
+To get it working on Linux (Manjaro) I had to stop all running instances of docker using `sudo systemctl stop docker` and then run the above command with `dockerd` instead of `docker daemon`.
+So the command became `sudo dockerd -H tcp://0.0.0.0:2375`
+This runs the docker daemon locally, not through a service manager.
+Makes me wonder how to do so on macOS though....
+
+
 ## Learning with Jonathan
 I've been going through the book [Docker In Practice](docker-in-practice) with Jonathan.
 He's been wonderful in helping me learn and understand docker.

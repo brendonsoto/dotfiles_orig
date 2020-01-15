@@ -40,3 +40,16 @@ An image is made of several *layers* plus meta data.
 A layer is a set of changes to files.
 
 I was thinking of object-oriented programming as a metaphor, with the idea of objects defined by classes, and am glad to see the book uses the same metaphor.
+
+Technique 1
+[PROBLEM]
+See [docker](docker.md) page.
+
+Technique 2
+[PROBLEM]
+I can run `docker run -d -i -p 1234:1234 --name daemon ubuntu:14:04 nc -l 1234`
+But when I try to connect via `telnet localhost 1234` I get an error.
+Using `docker ps` I saw the port mapping so I tried using `telnet 0.0.0.0 <port-from-docker-ps>` and that worked fine
+[END]
+
+The idea of having docker run as a background process and having a flag/functionality baked in to handle restarting is pretty cool. I can see this being handy with Technique 1 where you have a central shared resource and have the restart flag set to overcome any potential problems.
