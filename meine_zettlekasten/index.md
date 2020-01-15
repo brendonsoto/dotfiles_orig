@@ -55,6 +55,10 @@ https://zettelkasten.de/posts/overview/
   - [[command-line-dictionary#Command Line Dictionary]]
   - [[megaman-tribute#Megaman Tribute]]
 
+## javascript
+
+  - [[socket.io#Socket IO]]
+
 ## kinds
 
   - [[kinds#Kinds]]
@@ -83,6 +87,10 @@ https://zettelkasten.de/posts/overview/
 ## semigroup
 
   - [[semigroup#Semigroup]]
+
+## socket.io
+
+  - [[socket.io#Socket IO]]
 
 ## sum-types
 

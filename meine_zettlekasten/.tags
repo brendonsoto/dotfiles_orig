@@ -18,6 +18,7 @@ haskell	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
 haskell	type-classes.md	2;"	vimwiki:type-classes\ttype-classes#Type Classes
 ideas	command-line-dictionary.md	2;"	vimwiki:command-line-dictionary\tcommand-line-dictionary#Command Line Dictionary
 ideas	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute
+javascript	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 kinds	kinds.md	2;"	vimwiki:kinds\tkinds#Kinds
 mental-models	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#mental-models
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
@@ -26,6 +27,7 @@ programming	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effecti
 programming-languages	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
 programming-languages	typescript.md	42;"	vimwiki:typescript\ttypescript#programming-languages
 semigroup	semigroup.md	2;"	vimwiki:semigroup\tsemigroup#Semigroup
+socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 sum-types	sum-types.md	2;"	vimwiki:sum-types\tsum-types#Sum Types
 systems	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#systems
 unix	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#unix
