@@ -30,14 +30,20 @@ https://zettelkasten.de/posts/overview/
 
 ## docker
 
+  - [[docker#Docker]]
   - [[docker-in-practice#Docker in Practice, Second Edition]]
 
 ## fonts
 
   - [[install-fonts-unix#fonts]]
 
+## handle
+
+  - [[handle#Handle]]
+
 ## haskell
 
+  - [[handle#Handle]]
   - [[haskell#Haskell]]
   - [[newtype#Newtype]]
   - [[parameterized-types#Parameterized Types]]
@@ -48,6 +54,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[command-line-dictionary#Command Line Dictionary]]
   - [[megaman-tribute#Megaman Tribute]]
+
+## javascript
+
+  - [[socket.io#Socket IO]]
 
 ## kinds
 
@@ -77,6 +87,10 @@ https://zettelkasten.de/posts/overview/
 ## semigroup
 
   - [[semigroup#Semigroup]]
+
+## socket.io
+
+  - [[socket.io#Socket IO]]
 
 ## sum-types
 

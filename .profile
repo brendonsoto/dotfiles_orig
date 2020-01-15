@@ -126,6 +126,8 @@ fi
 
 export HISTCONTROL=ignoredups
 
+# Broot
+source /home/brendon/.config/broot/launcher/bash/br
 
 ##########################################
 #             For fun :)
