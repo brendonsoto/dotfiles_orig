@@ -41,6 +41,38 @@ A layer is a set of changes to files.
 
 I was thinking of object-oriented programming as a metaphor, with the idea of objects defined by classes, and am glad to see the book uses the same metaphor.
 
+After running `docker build .` the hash at the end is the ID to the image.
+You can use `docker tag <image-id> <name>` to create a more human-readable name.
+
+[Q - From after running `docker run ...`] Why is the run command so complicated?
+??? Also, after I `CTRL-c`'d out of docker, I noticed `docker ps` did not show any processes...
+
+When changes to a docker image are made, they're saved _on the disk_.
+`docker commit` persists the change to the container.
+
+[Q - Three paragraphs above the Summary] How can layers be shared across multiple containers?
+
+Changes are saved to the disk and then on commit/saved are copied. << Is this correct?
+
+
+## Chapter 2 Understanding Docker: Inside the engine room
+
+Docker is split up into two parts:
+- a daemon that acts as a RESTful API
+- a client that communicates with the daemon over HTTP
+
+Is it fair to think of it as a local web app?
+
+The overall flow to docker is as follow:
+- Host machine (i.e. your computer) hosts the docker daemon
+- Host machine also has a docker client to communicate with the docker daemon
+- Docker daemon is the brains, it can access private registrise or registries online (i.e. Docker Hub or other public registries)
+
+You can open up your docker container so others can access it too!
+A big problem though is that it is currently insecure and can potentially allow root access is the other person knows what they're doing.
+
+??? `docker daemon` is not working for me...
+
 Technique 1
 [PROBLEM]
 See [docker](docker.md) page.
