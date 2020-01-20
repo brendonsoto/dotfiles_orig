@@ -17,22 +17,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 
 " External plugin support
-" Conditional loading of the directory for fzf
-if (executable("fzf"))
-  let s:uname = system("uname")
-  if s:uname == "Darwin\n"
-    " Mac stuff
-    Plug '/usr/local/opt/fzf'
-  else
-    " Linux stuff
-    Plug '/usr/bin/fzf'
-  endif
-endif
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Multi-lang
-Plug 'godlygeek/tabular'
-Plug 'sirver/UltiSnips'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 
 " Haskell
@@ -104,6 +93,7 @@ set autoindent " allow autoindent by default
 set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard+=unnamedplus " Use the clipboard register + in addition to the default
+set cmdheight=2
 " Use a popup menu, even if there's one match, show extra info, do not auto-select or auto-insert
 set completeopt=menu,menuone,preview,noselect,noinsert
 set diffopt=filler,vertical " Diff settings
@@ -115,6 +105,7 @@ set ignorecase " ignore case when searching
 set incsearch " show matches as you type
 set linebreak " enable word-break without inserting an EOL character
 set nobackup " no backups
+set nowritebackup " no backups
 set nomodeline " For a security thing - https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
 set noswapfile " no backups
 set number " display line number
@@ -130,6 +121,7 @@ set undodir=$HOME/.vim/undo " undo file for work
 set undofile " Save undo's after file closes
 set undolevels=1000 " How many undos
 set undoreload=1000 " How many lines to save for undo
+set updatetime=300
 
 " enable mouse for scrolling
 if has("mouse")
@@ -254,6 +246,12 @@ nmap <Leader>? <Plug>(ale_detail)
 nmap <Leader>d <Plug>(ale_go_to_definition)
 nmap <Leader>r <Plug>(ale_find_references)
 
+" Coc
+" Coc-Snippets
+imap <C-e> <Plug>(coc-snippets-expand)
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+
 " Emmet
 let g:user_emmet_settings = {
   \'javascript.jsx': {
@@ -326,10 +324,6 @@ let g:startify_bookmarks = [
       \ {'z': '~/dotfiles/meine_zettlekasten/index.md'},
       \ ]
 
-" Tabular
-nmap <Leader>T= :Tabularize /=<CR>
-vmap <Leader>T: :Tabularize /:\zs<CR>
-
 " Tagbar
 nmap <Leader>tt :TagbarToggle<CR>
 let g:tagbar_type_typescript = {
@@ -350,12 +344,6 @@ let g:tagbar_type_typescript = {
   \ ],
   \ 'sort' : 0
   \ }
-
-
-" UltiSnips
-let g:UltiSnipsSnippetsDir='~/.vim/ultiSnips'
-let g:UltiSnipsSnippetsDirectories=['~/.vim/ultiSnips']
-let g:UltiSnipsExpandTrigger='<c-e>'
 
 " Vimwiki
 let g:vimwiki_list = [
