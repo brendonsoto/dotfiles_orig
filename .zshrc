@@ -15,3 +15,5 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[red]%}Δ%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%} %{$fg[yellow]%}↻%{$reset_color%}"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
