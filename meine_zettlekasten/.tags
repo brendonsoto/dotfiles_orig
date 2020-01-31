@@ -1,6 +1,7 @@
 !_TAG_FILE_SORTED	1	
 algebraic-data-types	algebraic-data-types.md	2;"	vimwiki:algebraic-data-types\talgebraic-data-types#Algebraic Data Types
 book	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
+canvas	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
 cardinality	cardinality.md	2;"	vimwiki:cardinality\tcardinality#Cardinality
 cognitive-load	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#cognitive-load
 datatypes	newtype.md	2;"	vimwiki:newtype\tnewtype#Newtype
@@ -9,6 +10,7 @@ datatypes	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
 docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 docker	docker.md	2;"	vimwiki:docker\tdocker#Docker
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
+game-development	creating-a-game-with-javascript.md	2;"	vimwiki:creating-a-game-with-javascript\tcreating-a-game-with-javascript#Creating a Game with JavaScript
 handle	handle.md	2;"	vimwiki:handle\thandle#Handle
 haskell	handle.md	2;"	vimwiki:handle\thandle#Handle
 haskell	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
@@ -18,17 +20,21 @@ haskell	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
 haskell	type-classes.md	2;"	vimwiki:type-classes\ttype-classes#Type Classes
 ideas	command-line-dictionary.md	2;"	vimwiki:command-line-dictionary\tcommand-line-dictionary#Command Line Dictionary
 ideas	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute
+javascript	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
 javascript	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
+javascript	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
 kinds	kinds.md	2;"	vimwiki:kinds\tkinds#Kinds
 mental-models	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#mental-models
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
 product-types	product-types.md	2;"	vimwiki:product-types\tproduct-types#Product Types
 programming	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#programming
 programming-languages	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
-programming-languages	typescript.md	42;"	vimwiki:typescript\ttypescript#programming-languages
+programming-languages	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
 semigroup	semigroup.md	2;"	vimwiki:semigroup\tsemigroup#Semigroup
 socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 sum-types	sum-types.md	2;"	vimwiki:sum-types\tsum-types#Sum Types
 systems	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#systems
+typescript	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
 unix	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#unix
+video-game	creating-a-game-with-javascript.md	2;"	vimwiki:creating-a-game-with-javascript\tcreating-a-game-with-javascript#Creating a Game with JavaScript
 video-game	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute

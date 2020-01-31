@@ -14,6 +14,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[docker-in-practice#Docker in Practice, Second Edition]]
 
+## canvas
+
+  - [[canvas#Canvas]]
+
 ## cardinality
 
   - [[cardinality#Cardinality]]
@@ -37,6 +41,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[install-fonts-unix#fonts]]
 
+## game-development
+
+  - [[creating-a-game-with-javascript#Creating a Game with JavaScript]]
+
 ## handle
 
   - [[handle#Handle]]
@@ -57,7 +65,9 @@ https://zettelkasten.de/posts/overview/
 
 ## javascript
 
+  - [[canvas#Canvas]]
   - [[socket.io#Socket IO]]
+  - [[typescript#TypeScript]]
 
 ## kinds
 
@@ -82,7 +92,7 @@ https://zettelkasten.de/posts/overview/
 ## programming-languages
 
   - [[haskell#Haskell]]
-  - [[typescript#programming-languages]]
+  - [[typescript#TypeScript]]
 
 ## semigroup
 
@@ -100,10 +110,15 @@ https://zettelkasten.de/posts/overview/
 
   - [[effective-mental-models-for-code-and-systems#systems]]
 
+## typescript
+
+  - [[typescript#TypeScript]]
+
 ## unix
 
   - [[install-fonts-unix#unix]]
 
 ## video-game
 
+  - [[creating-a-game-with-javascript#Creating a Game with JavaScript]]
   - [[megaman-tribute#Megaman Tribute]]
