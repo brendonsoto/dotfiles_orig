@@ -93,7 +93,6 @@ set autoindent " allow autoindent by default
 set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard+=unnamedplus " Use the clipboard register + in addition to the default
-set cmdheight=2
 " Use a popup menu, even if there's one match, show extra info, do not auto-select or auto-insert
 set completeopt=menu,menuone,preview,noselect,noinsert
 set diffopt=filler,vertical " Diff settings
