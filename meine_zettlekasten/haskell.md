@@ -42,6 +42,11 @@ The `do` keyword is not an `IO` only thing.
 `do` is a function that belongs to the *monad* typeclass.
 This means anything that use the monad typeclass, such as `Maybe`, can use `do` notation.
 
+Using the left arrow (`<-`) in a `do` block is a way to take the `IO` type out temporarily.
+Within a `do` block `let` allows you to create a variable that is not concerned about the IO type.
+
+Through the Reddit community I've learned that `pure` is a way to return values in an `IO` monad.
+
 
 ## Questions
 

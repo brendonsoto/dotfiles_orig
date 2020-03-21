@@ -1,5 +1,6 @@
 !_TAG_FILE_SORTED	1	
 algebraic-data-types	algebraic-data-types.md	2;"	vimwiki:algebraic-data-types\talgebraic-data-types#Algebraic Data Types
+book	art-of-problem-solving-vol-1.md	2;"	vimwiki:art-of-problem-solving-vol-1\tart-of-problem-solving-vol-1#Art of Problem Solving Vol 1
 book	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 canvas	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
 cardinality	cardinality.md	2;"	vimwiki:cardinality\tcardinality#Cardinality
@@ -11,6 +12,7 @@ docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#
 docker	docker.md	2;"	vimwiki:docker\tdocker#Docker
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
 game-development	creating-a-game-with-javascript.md	2;"	vimwiki:creating-a-game-with-javascript\tcreating-a-game-with-javascript#Creating a Game with JavaScript
+game-development	slime-volleyball.md	2;"	vimwiki:slime-volleyball\tslime-volleyball#Slime Volleyball
 handle	handle.md	2;"	vimwiki:handle\thandle#Handle
 haskell	handle.md	2;"	vimwiki:handle\thandle#Handle
 haskell	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
@@ -30,6 +32,8 @@ product-types	product-types.md	2;"	vimwiki:product-types\tproduct-types#Product 
 programming	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#programming
 programming-languages	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
 programming-languages	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
+projects	mobile-controllers.md	2;"	vimwiki:mobile-controllers\tmobile-controllers#Mobile Controllers
+projects	pass2bitwarden.md	2;"	vimwiki:pass2bitwarden\tpass2bitwarden#Pass to Bitwarden
 semigroup	semigroup.md	2;"	vimwiki:semigroup\tsemigroup#Semigroup
 socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 sum-types	sum-types.md	2;"	vimwiki:sum-types\tsum-types#Sum Types
@@ -38,3 +42,5 @@ typescript	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
 unix	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#unix
 video-game	creating-a-game-with-javascript.md	2;"	vimwiki:creating-a-game-with-javascript\tcreating-a-game-with-javascript#Creating a Game with JavaScript
 video-game	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute
+video-game	mobile-controllers.md	2;"	vimwiki:mobile-controllers\tmobile-controllers#Mobile Controllers
+video-game	slime-volleyball.md	2;"	vimwiki:slime-volleyball\tslime-volleyball#Slime Volleyball

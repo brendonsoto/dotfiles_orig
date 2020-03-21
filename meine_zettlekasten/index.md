@@ -12,6 +12,7 @@ https://zettelkasten.de/posts/overview/
 
 ## book
 
+  - [[art-of-problem-solving-vol-1#Art of Problem Solving Vol 1]]
   - [[docker-in-practice#Docker in Practice, Second Edition]]
 
 ## canvas
@@ -44,6 +45,7 @@ https://zettelkasten.de/posts/overview/
 ## game-development
 
   - [[creating-a-game-with-javascript#Creating a Game with JavaScript]]
+  - [[slime-volleyball#Slime Volleyball]]
 
 ## handle
 
@@ -94,6 +96,11 @@ https://zettelkasten.de/posts/overview/
   - [[haskell#Haskell]]
   - [[typescript#TypeScript]]
 
+## projects
+
+  - [[mobile-controllers#Mobile Controllers]]
+  - [[pass2bitwarden#Pass to Bitwarden]]
+
 ## semigroup
 
   - [[semigroup#Semigroup]]
@@ -122,3 +129,5 @@ https://zettelkasten.de/posts/overview/
 
   - [[creating-a-game-with-javascript#Creating a Game with JavaScript]]
   - [[megaman-tribute#Megaman Tribute]]
+  - [[mobile-controllers#Mobile Controllers]]
+  - [[slime-volleyball#Slime Volleyball]]
