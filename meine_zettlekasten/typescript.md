@@ -2,7 +2,7 @@
 :programming-languages:typescript:javascript:
 
 
-## Intersection Types
+# Intersection Types
 Think of intersection types as types connected through the use of *and*.
 A type is this *and* that.
 Intersection types are *sum* types.
@@ -11,7 +11,7 @@ Use them when you're combining two types (i.e. while using `Object.assign`)
 For mnemonic purposes, think of the intersection of two types.
 
 
-## Union Types
+# Union Types
 Think of union types as types connected through the use of *or*.
 A type is this *or* that.
 Union types are *product* types, more-or-less.
@@ -35,12 +35,12 @@ function getCust(user: Admin | Customer) {
 ```
 
 
-## Abstract Data Types (Discriminated Unions)
+# Abstract Data Types (Discriminated Unions)
 Check Microsoft's handbook [here](https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions).
 Their documentation on it is really good.
 
 
-## Casting
+# Casting
 To cast a type use `<Type> myFunction()`.
 An example of where this is helpful is using [canvas](./canvas.md):
 ```
@@ -50,7 +50,7 @@ const canvas = <HTMLCanvasElement> documeng.getElementById("myCanvas")
 ```
 
 
-## Node Modules
+# Node Modules
 Say you want to use `Express`.
 How do you import it?
 Usually you use `const express = require("express")`.
@@ -61,3 +61,13 @@ Then the TypeScript manual mentions a way that doesn't create errors:
 `import express = require("express")`
 
 Personally, I think it's funky, but that's just opinion on style.
+
+
+# How to quickly get the type of something
+For context, I was struggling finding the type of `setTimeout` to use for a variable to hold timeout ids.
+I found there's a function called `ReturnType` that can be used to get the type for basically anything.
+So in practice, it looks like `const timeoutId: ReturnType<typeof setTimeout> = setTimeout(myFunc, time)`.
+
+
+# Questions
+- What is the difference between `const var = <Type>thing` and `const var: Type = thing`?
