@@ -27,6 +27,12 @@ ln -s "$dotfileDir/.zshrc" "$HOME/.zshrc"
 
 # Happy little messages
 echo "Symlinks have been created!"
-echo "Please install zsh using your package manager"
 echo "Now installing oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Please now download the following:
+> zsh
+> neovim
+> st
+> node
+> npm"
