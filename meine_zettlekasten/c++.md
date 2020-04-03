@@ -1,5 +1,5 @@
 # C++
-:book:programming:languages:
+:programming:languages:
 
 
 # Syntax
@@ -70,6 +70,40 @@ Breaking it down we have:
 To concatenate, use `+`
 `greeting = "Hello " + name + "!";`
 Concatenation does not work on two string literals
+
+The type to use when working with a number of characters is `std::string::size_type`
+The rationale for this is that the number is kept in check with the possible bits to represent a string
+In other words, the limit of `std::string::size_type` is different than `int` so we avoid the possibility of going beyond `int`'s limit
+
+
+# Equality
+`==` is used for comparisons
+There is *short-circuit evaluation*
+i.e. in the statement `true || false` since the left section is true the right section is not evaluated
+
+Zero is considered false while any other numerical value is true.
+
+
+# Namespaces
+You might think of this as *modules* from other languages
+You know how when you "include" a library, you still need to reference that library when using a function from it?
+For example:
+```
+#include <iostream>
+
+...
+std::cout << std::endl;
+```
+You can avoid having to use the namespace in every function call by adding a `using` clause at the top:
+```
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
+...
+cout << endl;
+```
 
 
 # I/O

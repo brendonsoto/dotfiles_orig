@@ -75,6 +75,14 @@ https://zettelkasten.de/posts/overview/
 
   - [[kinds#Kinds]]
 
+## languages
+
+  - [[c++#C++]]
+
+## math
+
+  - [[conjugate-radical#Conjugate Radical]]
+
 ## mental-models
 
   - [[effective-mental-models-for-code-and-systems#mental-models]]
@@ -89,6 +97,7 @@ https://zettelkasten.de/posts/overview/
 
 ## programming
 
+  - [[c++#C++]]
   - [[effective-mental-models-for-code-and-systems#programming]]
 
 ## programming-languages

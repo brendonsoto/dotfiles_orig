@@ -26,9 +26,12 @@ javascript	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
 javascript	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 javascript	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
 kinds	kinds.md	2;"	vimwiki:kinds\tkinds#Kinds
+languages	c++.md	2;"	vimwiki:c++\tc++#C++
+math	conjugate-radical.md	2;"	vimwiki:conjugate-radical\tconjugate-radical#Conjugate Radical
 mental-models	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#mental-models
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
 product-types	product-types.md	2;"	vimwiki:product-types\tproduct-types#Product Types
+programming	c++.md	2;"	vimwiki:c++\tc++#C++
 programming	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#programming
 programming-languages	haskell.md	2;"	vimwiki:haskell\thaskell#Haskell
 programming-languages	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
