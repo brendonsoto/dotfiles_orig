@@ -4,6 +4,11 @@ What is zettlekasten?
 https://zettelkasten.de/posts/overview/
 
 
+# Questions / Things to explore
+- Cross-Site Request Forgery
+
+
+
 # Generated Tags
 
 ## algebraic-data-types

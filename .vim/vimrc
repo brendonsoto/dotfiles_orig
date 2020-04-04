@@ -222,6 +222,9 @@ let g:jsx_ext_required = 0
 " SQL -- Reset the Omni Key so I can use CTRL-[ to exit insert mode
 let g:ftplugin_sql_omni_key = '<C-j>'
 
+" Vimwiki
+autocmd FileType vimwiki set syntax=markdown
+
 
 """""""""""""""""""""
 "		Tools
