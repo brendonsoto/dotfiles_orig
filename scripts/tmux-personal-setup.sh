@@ -8,4 +8,4 @@ tmux new-window -n 'build'
 tmux new-window -n 'code'
 
 # Launch the 'coding' session in the client and detach any other clients connected to the session
-tmux attach-session -d -t 'coding'
+tmux attach-session -d -t 'personal'

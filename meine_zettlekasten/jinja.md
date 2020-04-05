@@ -45,3 +45,8 @@ This assumes both the template and the file extending it are in the same directo
 # Referencing data
 It's just like accessing properties from a dictionary/class/JSON/etc.
 `{{ user.name }}`
+
+
+# Dynamic context
+There is syntax to use Python's `with` statement in Jinja:
+`{% with myVar = myFunc}...{% endwith %}`
