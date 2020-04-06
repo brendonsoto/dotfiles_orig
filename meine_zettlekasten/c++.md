@@ -75,6 +75,15 @@ The type to use when working with a number of characters is `std::string::size_t
 The rationale for this is that the number is kept in check with the possible bits to represent a string
 In other words, the limit of `std::string::size_type` is different than `int` so we avoid the possibility of going beyond `int`'s limit
 
+A *multiline* string can be written by using string literals on multiple lines with only the last one having the ending semicolon
+```
+cout << "This"
+        "is"
+        "a"
+        "multiline"
+        "string";
+```
+
 
 # Equality
 `==` is used for comparisons
@@ -113,6 +122,14 @@ One way to write things out is by including `<iostream>` to your program and use
 - `std::endl` for end of line
 
 There are some operands that are *manipulators* which can alter a stream of data/characters
+In some cases the manipulator's effects impact the stream at that moment and afterwards which means sometimes the same manipulator function may need to be used to reset the effects on the stream
+Let's say we have a stream like the following diagram:
+`|------------|`
+And we use manipulator `x` at some point in this stream:
+`|---x~~~~~~~~|`
+Everything after `x` will be impacted by `x`, as indicated by the tildes, unless if it was reset by calling the same manipulator:
+`|---x~~~~x---|`
+Above we used `x` to manipulate the stream twice.
 
 Generally, I/O uses *buffers* as a temporary storage for data to be written
 Once all the data is collected and the input function is complete, the buffer is *flushed*, or written to an output device
@@ -122,6 +139,18 @@ Buffers can be flushed in the following ways:
 - The library calls to read from the standard input
 - Programmer makes a call to flush the buffer
 It is important to flush output buffers thoughtfully to prevent too much build up in a buffer
+
+
+# Types
+*Type aliases* are defined using `typedef`
+Ex: `typdef vector<double>::size_type vec_sz;`
+The above creates the type alias `vec_sz` which represents the type `vector<double>::size_type`
+
+
+# Vectors
+A *vector* is what C++ uses to store an arbitrary amount of things of a certain type
+You can manipulate vectors in ways like sorting
+I don't know too much about them at the moment, but they seem like a convenient linked list
 
 
 # Questions

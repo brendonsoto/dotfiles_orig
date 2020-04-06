@@ -1,5 +1,5 @@
 # Python
-:python:
+:python:languages:
 
 
 # Virtual environment (venv)

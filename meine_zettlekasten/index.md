@@ -43,6 +43,10 @@ https://zettelkasten.de/posts/overview/
   - [[docker#Docker]]
   - [[docker-in-practice#Docker in Practice, Second Edition]]
 
+## flask
+
+  - [[flask#Flask]]
+
 ## fonts
 
   - [[install-fonts-unix#fonts]]
@@ -76,6 +80,10 @@ https://zettelkasten.de/posts/overview/
   - [[socket.io#Socket IO]]
   - [[typescript#TypeScript]]
 
+## jinja
+
+  - [[jinja#Jinja]]
+
 ## kinds
 
   - [[kinds#Kinds]]
@@ -83,6 +91,7 @@ https://zettelkasten.de/posts/overview/
 ## languages
 
   - [[c++#C++]]
+  - [[python#Python]]
 
 ## math
 
@@ -114,6 +123,12 @@ https://zettelkasten.de/posts/overview/
 
   - [[mobile-controllers#Mobile Controllers]]
   - [[pass2bitwarden#Pass to Bitwarden]]
+
+## python
+
+  - [[flask#Flask]]
+  - [[jinja#Jinja]]
+  - [[python#Python]]
 
 ## semigroup
 
