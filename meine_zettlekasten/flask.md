@@ -50,6 +50,13 @@ This can be modified to include more than just the app, like the db or its model
 Most flask extensions are prefixed using `flask_`
 For *forms*, `flask_wtf` is handy
 For *databases/orms*, `flask_sqlalchemy` is great!
+For *logging in*, `flask_login` is great!
+
+
+## Flask WTF
+This package is _fantastic_ for forms.
+It includes the function `hidden_tag` to add an input with the secret key of the application to guard against Cross Site Request Forgery!
+It also models a form via a class which is super convenient and saves from having to write all of the markup.
 
 
 ## Flask SQLAlchemy
@@ -65,3 +72,13 @@ Models are represented as classes
 
 For more info, check out [the documentation](https://flask-sqlalchemy.palletsprojects.com/en/2.x/)!
 The quickstart covers a fair amount!
+
+
+## Flask Login
+Flask login includes the following helper functions:
+- `current_user` -- gets the current user
+- `login_user` -- registers whether a user is logged in and whether to remember them or not
+- `logout_user` -- logs out a user
+- `login_required` -- a decorator for routes to only allow access to logged in users
+
+There's also the helpful `UserMixin` which a class can extend to acquire the required properties the login plugin needs from users
