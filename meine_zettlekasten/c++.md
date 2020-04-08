@@ -2,6 +2,63 @@
 :programming:languages:
 
 
+# What's needed to get started
+To make and compile C++ programs you will need a compiler
+Two options are *gcc* and *clang*
+As of writing I've been using clang since I saw a few results online saying clang has easier to read error messaging which I thought would be beneficial as a beginner
+
+
+# Compiling
+To compile a C++ program run `<compiler> file1.cpp file2.cpp ... -o <program name>`
+A more concrete example using clang `clang++ program.cpp utils.cpp -o myProgram`
+The above takes the several .cpp files as input and links them together to create a binary file, named using whatever's fed to the `-o` flag
+
+
+# Header files
+Header files contain an overview of functionality
+They define functions by name and arguments, but without body, or data structures
+Any functionality can be in an accompanying .cpp file
+So for example, say you have the following file:
+```
+// utils.h
+
+boolean compare(myStruct&, myStruct&);
+myStruct combine(myStruct&, myStruct&);
+...
+```
+These are just function declarations, not the implementations
+The implementations would live in another file:
+```
+// utils.cpp
+
+boolean compare(myStruct&, myStruct&)
+{
+  // logic
+}
+
+myStruct combine(myStruct&, myStruct&)
+{
+  // logic
+}
+```
+
+There is a way to prevent a file from being included multiple times when compiled:
+```
+#ifndef GUARD_utils_h
+#define GUARD_utils_h
+
+// includes...
+// using...
+// main logic
+
+#endif
+```
+
+It is advisable to avoid using `using` statements in header files since the user (this case another programmer) may not want that `using` statement in their program
+
+Also, it is okay to include a header file in the implementation file.
+
+
 # Syntax
 Comments are written using two forward-slashes
 `// I am a comment`
@@ -66,6 +123,34 @@ Breaking it down we have:
 - The `)` indicates we're done adding in parts to construct the value. We have the number of characters in `greeting`, let's call it X, and a character literal. I'm not sure yet what the type of a string is, but from experience with other languages I'm guessing it's like a linked list of characters. So since we have a char literal and a number we can repeat that literal X amount of times.
 
 
+# Overloading
+Same idea as from Java
+Multiple functions of the same name, but with different arguments
+
+
+# Reference
+Use the ampersand (`&`) to create a reference to an object/primitive.
+It is possible to create a const reference to prevent writing to the object via the reference
+Example:
+```
+vector<double> grades; // Writable
+const vector<double>& gradesReadOnly = grades;
+```
+
+
+# Data Structures
+There are `structs` similar to C
+i.e.
+```
+struct Car {
+  string name;
+  boolean isStick;
+  int year;
+  ...
+};
+```
+
+
 # Strings
 To concatenate, use `+`
 `greeting = "Hello " + name + "!";`
@@ -91,6 +176,22 @@ There is *short-circuit evaluation*
 i.e. in the statement `true || false` since the left section is true the right section is not evaluated
 
 Zero is considered false while any other numerical value is true.
+
+
+# Error handling
+The `throw` keyword is to *throw an exception*
+The namespace `<stdexcept>` introduces `std::domain_error` which can be used to create error objects with messages by passing in a string when calling `domain_error`.
+
+There are `try...catch` statements that are structured like most other languages
+```
+try {
+  // risky business...
+} catch (domain_error e) {
+  // cleanup
+}
+```
+
+To display what caused an error, use `e.what()`
 
 
 # Namespaces
@@ -140,6 +241,8 @@ Buffers can be flushed in the following ways:
 - Programmer makes a call to flush the buffer
 It is important to flush output buffers thoughtfully to prevent too much build up in a buffer
 
+When invalid input is received it triggers the *failure state* of the input stream and prevents any additional data from being read
+
 
 # Types
 *Type aliases* are defined using `typedef`
@@ -157,3 +260,6 @@ I don't know too much about them at the moment, but they seem like a convenient 
 What's the difference between a header and a program file?
 
 How is a buffer different than writing to disk?
+
+How are header files matched to corresponding .cpp files?
+What if a header does not have an accompanying .cpp file?
