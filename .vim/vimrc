@@ -37,6 +37,7 @@ Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
 
 " Markdown
+Plug 'dkarter/bullets.vim'
 Plug 'junegunn/goyo.vim'
 
 " TypeScript
@@ -222,9 +223,6 @@ let g:jsx_ext_required = 0
 " SQL -- Reset the Omni Key so I can use CTRL-[ to exit insert mode
 let g:ftplugin_sql_omni_key = '<C-j>'
 
-" Vimwiki
-autocmd FileType vimwiki set syntax=markdown
-
 
 """""""""""""""""""""
 "		Tools
@@ -351,6 +349,8 @@ let g:tagbar_type_typescript = {
 let g:vimwiki_list = [
       \ {'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
       \ {'path': '~/dotfiles/my_wiki', 'syntax': 'markdown', 'ext': '.md'},
-      \ {'path': '~/dotfiles/meine_zettlekasten', 'syntax': 'markdown', 'ext': '.md'}
+      \ {'path': '~/dotfiles/meine_zettlekasten', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1}
       \]
+let g:vimwiki_global_ext = 0
+let g:vimwiki_ex2syntaqx = {'.md': 'markdown'}
 nmap <Leader>x <Plug>VimwikiToggleListItem
