@@ -90,8 +90,6 @@ The second part is a function from the namespace
 
 Scope is very similar to how other languages you know handle it.
 
-*String literals* begin and end with double quotes (`"\nliteral\n"`)
-
 `>>` signifies *read into*
 So take whatever's on the left side and pipe it to what's on the right
 
@@ -122,6 +120,36 @@ Breaking it down we have:
 - `' '` is a *char literal* to represent an empty string
 - The `)` indicates we're done adding in parts to construct the value. We have the number of characters in `greeting`, let's call it X, and a character literal. I'm not sure yet what the type of a string is, but from experience with other languages I'm guessing it's like a linked list of characters. So since we have a char literal and a number we can repeat that literal X amount of times.
 
+The `static` keyword is known as a *storage class specifier*
+It creates whatever variable it is attached to only once so it's not recreated per invocation of its parent function/context
+
+
+# Functions
+A function looks like:
+`bool does_this_work(int val) { ... }`
+
+A function that uses containers with specific type may look like this:
+`bool did_all_hw(vector<Student> s)`
+
+You can say the function will not change the parameter by using the `const` keyword:
+`bool did_all_hw(const vector<Student> s)`
+
+To provide a reference to an object, use `&`:
+`bool did_all_hw(const vector<Student>& s)`
+
+If a parameter is a function, you can include it like so:
+```
+bool did_what_i_want(const Student& s) { ... }
+
+bool did_everyone_read_my_mind(
+  const vector<Student>& s,
+  bool task(const Student& s)
+) { ... }
+
+...
+return did_everyone_read_my_mind(students, did_what_i_want);
+```
+
 
 # Overloading
 Same idea as from Java
@@ -138,6 +166,11 @@ const vector<double>& gradesReadOnly = grades;
 ```
 
 
+# Dereference
+Use the dereference operator (`*`) to get an element
+See Iterators for more
+
+
 # Data Structures
 There are `structs` similar to C
 i.e.
@@ -152,6 +185,7 @@ struct Car {
 
 
 # Strings
+*String literals* begin and end with double quotes (`"\nliteral\n"`)
 To concatenate, use `+`
 `greeting = "Hello " + name + "!";`
 Concatenation does not work on two string literals
@@ -167,6 +201,17 @@ cout << "This"
         "a"
         "multiline"
         "string";
+```
+
+There is a header, `<cctype>`, that provides *functions for checking characters* like `isspace`
+These functions are *overloaded* so they can *support different languages*
+When using them in your programs, consider creating a wrapper function that makes it explicit what version of the function you're using
+Example for checking spaces:
+```
+bool space(char c)
+{
+  return isspace(c);
+}
 ```
 
 
@@ -254,6 +299,90 @@ The above creates the type alias `vec_sz` which represents the type `vector<doub
 A *vector* is what C++ uses to store an arbitrary amount of things of a certain type
 You can manipulate vectors in ways like sorting
 I don't know too much about them at the moment, but they seem like a convenient linked list
+Vectors are optimized for fast random access (think of accessing an element from an array)
+
+
+# List
+Lists are optimized for insertion and deletion (least from not the end)
+
+
+# Containers
+I'm not sure if is common in the C++ world, but in the book I'm learning from they use the word *container* a lot.
+A _vector_ is described as a _container_.
+This leads me to believe that container is used for any abstract data type
+
+
+# Iterators
+Iterators are values that progress from one element to another sequentially
+Think of them as a more optimized way to iterate through things rather than using a `for` loop with integers
+
+There are two iterator types:
+- `container-type::const_iterator` (i.e. `vector<string>::const_iterator`)
+- `container-type::iterator` (i.e. `vector<string>::iterator`)
+
+The starting and ending points of iterators can be found by using:
+- `.begin()`
+- `.end()`
+
+To access the element of an iterator we can use the *deference* operator: `*`.
+For example:
+```
+vector<string> people = ...;
+vector<string>::const_iterator iter = people.begin();
+cout << (*iter).age;
+```
+
+
+## Iterator Adaptors
+Iterator adaptors are functions that return iterators with useful qualities
+An example would be `back_inserter(container)` which is used to add things to the end of a container
+Why not use `.end()`?
+Because `.end()` points to the end of the container where no elements exist
+`back_inserter` returns an interator that allows more to be added to the end of a container
+These functions are defined in `<iterator>`
+
+
+# Algorithms
+There are several predefined algorithms for use on containers in `<algorithm>`
+An example of one is `remove_if`
+An *important note* is that these algorithms *do not change the containers*, only the values.
+So let's use `remove_if` as an example
+The function takes three parameters:
+- Beginning iterator
+- Ending iterator
+- Predicate
+So let's say we have the call `remove_if(nums.begin(), nums.end(), isOdd)`
+Assume `nums` is a vector of ints in the range [1, 10]
+What this will do is iterate through the vector and check it against the `isOdd` function
+If the result is true the value is marked as the next spot to write _the next false result_ to
+Else, the value remains as is
+Say you have a vector of ints in the range [1, 5] and you want to get the even numbers
+[1, 2, 3, 4, 5]
+So you call `remove_if(nums.begin(), nums.end(), isOdd)`
+Let's step through it together
+The first value, 1, is odd so it's "marked" as to be removed
+What this means is that the computer has marekd the area in memory as to be rewritten by the next false value.
+So the vector would look like this with 'X' marking where to write
+[X, 2, 3, 4, 5]
+Going to the next value we have 2
+This value is even and thus is to be kept since it failed the predicate (`isOdd`)
+What happens is this value, 2, is copied to where 1 used to be
+So now we have:
+[2, X, 3, 4, 5]
+Notice how the next available spot is where 2 used to be
+We proceed to 3 which is odd so that too is marked
+[2, X, X, 4, 5]
+Next up is 4, another even
+The number is copied to _where 2 used to be_
+This is because after two was copied over its location became the next available spot to write
+Thus we're left with
+[2, 4, X, X, 5]
+We're at our last element, 5, which is odd
+It is marked so we end up with
+[2, 4, X, X, X]
+What happens now?
+Since those numbers that were  marked for writing were not written to they return to their normal value:
+[2, 4, 3, 4, 5]
 
 
 # Questions

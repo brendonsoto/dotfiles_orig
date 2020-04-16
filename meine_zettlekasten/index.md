@@ -112,6 +112,7 @@ https://zettelkasten.de/posts/overview/
 ## programming
 
   - [[c++#C++]]
+  - [[call-by-value#Call by Value]]
   - [[effective-mental-models-for-code-and-systems#programming]]
 
 ## programming-languages
