@@ -24,6 +24,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 
+" Elixir
+Plug 'elixir-editors/vim-elixir'
+
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
 
