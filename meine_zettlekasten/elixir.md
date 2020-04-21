@@ -59,7 +59,8 @@
 
 Using this space to jot down things I think are interesting or that are not noted in the docs
 Resources used:
-- [Elixir School](elixirschool.com/) << used this primarily
+- [Elixir School](elixirschool.com/)
+- Programming Elixir
 
 
 # General
@@ -124,7 +125,7 @@ The format is the same as using `@moduledoc`
 
 A really cool features is that *markdown* can be used in documentation!
 
-## Auto-documentation with ExDoc
+## ExDoc
 There's a dependency called ExDoc that can be used to turn all of your documentation into an online doc
 It relies on Earmark
 The dependencies are `:ex_doc` and `:earmark`
@@ -182,6 +183,7 @@ cond do
 Elixir has guards!
 
 A *guard* is like a shorter conditional
+They can be handy for adding *constraints* to a function parameter
 If the conditional passes, then something else can happen
 Example using cases:
 ```
@@ -221,8 +223,11 @@ end
 ## with
 The `with` statement is intereting and weird
 I can see how it can be useful for cleaning up nested statements based on this [example from elixirschool](https://elixirschool.com/en/lessons/basics/control-structures/)
+
 It's like a way to show just the happy path of a series of functions
 `else` may be provided to "catch" errors
+
+From Programming Elixir it looks like another useful property of `with` is creating temporary local variables that won't leak out of the current scope
 
 
 # Conventions
@@ -267,8 +272,21 @@ Take for example, this simple map function:
 `Enum.map([1, 2, 3], fn(x) -> x * x end) # will produce [1, 4, 9]`
 
 
+# File Suffixes
+This confused me at first
+It is common to see both *.ex* and *.exs* files in Elixir
+The differences are:
+- `.ex` is for files to be compiled (think source files for your app)
+- `.exs` is for scripts, things to run by themselves, like tests or one off scripts like in Python
+
+An .exs script can be *run* by using `elixir my_script.exs`
+
+
 # Functions
 *Functions can not be created outside of a module*
+One weird thing about functions from Programming Elixir is the concept of how values are passed into the function
+Parameters are rebound to whatever values are passed in
+So think of pattern matching
 
 ## Anonymous Functions
 They are declared using `fn` and `end` like so:
@@ -282,6 +300,44 @@ They can also be declared by using an ampersand `&`
 product = &(&1 * &2)
 product.(2, 3)
 ```
+
+The ampersand format can be used as a way to create a shorter alias for a function when the parameters match the order of the original one
+Example:
+```
+up = &(String.upcase(&1))
+```
+
+Finally they can be made using pattern matching like so:
+```
+fizz_buzz = fn
+  0, 0, _ -> "FizzBuzz"
+  0, _, _ -> "Fizz"
+  _, 0, _ -> "Buzz"
+  _, _, c -> c
+end
+```
+
+Generally, the last line before the `end` statement is what's returned
+Example:
+```
+test = fn a ->
+  b = 2*a
+  b
+end
+
+test.(2) # returns 4
+```
+
+This means we can create *higher-order functions*, functions that return functions, by making the last expression in a function a function
+Example:
+```
+multiply = fn a ->
+  fn b -> a * b end
+end
+
+multiply.(2).(3) # 6
+```
+Additionally we see that the above demonstrates a *closure* since the inner function references a variable from the parent function/scope!
 
 ## Named Functions
 Functions can be defined using the `def` keyword
@@ -357,11 +413,13 @@ nums ++ [4]
 ```
 
 There's an operator to _remove values from one array to another_: `--`
-Example: `[1, 2, 3] -- [1] # = [2, 3]`
+Example:
+`[1, 2, 3] -- [1] # = [2, 3]`
 This also works when the array with values to remove has a value that is _not present_ in the primary array
 
 The *cons* operator can be used for destructuring
-Example: `[head | tail] = [1, 2, 3] # = 1, [2, 3]`
+Example:
+`[head | tail] = [1, 2, 3] # = 1, [2, 3]`
 This would be equivalent to:
 ```
 nums = [1, 2, 3]
@@ -369,8 +427,15 @@ head = hd nums
 tail = tl nums
 ```
 
+To see if an *item is present* in a list use `in`
+Example:
+`1 in [1, 2, 3]`
+
+
 ## Keyword lists
 These are basically *dicts/hash maps/etc* from other languages
+They are most useful for options to be passed into either other functions or command-line params
+If you need something like a dictionary, use [map](#maps)
 Examples:
 ```
 [name: "Brendon", age: 12]
@@ -588,6 +653,17 @@ The `use` statement is a way of including a subsect of functionality defined wit
 See the example from [elixirschool](https://elixirschool.com/en/lessons/basics/modules/)
 
 
+# On Performance
+Performance with functional languages is always a tricky subject
+There's the matter of copying values due to immutability and garbage collection
+Chapter 3 of Programming Elixir had very interesting insights on these topics
+
+In regards to copying values functional languages don't necessarily have to copy values
+Since the values are immutable new values constructed from old values can simply use references to the older values, instead of copying values
+
+For garbage collection, this isn't applicable to all functional langauges, but Elixir handles it pretty well since most Elixir code is written using a lot of processes each with their own heap which spreads the load as a result
+
+
 # Pattern Matching
 There are two main operators for pattern matching:
 - match (`=`)
@@ -606,6 +682,7 @@ For example:
 > MatchError ...
 ```
 Alright, so we can see it's throwing an error because we're trying to match 2 to 1
+So we can infer that *assigment* happens only when a *variable is on the right* and the variable name on the left (without the pin operator though)
 But where it can get a bit wonky to comprehend is in scenarios like this:
 ```
 > {:name, val} = {:name, "Brendon"}
@@ -634,9 +711,17 @@ A `MatchError` occurs!
 Here we can see the match operator is a way to tell the computer to keep the value of `x` the same and compare it to what's on the right side of the equals, or match, operator
 
 
+# PID
+A PID is the same as in Unix, a reference to a process
+
+
 # Pipe
 The pipe operator, `|>`, is a way of passing data from one function to another
 Think of it as chaining functions in JavaScript or the pipes in Unix
+
+
+# Port
+A port is a reference to an external resource for reading or writing
 
 
 # Sigils
