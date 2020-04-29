@@ -29,7 +29,7 @@ javascript	typescript.md	2;"	vimwiki:typescript\ttypescript#TypeScript
 jinja	jinja.md	11;"	vimwiki:jinja\tjinja#Jinja
 kinds	kinds.md	2;"	vimwiki:kinds\tkinds#Kinds
 languages	c++.md	2;"	vimwiki:c++\tc++#C++
-languages	elixir.md	57;"	vimwiki:elixir\telixir#Elixir
+languages	elixir.md	61;"	vimwiki:elixir\telixir#Elixir
 languages	python.md	2;"	vimwiki:python\tpython#Python
 math	conjugate-radical.md	2;"	vimwiki:conjugate-radical\tconjugate-radical#Conjugate Radical
 mental-models	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#mental-models

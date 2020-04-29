@@ -5,7 +5,7 @@
   - [Booleans](#Booleans)
     - [Comparison](#Booleans#Comparison)
   - [Comments](#Comments)
-    - [Auto-documentation with ExDoc](#Comments#Auto-documentation with ExDoc)
+    - [ExDoc](#Comments#ExDoc)
   - [Control Structures](#Control Structures)
     - [case](#Control Structures#case)
     - [cond](#Control Structures#cond)
@@ -16,6 +16,7 @@
     - [Tuples as Return Values](#Conventions#Tuples as Return Values)
   - [Date and Time](#Date and Time)
   - [Enumeration](#Enumeration)
+  - [File Suffixes](#File Suffixes)
   - [Functions](#Functions)
     - [Anonymous Functions](#Functions#Anonymous Functions)
     - [Named Functions](#Functions#Named Functions)
@@ -41,10 +42,13 @@
     - [only and except](#Modules#only and except)
     - [require](#Modules#require)
     - [use](#Modules#use)
+  - [On Performance](#On Performance)
   - [Pattern Matching](#Pattern Matching)
     - [match](#Pattern Matching#match)
     - [pin](#Pattern Matching#pin)
+  - [PID](#PID)
   - [Pipe](#Pipe)
+  - [Port](#Port)
   - [Sigils](#Sigils)
   - [Strings](#Strings)
   - [Testing](#Testing)
@@ -70,6 +74,12 @@ Values seem to be immutable
 For instance, adding to a map is not in-place
 
 Seems like there is strict and lazy evaluation
+
+
+# Actor Model
+The actor model describes how Elixir works concurrently
+An *actor* is a process independent from other processes
+You *spawn* an actor, *send* it messages, and *receive* messages back
 
 
 # Atoms
@@ -131,6 +141,94 @@ It relies on Earmark
 The dependencies are `:ex_doc` and `:earmark`
 
 Elixirschool mentioned adding the `:dev` option onto both of them to not create documentation for the prod site/api
+
+
+# Concurrency
+Concurrency is achieved using the [actor model](#Actor Model)
+*Processes* are _spawned_ and listen for events
+Below are the important functions involved with concurrency
+
+## spawn
+Creates a process and returns a process id
+Example:
+`pid = spawn(MyModule, :my_func, [:arg1, :arg2, ...])`
+
+## spawn_link
+Creates a process that listens for if the function passed in exits before sending anything
+Use this when you want *one process to terminate the other*
+Example:
+`pid = spawn_link(MyModule, :my_func, [:arg1, :arg2, ...])`
+
+## spawn_monitor
+Similar to [spawn_link](##spawn_link)
+Listens for `:DOWN` messages from the passed in function
+Use this when you want *to know when a process exits*
+
+## send
+Sends a message to a process
+Example:
+`send pid, {sender_process, data}`
+
+to use the current process as the `sender_process` use `self()`
+Example:
+`send pid, {self(), "My Social is..."}`
+
+## receive
+Listens for a message from a `send` call
+Is similar to a case statement
+Example:
+```
+receive do
+  {sender, msg} ->
+    send sender, {:ok, transform(msg)}
+end
+```
+
+## after
+Think of `after` as a timeout catch
+You give it a value in miliseconds to wait before calling it quits
+It is paired with `receive` similar to how `else` is paired with `if`
+Example:
+```
+receive do
+  {sender, msg} ->
+    send sender, {:ok, "Received!"}
+after 500 ->
+  IO.puts "Message not received"
+end
+```
+
+## Handling Multiple Messages
+Usually once a message is received that's the end of that process
+To keep the process going recursion is needed
+This means after receiving the message the function itself needs to be called again
+Example:
+```
+defmodule Ear do
+  def listen do
+    receive do
+      {sender, msg} ->
+        send sender, { :ok, "I heard you say #{msg}" }
+        listen()
+    end
+  end
+end
+```
+Notice the call to `listen` within `listen`
+
+One concern this may have is building up the stack
+This is of no concern thankfully because of the underlying architecture
+Instead of calling the function again and creating memory the runtime jumps back to the beginning of the function
+This is called *tail-call optimization*
+The only caveat is that the function *must* be the *last* thing called
+Programming Elixir uses the example of a factorial function to demonstrate this difference
+```
+# Version 1 -- not tail-call
+def factorial(0), do: 1
+def factorial(n), do: n * factorial(n-1)
+```
+Here we can see `factorial` is not the last thing called
+It's _n times the result_ of factorial
 
 
 # Control Structures
@@ -242,6 +340,9 @@ defmodule Arithmetic do
   def even?(a), do: rem(a, 2) == 0
 end
 ```
+
+## Functions Ending with an Exclamation Mark
+If a function has an exclamation mark at the end of it (i.e. `File.open!("my-file.txt")`) the file will raise an exception if the function fails
 
 ## Tuples as Return Values
 Tuples tend to be returned as values for functions
@@ -484,6 +585,9 @@ for n <- list,
 ```
 The above will print only the even numbers, 2 and 4
 
+We can see the format is:
+`for x <- list, cond1, cond2, cond..., do: ...`
+
 ## into
 There is a keyword called `into` which can transform a list into a different data structure via list comprehension
 Example (from elixirschool):
@@ -492,6 +596,28 @@ list = [one: 1, two: 2, three: 3]
 for {x, v} <- list, into: %{} do: {k, v}
 ```
 The above will produce a map of one: 1, two: 2, etc.
+
+
+# Logging
+By default Elixir projects include a logger to keep track of your application
+There are four levels of messaging:
+- debug
+- info
+- warn
+- error
+
+The level of logging can be set at compile time using something like below:
+```
+# in config/config.exs
+
+config :logger, compile_time_purge_level: :info
+```
+
+There are two ways to log something:
+- `Logger.debug "my string with #{extras}"`
+- `Logger.debug fn -> "interpolation will only happen when this statement is #{reached}"`
+The string in the example above using a function will only call what's in the brackets if the statement is reached
+The first example will always call what's in the brackets
 
 
 # Maps
@@ -594,6 +720,7 @@ For example, if you have a `Math` module and want to add an `Arithmetic` module 
 
 A module can have *attributes* which are like *constants* for modules
 They can be defined within a module using the syntax `@<attribute-name> <value>`
+They can be referenced within the function's scope using `@<attribute-name>`
 
 ## Structs
 A struct is a special map of defined keys and default values
@@ -651,6 +778,28 @@ An error will occur if otherwise
 ## use
 The `use` statement is a way of including a subsect of functionality defined within another module via the `__using__` macro
 See the example from [elixirschool](https://elixirschool.com/en/lessons/basics/modules/)
+
+
+# Nodes
+A node is a *running Erlang VM*
+The Erlang VM is called *Beam*
+A node can connect to other nodes whether locally or across the wire
+
+## connect
+To connect to a node use `Node.connect :nodeName@nodeLocation`
+
+## Calling Functions on Other Nodes
+To do so use `Node.spawn(:node, function)`
+
+## Cookies
+Right now I'm thinking of cookies as a sort of key
+When a node is created it has a cookie
+This cookie acts as the password to gain access to it
+When another node is created it can connect to the original node only if the new node's cookie is the same as the cookie on the original node
+
+## Group Leader
+A node could be a *group leader* which means it inherits the output of the processes
+As an example this means that any calls to `IO.puts` will be through the group leader even if the process is executed on another node
 
 
 # On Performance
@@ -730,6 +879,13 @@ I think of them as a way of representing a literal with formatting/escaping or i
 I need to see them in action in order to understand them better
 
 
+# Streams
+A stream is a way to process a set of data in a *lazy* like manner
+It operates on the current given data and then proceeds to process the next item
+It is useful for data that is streamed, when you may receive data in chunks as opposed to a whole lot
+Generally it is slower than `Enum`, but not when the given dataset is large
+
+
 # Strings
 *Interpolation*: `"Hello #{name}"`
 *Concatenation*: `"Hello " <> name` (like Semigroups in Haskell!)
@@ -764,6 +920,11 @@ This was an interesting note to me
 Mocks are *discouraged* in Elixir
 This article was referenced as a why:
 http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/
+
+## Testing Documentation
+It's possible to test documentation with Elixir!
+We know from the [comments](#Comments) section above that there are `moduledoc` and `doc` statements
+If these include iex examples there's a way for `mix` to test them by using `doctest <module>`
 
 
 # Tuples

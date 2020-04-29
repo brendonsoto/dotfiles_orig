@@ -19,8 +19,11 @@
 
 ### Maybe
 - [ ] Drums:
+  - [ ] Addictive Drums 2 w/ the following packs:
+    - [ ] https://www.xlnaudio.com/products/addictive_drums_2/adpak/united_heavy
+    - [ ] https://www.xlnaudio.com/products/addictive_drums_2/adpak/studio_prog
+    - [ ] https://www.xlnaudio.com/products/addictive_drums_2/adpak/black_velvet
   - [ ] Roland V-drum - $500
-  - [ ] Studio Drummer or EZDrummer2 (but leaning more towards Studio since it's NI and the mics & kits are high qual)
 - [ ] Outboard compressor:
   - [ ] ($180) FMR Really Nice Compressor
   - [ ] ($400) Klark Teknik KT-2A
