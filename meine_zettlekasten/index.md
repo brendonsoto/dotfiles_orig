@@ -91,6 +91,7 @@ https://zettelkasten.de/posts/overview/
 ## languages
 
   - [[c++#C++]]
+  - [[elixir#Elixir]]
   - [[python#Python]]
 
 ## math
