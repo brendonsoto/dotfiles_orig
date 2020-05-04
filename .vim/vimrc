@@ -23,6 +23,7 @@ Plug 'junegunn/fzf.vim'
 " Multi-lang
 Plug 'w0rp/ale'
 Plug 'tpope/vim-endwise'
+Plug 'SirVer/ultisnips'
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
@@ -343,6 +344,11 @@ let g:tagbar_type_typescript = {
       \ ],
       \ 'sort' : 0
       \ }
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 " Vimwiki
 let g:vimwiki_list = [
