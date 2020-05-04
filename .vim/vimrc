@@ -21,8 +21,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Multi-lang
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
+Plug 'tpope/vim-endwise'
 
 " Elixir
 Plug 'elixir-editors/vim-elixir'
@@ -149,7 +149,7 @@ map <silent> <F12> :!open %<CR>
 
 " Easy open, close, and save
 nnoremap <Leader>e :e<Space>
-nnoremap <Leader>v :vs
+nnoremap <Leader>v :vs<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
@@ -233,34 +233,30 @@ let g:ftplugin_sql_omni_key = '<C-j>'
 
 " Ale
 let g:ale_linters = {
-  \ 'cucumber': [],
-  \ 'javascript': ['eslint', 'tsserver'],
-  \ 'typescript': ['eslint', 'tsserver'],
-  \}
+      \ 'cucumber': [],
+      \ 'javascript': ['eslint', 'tsserver'],
+      \ 'typescript': ['eslint', 'tsserver'],
+      \}
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
       \ 'javascript': ['prettier']
       \}
+let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
-" let g:ale_completion_enabled = 1
 nmap [j <Plug>(ale_previous_wrap)
 nmap ]j <Plug>(ale_next_wrap)
-nmap <Leader>? <Plug>(ale_detail)
-nmap <Leader>d <Plug>(ale_go_to_definition)
-nmap <Leader>r <Plug>(ale_find_references)
-
-" Coc
-" Coc-Snippets
-imap <C-e> <Plug>(coc-snippets-expand)
-let g:coc_snippet_next = '<c-j>'
-let g:coc_snippet_prev = '<c-k>'
+nmap gd <Plug>(ale_detail)
+nmap gt <Plug>(ale_go_to_definition)
+nmap gr <Plug>(ale_find_references)
+nmap gh <Plug>(ale_hover)
+set omnifunc=ale#completion#OmniFunc
 
 " Emmet
 let g:user_emmet_settings = {
-  \'javascript.jsx': {
-  \   'extends': 'jsx'
-  \}
-  \}
+      \'javascript.jsx': {
+      \   'extends': 'jsx'
+      \}
+      \}
 
 " Fugitive - auto-clean fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
@@ -273,19 +269,19 @@ nnoremap <C-p> :Files<CR>
 " Lightline
 set laststatus=2
 let g:lightline = {
-  \ 'active': {
-  \   'right':  [ [ 'lineinfo' ],
-  \               [ 'percent' ] ],
-  \   'left': [ [ 'mode', 'paste', 'relativepath' ],
-  \             [ 'fugitive', 'readonly', 'modified' ] ]
-  \ },
-  \ 'colorscheme': 'one',
-  \ 'component_function': {
-  \   'fugitive': 'LightLineFugitive',
-  \   'readonly': 'LightLineReadonly',
-  \   'modified': 'LightLineModified'
-  \ }
-  \ }
+      \ 'active': {
+      \   'right':  [ [ 'lineinfo' ],
+      \               [ 'percent' ] ],
+      \   'left': [ [ 'mode', 'paste', 'relativepath' ],
+      \             [ 'fugitive', 'readonly', 'modified' ] ]
+      \ },
+      \ 'colorscheme': 'one',
+      \ 'component_function': {
+      \   'fugitive': 'LightLineFugitive',
+      \   'readonly': 'LightLineReadonly',
+      \   'modified': 'LightLineModified'
+      \ }
+      \ }
 
 function! LightLineModified()
   if &filetype == "help"
@@ -330,23 +326,23 @@ let g:startify_bookmarks = [
 " Tagbar
 nmap <Leader>tt :TagbarToggle<CR>
 let g:tagbar_type_typescript = {
-  \ 'ctagsbin' : 'tstags',
-  \ 'ctagsargs' : '-f-',
-  \ 'kinds': [
-  \ 'e:enums:0:1',
-  \ 'f:function:0:1',
-  \ 't:typealias:0:1',
-  \ 'M:Module:0:1',
-  \ 'I:import:0:1',
-  \ 'i:interface:0:1',
-  \ 'C:class:0:1',
-  \ 'm:method:0:1',
-  \ 'p:property:0:1',
-  \ 'v:variable:0:1',
-  \ 'c:const:0:1',
-  \ ],
-  \ 'sort' : 0
-  \ }
+      \ 'ctagsbin' : 'tstags',
+      \ 'ctagsargs' : '-f-',
+      \ 'kinds': [
+      \ 'e:enums:0:1',
+      \ 'f:function:0:1',
+      \ 't:typealias:0:1',
+      \ 'M:Module:0:1',
+      \ 'I:import:0:1',
+      \ 'i:interface:0:1',
+      \ 'C:class:0:1',
+      \ 'm:method:0:1',
+      \ 'p:property:0:1',
+      \ 'v:variable:0:1',
+      \ 'c:const:0:1',
+      \ ],
+      \ 'sort' : 0
+      \ }
 
 " Vimwiki
 let g:vimwiki_list = [
