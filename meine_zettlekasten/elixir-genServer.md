@@ -44,6 +44,31 @@ A message can be *cast* to the server which is to say a one-way message can be s
 When a message is cast it is expected that the server *will not reply*
 The return of this function is a tuple with the format: `{ :noreply, state_of_process }`
 
+## handle_info
+`handle_info(info, state)`
+From the book, this is to handle messages that are not from `call` or `cast` calls
+The example given of such a message is the *timeout* message
+
+## code_change
+`code_change(from_version, state, extra)`
+This looks neat!
+It's a way to update the server without stopping the system
+
+
+# Call and cast response types
+## hibernate
+`:hibernate` will trigger the server state to be removed from memory temporarily
+On the next request the state will be restored
+This is to conserve memory at the cost of some CPU
+
+## stop
+This is only for `handle_call`
+`:stop` signals the server to *terminate*
+
+## timeout
+`:timeout` is what you think
+Values can be either `:infinite` (the default) or a number of milliseconds
+
 # Debugging
 The `start_link` function can take a third parameter, a keyword list, which can be used for debugging
 To do so use `[debug: [:trace]]`

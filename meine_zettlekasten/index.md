@@ -32,6 +32,10 @@ https://zettelkasten.de/posts/overview/
 
   - [[effective-mental-models-for-code-and-systems#cognitive-load]]
 
+## css-quirks
+
+  - [[spacing#Spacing]]
+
 ## datatypes
 
   - [[newtype#Newtype]]
@@ -42,6 +46,11 @@ https://zettelkasten.de/posts/overview/
 
   - [[docker#Docker]]
   - [[docker-in-practice#Docker in Practice, Second Edition]]
+
+## elixir
+
+  - [[elixir-genServer#elixir]]
+  - [[elixir-otp#OTP]]
 
 ## flask
 
@@ -78,7 +87,6 @@ https://zettelkasten.de/posts/overview/
 
   - [[canvas#Canvas]]
   - [[socket.io#Socket IO]]
-  - [[typescript#TypeScript]]
 
 ## jinja
 
@@ -92,6 +100,7 @@ https://zettelkasten.de/posts/overview/
 
   - [[c++#C++]]
   - [[elixir#Elixir]]
+  - [[haskell#Haskell]]
   - [[python#Python]]
 
 ## math
@@ -115,11 +124,6 @@ https://zettelkasten.de/posts/overview/
   - [[c++#C++]]
   - [[call-by-value#Call by Value]]
   - [[effective-mental-models-for-code-and-systems#programming]]
-
-## programming-languages
-
-  - [[haskell#Haskell]]
-  - [[typescript#TypeScript]]
 
 ## projects
 
@@ -148,9 +152,22 @@ https://zettelkasten.de/posts/overview/
 
   - [[effective-mental-models-for-code-and-systems#systems]]
 
+## types
+
+  - [[typescript-casting]]
+  - [[typescript-discriminated-unions]]
+  - [[typescript-intersection-types]]
+  - [[typescript-union-types]]
+
 ## typescript
 
-  - [[typescript#TypeScript]]
+  - [[typescript-casting]]
+  - [[typescript-discriminated-unions]]
+  - [[typescript-intersection-types]]
+  - [[typescript-node-modules]]
+  - [[typescript-questions]]
+  - [[typescript-quickly-get-type]]
+  - [[typescript-union-types]]
 
 ## unix
 

@@ -353,6 +353,17 @@ So it seems common that people pattern match to pull out the value like so:
 I guess this is a way to check if all is well for functions that may fail
 Think of `either` from Haskell
 
+## GenServer
+It is common when working with GenServer to create functions to act as an external API to the GenServer commands
+These API functions basically wrap whatever GenServer commands are written
+
+## Dave Thomas Approach
+This is from the author of Programming Elixir
+He experiments with splitting the code into three parts:
+- The main module -- This has the functions that wrap around GenServer calls
+- The server module -- This defines how to respond to different messages, but with references to the functions in the next module
+- The "impl" (implementation) module -- This is where the functions that modify the state/business logic live
+
 
 # Date and Time
 It's interesting

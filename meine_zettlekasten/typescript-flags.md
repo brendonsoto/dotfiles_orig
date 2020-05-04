@@ -1,0 +1,12 @@
+:typescript:
+
+# Flags
+
+## target
+`--target` is to tell the TypeScript compiler what browser is being targetted so it knows whether or not to add extra code and what extra code to add
+
+You can find target values online
+
+## module
+`--module` tells the compiler what type of module system to use
+Think commonJS or ESM
