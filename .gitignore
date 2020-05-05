@@ -4,5 +4,6 @@
 ./undo/**
 plugged
 plug.vim.old
+.vim/autoload/plug.vim
 .config/coc/extensions/**
 .config/coc/memos.json
