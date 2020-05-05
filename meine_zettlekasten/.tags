@@ -13,6 +13,7 @@ docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#
 docker	docker.md	2;"	vimwiki:docker\tdocker#Docker
 elixir	elixir-genServer.md	9;"	vimwiki:elixir-genServer\telixir-genServer#elixir
 elixir	elixir-otp.md	2;"	vimwiki:elixir-otp\telixir-otp#OTP
+elixir	elixir-supervisors.md	1;"	vimwiki:elixir-supervisors\telixir-supervisors
 flask	flask.md	2;"	vimwiki:flask\tflask#Flask
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
 game-development	creating-a-game-with-javascript.md	2;"	vimwiki:creating-a-game-with-javascript\tcreating-a-game-with-javascript#Creating a Game with JavaScript

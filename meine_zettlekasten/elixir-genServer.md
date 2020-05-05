@@ -69,6 +69,7 @@ This is only for `handle_call`
 `:timeout` is what you think
 Values can be either `:infinite` (the default) or a number of milliseconds
 
+
 # Debugging
 The `start_link` function can take a third parameter, a keyword list, which can be used for debugging
 To do so use `[debug: [:trace]]`
@@ -94,3 +95,21 @@ If you want to modify its output create a function `format_status` with the foll
 `def format_status(_reason, [ _pdict, state ])`
 
 As of this point, I'm not sure what `reason` or `pdict` are
+
+
+# Restart options
+Restart options are details concerning what conditions a process should meet to be restarted
+
+Add them like so:
+`use GenServer, restart: :transient`
+
+Some common ones are:
+
+## :permanent
+Always have the server running
+
+## :temporary
+Never restart it
+
+## :transient
+It is expected for the process to terminate normally, but if it terminates unexpectedly then restart it
