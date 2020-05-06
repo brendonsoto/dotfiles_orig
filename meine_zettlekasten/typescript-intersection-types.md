@@ -7,3 +7,18 @@ Intersection types are *sum* types.
 Use them when you're combining two types (i.e. while using `Object.assign`)
 
 For mnemonic purposes, think of the intersection of two types.
+
+The syntax for it would be like so:
+```
+interface One {
+  name: string
+}
+interface Two {
+  num: number
+}
+
+const Three: One & Two = {
+  name: "MyName",
+  num: 7
+}
+```

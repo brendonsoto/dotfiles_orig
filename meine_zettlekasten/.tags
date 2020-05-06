@@ -9,10 +9,14 @@ css-quirks	spacing.md	2;"	vimwiki:spacing\tspacing#Spacing
 datatypes	newtype.md	2;"	vimwiki:newtype\tnewtype#Newtype
 datatypes	parameterized-types.md	2;"	vimwiki:parameterized-types\tparameterized-types#Parameterized Types
 datatypes	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
+distillery	elixir-distillery.md	1;"	vimwiki:elixir-distillery\telixir-distillery
 docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 docker	docker.md	2;"	vimwiki:docker\tdocker#Docker
+elixir	elixir-applications.md	1;"	vimwiki:elixir-applications\telixir-applications
+elixir	elixir-distillery.md	1;"	vimwiki:elixir-distillery\telixir-distillery
 elixir	elixir-genServer.md	9;"	vimwiki:elixir-genServer\telixir-genServer#elixir
 elixir	elixir-otp.md	2;"	vimwiki:elixir-otp\telixir-otp#OTP
+elixir	elixir-releases.md	1;"	vimwiki:elixir-releases\telixir-releases
 elixir	elixir-supervisors.md	1;"	vimwiki:elixir-supervisors\telixir-supervisors
 flask	flask.md	2;"	vimwiki:flask\tflask#Flask
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
@@ -57,14 +61,20 @@ types	typescript-discriminated-unions.md	1;"	vimwiki:typescript-discriminated-un
 types	typescript-intersection-types.md	1;"	vimwiki:typescript-intersection-types\ttypescript-intersection-types
 types	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
 types	typescript-union-types.md	1;"	vimwiki:typescript-union-types\ttypescript-union-types
+typescript	typescript-aliases.md	1;"	vimwiki:typescript-aliases\ttypescript-aliases
 typescript	typescript-casting.md	1;"	vimwiki:typescript-casting\ttypescript-casting
 typescript	typescript-config.md	1;"	vimwiki:typescript-config\ttypescript-config
+typescript	typescript-dictionary.md	1;"	vimwiki:typescript-dictionary\ttypescript-dictionary
 typescript	typescript-discriminated-unions.md	1;"	vimwiki:typescript-discriminated-unions\ttypescript-discriminated-unions
 typescript	typescript-flags.md	1;"	vimwiki:typescript-flags\ttypescript-flags
+typescript	typescript-interfaces.md	1;"	vimwiki:typescript-interfaces\ttypescript-interfaces
 typescript	typescript-intersection-types.md	1;"	vimwiki:typescript-intersection-types\ttypescript-intersection-types
 typescript	typescript-node-modules.md	1;"	vimwiki:typescript-node-modules\ttypescript-node-modules
+typescript	typescript-object-properties.md	1;"	vimwiki:typescript-object-properties\ttypescript-object-properties
+typescript	typescript-overloaded-functions.md	1;"	vimwiki:typescript-overloaded-functions\ttypescript-overloaded-functions
 typescript	typescript-questions.md	1;"	vimwiki:typescript-questions\ttypescript-questions
 typescript	typescript-quickly-get-type.md	1;"	vimwiki:typescript-quickly-get-type\ttypescript-quickly-get-type
+typescript	typescript-tuple.md	1;"	vimwiki:typescript-tuple\ttypescript-tuple
 typescript	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
 typescript	typescript-union-types.md	1;"	vimwiki:typescript-union-types\ttypescript-union-types
 typescript	typescript-with-babel.md	1;"	vimwiki:typescript-with-babel\ttypescript-with-babel

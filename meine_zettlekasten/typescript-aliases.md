@@ -1,0 +1,10 @@
+:typescript:
+
+# Aliases
+Aliases are a way to give more semantical names to types
+Example:
+`type Name = string`
+
+This can be used with objects as well
+Example:
+`type Car = { manufacturer: string }`

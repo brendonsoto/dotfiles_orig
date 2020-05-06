@@ -751,6 +751,12 @@ usa = %Government{name: "usa"}
 inspect(usa) # "usa"
 ```
 
+To *get a value* from a struct, just use:
+`usa.name`
+
+To set a value, treat it like a map
+`newGov = %Government{ name: "Poopsulvanya", money: "brown" }`
+
 ## alias
 It's possible for a module to use functions from another module by using `alias`
 Example:
