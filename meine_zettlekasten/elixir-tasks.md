@@ -1,0 +1,25 @@
+:elixir:
+
+# Tasks
+Tasks are functions that run in the background
+
+## When to Use
+Use Tasks and [Agents](./elixir-agents.md) when dealing with specific background activities
+You can wrap them in modules to make them interchangeable with GenServer modules
+
+## What They're About
+So far they seem like promises and async/await from JavaScript
+I say this because the syntax looks like this:
+```
+worker = Task.async(Module, func, [args])
+# The above can also be written as:
+# worker = Task.async(fn -> Module.func(args))
+result = Task.await(worker)
+```
+
+Tasks are OTP servers under the hood
+This means they can be added to supervisors
+
+## Linking Tasks
+If a task is _linked_ using `start_link` and *fails* then the whole process terminates immediately
+When using `Task.async` the entire process will fail when the failed async'd function is referenced in the `await` call

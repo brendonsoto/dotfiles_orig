@@ -12,12 +12,14 @@ datatypes	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
 distillery	elixir-distillery.md	1;"	vimwiki:elixir-distillery\telixir-distillery
 docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 docker	docker.md	2;"	vimwiki:docker\tdocker#Docker
+elixir	elixir-agents.md	1;"	vimwiki:elixir-agents\telixir-agents
 elixir	elixir-applications.md	1;"	vimwiki:elixir-applications\telixir-applications
 elixir	elixir-distillery.md	1;"	vimwiki:elixir-distillery\telixir-distillery
 elixir	elixir-genServer.md	9;"	vimwiki:elixir-genServer\telixir-genServer#elixir
 elixir	elixir-otp.md	2;"	vimwiki:elixir-otp\telixir-otp#OTP
 elixir	elixir-releases.md	1;"	vimwiki:elixir-releases\telixir-releases
 elixir	elixir-supervisors.md	1;"	vimwiki:elixir-supervisors\telixir-supervisors
+elixir	elixir-tasks.md	1;"	vimwiki:elixir-tasks\telixir-tasks
 flask	flask.md	2;"	vimwiki:flask\tflask#Flask
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
 game-development	creating-a-game-with-javascript.md	2;"	vimwiki:creating-a-game-with-javascript\tcreating-a-game-with-javascript#Creating a Game with JavaScript

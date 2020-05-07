@@ -42,6 +42,10 @@ https://zettelkasten.de/posts/overview/
   - [[parameterized-types#Parameterized Types]]
   - [[type-alias#Type Alias]]
 
+## distillery
+
+  - [[elixir-distillery]]
+
 ## docker
 
   - [[docker#Docker]]
@@ -49,8 +53,14 @@ https://zettelkasten.de/posts/overview/
 
 ## elixir
 
+  - [[elixir-agents]]
+  - [[elixir-applications]]
+  - [[elixir-distillery]]
   - [[elixir-genServer#elixir]]
   - [[elixir-otp#OTP]]
+  - [[elixir-releases]]
+  - [[elixir-supervisors]]
+  - [[elixir-tasks]]
 
 ## flask
 
@@ -87,6 +97,7 @@ https://zettelkasten.de/posts/overview/
 
   - [[canvas#Canvas]]
   - [[socket.io#Socket IO]]
+  - [[typescript-with-babel]]
 
 ## jinja
 
@@ -157,17 +168,28 @@ https://zettelkasten.de/posts/overview/
   - [[typescript-casting]]
   - [[typescript-discriminated-unions]]
   - [[typescript-intersection-types]]
+  - [[typescript-types]]
   - [[typescript-union-types]]
 
 ## typescript
 
+  - [[typescript-aliases]]
   - [[typescript-casting]]
+  - [[typescript-config]]
+  - [[typescript-dictionary]]
   - [[typescript-discriminated-unions]]
+  - [[typescript-flags]]
+  - [[typescript-interfaces]]
   - [[typescript-intersection-types]]
   - [[typescript-node-modules]]
+  - [[typescript-object-properties]]
+  - [[typescript-overloaded-functions]]
   - [[typescript-questions]]
   - [[typescript-quickly-get-type]]
+  - [[typescript-tuple]]
+  - [[typescript-types]]
   - [[typescript-union-types]]
+  - [[typescript-with-babel]]
 
 ## unix
 
