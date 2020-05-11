@@ -57,6 +57,7 @@ https://zettelkasten.de/posts/overview/
   - [[elixir-applications]]
   - [[elixir-distillery]]
   - [[elixir-genServer#elixir]]
+  - [[elixir-macros]]
   - [[elixir-otp#OTP]]
   - [[elixir-releases]]
   - [[elixir-supervisors]]

@@ -1,0 +1,5 @@
+:elixir:
+
+# Behaviors
+Think of behaviors as a sort of _interface_ like from TypeScript or Java
+It lists out functions that other modules must implement

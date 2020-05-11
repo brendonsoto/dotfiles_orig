@@ -910,6 +910,15 @@ Generally it is slower than `Enum`, but not when the given dataset is large
 Strings are a bit weird in Elixir as they are *represented with bytes* instead of as characters
 There is a char list type which uses single quotes, but it's rarely used
 
+Char lists are weird
+When together (i.e. `'string'`) they're a cohesive unit that makes a list
+However, by themselves they can come off as integers if the character can be represented as one
+For instance, if you run `hd 'alpha'` the result will be `97` the ascii code for the letter a
+
+There is special syntax to check against a char, `?a` where `a` can be replaced with any other key
+So if you need to *check against a char*, use `?c`
+If you need to *return a char*, use the same syntax
+
 
 # Testing
 Elixir comes with a testing framework called `ExUnit`
