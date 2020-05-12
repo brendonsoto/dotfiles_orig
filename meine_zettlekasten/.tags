@@ -13,6 +13,7 @@ datatypes	type-alias.md	2;"	vimwiki:type-alias\ttype-alias#Type Alias
 distillery	elixir-distillery.md	1;"	vimwiki:elixir-distillery\telixir-distillery
 docker	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 docker	docker.md	2;"	vimwiki:docker\tdocker#Docker
+elixir	ecto.md	1;"	vimwiki:ecto\tecto
 elixir	elixir-agents.md	1;"	vimwiki:elixir-agents\telixir-agents
 elixir	elixir-applications.md	1;"	vimwiki:elixir-applications\telixir-applications
 elixir	elixir-behaviors.md	1;"	vimwiki:elixir-behaviors\telixir-behaviors
