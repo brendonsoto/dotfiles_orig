@@ -64,7 +64,6 @@ Plug 'mhinz/vim-startify'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 Plug 'vimwiki/vimwiki'
 
 " Below is needed with Ranger
@@ -184,6 +183,12 @@ nnoremap du :diffupdate<CR>
 
 " Easy search for visually selected text
 vnoremap // y/<C-R>"<CR>
+
+" Taken from Tim Pope's unimpaired
+map [b :bprevious<CR>
+map ]b :bnext<CR>
+map [t :tabp<CR>
+map ]t :tabn<CR>
 
 
 """""""""""""""""""""

@@ -1,11 +1,13 @@
 !_TAG_FILE_SORTED	1	
 algebraic-data-types	algebraic-data-types.md	2;"	vimwiki:algebraic-data-types\talgebraic-data-types#Algebraic Data Types
+article	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
 book	art-of-problem-solving-vol-1.md	2;"	vimwiki:art-of-problem-solving-vol-1\tart-of-problem-solving-vol-1#Art of Problem Solving Vol 1
 book	docker-in-practice.md	2;"	vimwiki:docker-in-practice\tdocker-in-practice#Docker in Practice, Second Edition
 canvas	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
 cardinality	cardinality.md	2;"	vimwiki:cardinality\tcardinality#Cardinality
 cognitive-load	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#cognitive-load
 css-quirks	spacing.md	2;"	vimwiki:spacing\tspacing#Spacing
+database	postgresql-basics.md	1;"	vimwiki:postgresql-basics\tpostgresql-basics
 database	postgresql-install.md	1;"	vimwiki:postgresql-install\tpostgresql-install
 datatypes	newtype.md	2;"	vimwiki:newtype\tnewtype#Newtype
 datatypes	parameterized-types.md	2;"	vimwiki:parameterized-types\tparameterized-types#Parameterized Types
@@ -21,10 +23,12 @@ elixir	elixir-distillery.md	1;"	vimwiki:elixir-distillery\telixir-distillery
 elixir	elixir-genServer.md	9;"	vimwiki:elixir-genServer\telixir-genServer#elixir
 elixir	elixir-macros.md	1;"	vimwiki:elixir-macros\telixir-macros
 elixir	elixir-otp.md	2;"	vimwiki:elixir-otp\telixir-otp#OTP
+elixir	elixir-plug.md	1;"	vimwiki:elixir-plug\telixir-plug
 elixir	elixir-quirks.md	1;"	vimwiki:elixir-quirks\telixir-quirks
 elixir	elixir-releases.md	1;"	vimwiki:elixir-releases\telixir-releases
 elixir	elixir-supervisors.md	1;"	vimwiki:elixir-supervisors\telixir-supervisors
 elixir	elixir-tasks.md	1;"	vimwiki:elixir-tasks\telixir-tasks
+elixir	elixir-testing-gotchas.md	1;"	vimwiki:elixir-testing-gotchas\telixir-testing-gotchas
 elixir	phoenix-conventions.md	1;"	vimwiki:phoenix-conventions\tphoenix-conventions
 elixir	phoenix-general.md	1;"	vimwiki:phoenix-general\tphoenix-general
 flask	flask.md	2;"	vimwiki:flask\tflask#Flask
@@ -41,6 +45,7 @@ haskell	type-classes.md	2;"	vimwiki:type-classes\ttype-classes#Type Classes
 ideas	command-line-dictionary.md	2;"	vimwiki:command-line-dictionary\tcommand-line-dictionary#Command Line Dictionary
 ideas	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute
 javascript	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
+javascript	javascript-chaining-recipe.md	1;"	vimwiki:javascript-chaining-recipe\tjavascript-chaining-recipe
 javascript	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 javascript	typescript-with-babel.md	1;"	vimwiki:typescript-with-babel\ttypescript-with-babel
 jinja	jinja.md	11;"	vimwiki:jinja\tjinja#Jinja
@@ -52,8 +57,15 @@ languages	python.md	2;"	vimwiki:python\tpython#Python
 math	conjugate-radical.md	2;"	vimwiki:conjugate-radical\tconjugate-radical#Conjugate Radical
 mental-models	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#mental-models
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
+phoenix	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
+phoenix	phoenix-alter-schema-after-gen.md	1;"	vimwiki:phoenix-alter-schema-after-gen\tphoenix-alter-schema-after-gen
+phoenix	phoenix-authentication.md	1;"	vimwiki:phoenix-authentication\tphoenix-authentication
 phoenix	phoenix-conventions.md	1;"	vimwiki:phoenix-conventions\tphoenix-conventions
 phoenix	phoenix-general.md	1;"	vimwiki:phoenix-general\tphoenix-general
+phoenix	phoenix-models.md	1;"	vimwiki:phoenix-models\tphoenix-models
+phoenix	phoenix-routes.md	1;"	vimwiki:phoenix-routes\tphoenix-routes
+phoenix	phoenix-seeding-data.md	1;"	vimwiki:phoenix-seeding-data\tphoenix-seeding-data
+postgresql	postgresql-basics.md	1;"	vimwiki:postgresql-basics\tpostgresql-basics
 postgresql	postgresql-install.md	1;"	vimwiki:postgresql-install\tpostgresql-install
 product-types	product-types.md	2;"	vimwiki:product-types\tproduct-types#Product Types
 programming	c++.md	2;"	vimwiki:c++\tc++#C++

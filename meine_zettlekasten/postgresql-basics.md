@@ -1,0 +1,23 @@
+:postgresql:database:
+
+# Basics
+This builds off of the [basic installation](./postgresql-install.md)
+
+Once that's set up, you may want to inspect the db
+The `psql` command is supposed to be the interface to the db
+
+The default user is the *postgres* user
+So if you tried running `psql` from your regular user, say "User", you'll see a message saying "No role 'User' exists"
+
+To get around this run `sudo -u postgres -i`
+This will give you sudo privileges and masquerade yourself as the `postgres` user
+
+_Now_ you can run `psql`
+
+For help, run `/?`
+The prompt is pretty helpful from there.
+
+To save some time:
+- `\l`: list databases
+- `\c <database>`: use database `<database>`
+- `\dt`: show tables

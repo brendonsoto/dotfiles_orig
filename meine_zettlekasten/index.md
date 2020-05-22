@@ -36,6 +36,11 @@ https://zettelkasten.de/posts/overview/
 
   - [[spacing#Spacing]]
 
+## database
+
+  - [[postgresql-basics]]
+  - [[postgresql-install]]
+
 ## datatypes
 
   - [[newtype#Newtype]]
@@ -53,15 +58,22 @@ https://zettelkasten.de/posts/overview/
 
 ## elixir
 
+  - [[ecto]]
   - [[elixir-agents]]
   - [[elixir-applications]]
+  - [[elixir-behaviors]]
   - [[elixir-distillery]]
   - [[elixir-genServer#elixir]]
   - [[elixir-macros]]
   - [[elixir-otp#OTP]]
+  - [[elixir-plug]]
+  - [[elixir-quirks]]
   - [[elixir-releases]]
   - [[elixir-supervisors]]
   - [[elixir-tasks]]
+  - [[elixir-testing-gotchas]]
+  - [[phoenix-conventions]]
+  - [[phoenix-general]]
 
 ## flask
 
@@ -97,6 +109,7 @@ https://zettelkasten.de/posts/overview/
 ## javascript
 
   - [[canvas#Canvas]]
+  - [[javascript-chaining-recipe]]
   - [[socket.io#Socket IO]]
   - [[typescript-with-babel]]
 
@@ -126,6 +139,20 @@ https://zettelkasten.de/posts/overview/
 ## monoid
 
   - [[monoid#Monoid]]
+
+## phoenix
+
+  - [[phoenix-authentication]]
+  - [[phoenix-conventions]]
+  - [[phoenix-general]]
+  - [[phoenix-models]]
+  - [[phoenix-routes]]
+  - [[phoenix-seeding-data]]
+
+## postgresql
+
+  - [[postgresql-basics]]
+  - [[postgresql-install]]
 
 ## product-types
 
