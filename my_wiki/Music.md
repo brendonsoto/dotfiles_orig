@@ -4,12 +4,13 @@
 # Studio Setup
 ## TO BUY
 ### Base
-- [ ] Mac Mini (start off w/ 6-core i5, 8gb ram, 512gb storage) - $1300
-- [ ] Monitor - $200
+- [X] Mac Mini (start off w/ 6-core i5, 8gb ram, 512gb storage) - $1300
+- [X] Monitor - $200
 - [ ] 5 String bass guitar - G&L LB-100 - $500
 
 ### Upgrades
-- [ ] Audient iD22
+- [ ] -Audient iD22-
+- [X] Universal Audio Arrow
 - [ ] Laney IRT Studio - $600
 
 ### Extra
