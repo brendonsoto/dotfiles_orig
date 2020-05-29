@@ -102,6 +102,12 @@ Not much is being changed. There's a new import statement at the top. TODO Why?
 
 Outside of that the only addition is the changeset. The function looks like any other changeset function. We're just limiting our changeset validations to two checks: id and password.
 
+Once that's done we can edit the templates to remove the field. Run `mix pow.phoenix.gen.templates`. It will prompt you to make a slight modification to your configuration by adding `web_module: <Project>Web`. The result of running the command is Pow has generated a `pow` directory in the `templates` directory so you can modify the registration and session views.
+
+To finish off the confirm password field all that's left is to remove the markup in `lib/<project>_web/templates/pow/registration/new.html.eex` and voila! No more confirm password field!
+
+Don't forget to update your tests!
+
 
 ### Default Changeset
 The default changeset can be found in `deps/pow/lib/pow/ecto/schema.ex` by searching for `def pow_changeset` (as of v1.0.20). The defaults look like this:
