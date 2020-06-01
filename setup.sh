@@ -33,6 +33,5 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo "Please now download the following:
 > zsh
 > neovim
-> st
-> node
-> npm"
+> st/al
+> nvm"
