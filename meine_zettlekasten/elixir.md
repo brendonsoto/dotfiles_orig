@@ -831,6 +831,14 @@ For garbage collection, this isn't applicable to all functional langauges, but E
 
 
 # Pattern Matching
+Pattern matching is the same as in Haskell.
+One interesting part is that the following is valid:
+
+`def doThing("id:" <> rest)`
+
+What this is doing is pattern matching against everything starting with `id:` and assigning the rest of the string to the param `rest`
+
+
 There are two main operators for pattern matching:
 - match (`=`)
 - pin (`^`)
