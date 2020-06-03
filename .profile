@@ -1,22 +1,17 @@
 # Set bash to use vi commands
 set -o vi
 
-# PASS
-export PASSWORD_STORE_CHARACTER_SET="[:alnum:]#%="
-
 # NVM
-if [ -f /usr/share/nvm/init-nvm.sh ]
+if [ -f "/usr/local/opt/nvm/nvm.sh" ]
 then
   export NVM_DIR="$HOME/.nvm"
-  source /usr/share/nvm/init-nvm.sh
-  [ -s /usr/local/opt/nvm/nvm.sh ] && source /usr/local/opt/nvm/nvm.sh
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 fi
 
 ##########################################
 #             Path Addendums
 ##########################################
-
-export PATH="${PATH}:/usr/local/bin"
 
 # Set editor to either neovim or vim
 if command -v nvim >/dev/null 2>&1
@@ -45,14 +40,11 @@ then
   export PATH="${PATH}:$HOME/.local/bin"
 fi
 
+# Python
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 # my scripts
 export PATH="${PATH}:$HOME/dotfiles/scripts"
-
-# Rust
-export PATH="${PATH}:$HOME/.cargo/bin"
-
-# Yarn
-export PATH="${PATH}:/home/brendon/.yarn/bin"
 
 ##########################################
 #             Aliases
