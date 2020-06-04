@@ -1,0 +1,4 @@
+:elixir:
+
+# Umbrella Projects
+An **umbrella project** in Elixir is an application that groups several other applications together. This is to have smaller, isolated, and more focused applications for development purposes. As an example, the book Programming Phoenix refactors the main video sharing and annotating application into an umbrella project to separate out the backend code from the client-interfacing code (meaning the views and controllers).
