@@ -7,7 +7,14 @@
 !_TAG_PROGRAM_VERSION	2.5
 accessibility	accessibility.md	1;"	vimwiki:accessibility\taccessibility
 article	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
+elixir	ecto.md	1;"	vimwiki:ecto\tecto
+elixir	elixir-detecting-bottlenecks.md	1;"	vimwiki:elixir-detecting-bottlenecks\telixir-detecting-bottlenecks
 elixir	elixir-pow.md	1;"	vimwiki:elixir-pow\telixir-pow
+elixir	elixir-umbrella-projects.md	1;"	vimwiki:elixir-umbrella-projects\telixir-umbrella-projects
+languages	elixir.md	61;"	vimwiki:elixir\telixir#Elixir
 phoenix	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
 phoenix	elixir-pow.md	1;"	vimwiki:elixir-pow\telixir-pow
+phoenix	phoenix-channels.md	1;"	vimwiki:phoenix-channels\tphoenix-channels
+phoenix	phoenix-protocols.md	1;"	vimwiki:phoenix-protocols\tphoenix-protocols
+phoenix	phoenix-views.md	1;"	vimwiki:phoenix-views\tphoenix-views
 session]`	article-phoenix-blog.md	600;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog#session]`

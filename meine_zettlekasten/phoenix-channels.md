@@ -1,0 +1,89 @@
+:phoenix:
+
+# Channels
+A channel in Phoenix is a relationship between the server and the client that allows them to talk to each other directly. Think websockets. Another way to describe them is as a **conversation** between the server and client. Think communication channel.
+
+This allows developers to no longer worry about getting information through the traditional request-response flow.
+
+The channel can send and receive messages, which it calls *events* and stores the state in a struct called *socket*. Every channel has its *own isolated, dedicated process*.
+
+A Channel must have a *topic*.
+
+
+# Creating a Channel
+In the `assets/js` directory there should be a file called `socket.js`. That file needs to be imported into the `app.js` file, the main JS file. Looking in `socket.js` we can see it imports a file from Phoenix. The interface can be found [here](https://hexdocs.pm/phoenix/js/#socket).
+
+Once that file is imported, the key function is `socket.connect()`. No params are needed. That's it for the client side.
+
+On the server side, open `lib/rumbl_web/channels/user_socket.ex` and add your channel like so: `channel "things:*", <Project>Web.ThingChannel`. Similar to the set up of the router, this is saying create a channel for `"thing:*"` where the asterisk can be anything and let the `ThingChannel` module take care of it.
+
+As for what goes in `ThingChannel`, at bare minimum something like this:
+
+```
+defmodule <Project>Web.ThingChannel do
+  use <Project>Web, :channel
+
+  def join("things:" <> thing_id, _params, socket) do
+    {:ok, assign(socket, :thing_id, String.to_integer(thing_id))}
+  end
+end
+```
+
+The `use` statement is similar to creating a controller or view. The `join` function is mandatory. The first param is the "route" that was declared in `user_socket.ex`. It's pattern matching against all channels that start with `things:` and saving the rest in the `thing_id` variable. We're returning a tuple with either an `:ok` or `:error` atom followed by the socket. We can see we're using `assign` to provide a `thing_id` to the socket beforehand.
+
+
+# Joining a Channel
+On the client side:
+`socket.channel("things:" + thingId)`
+
+
+# Sending Messages from the Client
+On the client side:
+`socket.push(<event_name>, payload).receive(error => console.log(error))`
+
+The `receive` call is optional, but worthwhile to catch errors, if the server sends them.
+
+
+# Receiving Messages from the Client
+On the server side, in the corresponding channel module:
+
+```
+def <Project>Web.ThingChannel do
+  ...
+
+  handle_in(<event_name>, params, socket) do
+    # Any processing or sending data back...
+    ...
+
+    {:reply, :ok, socket}
+  end
+end
+```
+
+For the full list of what the channel module can respond to, see [here](https://hexdocs.pm/phoenix/Phoenix.Channel.html#summary)
+
+
+# Sending Messages from the Server
+`broadcast!(socket, <event-name>, message)`
+
+The `message` param is a map of any data to be sent.
+
+
+# Receiving Messages from the Server
+On the client side:
+
+`socket.on(<event-name>, callback)`
+
+
+# Send Messages from the Server when the Client Joins
+The `socket.join` function from before can return up to three parameters:
+- the channel + topic
+- data for the client
+- the socket
+
+So if you want to send, say, candy products to a client the return would look like:
+`{:ok, %{candies: candies}, socket}`
+
+
+# Persisting Channel Data
+Say you're creating a chat app. User signs in, joins a channel, makes a few comments, signs out, and then signs in later. In order to preserve whatever posts they made and show them again once they log back in, you can send a message from the server when the client joins, just like in the above section. The process is the same as sending info from a controller to a view: query the data, transform it however you'd like, and then send!

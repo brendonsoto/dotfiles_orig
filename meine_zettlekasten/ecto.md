@@ -24,3 +24,10 @@ To create a migration run the following on the command line:
 This will create a file where db modifications can be coded
 To act on them, run `mix ecto.migrate`
 Any changes will be made for the *current environment*
+
+## Ecto Types
+Consider a situation where you have a reference to something in the database, like a link to a video, but the structure of that data is different from the reference. To use the example from Programming Phoenix, say the link to the video uses a string with the format "{id}-{title}" but the video's primary key is the `id` field which uses integers. Thus clicking a link will error since the `show` function in the controller looks for an integer but is receiving a string. This is where custom types help.
+
+An **ecto type** is a way to link a field in a schema to a module representing that field. This allows you to manipulate the field however you want in its presentation while still having a way to reference it.
+
+The module must have four functions defined as described [here](https://hexdocs.pm/ecto/Ecto.Type.html)
