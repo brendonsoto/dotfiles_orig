@@ -23,30 +23,11 @@ Plug 'junegunn/fzf.vim'
 " Multi-lang
 Plug 'w0rp/ale'
 Plug 'tpope/vim-endwise'
-Plug 'SirVer/ultisnips'
-
-" Elixir
-Plug 'elixir-editors/vim-elixir'
-
-" Haskell
-Plug 'neovimhaskell/haskell-vim'
-
-" Javascript
-Plug 'pangloss/vim-javascript'
-
-"JSON
-Plug 'elzr/vim-json'
-
-" JSX
-Plug 'mxw/vim-jsx'
+" Plug 'SirVer/ultisnips'
 
 " Markdown
 Plug 'dkarter/bullets.vim'
 Plug 'junegunn/goyo.vim'
-
-" TypeScript
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 
 " Web general
 Plug 'mattn/emmet-vim'
@@ -61,6 +42,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
+Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -351,9 +333,9 @@ let g:tagbar_type_typescript = {
       \ }
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+" let g:UltiSnipsExpandTrigger="<c-e>"
+" let g:UltiSnipsJumpForwardTrigger="<c-n>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 " Vimwiki
 let g:vimwiki_list = [
@@ -363,4 +345,4 @@ let g:vimwiki_list = [
       \]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_ex2syntaqx = {'.md': 'markdown'}
-nmap <Leader>x <Plug>VimwikiToggleListItem
+nmap <Leader>x <Plug>VimwikiToggleListItem<CR>

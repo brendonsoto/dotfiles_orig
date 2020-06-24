@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_NAME	Vimwiki Tags
 !_TAG_PROGRAM_URL	https://github.com/vimwiki/vimwiki
 !_TAG_PROGRAM_VERSION	2.5
+accessibility	accessibility.md	1;"	vimwiki:accessibility\taccessibility
 article	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
 elixir	elixir-pow.md	1;"	vimwiki:elixir-pow\telixir-pow
 phoenix	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
