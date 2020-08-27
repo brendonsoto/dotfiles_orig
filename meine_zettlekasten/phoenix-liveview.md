@@ -15,6 +15,8 @@ App
 
 These are my notes from the PragmaticStudio's LiveView course.
 
+`morphDom` is the JS dep used to manipulate the DOM
+
 
 # Making a Live page -- Router setup
 To create a page using LiveView first you need a route.
@@ -97,3 +99,13 @@ The main difference is if you want to manipulate the page's state.
 There are two functions:
 - `assign`: set state
 - `update`: use the current state to derive the next state
+
+
+# Debugging
+Since LiveView is over websockets you can see the messages being sent by using the Network panel in DevTools.
+Another way is to go into the Console tab of DevTools and run `liveview.enableDebug()`.
+This will enable debugging for the session so if you reload you'll see the content from the Network tab in your console!
+
+# Life Cycle
+When a LiveView app is running and a client connects there are _two_ `mount` related processes that happen: one on the client and one on the server.
+This can be observed by adding `inspect` logging calls in the `mount` function in live modules.

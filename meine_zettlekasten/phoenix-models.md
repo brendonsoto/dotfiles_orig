@@ -9,6 +9,12 @@ Think back to the book Programming Phoenix, the Rumbl project
 The code for videos and categories was stored in a directory called `multimedia`
 So the full path was `lib/rumbl/multimedia/{videos|categories}.ex`
 
+# Automagic Way
+Taken from the [Phoenix docs](https://hexdocs.pm/phoenix/Mix.Tasks.Phx.Gen.Context.html#content)
+`mix phx.gen.context Accounts User users firstName:string lastName: string`
+Why `context` and not `model`?
+Because in Elixir a model is considered part of the business logic and as a result is grouped in the Elixir term "context"
+
 # Manual Way
 ## What Code is Needed
 To start off, you can use something like the following:

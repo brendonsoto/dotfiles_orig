@@ -7,6 +7,10 @@ https://zettelkasten.de/posts/overview/
 # Questions / Things to explore
 - Cross-Site Request Forgery
 
+- Haskell:
+  - How to print (hello world)
+  - How to take std input
+  -
 
 
 # Generated Tags
