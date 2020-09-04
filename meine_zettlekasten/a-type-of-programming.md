@@ -87,3 +87,4 @@ tl;dr - How to create a datatype in Haskell, using sum types as an example via t
 
 
 ## 14. Pattern matching
+tl;dr - Using case statements as a way of pattern matching, returning certain data based on the input, like short circuits.

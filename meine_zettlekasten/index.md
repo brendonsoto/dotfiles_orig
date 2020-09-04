@@ -12,6 +12,12 @@ https://zettelkasten.de/posts/overview/
   - How to take std input
   -
 
+- Difference between syntax and grammar?
+For more context, Haskell, why does the syntax not bother people?
+I feel like it's the language, the words to describe functions itself.
+The ideas are clearer to understand, it's more like English.
+But what do you call the words?
+
 
 # Generated Tags
 
