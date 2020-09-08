@@ -128,7 +128,7 @@ colors:
     cyan:    '#8ec07c'
     white:   '#ebdbb2'
 
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
 
@@ -178,7 +178,7 @@ scrolling:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
-dynamic_title: true
+window.dynamic_title: true
 
 mouse.hide_when_typing: false
 
