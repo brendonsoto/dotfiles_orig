@@ -126,6 +126,7 @@ endif
 
 " MapLeader
 let mapleader = "\<Space>"
+let maplocalleader = "\\"
 
 " Easy open file from vim
 map <silent> <F12> :!open %<CR>
@@ -173,14 +174,14 @@ noremap ]b :bnext<CR>
 noremap [t :tabp<CR>
 noremap ]t :tabn<CR>
 
+" Easy access to vimrc
+nnoremap <leader>ev :vsplit ~/.vimrc<cr>
+nnoremap <leader>sv :source ~/.vimrc<cr>
+
 
 """""""""""""""""""""
 "		Autocommands
 """""""""""""""""""""
-
-" Enable auto sourcing vimrc on save
-autocmd! bufwritepost .vimrc source %
-autocmd! bufwritepost vimrc source %
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
