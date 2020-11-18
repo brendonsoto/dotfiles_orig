@@ -22,7 +22,6 @@ I feel like it's the language, the words to describe functions itself.
 The ideas are clearer to understand, it's more like English.
 But what do you call the words?
 
-
 # Generated Tags
 
 ## accessibility

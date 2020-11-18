@@ -24,6 +24,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-endwise'
 " Plug 'SirVer/ultisnips'
+Plug 'jiangmiao/auto-pairs'
+Plug 'adelarsq/vim-matchit'
 
 " Markdown
 Plug 'dkarter/bullets.vim'
@@ -38,11 +40,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'mtth/scratch.vim'
+Plug 'gcmt/taboo.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
@@ -241,6 +243,8 @@ let g:ale_fixers = {
       \ 'elixir': ['mix_format']
       \}
 let g:ale_completion_enabled = 1
+let g:ale_completion_delay = 500
+let g:ale_completion_autoimport = 1
 let g:ale_fix_on_save = 1
 nnoremap [j <Plug>(ale_previous_wrap)
 nnoremap ]j <Plug>(ale_next_wrap)

@@ -149,7 +149,7 @@ colors:
     cyan:    '#8ec07c'
     white:   '#ebdbb2'
 
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
   color: '0xffffff'
@@ -190,7 +190,7 @@ selection:
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: false
 
-dynamic_title: true
+window.dynamic_title: true
 
 cursor:
   # Cursor style
