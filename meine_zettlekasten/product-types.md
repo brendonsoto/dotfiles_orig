@@ -1,5 +1,6 @@
+:haskell:datatypes:
+
 # Product Types
-:product-types:
 
 Types combined with "and" are called *product types*.
 An example in English would be:

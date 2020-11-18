@@ -1,5 +1,6 @@
-# Type Alias
 :haskell:datatypes:
+
+# Type Alias
 
 A type alias is a way to refer to a datatype by another name.
 So it's like giving datatypes nicknames.

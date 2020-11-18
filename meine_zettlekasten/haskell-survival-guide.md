@@ -3,12 +3,29 @@
 # Survival Guide
 A quick and dirty reference for Haskell
 
-# Comments
+# Installation
+Look into `ghcup` for a convenient solution.
+Needed:
+- GHC
+- Stack
+- Cabal
+
+# REPL
+GHCi is the REPL
+Run `ghci`
+
+To load a file:
+- `ghci myFile.hs`
+- (in ghci) `> :load myFile.hs` -- shortcut = `:l`
+
+To reload a file within ghci: `ghci :reload` -- shortcut = `:r`
+
+
+# Syntax
+## Comments
 Comments begin with `--``
 `-- This is a comment`
 
-
-# Declarations
 ## Variables
 Remember, variables are immutable
 `one = 1`
@@ -38,7 +55,7 @@ Quick info:
   - (in ghci): `me = Person Brendon 27; :t me -- Results in Person`
 
 
-# Pattern Matching
+## Pattern Matching
 Simple pattern matching example based on numbers
 ```
 f :: Int -> String
@@ -46,16 +63,6 @@ f 0 = "Zero"
 f 1 = "One"
 f _ = "Something greater than One"
 ```
-
-
-# Repl
-In term: `ghci`
-
-To load a file:
-- `ghci myFile.hs`
-- (in ghci) `> :load myFile.hs` -- shortcut = `:l`
-
-To reload a file within ghci: `ghci :reload` -- shortcut = `:r`
 
 
 # Typeclasses

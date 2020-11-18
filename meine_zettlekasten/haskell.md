@@ -1,5 +1,6 @@
-# Haskell
 :haskell:languages:
+
+# Haskell
 
 
 ## Creating Data Types

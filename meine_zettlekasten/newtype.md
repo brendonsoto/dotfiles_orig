@@ -1,5 +1,6 @@
+:haskell:
+
 # Newtype
-:haskell:datatypes:
 
 Newtype is a way to create a datatype in Haskell.
 It is limited by the fact that it can only take in one datatype after the type constructor.

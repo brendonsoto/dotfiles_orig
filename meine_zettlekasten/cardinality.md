@@ -1,5 +1,6 @@
+:cardinality:haskell:
+
 # Cardinality
-:cardinality:
 
 The names have to do with a concept called *cardinality* which represents the number of possibilities a type can be.
 For instance, the `Bool` type has a cardinality of two since it only has two values: `True` and `False`.

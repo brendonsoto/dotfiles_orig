@@ -1,0 +1,16 @@
+:vim:
+
+# Handy Stuff
+
+# Debugging
+`echom` + `messages`
+To see it in action, try:
+```
+:echom "Hello there!"
+:echom "General Kenobi!"
+:messages
+```
+
+# CTRL-T & CTRL-D
+[Insert mode]
+Try typing some text and then hit `CTRL-T` followed by `CTRL-D`

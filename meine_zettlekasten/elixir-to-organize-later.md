@@ -1,0 +1,90 @@
+:elixir:
+
+# Notes to organize later
+
+# Running one off files
+`elixir my-file.ex`
+
+# REPL
+`iex`
+
+# Help
+`h` for general, `h(term)` for help on something specific (i.e. `h(enum)`)
+
+## Load a module
+`c "path/to/file.ex"`
+
+## Start a session with the current mix project
+`iex -s mix`
+
+## Reload a module
+`r "path/to/file.ex"`
+
+# Functions
+Last line is what's returned
+
+# Variables and Pattern Matching
+To set a variable: `a = 1`
+You can also do `1 = a`, but this doesn't set a value, it compares the left value against the right for a match
+To match a variable without resetting it use the *pin* operator: `^a = 1`
+
+You can then pattern match and assign using something like the following:
+`[first, 2, last] = [1, 2, 3]`
+A more useful example regarding http requests:
+```
+header = "GET /stuff HTTP/1.1"
+[method, path, protocol] = String.split(header, " ")
+> method
+> "GET"
+```
+
+# Accesing items in a map
+If the keys are atoms
+```
+my_map = %{ name: "Brendon" }
+name = my_map[:name]
+name_alt = my_map.name
+```
+
+If the keys are strings
+
+# Modules
+## Defining one
+```
+defmodule Domain.ModuleName do
+end
+```
+
+## How to reference other modules in a module
+Say you have a structure like so:
+```
+lib/domain
+lib/domain/core
+lib/domain/utils
+```
+You're working in core (`Domain.Core`) but want to reference `Domain.Utils`
+At the top of `Domain.Core` add an import statement like so to import everything from it:
+`import Domain.Utils`
+
+If you want only some functions, the import statement would look like the following:
+`import Domain.Utils, only: [func_1: 1, add_two_nums: 2]`
+The `only` keyword is followed by a list that defines functions and their arity, or the number of args they take
+
+# Structs
+Defined using `defstruct <keyword list>` in a module
+There can be only **one** struct per module
+
+## Pseudo Type Checking
+Structs can be used to check that arguments follow a certain shape
+Consider the differences between the following two functions:
+```
+def handle_request({method: "GET", path: ...})
+
+def handle_request(%Request{method: "GET", path: ...})
+```
+
+The top one looks for a map while the bottom looks specifically for a `Request` struct
+As a result, we're constraining the arguments to an extent
+
+# Recursion
+Tail-call optimization is used to make recursive functions more optimal and not push new frames onto the stack

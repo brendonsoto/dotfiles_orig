@@ -1,8 +1,10 @@
+:haskell:
+
 # Semigroup
-:semigroup:
 
 A semigroup is a type class used to describe how to combine data types.
 Think of it as addition in mathematics.
+It is made up of one function, `<>`, but this function implies the associativity law is adhered to.
 
 An important part of the semigroup is that an instance of semigroup should adhere to the associative law.
 This is the law that says 1 + (2 + 3) = (1 + 2) + 3.

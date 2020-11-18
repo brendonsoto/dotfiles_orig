@@ -1,10 +1,8 @@
+:haskell:
+
 # Monoid
-:monoid:
 
 A monoid is a type class used to combine things.
-
-Haskell from First Principles mentions it may be better to think of this type class as a way to reduce a set of values into a single value as opposed to combining.
-HFFP's example involves the `All` data type imported from `Data.Monoid` which wraps a monoid around the `Bool` type using `False` as the identity structure.
 
 It is very similar to the [semigroup](semigroup) type class.
 The monoid class has three things to implement (as opposed to semigroup's `<>`):
@@ -28,6 +26,9 @@ Since we may not know what value can be used to find the identity of something w
 For a more concrete example, think of addition.
 Zero is the value to be used in identity functions because anything plus zero is the original number.
 So `mempty` is like abstracting out the helpfulness of zero in addition.
+
+Haskell from First Principles mentions it may be better to think of this type class as a way to reduce a set of values into a single value as opposed to combining.
+HFFP's example involves the `All` data type imported from `Data.Monoid` which wraps a monoid around the `Bool` type using `False` as the identity structure.
 
 You may ask why are there similarities between semigroup and monoid?
 Monoid came before semigroup.

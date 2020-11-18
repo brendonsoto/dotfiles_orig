@@ -144,22 +144,22 @@ nnoremap <Leader>k <C-w>k
 nnoremap <Leader>l <C-w>l
 
 " Easy copy & paste
-map <Leader>y "+y
-map <Leader>p "+p
-map <Leader>Y ggv<S-g>$"*y
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+noremap <Leader>Y ggv<S-g>$"*y
 
 " Move line by line even when the line is wrapped
-map j gj
-map k gk
+noremap j gj
+noremap k gk
 
 " Easy window splitting
-map <Leader>s :split<CR>
+noremap <Leader>s :split<CR>
 
 " Easy tabs
-map <Leader>ts :tab split<CR>
+noremap <Leader>ts :tab split<CR>
 
 " Easy remove highlighting
-map <Leader>/ :nohl<CR>
+noremap <Leader>/ :nohl<CR>
 
 " Easy diffupdate
 nnoremap du :diffupdate<CR>
@@ -168,10 +168,10 @@ nnoremap du :diffupdate<CR>
 vnoremap // y/<C-R>"<CR>
 
 " Taken from Tim Pope's unimpaired
-map [b :bprevious<CR>
-map ]b :bnext<CR>
-map [t :tabp<CR>
-map ]t :tabn<CR>
+noremap [b :bprevious<CR>
+noremap ]b :bnext<CR>
+noremap [t :tabp<CR>
+noremap ]t :tabn<CR>
 
 
 """""""""""""""""""""
@@ -241,12 +241,12 @@ let g:ale_fixers = {
       \}
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
-nmap [j <Plug>(ale_previous_wrap)
-nmap ]j <Plug>(ale_next_wrap)
-nmap gd <Plug>(ale_detail)
-nmap gt <Plug>(ale_go_to_definition)
-nmap gr <Plug>(ale_find_references)
-nmap gh <Plug>(ale_hover)
+nnoremap [j <Plug>(ale_previous_wrap)
+nnoremap ]j <Plug>(ale_next_wrap)
+nnoremap gd <Plug>(ale_detail)
+nnoremap gt <Plug>(ale_go_to_definition)
+nnoremap gr <Plug>(ale_find_references)
+nnoremap gh <Plug>(ale_hover)
 set omnifunc=ale#completion#OmniFunc
 
 " Emmet
@@ -322,7 +322,7 @@ let g:startify_bookmarks = [
       \ ]
 
 " Tagbar
-nmap <Leader>tt :TagbarToggle<CR>
+nnoremap <Leader>tt :TagbarToggle<CR>
 let g:tagbar_type_typescript = {
       \ 'ctagsbin' : 'tstags',
       \ 'ctagsargs' : '-f-',
@@ -355,4 +355,4 @@ let g:vimwiki_list = [
       \]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_ex2syntaqx = {'.md': 'markdown'}
-nmap <Leader>x <Plug>VimwikiToggleListItem<CR>
+nnoremap <Leader>x <Plug>VimwikiToggleListItem<CR>

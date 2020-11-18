@@ -1,0 +1,14 @@
+:haskell:
+
+# Installation
+This is a weird point. There's the Haskell Platform (HP) which a good chunk of people recommend, but a lot of people have reported problems using HP. It seems like the minimal set of tools needed are *GHC*, *Stack*, and *Cabal*. Installing Stack should install the others, or through the use of a tool called `ghcup`.
+
+GHC is the compiler. GHCi is the REPL. Use `ghci` to access the REPL.
+Some helpful commands:
+- To load a file:
+  * `ghci myFile.hs`
+  * (in ghci) `> :load myFile.hs` -- shortcut = `:l`
+- To reload a file within ghci: `ghci :reload` -- shortcut = `:r`
+- `:i` to get **info** on a type/declaration/function
+- `:t` to get **type** info on a declaration/function
+- `:k` to get **kind** info on a function

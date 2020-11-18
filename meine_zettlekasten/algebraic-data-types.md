@@ -1,7 +1,6 @@
+:haskell:
+
 # Algebraic Data Types
-:algebraic-data-types:
-
-
 
 ## What are algebraic data types?
 Algebraic Data Types (ADTs) are data types that you can make by combining other data types.

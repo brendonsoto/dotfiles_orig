@@ -1,3 +1,5 @@
+:books:haskell:
+
 # Contents
 
 - [A Type Of Programming](#A Type Of Programming)
@@ -12,7 +14,6 @@
   - [9. Function application](#A Type Of Programming#9. Function application)
   - [10. Perspective](#A Type Of Programming#10. Perspective)
 
-:books:haskell:
 
 # A Type Of Programming
 

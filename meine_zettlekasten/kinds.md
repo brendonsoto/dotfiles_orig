@@ -1,5 +1,6 @@
+:haskell:
+
 # Kinds
-:kinds:
 
 A "kind" in [Haskell](haskell) is a type of a type.
 It is represented by an asterisk `*`.

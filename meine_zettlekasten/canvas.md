@@ -2,7 +2,7 @@
 :canvas:javascript:
 
 
-## Overview
+# Overview
 Canvas is pretty cool! You can draw things with it!
 
 To really use it there are two main parts:
@@ -17,7 +17,7 @@ var ctx = canvas.getContext("2d");
 ```
 
 
-## How to Draw
+# How to Draw
 How do you, personally, draw?
 You put a pen/pencil down, drag it across paper, and then lift when done.
 It's very similar with code!
@@ -28,3 +28,56 @@ In between is where you define properties of your drawing!
 You can use functions like `arc` or `rect` to draw semi-circles, circles, and rectangles!
 Functions like `fill`, well, fill the entire defined area with whatever `fillStyle` is defined
 `stroke` can be used to get just a line
+
+
+# Setup
+```
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+```
+
+# Pen/Drawing Functionality
+## Put Pen Down
+To "put your pen/pencil down", use `ctx.beginPath`.
+
+## Lift Pen
+To "lift", use `ctx.closePath`
+
+## Change Starting Point
+`ctx.moveTo`
+
+## Draw Recipe
+```
+let canvas = document.getElementById('canvas');
+let ctx = canvas.getContext('2d');
+let isDrawing = false;
+let canvasX = 0;
+let canvasY = 0;
+let canvasWidth = ctx.canvas.width;
+let canvasHeight = ctx.canvas.height;
+let canvasClientWidth = ctx.canvas.clientWidth;
+let canvasClientHeight = ctx.canvas.clientHeight;
+
+canvas.addEventListener('mousedown', (e) => {
+  canvasX = (e.pageX / canvasClientWidth) * canvasWidth;
+  canvasY = (e.pageY / canvasClientHeight) * canvasHeight;
+  ctx.beginPath();
+  ctx.moveTo(canvasX, canvasY);
+  isDrawing = true;
+});
+
+canvas.addEventListener('mouseup', (e) => {
+  ctx.closePath();
+  isDrawing = false;
+});
+
+canvas.addEventListener('mousemove', (e) => {
+  if (!isDrawing) {
+    return;
+  }
+  canvasX = (e.pageX / canvasClientWidth) * canvasWidth;
+  canvasY = (e.pageY / canvasClientHeight) * canvasHeight;
+  ctx.lineTo(canvasX, canvasY);
+  ctx.stroke();
+});
+```

@@ -1,5 +1,6 @@
+:haskell:datatypes:
+
 # Sum Types
-:sum-types:
 
 Types combine with "or" are called *sum types*.
 An example in English would be:
