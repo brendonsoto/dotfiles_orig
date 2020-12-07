@@ -7,6 +7,7 @@
 !_TAG_PROGRAM_VERSION	2.5
 accessibility	accessibility.md	1;"	vimwiki:accessibility\taccessibility
 article	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
+bitwig	bitwig.md	1;"	vimwiki:bitwig\tbitwig
 books	a-type-of-programming.md	1;"	vimwiki:a-type-of-programming\ta-type-of-programming
 books	vimscript-the-hard-way.md	1;"	vimwiki:vimscript-the-hard-way\tvimscript-the-hard-way
 canvas	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
@@ -15,6 +16,7 @@ course	design-for-developers.md	1;"	vimwiki:design-for-developers\tdesign-for-de
 datatypes	product-types.md	1;"	vimwiki:product-types\tproduct-types
 datatypes	sum-types.md	1;"	vimwiki:sum-types\tsum-types
 datatypes	type-alias.md	1;"	vimwiki:type-alias\ttype-alias
+daw	bitwig.md	1;"	vimwiki:bitwig\tbitwig
 design	design-for-developers.md	1;"	vimwiki:design-for-developers\tdesign-for-developers
 elixir	ecto.md	1;"	vimwiki:ecto\tecto
 elixir	elixir-detecting-bottlenecks.md	1;"	vimwiki:elixir-detecting-bottlenecks\telixir-detecting-bottlenecks
@@ -51,6 +53,7 @@ languages	elixir.md	61;"	vimwiki:elixir\telixir#Elixir
 languages	haskell.md	1;"	vimwiki:haskell\thaskell
 languages	language-server-protocol.md	1;"	vimwiki:language-server-protocol\tlanguage-server-protocol
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
+music	bitwig.md	1;"	vimwiki:bitwig\tbitwig
 news	nytimes-trump-taxes.md	1;"	vimwiki:nytimes-trump-taxes\tnytimes-trump-taxes
 phoenix	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
 phoenix	elixir-pow.md	1;"	vimwiki:elixir-pow\telixir-pow
