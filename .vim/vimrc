@@ -246,12 +246,12 @@ let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 500
 let g:ale_completion_autoimport = 1
 let g:ale_fix_on_save = 1
-nnoremap [j <Plug>(ale_previous_wrap)
-nnoremap ]j <Plug>(ale_next_wrap)
-nnoremap gd <Plug>(ale_detail)
-nnoremap gt <Plug>(ale_go_to_definition)
-nnoremap gr <Plug>(ale_find_references)
-nnoremap gh <Plug>(ale_hover)
+nnoremap [j :ALEPreviousWrap<cr>
+nnoremap ]j :ALENextWrap<cr>
+nmap gd <Plug>(ale_detail)
+nmap gt <Plug>(ale_go_to_definition)
+nmap gr <Plug>(ale_find_references)
+nmap gh <Plug>(ale_hover)
 set omnifunc=ale#completion#OmniFunc
 
 " Emmet
@@ -360,4 +360,4 @@ let g:vimwiki_list = [
       \]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_ex2syntaqx = {'.md': 'markdown'}
-nnoremap <Leader>x <Plug>VimwikiToggleListItem<CR>
+nmap <Leader>x :VimwikiToggleListItem<CR>
