@@ -66,9 +66,13 @@ phoenix	phoenix-views.md	1;"	vimwiki:phoenix-views\tphoenix-views
 politics	nytimes-trump-taxes.md	1;"	vimwiki:nytimes-trump-taxes\tnytimes-trump-taxes
 programming	call-by-value.md	1;"	vimwiki:call-by-value\tcall-by-value
 programming	language-server-protocol.md	1;"	vimwiki:language-server-protocol\tlanguage-server-protocol
+programming	web-app-architecture.md	1;"	vimwiki:web-app-architecture\tweb-app-architecture
 semigroup	semigroup.md	2;"	vimwiki:semigroup\tsemigroup#Semigroup
 session]`	article-phoenix-blog.md	600;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog#session]`
 stupid	dumb-jeopardy.md	1;"	vimwiki:dumb-jeopardy\tdumb-jeopardy
+thinking	decision-matrix.md	1;"	vimwiki:decision-matrix\tdecision-matrix
+thinking	second-order-thinking.md	1;"	vimwiki:second-order-thinking\tsecond-order-thinking
 types	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
+typescript	typescript-good-to-know.md	1;"	vimwiki:typescript-good-to-know\ttypescript-good-to-know
 typescript	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
 vim	vim-handy.md	1;"	vimwiki:vim-handy\tvim-handy

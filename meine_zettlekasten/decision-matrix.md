@@ -1,0 +1,16 @@
+:thinking:
+
+[Source](https://untools.co/decision-matrix)
+
+# Decision Matrix
+The idea here is to make a table with headers on both axis.
+Y-axis: options
+X-axis: valued attributes
+The cells should be filled with numbers representing how strongly the option presents the valued attribute.
+
+The source uses picking a design tool as an example.
+Another example could be picking out a synth.
+
+Let's say three options I'm considering are:
+- Elektron Analog Four
+- Korg Monostation

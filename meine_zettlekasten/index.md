@@ -45,11 +45,19 @@ But what do you call the words?
 
 - [cardinality](cardinality)
 
+## course
+
+- [design-for-developers](design-for-developers)
+
 ## datatypes
 
 - [product-types](product-types)
 - [sum-types](sum-types)
 - [type-alias](type-alias)
+
+## design
+
+- [design-for-developers](design-for-developers)
 
 ## elixir
 
@@ -91,6 +99,11 @@ But what do you call the words?
 ## javascript
 
 - [Canvas](canvas#Canvas)
+- [node-gyp-issue](node-gyp-issue)
+
+## jeopardy
+
+- [dumb-jeopardy](dumb-jeopardy)
 
 ## languages
 
@@ -125,6 +138,7 @@ But what do you call the words?
 
 - [call-by-value](call-by-value)
 - [language-server-protocol](language-server-protocol)
+- [web-app-architecture](web-app-architecture)
 
 ## semigroup
 
@@ -134,12 +148,22 @@ But what do you call the words?
 
 - [session]`](article-phoenix-blog#session]`)
 
+## stupid
+
+- [dumb-jeopardy](dumb-jeopardy)
+
+## thinking
+
+- [decision-matrix](decision-matrix)
+- [second-order-thinking](second-order-thinking)
+
 ## types
 
 - [typescript-types](typescript-types)
 
 ## typescript
 
+- [typescript-good-to-know](typescript-good-to-know)
 - [typescript-types](typescript-types)
 
 ## vim
