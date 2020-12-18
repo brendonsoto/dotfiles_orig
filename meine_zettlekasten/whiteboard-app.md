@@ -122,9 +122,9 @@ Text tool talking with Court
 - [X] Fix problem of clicking into another textarea creates a text area
 
 Separate:
-- [ ] Text font = century gothic
+- [ ] Text font = century gothic (https://www.fonts.com/font/monotype/century-gothic)
+- [ ] Make pen and eraser styles bigger (maybe add circle icon for eraser?)
 - try to not erase the whole canvas when resizing the window (maybe `.save`?)
-- Make pen and eraser styles bigger (maybe add circle icon for eraser?)
 - undo?
 - + redo?
 
@@ -151,3 +151,92 @@ Express for now?
 
 ## Once Prototype Looks GOod
 Migrate to Phoenix
+
+
+
+# 2020/Nov/29
+I think the goal for today is either to do CSS stuff or functionality
+Actually, a mixutre of both
+Basic functionality for toggling between the admin/chat section
+Then styling
+
+
+Reduce font-awesome size
+But first measur ehow much data is dl'd
+
+
+I also need the home page
+The home page either creates a room or joins a room
+
+Pages:
+- Home
+- Join whiteboard
+- Create whiteboard
+
+I'm thinking of having the three sections on the page altogether, but just hiding them.
+There's not much content.
+
+Or maybe I should just have three static pages?
+I'm thinking of that so I don't have to deal with the back button or anything
+
+
+## From Courtney:
+- [X] Make textareas only editable when the text tool is active (this is so you can draw/highlight on the text)
+- [X] Clear board button for Admin only
+- [X] Make text from text tool bigger
+- [X] Make drawing tool half as big
+- [X] For the text tool, see if you can make textareas stretch horizontally, apply a max-width, and then have the sentence/text stretch vertically
+
+
+## [2020/Dec/3] Next steps
+- [X] Ask Court for max width on text tool
+- [X] See if when entering text in a text box you can manipulate the Enter key to just put a newline
+
+
+## [2020/Dec/6]
+Continuing work
+
+### Meta / Dev Work
+- Consider gulp?
+  - Transpile + minimize assets?
+
+### Home Page
+- [ ] Change headline to have mixed up letters and colours
+- [ ] Change colours of buttons
+
+### Join Page
+- [ ] Change headline to have mixed up letters and colours
+- [ ] Change colour of inputs and labels
+- [ ] Change button style to be more consistent
+- [ ] Wire up form
+
+### Whiteboard
+- [ ] Rename current whiteboard.html to have admin in it
+- [ ] Take current whiteboard.html and make a student/limited version
+
+### Server
+- [X] Set up serving the index page
+- [X] When admin page is set up, set up a socket connection
+- [ ] On draw send message
+
+I can tell what requests are coming in by using referrer
+
+
+
+## [2020/Dec/18]
+After reading some articles online (todo, link them here) I'm convinced going vanilla-js may have been a not-so great idea since I'd, most likely, will be working on this time to time. With that in mind, it would be most beneficial to use whatever I'm familiar with. On the other hand, I am curious about Preact and have heard it's basically identical to working with React, so I'm going to try that!
+
+I have the typescript template installed and running. Pretty nifty how it gives you routing right out of the box! Now to migrate. The migration may be slightly different in order. Since routing's in already, I'm thinking about taking it page by page starting with the home. This is opposite from how I developed, starting at the meat of the app with the whiteboard.
+
+Gameplan:
+- [X] Move CSS whole
+- [X] Remove the header
+- [X] Move home page markup
+- [X] Move join page markup
+- [X] Touch up styles
+- [X] Move whiteboard
+- [ ] Separate out components (tools, sidebar)
+- [ ] Assets?
+
+
+I might do this as an experiment since I'm in a decent place with the other version.

@@ -234,6 +234,7 @@ let g:ale_linters = {
       \ 'cucumber': [],
       \ 'javascript': ['eslint', 'tsserver'],
       \ 'typescript': ['eslint', 'tsserver'],
+      \ 'typescriptreact': ['eslint', 'tsserver'],
       \}
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],

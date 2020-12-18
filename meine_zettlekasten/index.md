@@ -28,9 +28,17 @@ But what do you call the words?
 
 - [accessibility](accessibility)
 
+## architecture
+
+- [micro-frontends](micro-frontends)
+
 ## article
 
 - [article-phoenix-blog](article-phoenix-blog)
+
+## bitwig
+
+- [bitwig](bitwig)
 
 ## books
 
@@ -55,8 +63,13 @@ But what do you call the words?
 - [sum-types](sum-types)
 - [type-alias](type-alias)
 
+## daw
+
+- [bitwig](bitwig)
+
 ## design
 
+- [addy-osmani-design-patterns](addy-osmani-design-patterns)
 - [design-for-developers](design-for-developers)
 
 ## elixir
@@ -66,6 +79,11 @@ But what do you call the words?
 - [elixir-pow](elixir-pow)
 - [elixir-to-organize-later](elixir-to-organize-later)
 - [elixir-umbrella-projects](elixir-umbrella-projects)
+
+## front-end
+
+- [addy-osmani-design-patterns](addy-osmani-design-patterns)
+- [micro-frontends](micro-frontends)
 
 ## haskell
 
@@ -100,6 +118,7 @@ But what do you call the words?
 
 - [Canvas](canvas#Canvas)
 - [node-gyp-issue](node-gyp-issue)
+- [Socket IO](socket.io#Socket IO)
 
 ## jeopardy
 
@@ -114,6 +133,10 @@ But what do you call the words?
 ## monoid
 
 - [Monoid](monoid#Monoid)
+
+## music
+
+- [bitwig](bitwig)
 
 ## news
 
@@ -147,6 +170,10 @@ But what do you call the words?
 ## session]`
 
 - [session]`](article-phoenix-blog#session]`)
+
+## socket.io
+
+- [Socket IO](socket.io#Socket IO)
 
 ## stupid
 
