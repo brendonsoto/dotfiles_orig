@@ -117,6 +117,8 @@ But what do you call the words?
 ## javascript
 
 - [Canvas](canvas#Canvas)
+- [frontend-masters-vuejs](frontend-masters-vuejs)
+- [javascript](frontend-masters-vuejs#javascript)
 - [node-gyp-issue](node-gyp-issue)
 - [Socket IO](socket.io#Socket IO)
 
@@ -157,19 +159,33 @@ But what do you call the words?
 
 - [nytimes-trump-taxes](nytimes-trump-taxes)
 
+## problems-and-solutions
+
+- [ruby-bundle-dep-version-not-found](ruby-bundle-dep-version-not-found)
+
 ## programming
 
 - [call-by-value](call-by-value)
+- [programming](frontend-masters-vuejs#programming)
 - [language-server-protocol](language-server-protocol)
 - [web-app-architecture](web-app-architecture)
+
+## rails
+
+- [hartl-rails-6-ch1](hartl-rails-6-ch1)
+
+## ruby
+
+- [hartl-rails-6-ch1](hartl-rails-6-ch1)
+- [ruby-bundle-dep-version-not-found](ruby-bundle-dep-version-not-found)
 
 ## semigroup
 
 - [Semigroup](semigroup#Semigroup)
 
-## session]`
+## session
 
-- [session]`](article-phoenix-blog#session]`)
+- [session](article-phoenix-blog#session)
 
 ## socket.io
 
