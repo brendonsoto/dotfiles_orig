@@ -2,7 +2,7 @@
 # A script to move all of my config files when setting up a new machine
 
 # Shortcut to the dir where this file is executed
-dotfileDir=$(pwd)
+dotfileDir="$HOME/dotfiles"
 dotfiles=(
   ".ctags"
   ".ghci"
@@ -16,17 +16,18 @@ dotfiles=(
 
 # Link dot files
 for dotfile in "${dotfiles[@]}";do
- ln -sf "${HOME}/${dotfile}" "${dir}"
+ ln -sf "$dotfileDir/$dotfile" "$HOME/$dotfile"
 done
 
 # The ".config" dir might already exist so check before symlinking
+# The -d is to say "does $dotfile/.config exist AND is a directory"
 if [ -d "$dotfileDir/.config" ]; then
 	echo "Looping"
 	for dir in .config/*; do
-		ln -sf "$dotfileDir/$dir" "$HOME/$dir"
+		ln -sf "$dotfileDir/.config/$dir" "$HOME/.config/$dir"
 	done
 else
-	ln -s "$dotfileDir/.config" "$HOME/.config"
+	ln -sf "$dotfileDir/.config" "$HOME/.config"
 fi
 
 # Happy little messages
