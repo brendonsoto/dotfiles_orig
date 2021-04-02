@@ -15,3 +15,6 @@ This is from Michael Hartl's tutorials from learnenough.com
 - when pushing to heroku **use the main branch**
 - a shortcut to push to heroku is `git push heroku`
 - pushing to heroku triggers the production build
+
+
+# Chapter 2

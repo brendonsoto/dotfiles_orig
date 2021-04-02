@@ -4,6 +4,12 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# shared-mime-info
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+# Helm
+export HELM_CONFIG_HOME="/Users/brendonsoto/.config/helm/"
+
 source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/.profile
 
@@ -17,3 +23,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[blue]%} %{$fg[yellow]%}↻%{$reset_color%}"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

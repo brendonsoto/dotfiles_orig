@@ -83,7 +83,12 @@ But what do you call the words?
 ## front-end
 
 - [addy-osmani-design-patterns](addy-osmani-design-patterns)
+- [frontend-masters-vuejs](frontend-masters-vuejs)
 - [micro-frontends](micro-frontends)
+
+## front-end-masters
+
+- [frontend-masters-vuejs](frontend-masters-vuejs)
 
 ## haskell
 
@@ -121,6 +126,7 @@ But what do you call the words?
 - [javascript](frontend-masters-vuejs#javascript)
 - [node-gyp-issue](node-gyp-issue)
 - [Socket IO](socket.io#Socket IO)
+- [vue-school--masterclass](vue-school--masterclass)
 
 ## jeopardy
 
@@ -144,6 +150,14 @@ But what do you call the words?
 
 - [nytimes-trump-taxes](nytimes-trump-taxes)
 
+## nix
+
+- [niv](niv)
+- [nix](nix)
+- [nix--scratchpad](nix--scratchpad)
+- [nix-env](nix-env)
+- [nix-shell](nix-shell)
+
 ## phoenix
 
 - [article-phoenix-blog](article-phoenix-blog)
@@ -161,7 +175,9 @@ But what do you call the words?
 
 ## problems-and-solutions
 
+- [ruby--bundler--shared-mime-types](ruby--bundler--shared-mime-types)
 - [ruby-bundle-dep-version-not-found](ruby-bundle-dep-version-not-found)
+- [rvm--allow-login-shell](rvm--allow-login-shell)
 
 ## programming
 
@@ -169,6 +185,7 @@ But what do you call the words?
 - [programming](frontend-masters-vuejs#programming)
 - [language-server-protocol](language-server-protocol)
 - [web-app-architecture](web-app-architecture)
+- [zsh-scripting](zsh-scripting)
 
 ## rails
 
@@ -177,15 +194,17 @@ But what do you call the words?
 ## ruby
 
 - [hartl-rails-6-ch1](hartl-rails-6-ch1)
+- [ruby--bundler--shared-mime-types](ruby--bundler--shared-mime-types)
 - [ruby-bundle-dep-version-not-found](ruby-bundle-dep-version-not-found)
+- [rvm--allow-login-shell](rvm--allow-login-shell)
 
 ## semigroup
 
 - [Semigroup](semigroup#Semigroup)
 
-## session
+## session]`
 
-- [session](article-phoenix-blog#session)
+- [session]`](article-phoenix-blog#session]`)
 
 ## socket.io
 
@@ -212,3 +231,12 @@ But what do you call the words?
 ## vim
 
 - [vim-handy](vim-handy)
+
+## vue
+
+- [frontend-masters-vuejs](frontend-masters-vuejs)
+- [vue-school--masterclass](vue-school--masterclass)
+
+## vue-school
+
+- [vue-school--masterclass](vue-school--masterclass)

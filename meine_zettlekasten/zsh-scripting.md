@@ -1,0 +1,55 @@
+:programming:
+
+# ZSH scripting
+I learned a lot when making tmux scripts at Odeko for optimizing my workflow
+
+
+# Arrays
+```
+myArray=(
+  "such"
+  "wow"
+  "so"
+  "much"
+  "stuff"
+)
+```
+
+## Iteration
+Using the above as an example source:
+```
+for thing in $myArray; do
+  # whatever
+done
+```
+
+
+# Conditionals
+This is really for checking if an environmental var is present
+```
+if [[ -z "${WORK}" ]]; then
+  # do stuff
+fi
+```
+
+# Early return
+Use `return` and not `exit`
+`exit` will quit your entire shell session
+
+
+# Variables
+```
+# string variable
+myStr="This is a string"
+
+# saving the output of a command to a variable
+# below will run the command "tput lines" and save the result to "lines"
+lines=$(tput lines)
+```
+
+You can reference variables in your script using `$varName`
+So using lines above would result in `$lines`
+
+**NOTE:** There is a difference between `$myVar` and `"$myVar"` (the double quotes)
+Wrapping the variable in double quotes makes it a string
+Without the quotes the contents of the variable may be executed immediately

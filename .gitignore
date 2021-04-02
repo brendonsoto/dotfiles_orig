@@ -1,9 +1,12 @@
-# Ignore folders 
-.DS_Store
-.netrwhist
+*.pem
 ./undo/**
-plugged
-plug.vim.old
-.vim/autoload/plug.vim
+.DS_Store
+.config/certs
 .config/coc/extensions/**
 .config/coc/memos.json
+.config/helm
+.netrwhist
+.vim/autoload/plug.vim
+node_modules
+plug.vim.old
+plugged

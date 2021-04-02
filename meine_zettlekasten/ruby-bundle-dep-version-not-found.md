@@ -20,4 +20,13 @@ remote:        in order to install.
 
 
 # Solution
-`bundle update mimemagic`
+- Find a non "yanked" version of the dependency from https://rubygems.org/
+- Update _Gemfile_ to have the dependency pointing to the available version
+- `bundle update <dependency>`
+- Generating a data model using scaffolding is similar to Elixir + Phoenix:
+  - `rails generate scaffold ModelName field1:string field2:int etc`
+- To persist: `rails db:migrate`
+- scaffolded model pages do not include validation or personalization
+- variables prefixed with `@` are **instance variables**
+- inheritance provides a lot of the functionality for model classes/objects
+- erb is the default template lang

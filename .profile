@@ -9,6 +9,11 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+# Most
+if command -v most > /dev/null 2>&1; then
+    export PAGER="most"
+fi
+
 # NVM - Mac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -17,7 +22,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Ruby
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-eval "$(rbenv init -)"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -37,14 +41,6 @@ else
   export EDITOR=vim
   alias v="vim"
   alias vpu="vim +PlugUpgrade +PlugUpdate +qa"
-fi
-
-# Set fzf to use rg
-if command -v rg >/dev/null 2>&1
-then
-  export FZF_DEFAULT_COMMAND="rg --files --follow --ignore-file ~/dotfiles/.ignore"
-else
-  echo "ripgrep not installed!"
 fi
 
 # local bin
@@ -93,7 +89,7 @@ fi
 alias gbr="git branch --sort=-committerdate | head -5"
 alias gcm="git checkout master"
 alias gf="git fetch"
-alias gfam="gcm; git fetch && git merge origin/master"
+alias gfarm="gcm; git fetch && git rebase origin/master"
 alias gp="git push"
 alias gm="git merge"
 alias grh="git reset --hard"
@@ -107,6 +103,32 @@ gmo() {
 # Haskell
 alias ghci="stack ghci"
 
+##########################################
+#             FZF
+##########################################
+# Set fzf to use ag
+if command -v ag >/dev/null 2>&1
+then
+  export FZF_DEFAULT_COMMAND="ag -p ~/dotfiles/.ignore -g ''"
+  export FZF_CTRL_T_COMMAND="ag -p ~/dotfiles/.ignore -g ''"
+else
+  echo "ag not installed!"
+fi
+
+_fzf_compgen_path() {
+  ag -p ~/dotfiles/.ignore -g ''
+}
+
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude '.git' . $1
+}
+
+if [ -n "$ZSH_VERSION" ]
+then
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+else
+  [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+fi
 
 ##########################################
 #             Helpful
@@ -114,14 +136,11 @@ alias ghci="stack ghci"
 # If zsh is available, assume that"s being used
 if [ -n "$ZSH_VERSION" ]
 then
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
   # Git completion
   autoload -Uz compinit && compinit
 
 # Assume Bash
 else
-  [ -f ~/.fzf.bash ] && source ~/.fzf.bash
   [ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
   [ -f /usr/share/bash-completion/completions/pass ] && source /usr/share/bash-completion/completions/pass
 

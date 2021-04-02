@@ -26,7 +26,9 @@ elixir	elixir-pow.md	1;"	vimwiki:elixir-pow\telixir-pow
 elixir	elixir-to-organize-later.md	1;"	vimwiki:elixir-to-organize-later\telixir-to-organize-later
 elixir	elixir-umbrella-projects.md	1;"	vimwiki:elixir-umbrella-projects\telixir-umbrella-projects
 front-end	addy-osmani-design-patterns.md	1;"	vimwiki:addy-osmani-design-patterns\taddy-osmani-design-patterns
+front-end	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
 front-end	micro-frontends.md	1;"	vimwiki:micro-frontends\tmicro-frontends
+front-end-masters	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
 haskell	a-type-of-programming.md	1;"	vimwiki:a-type-of-programming\ta-type-of-programming
 haskell	algebraic-data-types.md	1;"	vimwiki:algebraic-data-types\talgebraic-data-types
 haskell	cardinality.md	1;"	vimwiki:cardinality\tcardinality
@@ -55,6 +57,7 @@ javascript	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfronten
 javascript	frontend-masters-vuejs.md	26;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs#javascript
 javascript	node-gyp-issue.md	1;"	vimwiki:node-gyp-issue\tnode-gyp-issue
 javascript	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
+javascript	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--masterclass
 jeopardy	dumb-jeopardy.md	1;"	vimwiki:dumb-jeopardy\tdumb-jeopardy
 languages	elixir.md	61;"	vimwiki:elixir\telixir#Elixir
 languages	haskell.md	1;"	vimwiki:haskell\thaskell
@@ -62,6 +65,11 @@ languages	language-server-protocol.md	1;"	vimwiki:language-server-protocol\tlang
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
 music	bitwig.md	1;"	vimwiki:bitwig\tbitwig
 news	nytimes-trump-taxes.md	1;"	vimwiki:nytimes-trump-taxes\tnytimes-trump-taxes
+nix	niv.md	1;"	vimwiki:niv\tniv
+nix	nix--scratchpad.md	1;"	vimwiki:nix--scratchpad\tnix--scratchpad
+nix	nix-env.md	1;"	vimwiki:nix-env\tnix-env
+nix	nix-shell.md	1;"	vimwiki:nix-shell\tnix-shell
+nix	nix.md	1;"	vimwiki:nix\tnix
 phoenix	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
 phoenix	elixir-pow.md	1;"	vimwiki:elixir-pow\telixir-pow
 phoenix	phoenix-channels.md	1;"	vimwiki:phoenix-channels\tphoenix-channels
@@ -71,14 +79,19 @@ phoenix	phoenix-models.md	1;"	vimwiki:phoenix-models\tphoenix-models
 phoenix	phoenix-protocols.md	1;"	vimwiki:phoenix-protocols\tphoenix-protocols
 phoenix	phoenix-views.md	1;"	vimwiki:phoenix-views\tphoenix-views
 politics	nytimes-trump-taxes.md	1;"	vimwiki:nytimes-trump-taxes\tnytimes-trump-taxes
+problems-and-solutions	ruby--bundler--shared-mime-types.md	1;"	vimwiki:ruby--bundler--shared-mime-types\truby--bundler--shared-mime-types
 problems-and-solutions	ruby-bundle-dep-version-not-found.md	1;"	vimwiki:ruby-bundle-dep-version-not-found\truby-bundle-dep-version-not-found
+problems-and-solutions	rvm--allow-login-shell.md	1;"	vimwiki:rvm--allow-login-shell\trvm--allow-login-shell
 programming	call-by-value.md	1;"	vimwiki:call-by-value\tcall-by-value
 programming	frontend-masters-vuejs.md	26;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs#programming
 programming	language-server-protocol.md	1;"	vimwiki:language-server-protocol\tlanguage-server-protocol
 programming	web-app-architecture.md	1;"	vimwiki:web-app-architecture\tweb-app-architecture
+programming	zsh-scripting.md	1;"	vimwiki:zsh-scripting\tzsh-scripting
 rails	hartl-rails-6-ch1.md	1;"	vimwiki:hartl-rails-6-ch1\thartl-rails-6-ch1
 ruby	hartl-rails-6-ch1.md	1;"	vimwiki:hartl-rails-6-ch1\thartl-rails-6-ch1
+ruby	ruby--bundler--shared-mime-types.md	1;"	vimwiki:ruby--bundler--shared-mime-types\truby--bundler--shared-mime-types
 ruby	ruby-bundle-dep-version-not-found.md	1;"	vimwiki:ruby-bundle-dep-version-not-found\truby-bundle-dep-version-not-found
+ruby	rvm--allow-login-shell.md	1;"	vimwiki:rvm--allow-login-shell\trvm--allow-login-shell
 semigroup	semigroup.md	2;"	vimwiki:semigroup\tsemigroup#Semigroup
 session]`	article-phoenix-blog.md	600;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog#session]`
 socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
@@ -89,3 +102,6 @@ types	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
 typescript	typescript-good-to-know.md	1;"	vimwiki:typescript-good-to-know\ttypescript-good-to-know
 typescript	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
 vim	vim-handy.md	1;"	vimwiki:vim-handy\tvim-handy
+vue	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
+vue	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--masterclass
+vue-school	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--masterclass

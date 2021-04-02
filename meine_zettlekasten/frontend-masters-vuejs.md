@@ -1,4 +1,4 @@
-:javascript:
+:front-end:front-end-masters:javascript:vue:
 
 # Contents
 
@@ -27,6 +27,10 @@
 
 # Vue3
 This is from the frontend masters
+
+# Questions from the Course
+From Component Events with emit:
+If there are script tas representing the components, how does this impact accessibility and seo?
 
 # Introduction
 ## Intro
@@ -329,3 +333,135 @@ The watcher was for `orderStatus` which would set `orderSubmitted` to a string
 Question someone asked:
 Can watchers effect other properties?
 Yup
+
+# Components & Props
+## Components
+Vue uses HTML-based templates
+Templates are optional
+Can use JSX
+
+One way is by adding a `template` property in the App object and have the value be a string representing the html
+
+Another way that's similar is to make a component using `app.component(name, { template: '...' })`
+`app` in this case is the instance returned from `Vue.createApp`
+
+## Props
+Using `app.component` props can be added by adding the key `props` with a value of an array of attributes to use as props within the object passed to `app.component`
+```
+app.component(myComp, { props: ['myProp1'], template: '...' })
+
+<myComp myProp1="whatever"></myComp>
+```
+
+There is prop validation
+
+```
+props: {
+  propName: {
+    type: String,
+    required: true,
+    default: 'placeholder'
+  }
+}
+```
+
+NOTE: If the prop is an object or an array the `default` property expects a function that returns an object or array
+
+You can bind props to state bits by using `v-bind`/`:`
+
+## Components in Practice
+Props that are camelCased will be converted to kebab-case (myProp -> my-prop)
+
+For component in HTML, use
+`<script type="text/x-template" id="my-component">`
+Below would be your html for the component
+Then you can reference the component using `app.component('name', { template: '#my-component' })`
+Notice how the template is a css selector to the script tag
+
+What if you have multiple components? Are they separated white space?
+
+Components can have their own data
+So local state within components is possible!
+
+## Component Events with emit
+`emit` is a way to communicate from child to parent component
+
+This time the component is shown within a script tag, instead of below
+I guess this is the correct way?
+
+`emit` seems similar to calling a parent method from a child component in React
+`$emit('parentMethod', param)`
+
+`emit` can also be used within the `methods` section of a component by using `this.$emit(...)`
+
+## Slots
+Slots are like `children` for React
+A slot can be declared using `<slot></slot>`
+
+Sarah used modals to demonstrate this
+Modal component is the same
+but content is different
+
+Slots can have default content by just adding it within the slot tags
+
+You can name slots by using the `name` attribute on the slot tag and reference it by using `v-slot:name`
+
+Named slots are only available in Vue3
+
+`keep-alive` is a tag that can be used to prevent components from being unmounted?
+Or like, a rememberance system for a component that may be conditionally rendered?
+
+## Components Exercise
+I copied the internal div section representing a location and copied it within a script tag to make a component
+I then removed all of the hard-coded bits and replaced them with the moustache templates to reference data
+Afterwards I added the component in the JS section and added the props
+I slipped at this point because the image was still weird
+I had to review a previous slide to find out I needed to bind the `src` attribute
+At this point my component still was not working
+This was because I had all the props passed in like `name="location.name"`
+Just like with the img tag I needed to bind the property to it.
+
+This syntax is a bit weird to me.
+Not sure how I feel about it
+I am a bit nervous how there feels to be quite a reliance on strings which means it can be easy to misspell things or forget a character
+I guess only time will tell
+
+## Components Solution
+
+
+# App Development
+## Single File Templates
+Vue apps usually use Vue CLI and Nuxt
+Nuxt makes it easy to lazy load components
+
+Single file template:
+```
+<template>
+  <!-- html -->
+</template>
+
+<script>
+import OtherComponent from "..."
+
+export default {
+  // ... Vue component logic
+}
+</script>
+
+<style scoped>
+  // styles, scoped attribute is optional
+</styled>
+```
+This enables you to have everything regarding the component in the same file
+That does seem neat
+
+CLI: `npm i -g @vue/cli`
+
+Create vue app: `vue create <app-name>`
+Provides prompt for selecting setup
+
+Vuex is for managing state
+
+Nuxt is like Next but for Vue instead of React
+
+## Creating & Deploying a Vue.js App

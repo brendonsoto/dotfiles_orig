@@ -1,0 +1,20 @@
+:problems-and-solutions:ruby:
+
+# Error
+```
+RVM is not a function, selecting rubies with 'rvm use ...' will not work.
+
+You need to change your terminal emulator preferences to allow login shell.
+Sometimes it is required to use `/bin/bash --login` as the command.
+Please visit https://rvm.io/integration/gnome-terminal/ for a example.
+```
+
+# How did the error occur?
+Trying to run `rvm --default use 2.7.1` after installing that version of Ruby
+
+
+# Solution
+[Kudos](https://stackoverflow.com/questions/22773693/rvm-zsh-rvm-is-not-a-function-selecting-rubies-with-rvm-use-will-not-w)
+
+Add to .zshrc
+`source $HOME/.rvm/scripts/rvm`
