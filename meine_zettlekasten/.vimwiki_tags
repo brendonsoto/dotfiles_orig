@@ -9,6 +9,7 @@ accessibility	accessibility.md	1;"	vimwiki:accessibility\taccessibility
 architecture	micro-frontends.md	1;"	vimwiki:micro-frontends\tmicro-frontends
 article	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
 bitwig	bitwig.md	1;"	vimwiki:bitwig\tbitwig
+book	agile-web-development-with-rails-6.md	1;"	vimwiki:agile-web-development-with-rails-6\tagile-web-development-with-rails-6
 books	a-type-of-programming.md	1;"	vimwiki:a-type-of-programming\ta-type-of-programming
 books	vimscript-the-hard-way.md	1;"	vimwiki:vimscript-the-hard-way\tvimscript-the-hard-way
 canvas	canvas.md	2;"	vimwiki:canvas\tcanvas#Canvas
@@ -62,6 +63,7 @@ jeopardy	dumb-jeopardy.md	1;"	vimwiki:dumb-jeopardy\tdumb-jeopardy
 languages	elixir.md	61;"	vimwiki:elixir\telixir#Elixir
 languages	haskell.md	1;"	vimwiki:haskell\thaskell
 languages	language-server-protocol.md	1;"	vimwiki:language-server-protocol\tlanguage-server-protocol
+lessons-learned	lessons-learned--renting-apartments.md	1;"	vimwiki:lessons-learned--renting-apartments\tlessons-learned--renting-apartments
 monoid	monoid.md	2;"	vimwiki:monoid\tmonoid#Monoid
 music	bitwig.md	1;"	vimwiki:bitwig\tbitwig
 news	nytimes-trump-taxes.md	1;"	vimwiki:nytimes-trump-taxes\tnytimes-trump-taxes
@@ -87,21 +89,26 @@ programming	frontend-masters-vuejs.md	26;"	vimwiki:frontend-masters-vuejs\tfront
 programming	language-server-protocol.md	1;"	vimwiki:language-server-protocol\tlanguage-server-protocol
 programming	web-app-architecture.md	1;"	vimwiki:web-app-architecture\tweb-app-architecture
 programming	zsh-scripting.md	1;"	vimwiki:zsh-scripting\tzsh-scripting
+rails	agile-web-development-with-rails-6.md	1;"	vimwiki:agile-web-development-with-rails-6\tagile-web-development-with-rails-6
 rails	hartl-rails-6-ch1.md	1;"	vimwiki:hartl-rails-6-ch1\thartl-rails-6-ch1
+ruby	agile-web-development-with-rails-6.md	1;"	vimwiki:agile-web-development-with-rails-6\tagile-web-development-with-rails-6
 ruby	hartl-rails-6-ch1.md	1;"	vimwiki:hartl-rails-6-ch1\thartl-rails-6-ch1
+ruby	rake.md	1;"	vimwiki:rake\trake
 ruby	ruby--bundler--shared-mime-types.md	1;"	vimwiki:ruby--bundler--shared-mime-types\truby--bundler--shared-mime-types
+ruby	ruby--idioms.md	1;"	vimwiki:ruby--idioms\truby--idioms
 ruby	ruby-bundle-dep-version-not-found.md	1;"	vimwiki:ruby-bundle-dep-version-not-found\truby-bundle-dep-version-not-found
 ruby	rvm--allow-login-shell.md	1;"	vimwiki:rvm--allow-login-shell\trvm--allow-login-shell
 semigroup	semigroup.md	2;"	vimwiki:semigroup\tsemigroup#Semigroup
-session]`	article-phoenix-blog.md	600;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog#session]`
 socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 stupid	dumb-jeopardy.md	1;"	vimwiki:dumb-jeopardy\tdumb-jeopardy
 thinking	decision-matrix.md	1;"	vimwiki:decision-matrix\tdecision-matrix
 thinking	second-order-thinking.md	1;"	vimwiki:second-order-thinking\tsecond-order-thinking
 types	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
 typescript	typescript-good-to-know.md	1;"	vimwiki:typescript-good-to-know\ttypescript-good-to-know
+typescript	typescript-typed-object-keys.md	1;"	vimwiki:typescript-typed-object-keys\ttypescript-typed-object-keys
 typescript	typescript-types.md	1;"	vimwiki:typescript-types\ttypescript-types
 vim	vim-handy.md	1;"	vimwiki:vim-handy\tvim-handy
 vue	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
 vue	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--masterclass
+vue	vuex.md	1;"	vimwiki:vuex\tvuex
 vue-school	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--masterclass

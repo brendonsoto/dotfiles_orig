@@ -24,6 +24,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
 Plug 'plasticboy/vim-markdown'
 Plug 'LnL7/vim-nix'
+Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 Plug 'leafgarland/typescript-vim'
 Plug 'posva/vim-vue'
@@ -53,7 +54,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'mtth/scratch.vim'
 Plug 'gcmt/taboo.vim'
@@ -108,7 +108,7 @@ set nowritebackup " no backups
 set nomodeline " For a security thing - https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
 set noswapfile " no backups
 set number " display line number
-set omnifunc=syntaxcomplete#Complete " Enable omnicompletion
+" set omnifunc=syntaxcomplete#Complete " Enable omnicompletion
 set path=$PWD/** " Find from current directory
 set ruler " show the cursor position all the time
 set shiftwidth=2 " spaces for auto indent
@@ -141,12 +141,8 @@ endif
 let mapleader = "\<Space>"
 let maplocalleader = "\\"
 
-" Easy open file from vim
-map <silent> <F12> :!open %<CR>
-
 " Easy open, close, and save
 nnoremap <Leader>e :e<Space>
-nnoremap <Leader>v :vs<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
@@ -160,23 +156,18 @@ nnoremap <Leader>l <C-w>l
 " Easy copy & paste
 noremap <Leader>y "+y
 noremap <Leader>p "+p
-noremap <Leader>Y ggv<S-g>$"*y
 
 " Move line by line even when the line is wrapped
 noremap j gj
 noremap k gk
 
 " Easy window splitting
-noremap <Leader>s :split<CR>
-
-" Easy tabs
-noremap <Leader>ts :tab split<CR>
+noremap <Leader>sh :split<CR>
+noremap <Leader>sv :vs<CR>
+noremap <Leader>st :tab split<CR>
 
 " Easy remove highlighting
 noremap <Leader>/ :nohl<CR>
-
-" Easy diffupdate
-nnoremap du :diffupdate<CR>
 
 " Easy search for visually selected text
 vnoremap // y/<C-R>"<CR>
@@ -186,10 +177,6 @@ noremap [b :bprevious<CR>
 noremap ]b :bnext<CR>
 noremap [t :tabp<CR>
 noremap ]t :tabn<CR>
-
-" Easy access to vimrc
-nnoremap <leader>ev :vsplit ~/.vimrc<cr>
-nnoremap <leader>sv :source ~/.vimrc<cr>
 
 
 """""""""""""""""""""
@@ -235,6 +222,9 @@ let g:jsx_ext_required = 0
 " SQL -- Reset the Omni Key so I can use CTRL-[ to exit insert mode
 let g:ftplugin_sql_omni_key = '<C-j>'
 
+" Vue
+let g:vue_pre_processors = ['scss', 'typescript']
+
 
 """""""""""""""""""""
 "		Tools
@@ -246,17 +236,17 @@ let g:ale_linters = {
       \ 'javascript': ['eslint', 'tsserver'],
       \ 'typescript': ['eslint', 'tsserver'],
       \ 'typescriptreact': ['eslint', 'tsserver'],
+      \ 'vue': ['vls', 'eslint'],
       \}
 let g:ale_fixers = {
       \ '*': ['remove_trailing_lines', 'trim_whitespace'],
       \ 'javascript': ['prettier'],
       \ 'typescript': ['prettier'],
       \ 'typescriptreact': ['prettier'],
+      \ 'vue': ['prettier'],
       \ 'elixir': ['mix_format']
       \}
 let g:ale_completion_enabled = 1
-let g:ale_completion_delay = 500
-let g:ale_completion_autoimport = 1
 let g:ale_fix_on_save = 1
 nnoremap [j :ALEPreviousWrap<cr>
 nnoremap ]j :ALENextWrap<cr>
@@ -277,8 +267,8 @@ let g:user_emmet_settings = {
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " FZF
-nnoremap <Leader>a :Rg<CR>
-nnoremap <Leader>B :Buffers<CR>
+nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>b :Buffers<CR>
 nnoremap <C-p> :Files<CR>
 
 " Pangloss Javascript
@@ -340,27 +330,6 @@ let g:startify_bookmarks = [
       \ {'m': '~/dotfiles/my_wiki/index.md'},
       \ {'z': '~/dotfiles/meine_zettlekasten/index.md'},
       \ ]
-
-" Tagbar
-nnoremap <Leader>tt :TagbarToggle<CR>
-let g:tagbar_type_typescript = {
-      \ 'ctagsbin' : 'tstags',
-      \ 'ctagsargs' : '-f-',
-      \ 'kinds': [
-      \ 'e:enums:0:1',
-      \ 'f:function:0:1',
-      \ 't:typealias:0:1',
-      \ 'M:Module:0:1',
-      \ 'I:import:0:1',
-      \ 'i:interface:0:1',
-      \ 'C:class:0:1',
-      \ 'm:method:0:1',
-      \ 'p:property:0:1',
-      \ 'v:variable:0:1',
-      \ 'c:const:0:1',
-      \ ],
-      \ 'sort' : 0
-      \ }
 
 " UltiSnips
 " let g:UltiSnipsExpandTrigger="<c-e>"

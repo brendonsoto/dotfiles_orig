@@ -5,10 +5,11 @@ https://zettelkasten.de/posts/overview/
 
 
 # Questions / Things to explore
-- Cross-Site Request Forgery
+- Vue:
+  - state management
+  - forms
+- Figma
 
-- Language Server Protocol + Implementation
-- Haxe?
 - Haskell:
   - STATE MONAD
   - Understand Xmonad
@@ -16,11 +17,16 @@ https://zettelkasten.de/posts/overview/
   - How to take std input
   - Why can lazy evaluation lead to performance headaches? It's touted as a major point of Haskell.
 
+- Language Server Protocol + Implementation
+- Cross-Site Request Forgery
+
 - Difference between syntax and grammar?
 For more context, Haskell, why does the syntax not bother people?
 I feel like it's the language, the words to describe functions itself.
 The ideas are clearer to understand, it's more like English.
 But what do you call the words?
+
+- Haxe?
 
 # Generated Tags
 
@@ -39,6 +45,10 @@ But what do you call the words?
 ## bitwig
 
 - [bitwig](bitwig)
+
+## book
+
+- [agile-web-development-with-rails-6](agile-web-development-with-rails-6)
 
 ## books
 
@@ -138,6 +148,10 @@ But what do you call the words?
 - [haskell](haskell)
 - [language-server-protocol](language-server-protocol)
 
+## lessons-learned
+
+- [lessons-learned--renting-apartments](lessons-learned--renting-apartments)
+
 ## monoid
 
 - [Monoid](monoid#Monoid)
@@ -189,22 +203,22 @@ But what do you call the words?
 
 ## rails
 
+- [agile-web-development-with-rails-6](agile-web-development-with-rails-6)
 - [hartl-rails-6-ch1](hartl-rails-6-ch1)
 
 ## ruby
 
+- [agile-web-development-with-rails-6](agile-web-development-with-rails-6)
 - [hartl-rails-6-ch1](hartl-rails-6-ch1)
+- [rake](rake)
 - [ruby--bundler--shared-mime-types](ruby--bundler--shared-mime-types)
+- [ruby--idioms](ruby--idioms)
 - [ruby-bundle-dep-version-not-found](ruby-bundle-dep-version-not-found)
 - [rvm--allow-login-shell](rvm--allow-login-shell)
 
 ## semigroup
 
 - [Semigroup](semigroup#Semigroup)
-
-## session]`
-
-- [session]`](article-phoenix-blog#session]`)
 
 ## socket.io
 
@@ -226,6 +240,7 @@ But what do you call the words?
 ## typescript
 
 - [typescript-good-to-know](typescript-good-to-know)
+- [typescript-typed-object-keys](typescript-typed-object-keys)
 - [typescript-types](typescript-types)
 
 ## vim
@@ -236,6 +251,7 @@ But what do you call the words?
 
 - [frontend-masters-vuejs](frontend-masters-vuejs)
 - [vue-school--masterclass](vue-school--masterclass)
+- [vuex](vuex)
 
 ## vue-school
 

@@ -597,7 +597,8 @@ As a whole everything is pretty familiar. There's markup, functions for creating
 We have four parameters here:
 - `@conn`: a data structure implementing the `Phoenix.HTML.FormData` protocol
 - `Routes.sesion_path(..)`: where to send the data
-- `[as: :session]`: options; here we're saying "prepend the data with `session.`"
+- `[as\: \:session]`: options; here we're saying "prepend the data with `session.`"
+  - the forward slashes are to try to get around vimwiki
 - `fn f ->`: an anonymous function to use to build the markup
 
 Altogether it's a way to create a form to send data to a path where the data is formatted like `session.email: ..., session.password: ...`. We're using `@conn` as the first parameter because we don't have a particular changeset associated this information.

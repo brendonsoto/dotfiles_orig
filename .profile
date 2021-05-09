@@ -9,11 +9,6 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# Most
-if command -v most > /dev/null 2>&1; then
-    export PAGER="most"
-fi
-
 # NVM - Mac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -138,6 +133,10 @@ if [ -n "$ZSH_VERSION" ]
 then
   # Git completion
   autoload -Uz compinit && compinit
+
+  # Don't share history between tabs
+  unsetopt inc_append_history
+  unsetopt share_history
 
 # Assume Bash
 else

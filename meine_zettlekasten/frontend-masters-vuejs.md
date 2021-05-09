@@ -464,4 +464,140 @@ Vuex is for managing state
 
 Nuxt is like Next but for Vue instead of React
 
+## Vue CLI
+Nuxt uses vue under the hood
+
+
 ## Creating & Deploying a Vue.js App
+Sarah uses Netlify
+Netlify seems like Heroku but for Jamstack
+
+
+## Lifecycle hooks
+There are a lot of hooks, similar to React's lifecycle
+- created comonent (ideal to call apis)
+- mounted component (ideal for DOM operations)
+- updated
+- activated (used for keep-alive)
+- deactivated
+- errorCaptured -v3
+- renderTracked - v3 (cool for debugging, vDOM rerender)
+- renderTriggered - v3 (tells you what triggered rerender)
+
+All of these hooks are on the root level, not needed in `methods`
+
+Lifecycle hooks auto-bind to the Vue instance so you have access to `this.*`
+
+There's a diagram showing the lifecycle
+
+## Nuxt
+Nuxt = next.js but for vue
+
+Sarah loves using Nuxt and finds herself using it more than the Vue CLI
+
+Nuxt provides:
+- automatic code splitting
+- server side rendering/static/jamstack/other desired outputs
+- routing system w/ async data
+  - middleware available to access routing midway
+- great lighthouse score by default
+- auto dynamic routes
+- transpilation
+- hot reloading
+- pre-processing
+
+
+# Animations
+## Animations
+Transitions vs Animations
+
+Transitions - one state to another
+Animations - keyframes -> a lot more power
+
+There are hooks for transitions/animations
+
+There's a `transition` tag!
+It has a name attribute
+
+There are the following directives:
+- enter-active
+- enter-from
+- leave-active
+- leave-from
+
+Animation tip: use `ease-out` for entrances and `ease-in` for leaving
+
+If you want the background to lose focus, transition component may not do it
+
+
+## CSS Animations
+You can add classes to the transition component based on the above states
+i.e. `enter-active-class="something"`
+
+using `translate3d()` with a z value of 0 will trigger the browser to use hardware acceleration
+
+
+## Animating with JavaScript Hooks
+When using just JavaScript add the attr `:css="false"` to the transition element
+
+When using javascript for animtions you can use the vue instance methods, but these have a second parameter, `done`, that is like `done` from async tests.
+
+
+# Composition API & Custom Directives
+## Composition API
+Composition API is only in Vue3
+
+Evan has a keynote regarding Vue2 -> Vue3
+
+Vue 2 -> 3 took 2 years, 99 contributors, a lot of work
+
+There's a `setup` method for the Vue instance
+
+Composition API is for moments where you have multiple components that are only slightly different from each other
+
+The idea is for the Composition API to encapsulate core functionality so it can be reused across multiple places
+
+Composition API was built off of React Hooks, but modified for Vue
+
+There's a `ref` thing that can be destructured from Vue
+You can set a piece of state using something like `numThings = ref(0)` where `0` is our starting value
+To access the item use `numThings.value`
+This can be cumbersome so there's another bit from Vue called reactive that looks like an object/data
+```
+const { ref } = Vue
+const state = reactive({
+  numThings: 0,
+  options: [...]
+})
+```
+
+
+## Computed Properties, Watch & WatchEffect
+
+## Lifecycle Hooks
+hooks are the same but prefixed with `on` (`onMounted`)
+
+`composables` - dir name for items that would be created with the Composition API
+
+## Script Setup & Composition Resources
+can use `setup` attribute in `script` tags to  put just composition stuff if you wanted
+
+vueuse.js.org seems like a good resource for finding stuff
+
+
+# Vuex
+## Vuex
+centralized store
+one way data flow
+influenced by flux
+similar to redux
+
+recommended file sturcture:
+`<proj-root>/src/store/index.js` or `store.js`
+
+Nuxt breaks out the boilerplate by setting state/mutations/actions/modules into their own exported variables
+
+`state` is what you expect, similar to `data` in vue components
+`getters` are like computed properties
+`mutations` are the only way to update the state -- sync only
+`actions` async operations
