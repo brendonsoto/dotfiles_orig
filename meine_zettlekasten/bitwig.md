@@ -28,3 +28,4 @@ To see this, press the unison button, the one with the mouth shape on it.
 In the bottom right there will be a layer display.
 This pairs other tracks' sounds to the current so you can play multiple timbres from one track.
 One creative thing to do with this is use one track as the main note sequencer and the other tracks as parameter locks.
+
