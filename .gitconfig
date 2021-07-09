@@ -20,3 +20,5 @@
 [user]
 	name = brendon
 	email = brendon.soto@gmail.com
+[init]
+	defaultBranch = main

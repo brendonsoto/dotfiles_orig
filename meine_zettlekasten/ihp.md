@@ -1,0 +1,16 @@
+:haskell:
+
+# IHP
+This is basically Rails for Haskell
+Gotta admit it seems pretty neat
+It is based on nix rather than stack which is interesting
+
+I first heard about this at Odeko, 2021/Jul/8 (Only reason I know this is because I created this post the next day)
+One concern was whether this would work nicely on macOS since at the time nix was a bit odd to use on macOS due to updates from BigSur (I think it had to do with Kernel permissions)
+
+I'm going through the "Your First Project" tutorial (https://ihp.digitallyinduced.com/Guide/your-first-project.html) as a guinea pig to make sure the framework is workable on a mac w/ an intel processor
+So far so good!
+
+# Quirks/Oddities I noticed
+There's usage of the `make` command (i.e. `make psql` for postgres session w/ the app's db or `make -B .envrc` to make sure new dependencies are in) but the Makefile seems pretty light
+Also, seems a bit hard to find the postgres configuration

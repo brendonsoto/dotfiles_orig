@@ -224,3 +224,103 @@ B.get_new # new 'A' object, not 'B'
     - special var representing the absolute path to the current file
   - `File.expand_path(rel_path_to_file, abs_path)`:
     - uses `abs_path` to generate an absolute path to the directory and then navigates to the file in `rel_path_to_file`
+
+
+# Part 2
+## Chpater 5 - The Depot Application
+This chapter is an overview of what the app is and how we'll be approaching it, kind of
+I say kind of because it doesn't outline the whole thing
+One interesting note is that the authors are embracing uncertainty while designing
+They're not trying to plan the whole thing out from the get go
+In fact, they say that leads to more pain
+They're working with whtat they have
+
+Depot has two types of users:
+- buyer: browse products, select some to purchase, makes orders
+- seller: creates list of products to sell, managing shipping
+
+Sketches of pages
+
+Sketches of the data, not w/ databases or anything like that, just the data outlines
+
+
+## Chapter 6 - Task A: Creating the Application
+For setting up other databases w/ rails: https://guides.rubyonrails.org/configuring.html#configuring-a-database
+
+When setting up a **model** using **scaffolding** use the singular form.
+Rails will set up a table whose name is the plural form
+
+Generating a model using scaffolding (on CLI):
+`bin/rails generate scaffold Table field1:string field2:text ...`
+
+This will generate:
+- model
+- migration
+- view
+- controller
+- scss file
+- tests
+
+To apply a data migration:
+`bin/rails db:migrate`
+
+If you mess up spelling a task, Rails will try to point you the right way.
+```
+bin/rails migrate
+
+> rails aborted!
+> Don't know how to build task 'migrate' ...
+> Did you mean? db:migrate
+```
+
+Rails provides a `seed.rb` file which is a way to quickly populate the db
+
+To rollback:
+`bin/rails db:rollback`
+
+### Questions
+- How to find all of the tasks you can do with `bin/rails`?
+  Run `bin/rails` and it will output everything
+- How does the CSS preprocessor get set up?
+- How does stitching together the html/erb files work?
+- Can you roll back a seeds file?
+
+
+## Chapter 7 - Task B: Validation and Unit Testing
+You can add basic validation by using `validates` in a model
+Some things you can validate against:
+- `presence: true`: value exists?
+- `uniqueness: true`: is value unique?
+- `numericality: { greater_than_or_equal_to: 100 }`
+
+Models have some methods built in regarding validations:
+- `errors()`
+- `invalid?()`
+- `any?()`: check for specific error based on attribute (i.e. `model.errors[:title].any?`)
+
+You can run tests against **just models** using `bin/rails test:models`
+
+**Fixtures**: an environment for testing
+The example the book provides is testing a circuit board and needing some fixture that provides the power and input
+
+Fixtures lie in `test/fixtures`
+Fixtures are yaml (.yml) files that **must** be named after tables
+yaml is space sensitive
+format is as follows:
+```
+descriptive_fixture_name:
+  field1: string
+  field2: 2
+  ...
+```
+
+### Questions
+- Where can you find all validation constraints?
+  https://guides.rubyonrails.org/active_record_validations.html#validation-helpers
+- How can you roll your own validation?
+  Not really rolling own but you can change the message using:
+  `validation_helper: { message: "Custom message" }`
+  or, for when needing to reference the validation in it
+  `validation_helper: { message: "Custom message with %{value}" }`
+
+  There's an `errors` array so you can use that in your erb

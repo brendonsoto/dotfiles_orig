@@ -40,6 +40,15 @@ Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'adelarsq/vim-matchit'
 
+Plug 'neovim/nvim-lspconfig'
+
+" Plug 'prabirshrestha/asyncomplete.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Plug 'mattn/vim-lsp-settings'
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'lighttiger2505/deoplete-vim-lsp'
+
 " Markdown
 Plug 'dkarter/bullets.vim'
 Plug 'junegunn/goyo.vim'
@@ -94,7 +103,7 @@ set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard+=unnamedplus " Use the clipboard register + in addition to the default
 " Use a popup menu, even if there's one match, show extra info, do not auto-select or auto-insert
-set completeopt=menu,menuone,preview,noselect,noinsert
+set completeopt=menuone,noselect
 set diffopt=filler,vertical " Diff settings
 set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
@@ -116,7 +125,7 @@ set showcmd " display incomplete commands
 set showmatch " show matching parenthesis
 set smartcase " search is case-insensitive when keyword is all lowercase
 set tabstop=2 " set tab to 2 spaces
-set undodir=$HOME/.vim/undo " undo file for work
+set undodir=$HOME/.nvim-undo " undo file for work
 set undofile " Save undo's after file closes
 set undolevels=1000 " How many undos
 set undoreload=1000 " How many lines to save for undo
@@ -246,15 +255,18 @@ let g:ale_fixers = {
       \ 'vue': ['prettier'],
       \ 'elixir': ['mix_format']
       \}
-let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
-nnoremap [j :ALEPreviousWrap<cr>
-nnoremap ]j :ALENextWrap<cr>
-nmap gd <Plug>(ale_detail)
-nmap gt <Plug>(ale_go_to_definition)
-nmap gr <Plug>(ale_find_references)
-nmap gh <Plug>(ale_hover)
-set omnifunc=ale#completion#OmniFunc
+" let g:ale_completion_enabled = 1
+nnoremap [a :ALEPreviousWrap<cr>
+nnoremap ]a :ALENextWrap<cr>
+" nmap gd <Plug>(ale_detail)
+" nmap gt <Plug>(ale_go_to_definition)
+" nmap gr <Plug>(ale_find_references)
+" nmap gh <Plug>(ale_hover)
+" set omnifunc=ale#completion#OmniFunc
+
+" Deoplete
+" let g:deoplete#enable_at_startup = 1
 
 " Emmet
 let g:user_emmet_settings = {
@@ -316,6 +328,20 @@ endfunction
 function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
+
+" LSP -- defined in nvim config
+" nmap gtd <Plug>(lsp-definition)
+" nmap gtt <Plug>(lsp-type-definition)
+" nmap gtptd <Plug>(lsp-peek-type-definition)
+" nmap gth <Plug>(lsp-hover)
+" nmap gtr <Plug>(lsp-references)
+" nmap gf <Plug>(lsp-document-format)
+" nmap [j <Plug>(lsp-next-diagnostic)
+" nmap ]j <Plug>(lsp-previous-diagnostic)
+" " autocmd BufWritePre <buffer> LspDocumentFormatSync
+" " let g:lsp_format_sync_timeout = 1000
+" let g:lsp_log_file = expand('~/vim-lsp.log')
+" set omnifunc=lsp#complete
 
 " Rainbow Parenthesis
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
