@@ -4,7 +4,9 @@
 .config/certs
 .config/coc/extensions/**
 .config/coc/memos.json
+.config/configstore
 .config/helm
+.config/nix
 .netrwhist
 .vim/autoload/plug.vim
 node_modules
