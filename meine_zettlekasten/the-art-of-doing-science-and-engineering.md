@@ -31,4 +31,19 @@
 - focus on the fundamentals of the _time_
     - dont be left behind over time
     - "Thus I am a veteran of learning enough to get along without at the same time devoting all my effort to learning new topics and thereby not contributing my share to the total effort of the organization."
-        - i don't aggree with this. cant you advance a field or topic by focusing on just it?
+        - i don't aggree with this. cant you advance a field or topic by focusing on just it? Maybe Im thinking of this too literally. I think the idea is if you spend all of your time learning other concepts, how can you create a new concept?
+- how do you recognize fundamentals?
+  - test of time
+  - "...unforseen technological inventions can completely upset the most careful predictions, you must try to forsee the future you will face."
+- **have a vision**
+  - drunken sailor path modeling (distance away from origin)
+  - one rebuttal is forming a vision now may seem moot since it probably will change. Hamming argues it is not the accuracy that matters, but the fact that you are doing something
+- use your imagination to see what will happen next
+  - Hamming spent "10% of his time", friday afternoons, trying to imagine the future of computing on work and play socially
+  - "What is possible?"
+  - "What is likely to happen?"
+  - "What is desirable to have happen?"
+  - acknowledgement of knowledge not being isolated sub pieces -- knowledge is interconnected
+  
+  
+# 2 Foundations of the Digital (discrete) Revolution
