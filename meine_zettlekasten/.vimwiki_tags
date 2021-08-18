@@ -62,6 +62,7 @@ elixir	phoenix-general.md	1;"	vimwiki:phoenix-general\tphoenix-general
 flask	flask.md	2;"	vimwiki:flask\tflask#Flask
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
 front-end	addy-osmani-design-patterns.md	1;"	vimwiki:addy-osmani-design-patterns\taddy-osmani-design-patterns
+front-end	computational-vs-presentational-components.md	1;"	vimwiki:computational-vs-presentational-components\tcomputational-vs-presentational-components
 front-end	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
 front-end	micro-frontends.md	1;"	vimwiki:micro-frontends\tmicro-frontends
 front-end-masters	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
@@ -171,6 +172,7 @@ ruby	rvm--allow-login-shell.md	1;"	vimwiki:rvm--allow-login-shell\trvm--allow-lo
 socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 stupid	dumb-jeopardy.md	1;"	vimwiki:dumb-jeopardy\tdumb-jeopardy
 systems	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#systems
+tech	computational-vs-presentational-components.md	1;"	vimwiki:computational-vs-presentational-components\tcomputational-vs-presentational-components
 thinking	decision-matrix.md	1;"	vimwiki:decision-matrix\tdecision-matrix
 thinking	second-order-thinking.md	1;"	vimwiki:second-order-thinking\tsecond-order-thinking
 to-sort	how-to-speak.md	1;"	vimwiki:how-to-speak\thow-to-speak
