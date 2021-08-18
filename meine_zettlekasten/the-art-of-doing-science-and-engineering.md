@@ -47,3 +47,29 @@
   
   
 # 2 Foundations of the Digital (discrete) Revolution
+- on why the revolution from continuous to discrete happened:
+  - analog requires accurate tech
+  - analog more expensive
+  - analog requires amplification, digital does not
+  - transmission through space is essentially the same as transmission through time (think of representing a sine wave discretely)
+  - this is not to say analog is deprecated; it still has desired uses (like music!)
+  - ICs
+  society moving from material goods to information age
+  - the ability to use computers in manufacturing (ie robots)
+  - the impact on computers in science (simulations vs lab)
+  - **dont forget about nature**
+    - books are great but there is a lot to be gained by observing nature; thats the basis of galileo and the scientific revolution 
+  - in engineering, computers can be used to explore alternative designs
+  - society
+    - the ability to micromanage wot computers
+  - computers as entertainment
+  - military
+    - information war
+- "You must assume responsibility for what you believe"
+- engineering will turn into:
+  - selecting chips
+  - connecting said chips
+  - writing programs for the chips
+- regards to the previous root level bullet, general purpose chips are often better than special due to the benefits also seen in open source software
+
+# History of Computers - Hardware
