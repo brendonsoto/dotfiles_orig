@@ -3,6 +3,8 @@
 What is zettlekasten?
 https://zettelkasten.de/posts/overview/
 
+From Software Lead Weekly (SWLW) #455
+@chrishlad: Grab a notebook. Create a section titled “I Don’t Know”. Every time you don’t understand something, write it down there. After a week, you may have 50 concepts or questions. 1) Google the simple ones 2) Ask a friend for the hard ones. This is exponential learning.
 
 # Questions / Things to explore
 - Vue:
