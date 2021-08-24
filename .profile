@@ -66,6 +66,7 @@ alias setColemak="setxkbmap us && xmodmap $HOME/dotfiles/.Xmodmap-colemak"
 alias rm="rm -i" # always ask, just in case
 alias rg="rg --ignore-file ~/dotfiles/.ignore"
 alias cg="curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET"
+alias pms="ps -ax -u `whoami` -o pid,command,state,lstart,etime,time,%cpu,%mem"
 
 # ls with colors!
 if [ $OSTYPE = "linux-gnu" ]
@@ -89,6 +90,11 @@ alias grm="git rebase main"
 alias gcp="git cherry-pick"
 gmo() {
   git merge origin/$1
+}
+
+gco() {
+  branch=$(git branch | fzf | xargs)
+  git checkout $branch
 }
 
 # Haskell

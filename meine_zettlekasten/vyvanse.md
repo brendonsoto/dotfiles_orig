@@ -35,3 +35,68 @@ It's interesting, I think I can feel a switch where my brain feels less cluttere
 I felt pretty focused through finishing up the turotial for the new haskell web framework
 I have noticed I have dry mouth more.
 I noticed a similar thing the other day but thought it was because I was thirsty and/or hungry for a snack
+
+
+---
+2021/Jul/10-11
+
+Let's talk the weekend
+
+The weekend was interesting
+Saturday I felt rather tired and out of it
+Almost like foggy, especially mid day
+I thought it was just because I may not have eaten enough
+
+Sunday was better
+However, I did feel rather tired again during the middle of the day
+
+Regarding activities, we did do a lot
+A good mixture of chores, outside shopping for apartment stuff, meeting with friends, and walking around the park
+
+I also fell asleep a lot sooner than I usually do, between half and hour to an hour (hour on Sunday)
+
+
+---
+2021/Jul/12
+
+MONDAY
+
+This morning I had a _rough_ start
+This wasn't because of the meds though, I just got too distracted before taking them
+Once I took them, I felt I started feeling the vyvanse kick in a bit later than normal (which is about 15-20min)
+There are also tasks that I do not want to do, but can actually kind of do them
+I'm still procrastinating, as I am right now by writing this, but I have the other task in mind and was able to try doing a bit of work towards it
+
+
+---
+2021/Jul/13
+
+(Writing this the next morning)
+Yesterday was an interesting day
+I had a difficult problem to solve (figuring out the no sku from inputPropsMap thing)
+I was able to really hyperfocus on it which I can't tell how great of a thing that is
+I was on my lunch break and couldn't stop really thinking about it
+And then at the end of the day my head was feeling really busy
+It took me about two-ish hours to decompress
+
+I went for a walk w/ Court after dinner
+We talked about home decor stuff which usually turns me off but this time I was fine!
+I also played some guitar later and felt like I had a significant amount of energy as it was 11pm
+
+---
+2021/Jul/14
+
+Did okay this morning
+Had a task I was not excited for but was able to focus and get to a conclusion in 2-ish hours
+Right now its 2:43 and I've been procrastinating doing the thing I'm supposed to be doing
+A lot of leg tapping right now
+
+
+---
+2021/Jul/15
+
+I realize now I should've probably structured this log a bit more
+I realize morning times are a bit rough for me
+My head is still all over the place until the meds really cick in
+I'm going to try taking it first thing in the morning instead of after breakfast
+I also read that it might metabolize better on an empty stomach

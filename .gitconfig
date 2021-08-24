@@ -16,7 +16,7 @@
 [difftool]
   prompt = false
 [push]
-	default = simple
+	default = current
 [user]
 	name = brendon
 	email = brendon.soto@gmail.com

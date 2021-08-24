@@ -208,6 +208,10 @@ But what do you call the words?
 - [type-alias](type-alias)
 - [type-classes](type-classes)
 
+## how-to
+
+- [how-to--squash-commits](how-to--squash-commits)
+
 ## ideas
 
 - [Command Line Dictionary](command-line-dictionary#Command Line Dictionary)
