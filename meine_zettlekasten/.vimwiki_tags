@@ -9,6 +9,8 @@ accessibility	accessibility.md	1;"	vimwiki:accessibility\taccessibility
 adhd	adhd--sachs.md	1;"	vimwiki:adhd--sachs\tadhd--sachs
 architecture	micro-frontends.md	1;"	vimwiki:micro-frontends\tmicro-frontends
 article	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
+article	different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory.md	1;"	vimwiki:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory\tdifferent-states-of-priority-recruit-different-neural-representations-in-visual-working-memory
+article	shared-mechanisms-underlie-the-control-of-working-memory-and-attention.md	1;"	vimwiki:shared-mechanisms-underlie-the-control-of-working-memory-and-attention\tshared-mechanisms-underlie-the-control-of-working-memory-and-attention
 audio-production	attenuation.md	1;"	vimwiki:attenuation\tattenuation
 audio-production	compression.md	1;"	vimwiki:compression\tcompression
 audio-production	console-1.md	1;"	vimwiki:console-1\tconsole-1
@@ -169,6 +171,8 @@ ruby	ruby--bundler--shared-mime-types.md	1;"	vimwiki:ruby--bundler--shared-mime-
 ruby	ruby--idioms.md	1;"	vimwiki:ruby--idioms\truby--idioms
 ruby	ruby-bundle-dep-version-not-found.md	1;"	vimwiki:ruby-bundle-dep-version-not-found\truby-bundle-dep-version-not-found
 ruby	rvm--allow-login-shell.md	1;"	vimwiki:rvm--allow-login-shell\trvm--allow-login-shell
+science	different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory.md	1;"	vimwiki:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory\tdifferent-states-of-priority-recruit-different-neural-representations-in-visual-working-memory
+science	shared-mechanisms-underlie-the-control-of-working-memory-and-attention.md	1;"	vimwiki:shared-mechanisms-underlie-the-control-of-working-memory-and-attention\tshared-mechanisms-underlie-the-control-of-working-memory-and-attention
 socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 stupid	dumb-jeopardy.md	1;"	vimwiki:dumb-jeopardy\tdumb-jeopardy
 systems	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#systems
@@ -212,3 +216,5 @@ vue	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--
 vue	vuex.md	1;"	vimwiki:vuex\tvuex
 vue-school	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--masterclass
 what-to-do	what-to-do--car-crash.md	1;"	vimwiki:what-to-do--car-crash\twhat-to-do--car-crash
+working-memory	different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory.md	1;"	vimwiki:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory\tdifferent-states-of-priority-recruit-different-neural-representations-in-visual-working-memory
+working-memory	shared-mechanisms-underlie-the-control-of-working-memory-and-attention.md	1;"	vimwiki:shared-mechanisms-underlie-the-control-of-working-memory-and-attention\tshared-mechanisms-underlie-the-control-of-working-memory-and-attention
