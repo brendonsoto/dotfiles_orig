@@ -14,3 +14,19 @@ I love how this is one of the starting sentences. Acknowledging the interconnect
   - learn to say No to repeating legacy code just because lf consistency
   - **understand the pain points declarative programming avoids**
 > headache first, then aspirin
+- mentions a pattern seen a lot:
+  - have a class that handles creation, updates, and disposal but in three different places
+- mentions "effect" as a way around this
+  - effect is defined as a way of handling creation, updates, and disposal together
+  - generators in JS were used as an example
+
+To be honest, Im still a bit confused on the effects bit. I get having separate function to create the fetch request url + payload so you can easily retry, but I dont get how a simple yield statement will allow you to update something.
+
+On the flip side, this reminds me of that article describing programming as using actual slots representing each feature.
+
+# P2 Reconcile All The Things
+- memoization can only take you so far
+  - falls flat for multi arg func calls
+  - weakMaps to prevent ever growing caches
+- caches have no contextual knowledge
+be

@@ -73,3 +73,6 @@
 - regards to the previous root level bullet, general purpose chips are often better than special due to the benefits also seen in open source software
 
 # History of Computers - Hardware
+This was an interesting recalling. I was a bit sad that Saul Walker wasnt mentioned in the building of the ENIAC. It is crazy seeing how computers have evolved and knowing theres plenty of space to grow. I am hopeful for parallel processing and, maybe, alternative architectures outside of the Von Neumann design. The philosophical bits at the end comparing us to machines and asking if we are different, if we are more than molecules banging together, was interesting. While disappointing to not think of us as special, it is also, oddly enough, nice to know we are the same as everything else at our cores.
+
+# 
