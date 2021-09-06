@@ -22,6 +22,9 @@ tl;dr - This book will be about thinking about programming and language as a way
 
 A short discussion on how computers have a limited vocabulary and how this limited vocabulary is not ideal for reasoning about computer programs. Also mentions how this book is not necessarily on Haskell. It's on programming, but using Haskell as a lens for thinking about programming. Finally, the author urges *patience* since the book takes its time to talk about topics with the hopes of developing long lasting knowledge.
 
+Quotes that stood out to me
+> Programming is the conversation that happens while these two ends struggle to understand each other.
+
 ## 2. Dare
 tl;dr - A bit of courage is needed to break the cycle of bouncing back and forth between knowing the limits of a language and figuring otu the scope of the problem to be solved.
 
@@ -31,6 +34,9 @@ This chapter opens up by describing a cycle of programming. We think about what 
 tl;dr - What sets computers apart from other machines is that they can be configured to do different things without changing the machine itself.
 
 Hardware such as phones and elevators are used as examples to think about the nature of machines. Machines interact with the environment in some way. There is some input and the machine responds with some output. The composition of these machines are different and are made for a singular purpose despite operating with the same foundation (electricity, wires, components, etc). Computers are then mentioned as *general purpose machines* which addresses the issue of being able to do different things with a common foundation.
+
+I really like this passage:
+> What happens is that the wires and electronics in these machines are connected in such a way that their accomplishments are mostly irrelevant to the wider electronic community. Like those steampunk contraptions, they each represent a solution to a finite understanding of one particular problem, and not more. But, is sending electricity to the engine that lifts the elevator really that different from sending it to the one that moves the hand of the clock? No, it is not. The logical decisions however, of when to do what and how, are. We say that the purpose of these machines is hardwired into their very existence, and it cannot be altered without physically modifying the machine itself. And yes, perhaps it is possible to adjust the time in a clock, but subtle variations like that one are considered and allowed upfront by the grand creators of the machine, who left enough cranks, switches and wires inside that we can alter this behaviour somehow within a known limited set of possibilities.
 
 ## 4. Programs
 tl;dr - Programs generally take an input and deliver some output.

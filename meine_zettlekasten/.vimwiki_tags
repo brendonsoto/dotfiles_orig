@@ -9,6 +9,8 @@ accessibility	accessibility.md	1;"	vimwiki:accessibility\taccessibility
 adhd	adhd--sachs.md	1;"	vimwiki:adhd--sachs\tadhd--sachs
 architecture	micro-frontends.md	1;"	vimwiki:micro-frontends\tmicro-frontends
 article	article-phoenix-blog.md	1;"	vimwiki:article-phoenix-blog\tarticle-phoenix-blog
+article	different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory.md	1;"	vimwiki:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory\tdifferent-states-of-priority-recruit-different-neural-representations-in-visual-working-memory
+article	shared-mechanisms-underlie-the-control-of-working-memory-and-attention.md	1;"	vimwiki:shared-mechanisms-underlie-the-control-of-working-memory-and-attention\tshared-mechanisms-underlie-the-control-of-working-memory-and-attention
 audio-production	attenuation.md	1;"	vimwiki:attenuation\tattenuation
 audio-production	compression.md	1;"	vimwiki:compression\tcompression
 audio-production	console-1.md	1;"	vimwiki:console-1\tconsole-1
@@ -62,6 +64,7 @@ elixir	phoenix-general.md	1;"	vimwiki:phoenix-general\tphoenix-general
 flask	flask.md	2;"	vimwiki:flask\tflask#Flask
 fonts	install-fonts-unix.md	7;"	vimwiki:install-fonts-unix\tinstall-fonts-unix#fonts
 front-end	addy-osmani-design-patterns.md	1;"	vimwiki:addy-osmani-design-patterns\taddy-osmani-design-patterns
+front-end	computational-vs-presentational-components.md	1;"	vimwiki:computational-vs-presentational-components\tcomputational-vs-presentational-components
 front-end	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
 front-end	micro-frontends.md	1;"	vimwiki:micro-frontends\tmicro-frontends
 front-end-masters	frontend-masters-vuejs.md	1;"	vimwiki:frontend-masters-vuejs\tfrontend-masters-vuejs
@@ -91,6 +94,7 @@ haskell	product-types.md	1;"	vimwiki:product-types\tproduct-types
 haskell	sum-types.md	1;"	vimwiki:sum-types\tsum-types
 haskell	type-alias.md	1;"	vimwiki:type-alias\ttype-alias
 haskell	type-classes.md	1;"	vimwiki:type-classes\ttype-classes
+how-to	how-to--squash-commits.md	1;"	vimwiki:how-to--squash-commits\thow-to--squash-commits
 ideas	command-line-dictionary.md	2;"	vimwiki:command-line-dictionary\tcommand-line-dictionary#Command Line Dictionary
 ideas	daw-idea.md	1;"	vimwiki:daw-idea\tdaw-idea
 ideas	megaman-tribute.md	2;"	vimwiki:megaman-tribute\tmegaman-tribute#Megaman Tribute
@@ -168,9 +172,12 @@ ruby	ruby--bundler--shared-mime-types.md	1;"	vimwiki:ruby--bundler--shared-mime-
 ruby	ruby--idioms.md	1;"	vimwiki:ruby--idioms\truby--idioms
 ruby	ruby-bundle-dep-version-not-found.md	1;"	vimwiki:ruby-bundle-dep-version-not-found\truby-bundle-dep-version-not-found
 ruby	rvm--allow-login-shell.md	1;"	vimwiki:rvm--allow-login-shell\trvm--allow-login-shell
+science	different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory.md	1;"	vimwiki:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory\tdifferent-states-of-priority-recruit-different-neural-representations-in-visual-working-memory
+science	shared-mechanisms-underlie-the-control-of-working-memory-and-attention.md	1;"	vimwiki:shared-mechanisms-underlie-the-control-of-working-memory-and-attention\tshared-mechanisms-underlie-the-control-of-working-memory-and-attention
 socket.io	socket.io.md	2;"	vimwiki:socket.io\tsocket.io#Socket IO
 stupid	dumb-jeopardy.md	1;"	vimwiki:dumb-jeopardy\tdumb-jeopardy
 systems	effective-mental-models-for-code-and-systems.md	43;"	vimwiki:effective-mental-models-for-code-and-systems\teffective-mental-models-for-code-and-systems#systems
+tech	computational-vs-presentational-components.md	1;"	vimwiki:computational-vs-presentational-components\tcomputational-vs-presentational-components
 thinking	decision-matrix.md	1;"	vimwiki:decision-matrix\tdecision-matrix
 thinking	second-order-thinking.md	1;"	vimwiki:second-order-thinking\tsecond-order-thinking
 to-sort	how-to-speak.md	1;"	vimwiki:how-to-speak\thow-to-speak
@@ -210,3 +217,5 @@ vue	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--
 vue	vuex.md	1;"	vimwiki:vuex\tvuex
 vue-school	vue-school--masterclass.md	1;"	vimwiki:vue-school--masterclass\tvue-school--masterclass
 what-to-do	what-to-do--car-crash.md	1;"	vimwiki:what-to-do--car-crash\twhat-to-do--car-crash
+working-memory	different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory.md	1;"	vimwiki:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory\tdifferent-states-of-priority-recruit-different-neural-representations-in-visual-working-memory
+working-memory	shared-mechanisms-underlie-the-control-of-working-memory-and-attention.md	1;"	vimwiki:shared-mechanisms-underlie-the-control-of-working-memory-and-attention\tshared-mechanisms-underlie-the-control-of-working-memory-and-attention

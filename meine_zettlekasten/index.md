@@ -3,6 +3,8 @@
 What is zettlekasten?
 https://zettelkasten.de/posts/overview/
 
+From Software Lead Weekly (SWLW) #455
+@chrishlad: Grab a notebook. Create a section titled “I Don’t Know”. Every time you don’t understand something, write it down there. After a week, you may have 50 concepts or questions. 1) Google the simple ones 2) Ask a friend for the hard ones. This is exponential learning.
 
 # Questions / Things to explore
 - Vue:
@@ -45,6 +47,8 @@ But what do you call the words?
 ## article
 
 - [article-phoenix-blog](article-phoenix-blog)
+- [different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory](different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory)
+- [shared-mechanisms-underlie-the-control-of-working-memory-and-attention](shared-mechanisms-underlie-the-control-of-working-memory-and-attention)
 
 ## audio-production
 
@@ -161,6 +165,7 @@ But what do you call the words?
 ## front-end
 
 - [addy-osmani-design-patterns](addy-osmani-design-patterns)
+- [computational-vs-presentational-components](computational-vs-presentational-components)
 - [frontend-masters-vuejs](frontend-masters-vuejs)
 - [micro-frontends](micro-frontends)
 
@@ -202,6 +207,10 @@ But what do you call the words?
 - [sum-types](sum-types)
 - [type-alias](type-alias)
 - [type-classes](type-classes)
+
+## how-to
+
+- [how-to--squash-commits](how-to--squash-commits)
 
 ## ideas
 
@@ -343,6 +352,11 @@ But what do you call the words?
 - [ruby-bundle-dep-version-not-found](ruby-bundle-dep-version-not-found)
 - [rvm--allow-login-shell](rvm--allow-login-shell)
 
+## science
+
+- [different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory](different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory)
+- [shared-mechanisms-underlie-the-control-of-working-memory-and-attention](shared-mechanisms-underlie-the-control-of-working-memory-and-attention)
+
 ## socket.io
 
 - [Socket IO](socket.io#Socket IO)
@@ -354,6 +368,10 @@ But what do you call the words?
 ## systems
 
 - [systems](effective-mental-models-for-code-and-systems#systems)
+
+## tech
+
+- [computational-vs-presentational-components](computational-vs-presentational-components)
 
 ## thinking
 
@@ -423,3 +441,8 @@ But what do you call the words?
 ## what-to-do
 
 - [what-to-do--car-crash](what-to-do--car-crash)
+
+## working-memory
+
+- [different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory](different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory)
+- [shared-mechanisms-underlie-the-control-of-working-memory-and-attention](shared-mechanisms-underlie-the-control-of-working-memory-and-attention)

@@ -1,0 +1,18 @@
+:article:science:working-memory:
+
+# Shared mechanisms underlie the control of working memory and attention
+[source](https://www.nature.com/articles/s41586-021-03390-w)
+
+# tl;dr
+attention and selection are represented differently and switching focus/goals in either task results in independent areas in the brain for handling the tasks
+
+# Jargon:
+- prefrontal and parietal cortex
+- Neural recordings
+
+# Quotes
+> ...shared neural mechanisms underlie the selection of items from working memory and attention to sensory stimuli.
+
+> Neural recordings showed that similar representations in prefrontal cortex encoded the control of both selection and attention, suggesting that prefrontal cortex acts as a domain-general controller. By contrast, both attention and selection were represented independently in parietal and visual cortex. Both selection and attention facilitated behaviour by enhancing and transforming the representation of the selected memory or attended stimulus. Specifically, during the selection task, memory items were initially represented in independent subspaces of neural activity in prefrontal cortex. Selecting an item caused its representation to transform from its own subspace to a new subspace used to guide behaviour. A similar transformation occurred for attention. Our results suggest that prefrontal cortex controls cognition by dynamically transforming representations to control what and when cognitive computations are engaged.
+
+[Note] Yeah, I know the above is basically half of the abstract, but it's so meaty.
