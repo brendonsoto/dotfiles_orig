@@ -4,7 +4,7 @@ source ~/.vimrc
 
 " LSP
 
-:lua << EOF
+lua << EOF
 local nvim_lsp = require('lspconfig')
 
 local vuels_setup = {

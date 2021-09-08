@@ -81,7 +81,7 @@ fi
 alias gbr="git branch --sort=-committerdate | head -5"
 alias gcm="git checkout master"
 alias gf="git fetch"
-alias gfarm="gcm; git fetch && git rebase origin/master"
+alias gfarm="gcm; git fetch && git rebase origin/main"
 alias gp="git push"
 alias gm="git merge"
 alias grh="git reset --hard"

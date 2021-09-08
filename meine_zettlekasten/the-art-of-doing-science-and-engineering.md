@@ -72,7 +72,58 @@
   - writing programs for the chips
 - regards to the previous root level bullet, general purpose chips are often better than special due to the benefits also seen in open source software
 
-# History of Computers - Hardware
+# 3 History of Computers - Hardware
 This was an interesting recalling. I was a bit sad that Saul Walker wasnt mentioned in the building of the ENIAC. It is crazy seeing how computers have evolved and knowing theres plenty of space to grow. I am hopeful for parallel processing and, maybe, alternative architectures outside of the Von Neumann design. The philosophical bits at the end comparing us to machines and asking if we are different, if we are more than molecules banging together, was interesting. While disappointing to not think of us as special, it is also, oddly enough, nice to know we are the same as everything else at our cores.
 
-# 
+# 4. History of Computers - Software
+
+_Side note: trying a new strategy where I highlight phrases to revisit and take notes on after reading the chapter._
+
+- Seems like advances come about when resources are readily available
+- Old habits die hard
+	- if a new technology abstracts away a concept that doesn't require such constant thought (i.e. memory allocation) people may still try diving into the concept despite not having to worry about it as much anymore
+	- FORTRAN is another example of technology that was opposed for no good reason, despite later becoming a very well known and used tool
+- This next one I have to quote:
+> but most users seem too busy to think or observe how bad things are and how much the computer could do to make things significantly easier and cheaper
+- I think this statement is a bit unfair. More times than not, the user is trying to get something done. While one can imagine how to improve the execution of a task via a program/application/etc, they will also need knowledge on how to realize that idea. That could be a long journey itself which may discourage people from realizing their ideas. Maybe they don't have enough time to dedicate to the idea. Lots of opportunities for an idea to never be realized.
+- Sometimes improvements are misunderstood and don't get the recognition they deserve
+	- example here being early interpreters living in Appendices of books instead of having some of the main text just to discuss interpreters
+	- just because you created something doesn't mean you understand it
+	> It has been said in physics no creator of any significant thing ever understood what he had done.
+- Inventors often see the scope of their creation less broadly than those who use the invention
+- sometimes a concept may not be understood until attempted
+
+# History of Computer Application
+- some key areas to be mindful of and work towards:
+	- writing papers/books
+	- prepared public talks
+	- impromptu talks
+- there's a difference between talking on a topic you're passionate about and giving a talk people want to hear
+	- the latter is described as "tell the truth as they see it"
+	- there's a thin line between technical communication and entertainment
+		- strive to be slightly more entertaining
+- Having three jokes spread throughout the beginning, middle, and end of a dinner can be successful
+	- the idea behind having three is so that hopefully the audience will remember one
+- the economics/applications of computers determines their evolution
+- A quote:
+
+> It is first necessary to prove beyond any doubt the new thing, device, method, or whatever it is, can cope with heroic tasks before it can get into the system to do the more routine, and in the long run, more useful tasks. Any innovation is always against such a barrier, so do not get discouraged when you find your new idea is stoutly, and perhaps foolishly, resisted. By realizing the magnitude of the actual task you can then decide if it is worth your efforts to continue, or if you should go do something else you can accomplish and not fritter away your efforts needlessly against the forces of inertia and stupidity.
+
+The idea I see here is to use new tech to do something beyond the scope of existing technology. This opens the door for the tech to be used for other, more routine, activities with relative ease.
+
+- Usually there's this sort of S curve (think of kind of exponential) relating the degree some technology is used and the amount of time it's been in use for. The tech rockets really quickly, but then plateaus as time goes by. However, subsequent applications of or industries that use the technology introduce new and more demands which can cause the degree the tech is used to increase. This increase produces a more linear increase over time.
+	- technology is taken for one goal, but then adapted to others over time
+
+- interesting side note/quote:
+
+> You simply cannot use a constantly changing data base for an optimization study
+
+Thought this was interesting and made me think of using Git w/ others.
+
+- There' this idea that if you know the current state of things in every detail you can manage things better (I know I"m guilty of this). This is not ideal as it's unreasonable to expect things to be up to date all the time or for people to waste their time to get to know the current state of things all the time.
+- As a solution becomes more general it's common for the emphasis on the solution domain to switch from hardware to software with the use of general purpose computers
+	- makes me think of languages, general purpose vs specialized ones
+
+One last quote:
+> As you go on in your careers you should examine the applications which succeed and those which fail; try to learn how to distinguish between them; try to understand the situations which produce successes and those which almost guarantee failure. Realize, as a general rule, it is not the same job you should do with a machine, but rather an equivalent one, and do it so then future, flexible, expansion can be easily added (if you do succeed). And always also remember to give serious thought to the field maintenance as it will actually be done in the field—which is generally not as you wish it would be done!
+
