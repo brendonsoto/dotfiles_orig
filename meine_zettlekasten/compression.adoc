@@ -1,0 +1,46 @@
+:doctype: book
+
+:audio-production:
+
+= Compression
+
+https://www.youtube.com/watch?v=7oOmX3JHwtE[Source - Rick Beato (How The Pros Use Compression)]
+
+== What does it sound like?
+
+== What is it?
+
+A way to make sounds louder without increasing amplitude and/or a way to make a track sound more even.
+
+== How?
+
+By reducing the difference between the loudest parts and the smallest parts.
+
+= Controls
+
+## Ratio You'll often see figures like 2:1, 4:1, 6:1, 8:1, 10:1, etc.
+These ratios represent the gain reduction and come into play when a sound source exceeds the compressor's threshold.
+The numerator represents a division of the difference between the incoming sound source and the threshold.
+The denominator represents the amount of attenuation per division of the difference between the incoming sound source and the threshold.
+
+Let's look at 2:1 as an example.
+This is saying "for every 2dB that the incoming sound exceeds the threshold by, attenuate the signal by 1" If the sound coming in is at 2dB, the sound will be attenuated by 1dB.
+If the sound coming in is 8dB, the sound will be attenuated by 4dB.
+If the ratio is 8:1 and the incoming sound is 8dB above the threshold, the sound will be attenuated by only 1dB.
+
+[discrete]
+=== Common Uses for Ratios
+
+Taken from 3:30 of the video
+
+| Ratio | Description | Use            | | 2:1   | Mild        | Drums          | | 4:1   | Moderate    | Bass/ Mix Buss | | 6:1   | Medium      | Bass-ish       | | 10:1  | Strong      | Drum Room*     |
+
+*What does Drum room mean?
+Rick gives the example of "When the Levee Breaks" by Led Zeppelin
+
+== Attack
+
+How fast the compressor reacts to the sound.
+*Slow* attacks allow transients to get through *Fast* attacks emphasize the compression and are useful for controlling the dynamic range on instruments.
+Rick gives the example of inconsistent bass or acoustic guitars for cleaning it out.
+Anything with sharp transients can use fast attacks to make them "pop"

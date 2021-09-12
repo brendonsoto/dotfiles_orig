@@ -1,0 +1,13 @@
+= Parameterized Types
+
+:datatypes:haskell:
+
+== What are they?
+
+Parameterized types are types that use type variables to constrain themselves.
+The list type is a perfect example: `data [] a = [] | a:[]` If that's hard to read, maybe a version using actual words may help: `data List a = Empty | Cons a (List a)` The presence of a type parameter in the data constructor is what tells us the above are parameterized types!
+
+== How are they useful?
+
+They are handy when you want a container for types, but want the container constrained to certain types.
+It's also handy for making variants of flexible data types that are less flexible, like if you wanted a `Tuple` of a particular type!

@@ -1,0 +1,29 @@
+:doctype: book
+
+:typescript:
+
+= Interfaces
+
+Interfaces can be used as an alternate way to describe the types of objects
+
+The syntax for them is as follows: ` interface Car {   manufacturer: string;
+year: number;
+} ` Notice the semicolon after each property/value pair.
+
+They can be _imported_ and _exported_ just like regular objects.
+
+Interfaces can _extend_ each other Example: `interface SUV extends Car { seats: number;
+}`
+
+When a function uses an interface as its type, the _types of the parameters can be omitted_ Example: `+const parkCar: Car = (_manufacturer, _year) => { ...
+}+`
+
+Interfaces can be merged if multiple are defined Example: ` interface Car {   manufacturer: string;
+} interface Car {   year: number;
+} ` This will provide an interface that includes both properties
+
+Tests can be written for your types using _dtslint_
+
+== When to use
+
+Use interfaces to describe the shapes of anything that is an object which includes: - Objects - Functions - Arrays

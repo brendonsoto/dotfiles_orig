@@ -1,0 +1,44 @@
+:doctype: book
+
+:phoenix:
+
+= Models
+
+Models are considered part of a Context, where the business logic goes, in Phoenix
+
+= Where to Put / File Structure
+
+The convention is to create a subdirectory in `lib/<project>/` representing the "category" of items to model Think back to the book Programming Phoenix, the Rumbl project The code for videos and categories was stored in a directory called `multimedia` So the full path was `lib/rumbl/multimedia/{videos|categories}.ex`
+
+= Automagic Way
+
+Taken from the https://hexdocs.pm/phoenix/Mix.Tasks.Phx.Gen.Context.html#content[Phoenix docs] `mix phx.gen.context Accounts User users firstName:string lastName: string` Why `context` and not `model`?
+Because in Elixir a model is considered part of the business logic and as a result is grouped in the Elixir term "context"
+
+= Manual Way
+
+## What Code is Needed To start off, you can use something like the following: ``` defmodule +++<Project>+++.+++<Category>+++.+++<Item>+++do use Ecto.Schema import Ecto.Changeset+++</Item>++++++</Category>++++++</Project>+++
+
+schema "+++<thing>+++" do end end ```+++</thing>+++
+
+The top is just the module declaration The second line is to be able to create _structs_ for the app that match the db's structure The thirdline  is for creating changes to the table in the db The block starting with `schema` is where you define your fields
+
+== Schema
+
+A schema from Ecto is basically a struct Schema code looks like the following: ``` schema "users" do   field :name, :string   field :email, :string   field :age, :int   field :password, :string
+
+timestamps() end ``` Notice the pattern: `field <atom-name>, <atom-type>` The exception is the last item, `timestamps` This is to include `updated_at` and `created_at` fields
+
+=== On Sensitive Data Fields
+
+Think of _password_ fields If you want to have a field in your schema, but not save it to the db add `virtual: true` to the keyword list for the attribute `field :password, :string, virtual: true`
+
+== Changesets
+
+Changesets handle any validation and prep the data to be inserted into a db The syntax/pattern is along the lines of: `+ def changeset(<model>, attrs) do  # where <model> is the name of your model   model   |> cast(attrs, [:field1, :field2])   |> validate_required([:field1])   |> ...any other validations   |> unique_constraint(:field1) end +` The function declaration has two parameters: the model, and attributess The model is "cast" as a data structure to be consumed by the db The arguments in the `cast` call represents a data structure with properties and a list of properties to extract from the data structure Following that is a line of validation and a line to make sure the field is unique
+
+== Migrations
+
+With your schema set, run `mix ecto.gen.migration create_<models>` to create an empty migration file This is where you outline what tables/fields the database is to have
+
+Once done, run `mix ecto.migrate` to have your changes take place!

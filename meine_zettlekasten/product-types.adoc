@@ -1,0 +1,29 @@
+:doctype: book
+
+:haskell:datatypes:
+
+= Product Types
+
+Types combined with "and" are called _product types_.
+An example in English would be: - An Outfit type can be made of the types Pants and Shirt
+
+An example in Haskell would be: - `data Outfit = Outfit Pants Shirt`
+
+The [[cardinality]] of product types is the product of the cardinality of the individual types.
+So let's say we have the following: ` data Pants = Jeans | Bellbottoms | Shorts data Shirt = ButtonDown | Cotton data Shoes = Birkenstock | Sneakers | Boots data Outfit = Outfit Pants Shirt Shoes ` The cardinality of `Outfit` would be 3 * 2 * 3 = 18 since `Pants` has three states, `Shirt` two, and `Shoes` three.
+
+For common data types the cardinality might depend on the hardware.
+For instance, `data Grade = Char Int` would be the cardinality of `Char` times the cardinality of `Int`.
+Let's say the program is running on a 64-bit computer and that there are only 26 values for `Char`.
+The cardinality would be 26 * 2{caret}64.
+
+Product types are also the most common way to combine types in most programming languages.
+In OOP product types assist in inheritance.
+You take the common things between types, make a class/interface out of that, and then inherit that in children types that expand on that.
+So it's parent class types _and_ child class types.
+
+Where this is problematic is the mindset involved in organizing your thoughts.
+You have to find commonalites and make an abstraction around that.
+In addition, if you change something in the root abstraction, it changes everything.
+It's not easily adaptible to change.
+One addition from the book is that this reasoning is very top-down driven.

@@ -1,0 +1,244 @@
+= C{pp}
+:doctype: book
+:pp: {plus}{plus}
+
+:programming:languages:
+
+= What's needed to get started
+
+To make and compile C{pp} programs you will need a compiler Two options are _gcc_ and _clang_ As of writing I've been using clang since I saw a few results online saying clang has easier to read error messaging which I thought would be beneficial as a beginner
+
+= Compiling
+
+To compile a C{pp} program run `+<compiler> file1.cpp file2.cpp ...
+-o <program name>+` A more concrete example using clang `pass:c[clang++ program.cpp utils.cpp -o myProgram]` The above takes the several .cpp files as input and links them together to create a binary file, named using whatever's fed to the `-o` flag
+
+= Header files
+
+Header files contain an overview of functionality They define functions by name and arguments, but without body, or data structures Any functionality can be in an accompanying .cpp file So for example, say you have the following file: ```
+// utils.h
+
+boolean compare(myStruct&, myStruct&);
+myStruct combine(myStruct&, myStruct&);
+\...
+` These are just function declarations, not the implementations The implementations would live in another file: `
+// utils.cpp
+
+boolean compare(myStruct&, myStruct&) {   // logic }
+
+myStruct combine(myStruct&, myStruct&) {   // logic } ```
+
+There is a way to prevent a file from being included multiple times when compiled: ``` #ifndef GUARD_utils_h #define GUARD_utils_h
+
+// includes\...
+// using\...
+// main logic
+
+= endif
+
+```
+
+It is advisable to avoid using `using` statements in header files since the user (this case another programmer) may not want that `using` statement in their program
+
+Also, it is okay to include a header file in the implementation file.
+
+= Syntax
+
+Comments are written using two forward-slashes `// I am a comment` Or using multi-line format similar to JavaScript ` /* I  * am  * a  * comment  */ `
+
+The _standard library_ hold a lot of fundamental functionality, like I/O.
+
+To include a library the syntax is: `#include <library>`
+
+Libraries wrapped in angle brackets (i.e.
+`<library>`) refer to the _standard header_
+
+The _main function must return an integer_ - 0 = success - otherwise = failure
+
+`<<` is an _output operator_ that is _left associative_
+
+`std::cout` is the standard output The first part of the above, `std::`, is a _namespace_ The second part is a function from the namespace
+
+Scope is very similar to how other languages you know handle it.
+
+`>>` signifies _read into_ So take whatever's on the left side and pipe it to what's on the right
+
+_To declare a variable_: `type name` (i.e.
+`std::string name`)
+
+_To declare a constant:_ `const type name` (i.e.
+`const std::string name`)
+
+If the value of a variable has a different type than what is specified in the variable declaration the value will be converted to the variable's type (I don't like the sound of that)
+
+An operator is _overloaded_ when it can do different things depending on the types of its arguments
+
+Most operators seem left-associative
+
+A variable's value can either be _explicitly set_ by the programmer or _constructed_ What does it mean for a value to be constructed?
+Alchemy!
+Kidding\...
+It depends on the type!
+Let's look at creating a string.
+The first example of this in the book is the following: `const std::string spaces(greeting.size(), ' ');` Breaking it down we have: - Make a constant - Make its type `std::string` - Name it `spaces` - The `(` indicates the value will need to be constructed using what comes after - `size` is a _member function_ of the type `string` which returns the length of a string.
+So here we're saying "get the length of the string greeting" - The comma indicates other parts to be used in constructing the value - `' '` is a _char literal_ to represent an empty string - The `)` indicates we're done adding in parts to construct the value.
+We have the number of characters in `greeting`, let's call it X, and a character literal.
+I'm not sure yet what the type of a string is, but from experience with other languages I'm guessing it's like a linked list of characters.
+So since we have a char literal and a number we can repeat that literal X amount of times.
+
+The `static` keyword is known as a _storage class specifier_ It creates whatever variable it is attached to only once so it's not recreated per invocation of its parent function/context
+
+= Functions
+
+A function looks like: `+bool does_this_work(int val) { ...
+}+`
+
+A function that uses containers with specific type may look like this: `bool did_all_hw(vector<Student> s)`
+
+You can say the function will not change the parameter by using the `const` keyword: `bool did_all_hw(const vector<Student> s)`
+
+To provide a reference to an object, use `&`: `bool did_all_hw(const vector<Student>& s)`
+
+If a parameter is a function, you can include it like so: ``` bool did_what_i_want(const Student& s) { \...
+}
+
+bool did_everyone_read_my_mind(   const vector+++<Student>+++& s, bool task(const Student& s) ) { \...
+}+++</Student>+++
+
+\...
+return did_everyone_read_my_mind(students, did_what_i_want);
+```
+
+= Overloading
+
+Same idea as from Java Multiple functions of the same name, but with different arguments
+
+= Reference
+
+Use the ampersand (`&`) to create a reference to an object/primitive.
+It is possible to create a const reference to prevent writing to the object via the reference Example: ` vector<double> grades;
+// Writable const vector<double>& gradesReadOnly = grades;
+`
+
+= Dereference
+
+Use the dereference operator (`*`) to get an element See Iterators for more
+
+= Data Structures
+
+There are `structs` similar to C i.e.
+`+ struct Car {   string name;
+boolean isStick;
+int year;
+...
+};
++`
+
+= Strings
+
+_String literals_ begin and end with double quotes (`"\nliteral\n"`) To concatenate, use `+` `greeting = "Hello " + name + "!";` Concatenation does not work on two string literals
+
+The type to use when working with a number of characters is `std::string::size_type` The rationale for this is that the number is kept in check with the possible bits to represent a string In other words, the limit of `std::string::size_type` is different than `int` so we avoid the possibility of going beyond ``int``'s limit
+
+A _multiline_ string can be written by using string literals on multiple lines with only the last one having the ending semicolon ` cout << "This"         "is"         "a"         "multiline"         "string";
+`
+
+There is a header, `<cctype>`, that provides _functions for checking characters_ like `isspace` These functions are _overloaded_ so they can _support different languages_ When using them in your programs, consider creating a wrapper function that makes it explicit what version of the function you're using Example for checking spaces: ` bool space(char c) {   return isspace(c);
+} `
+
+= Equality
+
+`==` is used for comparisons There is _short-circuit evaluation_ i.e.
+in the statement `true || false` since the left section is true the right section is not evaluated
+
+Zero is considered false while any other numerical value is true.
+
+= Error handling
+
+The `throw` keyword is to _throw an exception_ The namespace `<stdexcept>` introduces `std::domain_error` which can be used to create error objects with messages by passing in a string when calling `domain_error`.
+
+There are `+try...catch+` statements that are structured like most other languages `+ try {   // risky business...
+} catch (domain_error e) {   // cleanup } +`
+
+To display what caused an error, use `e.what()`
+
+= Namespaces
+
+You might think of this as _modules_ from other languages You know how when you "include" a library, you still need to reference that library when using a function from it?
+For example: ``` #include +++<iostream>++++++</iostream>+++
+
+\...
+std::cout << std::endl;
+` You can avoid having to use the namespace in every function call by adding a `using` clause at the top: ` #include +++<iostream>++++++</iostream>+++
+
+using std::cout;
+using std::endl;
+
+\...
+cout << endl;
+```
+
+= I/O
+
+One way to write things out is by including `<iostream>` to your program and use: - `std::cin` for standard input - `std::cout` for standard output - `std::endl` for end of line
+
+There are some operands that are _manipulators_ which can alter a stream of data/characters In some cases the manipulator's effects impact the stream at that moment and afterwards which means sometimes the same manipulator function may need to be used to reset the effects on the stream Let's say we have a stream like the following diagram: `|------------|` And we use manipulator `x` at some point in this stream: `|---x~~~~~~~~|` Everything after `x` will be impacted by `x`, as indicated by the tildes, unless if it was reset by calling the same manipulator: `|---x~~~~x---|` Above we used `x` to manipulate the stream twice.
+
+Generally, I/O uses _buffers_ as a temporary storage for data to be written Once all the data is collected and the input function is complete, the buffer is _flushed_, or written to an output device This is to optimize output operations since writing to disk can take time Buffers can be flushed in the following ways: - The input buffer is full - The library calls to read from the standard input - Programmer makes a call to flush the buffer It is important to flush output buffers thoughtfully to prevent too much build up in a buffer
+
+When invalid input is received it triggers the _failure state_ of the input stream and prevents any additional data from being read
+
+= Types
+
+_Type aliases_ are defined using `typedef` Ex: `typdef vector<double>::size_type vec_sz;` The above creates the type alias `vec_sz` which represents the type `vector<double>::size_type`
+
+= Vectors
+
+A _vector_ is what C{pp} uses to store an arbitrary amount of things of a certain type You can manipulate vectors in ways like sorting I don't know too much about them at the moment, but they seem like a convenient linked list Vectors are optimized for fast random access (think of accessing an element from an array)
+
+= List
+
+Lists are optimized for insertion and deletion (least from not the end)
+
+= Containers
+
+I'm not sure if is common in the C{pp} world, but in the book I'm learning from they use the word _container_ a lot.
+A _vector_ is described as a _container_.
+This leads me to believe that container is used for any abstract data type
+
+= Iterators
+
+Iterators are values that progress from one element to another sequentially Think of them as a more optimized way to iterate through things rather than using a `for` loop with integers
+
+There are two iterator types: - `container-type::const_iterator` (i.e.
+`vector<string>::const_iterator`) - `container-type::iterator` (i.e.
+`vector<string>::iterator`)
+
+The starting and ending points of iterators can be found by using: - `.begin()` - `.end()`
+
+To access the element of an iterator we can use the _deference_ operator: `*`.
+For example: `+ vector<string> people = ...;
+vector<string>::const_iterator iter = people.begin();
+cout << (*iter).age;
++`
+
+== Iterator Adaptors
+
+Iterator adaptors are functions that return iterators with useful qualities An example would be `back_inserter(container)` which is used to add things to the end of a container Why not use `.end()`?
+Because `.end()` points to the end of the container where no elements exist `back_inserter` returns an interator that allows more to be added to the end of a container These functions are defined in `<iterator>`
+
+= Algorithms
+
+There are several predefined algorithms for use on containers in `<algorithm>` An example of one is `remove_if` An _important note_ is that these algorithms _do not change the containers_, only the values.
+So let's use `remove_if` as an example The function takes three parameters: - Beginning iterator - Ending iterator - Predicate So let's say we have the call `remove_if(nums.begin(), nums.end(), isOdd)` Assume `nums` is a vector of ints in the range [1, 10] What this will do is iterate through the vector and check it against the `isOdd` function If the result is true the value is marked as the next spot to write _the next false result_ to Else, the value remains as is Say you have a vector of ints in the range [1, 5] and you want to get the even numbers [1, 2, 3, 4, 5] So you call `remove_if(nums.begin(), nums.end(), isOdd)` Let's step through it together The first value, 1, is odd so it's "marked" as to be removed What this means is that the computer has marekd the area in memory as to be rewritten by the next false value.
+So the vector would look like this with 'X' marking where to write [X, 2, 3, 4, 5] Going to the next value we have 2 This value is even and thus is to be kept since it failed the predicate (`isOdd`) What happens is this value, 2, is copied to where 1 used to be So now we have: [2, X, 3, 4, 5] Notice how the next available spot is where 2 used to be We proceed to 3 which is odd so that too is marked [2, X, X, 4, 5] Next up is 4, another even The number is copied to _where 2 used to be_ This is because after two was copied over its location became the next available spot to write Thus we're left with [2, 4, X, X, 5] We're at our last element, 5, which is odd It is marked so we end up with [2, 4, X, X, X] What happens now?
+Since those numbers that were  marked for writing were not written to they return to their normal value: [2, 4, 3, 4, 5]
+
+= Questions
+
+What's the difference between a header and a program file?
+
+How is a buffer different than writing to disk?
+
+How are header files matched to corresponding .cpp files?
+What if a header does not have an accompanying .cpp file?

@@ -1,0 +1,129 @@
+:doctype: book
+
+:news:politics:
+
+= Trumps Taxes
+
+Source: https://www.nytimes.com/interactive/2020/09/27/us/donald-trump-taxes.html
+
+= Quotes
+
+And he has previously bragged that his ability to get by without paying taxes "`makes me smart,`" as he said in 2016.
+
+In 1973, The Providence Journal reported that, after a charitable deduction for donating his presidential papers, Richard M.
+Nixon had paid $792.81 in 1970 on income of about $200,000.
+
+When he ran, he said he might make his taxes public if Hillary Clinton did the same with the deleted emails from her private server -- an echo of his taunt, while stoking the birther fiction, that he might release the returns if President Barack Obama released his birth certificate
+
+All of the information The Times obtained was provided by sources with legal access to it.
+While most of the tax data has not previously been made public, The Times was able to verify portions of it by comparing it with publicly available information and confidential records previously obtained by The Times.
+
+Transcripts of his main federal tax form, the 1040, from 1985 to 1994, https://www.nytimes.com/interactive/2019/05/07/us/politics/donald-trump-taxes.html[were obtained by The Times in 2019].
+They showed that, in many years, Mr.
+Trump lost more money than nearly any other individual American taxpayer.
+Three pages of his 1995 returns, mailed anonymously to The Times during the 2016 campaign, showed that Mr.
+Trump had https://www.nytimes.com/2016/10/02/us/politics/donald-trump-taxes.html[declared losses of $915.7 million], giving him a tax deduction that could have allowed him to avoid federal income taxes for almost two decades.
+Five months later, the journalist David Cay Johnston obtained two pages of https://www.nytimes.com/2017/03/14/us/politics/donald-trump-taxes.html[Mr.
+Trump's returns] from 2005;
+that year, his fortunes had rebounded to the point that he was paying taxes.
+
+Even so, the rules do hold particular advantages for real estate developers like Mr.
+Trump, who are allowed to use their real estate losses to reduce their taxable income from other activities.
+
+But the tax returns reveal that he has failed to pay back far more money than previously known: a total of $287 million since 2010.
+
+The I.R.S.
+considers forgiven debt to be income, but Mr.
+Trump was able to avoid taxes on much of that money by reducing his ability to declare future business losses.
+For the rest, he took advantage of a provision of the Great Recession bailout that allowed income from canceled debt to be completely deferred for five years, then spread out evenly over the next five.
+He declared the first $28.2 million in 2014.
+
+Mr.
+Trump was periodically required to pay a parallel income tax called the alternative minimum tax, created as a tripwire to prevent wealthy people from using huge deductions, including business losses, to entirely wipe out their tax liabilities.
+
+Mr.
+Trump paid alternative minimum tax in seven years between 2000 and 2017 -- a total of $24.3 million, excluding refunds he received after filing.
+For 2015, he paid $641,931, his first payment of any federal income tax since 2010.
+
+As he settled into the Oval Office, his tax bills soon returned to form.
+His potential taxable income in 2016 and 2017 included $24.8 million in profits from sources related to his celebrity status and $56.4 million for the loans he did not repay.
+The dreaded alternative minimum tax would let his business losses erase only some of his liability.
+
+Testifying before Congress in February 2019, the president's estranged personal lawyer, Mr.
+Cohen, recalled Mr.
+Trump's showing him a huge check from the U.S.
+Treasury some years earlier and musing "`that he could not believe how stupid the government was for giving someone like him that much money back.`"
+
+In fact, confidential records show that starting in 2010 he claimed, and received, an income tax refund totaling $72.9 million -- all the federal income tax he had paid for 2005 through 2008, plus interest.
+
+The legitimacy of that refund is at the center of the audit battle that he has long been waging, out of public view, with the I.R.S.
+
+Mr.
+Trump harvested that refund bonanza by declaring huge business losses -- a total of $1.4 billion from his core businesses for 2008 and 2009 -- that tax laws had prevented him from using in prior years.
+
+But to turn that long arc of failure into a giant refund check, he relied on some deft accounting footwork and an unwitting gift from an unlikely source -- Mr.
+Obama.
+
+Business losses can work like a tax-avoidance coupon: A dollar lost on one business reduces a dollar of taxable income from elsewhere.
+The types and amounts of income that can be used in a given year vary, depending on an owner's tax status.
+But some losses can be saved for later use, or even used to request a refund on taxes paid in a prior year.
+
+Until 2009, those coupons could be used to wipe away taxes going back only two years.
+But that November, the window was more than doubled by a little-noticed provision in a bill Mr.
+Obama signed as part of the Great Recession recovery effort.
+Now business owners could request full refunds of taxes paid in the prior four years, and 50 percent of those from the year before that.
+
+Mr.
+Trump had paid no income taxes in 2008.
+But the change meant that when he filed his taxes for 2009, he could seek a refund of not just the $13.3 million he had paid in 2007, but also the combined $56.9 million paid in 2005 and 2006, when "`The Apprentice`" created what was likely the biggest income tax bite of his life.
+
+Precisely why the case has stalled is not clear.
+But experts say it suggests that the gap between the sides remains wide.
+If negotiations were to deadlock, the case would move to federal court, where it could become a matter of public record.
+
+The dispute may center on a single claim that jumps off the page of Mr.
+Trump's 2009 tax return: a declaration of more than $700 million in business losses that he had not been allowed to use in prior years.
+Unleashing that giant tax-avoidance coupon enabled him to receive some or all of his refund.
+
+// To appreciate the below, look for the quote and read the three paragraphs before it
+The language was crucial.
+Mr.
+Trump was using the precise wording of I.R.S.
+rules governing the most beneficial, and perhaps aggressive, method for business owners to avoid taxes when separating from a business.
+
+A partner who walks away from a business with nothing -- what tax laws refer to as abandonment -- can suddenly declare all the losses on the business that could not be used in prior years.
+But there are a few catches, including this: Abandonment is essentially an all-or-nothing proposition.
+If the I.R.S.
+learns that the owner received anything of value, the allowable losses are reduced to just $3,000 a year.
+
+And Mr.
+Trump does appear to have received something.
+When the casino bankruptcy concluded, he got 5 percent of the stock in the new company.
+The materials reviewed by The Times do not make clear whether Mr.
+Trump's refund application reflected his public declaration of abandonment.
+If it did, that 5 percent could place his entire refund in question.
+
+It is possible that the case has been paused because Mr.
+Trump is president, which would raise the personal stakes of re-election.
+If the recent Fox interview is any indication, Mr.
+Trump seems increasingly agitated about the matter.
+
+The "`consultants`" are not identified in the tax records.
+But evidence of this arrangement was gleaned by comparing the confidential tax records to the financial disclosures Ivanka Trump filed when she joined the White House staff in 2017.
+Ms.
+Trump reported receiving payments from a consulting company she co-owned, totaling $747,622, that exactly matched consulting fees claimed as tax deductions by the Trump Organization for hotel projects in Vancouver and Hawaii.
+
+When asked about the arrangement, the Trump Organization lawyer, Mr.
+Garten, did not comment.
+
+https://www.nytimes.com/interactive/2018/10/02/us/politics/donald-trump-tax-schemes-fred-trump.html[A Times investigation in 2018] found that Mr.
+Trump's late father, Fred Trump, employed https://www.nytimes.com/2018/10/02/us/politics/donald-trump-wealth-fred-trump.html[a number of legally dubious schemes] decades ago to evade gift taxes on millions of dollars he transferred to his children.
+It is not possible to discern from this newer collection of tax records whether intra-family financial maneuverings were a motivating factor.
+
+On the failed hotel deal in Azerbaijan, which was plagued by suspicions of corruption, a Trump Organization lawyer told The New Yorker the company was blameless because it was merely a licenser and had no substantive role, adding, "`We did not pay any money to anyone.`" Yet, the tax records for three Trump L.L.C.s involved in that project show deductions for consulting fees totaling $1.1 million that were paid to someone.
+
+In Turkey, a person directly involved in developing two Trump towers in Istanbul expressed bafflement when asked about consultants on the project, telling The Times there was never any consultant or other third party in Turkey paid by the Trump Organization.
+But tax records show regular deductions for consulting fees over seven years totaling $2 million.
+
+Ms.
+Trump disclosed in her public filing that the fees she received were paid through TTT Consulting L.L.C., which she said provided "`consulting, licensing and management services for real estate projects.`" Incorporated in Delaware in December 2005, the firm is one of several Trump-related entities with some variation of TTT or TTTT in the name that appear to refer to members of the Trump family.

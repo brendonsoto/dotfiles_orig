@@ -1,0 +1,23 @@
+:doctype: book
+
+:phoenix:
+
+= Protocols
+
+Consider the following function: `<%= link "Watch", to: Routes.video_path(@conn, :show, video) %>`
+
+Let's assume `video` is has the following struct: `defstruct video id: 1, title: "Goose Grumps", length: 600`
+
+We know the `link` function creates a web link, an anchor tag, to something.
+In this case to "show" a video.
+The function takes in a _whole_ video struct and somehow we get a link to _that_ particular video!
+How?
+
+There are _protocols_ in Phoenix which describe how to do some generic task.
+In this case, a protocol is being used to convert the _video struct_ into a _parameter_ to be used in other places to reference that video.
+The function here to convert the struct into something the link can consume is called `to_param`.
+Let's look at an example.
+
+`+ defimpl Phoenix.Param, for: MyApp.Content.Video do   def to_param(%{id: id, title: title}) do     "#{id}-#{title}"   end end +`
+
+Overall this is saying this code chunk is an _implementation_ of the Phoenix.Param protocol for videos and when it's to be converted into a parameter do so by creating a string with the id and the title field.
