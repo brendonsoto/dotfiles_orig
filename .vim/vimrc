@@ -36,22 +36,16 @@ Plug 'junegunn/fzf.vim'
 " Multi-lang
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-endwise'
-" Plug 'SirVer/ultisnips'
 Plug 'jiangmiao/auto-pairs'
 Plug 'adelarsq/vim-matchit'
 
 Plug 'neovim/nvim-lspconfig'
 
-" Plug 'prabirshrestha/asyncomplete.vim'
-" Plug 'prabirshrestha/vim-lsp'
-" Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" Plug 'mattn/vim-lsp-settings'
-" Plug 'Shougo/deoplete.nvim'
-" Plug 'lighttiger2505/deoplete-vim-lsp'
-
-" Markdown
+" Notes
 Plug 'dkarter/bullets.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'lervag/wiki.vim'
+Plug 'preservim/tagbar'
 
 " Web general
 Plug 'mattn/emmet-vim'
@@ -60,7 +54,7 @@ Plug 'tmhedberg/matchit'
 " Vim general
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'francoiscabrol/ranger.vim'
+Plug 'francoiscabrol/ranger.vim' | Plug 'rbgrouleff/bclose.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'mhinz/vim-startify'
@@ -69,10 +63,6 @@ Plug 'gcmt/taboo.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'vimwiki/vimwiki'
-
-" Below is needed with Ranger
-Plug 'rbgrouleff/bclose.vim'
 
 call plug#end()
 
@@ -213,6 +203,7 @@ autocmd BufEnter * :syntax sync fromstart
 """""""""""""""""""""
 "		Language specific stuff
 """""""""""""""""""""
+" TODO: Move these to their own files?
 
 " Set .Xmonad-related files to use Haskell syntax highlighting
 autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
@@ -256,17 +247,23 @@ let g:ale_fixers = {
       \ 'elixir': ['mix_format']
       \}
 let g:ale_fix_on_save = 1
-" let g:ale_completion_enabled = 1
 nnoremap [a :ALEPreviousWrap<cr>
 nnoremap ]a :ALENextWrap<cr>
-" nmap gd <Plug>(ale_detail)
-" nmap gt <Plug>(ale_go_to_definition)
-" nmap gr <Plug>(ale_find_references)
-" nmap gh <Plug>(ale_hover)
-" set omnifunc=ale#completion#OmniFunc
 
-" Deoplete
-" let g:deoplete#enable_at_startup = 1
+" Bullets
+let g:bullets_enabled_filetypes = [
+      \ 'asciidoc',
+      \ 'asciidoctor',
+      \ 'markdown',
+      \ 'gitcommit',
+      \ 'scratch'
+      \ ]
+" Dunno why the defaults don't work for me
+let g:bullets_set_mappings = 0
+nnoremap <leader>x :ToggleCheckbox<cr>
+nmap o :InsertNewBullet<cr>
+imap <cr> <C-O>:InsertNewBullet<cr>
+
 
 " Emmet
 let g:user_emmet_settings = {
@@ -281,7 +278,11 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " FZF
 nnoremap <Leader>a :Ag<CR>
 nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>c :Commits<CR>
+nnoremap <Leader>H :History<CR>
+nnoremap <Leader>L :Lines<CR>
 nnoremap <C-p> :Files<CR>
+nnoremap <C-P> :GFiles<CR>
 
 " Pangloss Javascript
 let g:javascript_plugin_jsdoc = 1
@@ -329,24 +330,11 @@ function! LightLineFugitive()
   return exists('*fugitive#head') ? fugitive#head() : ''
 endfunction
 
-" LSP -- defined in nvim config
-" nmap gtd <Plug>(lsp-definition)
-" nmap gtt <Plug>(lsp-type-definition)
-" nmap gtptd <Plug>(lsp-peek-type-definition)
-" nmap gth <Plug>(lsp-hover)
-" nmap gtr <Plug>(lsp-references)
-" nmap gf <Plug>(lsp-document-format)
-" nmap [j <Plug>(lsp-next-diagnostic)
-" nmap ]j <Plug>(lsp-previous-diagnostic)
-" " autocmd BufWritePre <buffer> LspDocumentFormatSync
-" " let g:lsp_format_sync_timeout = 1000
-" let g:lsp_log_file = expand('~/vim-lsp.log')
-" set omnifunc=lsp#complete
-
 " Rainbow Parenthesis
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " Ranger
+let g:bclose_no_plugin_maps = 1 " undo bclose <Space>bd mapping
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 let g:ranger_replace_netrw = 1
 
@@ -357,17 +345,19 @@ let g:startify_bookmarks = [
       \ {'z': '~/dotfiles/meine_zettlekasten/index.md'},
       \ ]
 
-" UltiSnips
-" let g:UltiSnipsExpandTrigger="<c-e>"
-" let g:UltiSnipsJumpForwardTrigger="<c-n>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+" Tagbar
+let g:tagbar_use_cache = 0
+let g:tagbar_map_showproto = ''
+let g:tagbar_width = max([25, winwidth(0) / 5])
+let g:tagbar_autofocus = 1
+let g:tagbar_show_tag_count = 1
+let g:tagbar_wrap = 2
+nnoremap <Leader>tt :TagbarToggle<cr>
+autocmd FileType asciidoc :TagbarOpen
 
-" Vimwiki
-let g:vimwiki_list = [
-      \ {'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
-      \ {'path': '~/dotfiles/my_wiki', 'syntax': 'markdown', 'ext': '.md'},
-      \ {'path': '~/dotfiles/meine_zettlekasten', 'syntax': 'markdown', 'ext': '.md', 'auto_tags': 1}
-      \]
-let g:vimwiki_global_ext = 0
-let g:vimwiki_ex2syntaqx = {'.md': 'markdown'}
-" nmap <Leader>x :VimwikiToggleListItem<CR>
+" Wiki
+let g:wiki_root = '~/dotfiles/meine_zettlekasten'
+let g:wiki_filetypes = ['asciidoc', 'wiki']
+let g:wiki_link_extensiono = '.adoc'
+let g:wiki_link_target_type = 'adoc_xref_inline'
+let g:wiki_mappings_use_defaults = 'none'
