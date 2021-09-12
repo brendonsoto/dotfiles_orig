@@ -1,7 +1,0 @@
-:typescript:javascript:
-
-# TypeScript with Babel
-Going through the FrontEndMasters TypeScript Fundamentals course
-When using TypeScript with Babel the author recommends to set the target of the TS compiler to a very modern level and then let Babel take care of the rest
-His rationale is that if you want to use TS with Babel, TS is essentially just a type checker and Babel is your transformer
-Babel is built for transformations so it's best to let the input be as modern as it can be and let Babel reduce it as it sees fit

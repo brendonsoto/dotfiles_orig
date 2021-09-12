@@ -357,7 +357,7 @@ autocmd FileType asciidoc :TagbarOpen
 
 " Wiki
 let g:wiki_root = '~/dotfiles/meine_zettlekasten'
-let g:wiki_filetypes = ['asciidoc', 'wiki']
+let g:wiki_filetypes = ['adoc', 'wiki']
 let g:wiki_link_extensiono = '.adoc'
 let g:wiki_link_target_type = 'adoc_xref_inline'
 let g:wiki_mappings_use_defaults = 'none'
