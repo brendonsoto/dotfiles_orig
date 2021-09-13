@@ -260,9 +260,6 @@ let g:bullets_enabled_filetypes = [
       \ ]
 " Dunno why the defaults don't work for me
 let g:bullets_set_mappings = 0
-nnoremap <leader>x :ToggleCheckbox<cr>
-nmap o :InsertNewBullet<cr>
-imap <cr> <C-O>:InsertNewBullet<cr>
 
 
 " Emmet
@@ -282,7 +279,7 @@ nnoremap <Leader>c :Commits<CR>
 nnoremap <Leader>H :History<CR>
 nnoremap <Leader>L :Lines<CR>
 nnoremap <C-p> :Files<CR>
-nnoremap <C-P> :GFiles<CR>
+nnoremap <C-g> :GFiles<CR>
 
 " Pangloss Javascript
 let g:javascript_plugin_jsdoc = 1
