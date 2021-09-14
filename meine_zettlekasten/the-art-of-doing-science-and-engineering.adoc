@@ -117,7 +117,7 @@ Lots of opportunities for an idea to never be realized.
 * Inventors often see the scope of their creation less broadly than those who use the invention
 * sometimes a concept may not be understood until attempted
 
-= History of Computer Application
+= 5 History of Computer Application
 
 * some key areas to be mindful of and work towards:
  ** writing papers/books
@@ -164,3 +164,70 @@ try to learn how to distinguish between them;
 try to understand the situations which produce successes and those which almost guarantee failure.
 Realize, as a general rule, it is not the same job you should do with a machine, but rather an equivalent one, and do it so then future, flexible, expansion can be easily added (if you do succeed).
 And always also remember to give serious thought to the field maintenance as it will actually be done in the field--which is generally not as you wish it would be done!
+
+= 6 Artificial Intelligence I
+* "information", "thinking", and "intelligence" are fuzzy terms for us.
+** We think we know what it means, but there's no satisfactory decision
+** We like to think we're special, above plants, animals, etc.
+** Religion may enter the conversation since there's the idea of creating "man in god's image" yet we may make programs, AI, whatever in our "image"
+* There's this idea of "expert systems" where you spend time with an "expert", extract their knowledge/rules, and make a program out of it
+** This does not work.
+** Experts usually tap into subconscious knowledge; how do you communicate the subconscious?
+** Also there are reports of Beginners being just as adequate as Experts
+* "Artificial Intelligence" does not have a single meaning
+** A popular response to "what does AI mean?" is "Can machines think?"
+*** Defining "thinking" is important here
+*** Here is where religion, and feeling uncomfortable about our own being, can come in
+*** Hamming likes to rephrase the question/problem to "Of all of life's burdens, which are those machines can relieve, or significantly ease, for us?"
+* Hamming made a claim saying "I believe very likely in the future we will have vehicles exploring the surface of Mars"
+** Just recently (around 2021-Sept) NASA successfully extracted a piece of a crater on Mars and is planning to retrieve said specimen for research back on Earth!
+* On the extreme perspectives regarding AI:
+** hard = we are no different from machines. "All is atoms and void"
+** soft = self-awareness + selfconsciousness
+* Games are important in AI because they have indisbutible rules, but also create a sense of randomness that forces not hard and fast decisions, but decisions that will increase the probability of certain outcomes
+** _heuristics_ is a buzzword here
+** Art Samuel at IBM created a checker problem that evolved not by the program analyzing exhibiting some sort of reflection/self-awareness, but by Samuel analyzing the results of different tweaks and then further tweaking the program
+*** Some argue this isn't intelligence or the program "learning", but Hamming disputes: is this any different from how we learn through courses?
+* We don't know how to test machine learning. How to tell if a machine is "learning"
+* There will be times in exploring the possibilities of computers where your beliefs will be challenged. You will struggle. Handle it like how a debate should ideally flow: analyzing both sides and synthesis of the good and bad
+
+== Quotes
+=== On thinking
+____
+Perhaps “thinking” is not a yes-no thing, but maybe it is a matter of degree.
+____
+
+=== On Religion with AI
+____
+Religion unfortunately enters into discussions of the problem of machine thinking, and hence we have
+both vitalistic and non-vitalistic theories of “machines vs. humans”. For the Christian religions their Bible
+says, “God made Man in His image”. If we can in turn create machines in our image then we are in some
+sense the equal of God, and this is a bit embarrassing!
+____
+
+=== On the extremes of AI perspectives
+____
+Democritus (b. around 460 B.C.) said in ancient Greek times, “All is atoms and void”. This is
+the stance of the hard AI people; there is no essential difference between machines and humans, hence by
+suitably programming machines then machines can do anything humans can do.
+____
+
+____
+At the other extreme of the AI scale, some of us, when considering our own feelings, believe we have
+self-awareness and selfconsciousness—though we are not able to give satisfactory tests to prove these
+things exist. I can get a machine to print out, “I have a soul”, or “I am self-aware.”, or “I have self-
+consciousness.”, and you would not be impressed with such statements from a machine. But from humans
+you are inclined to give greater credence to such remarks, based on the belief that you, by introspection,
+feel you have such properties (things), and you have learned by long experience in life other humans are similar
+to you—though clearly racism still exists which asserts there are differences—me being always the better
+person!
+____
+
+=== On forming your own opinion
+____
+You must struggle with your own beliefs if you are to make any progress in
+understanding the possibilities and limitations of computers in the intellectual area. To do this adequately46
+CHAPTER 6
+you must formalize your beliefs and then criticize them severely, arguing one side against the other, until
+you have a fair idea of the strengths and weakness of both sides.
+____
