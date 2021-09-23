@@ -22,7 +22,6 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'sheerun/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
-Plug 'plasticboy/vim-markdown'
 Plug 'LnL7/vim-nix'
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
@@ -39,12 +38,20 @@ Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'adelarsq/vim-matchit'
 
-Plug 'neovim/nvim-lspconfig'
 
 " Notes
-Plug 'dkarter/bullets.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'lervag/wiki.vim'
+
+" Neovim specific
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-neorg/neorg'
+Plug 'neovim/nvim-lspconfig'
+" Auto completion
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 Plug 'preservim/tagbar'
 
 " Web general
@@ -93,7 +100,7 @@ set background=dark
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set clipboard+=unnamedplus " Use the clipboard register + in addition to the default
 " Use a popup menu, even if there's one match, show extra info, do not auto-select or auto-insert
-set completeopt=menuone,noselect
+set completeopt=menu,menuone,noselect
 set diffopt=filler,vertical " Diff settings
 set expandtab " maintains # of spaces for a tab in insert mode
 set hidden " don't have to write before opening new buffer
@@ -250,18 +257,6 @@ let g:ale_fix_on_save = 1
 nnoremap [a :ALEPreviousWrap<cr>
 nnoremap ]a :ALENextWrap<cr>
 
-" Bullets
-let g:bullets_enabled_filetypes = [
-      \ 'asciidoc',
-      \ 'asciidoctor',
-      \ 'markdown',
-      \ 'gitcommit',
-      \ 'scratch'
-      \ ]
-" Dunno why the defaults don't work for me
-let g:bullets_set_mappings = 0
-
-
 " Emmet
 let g:user_emmet_settings = {
       \'javascript.jsx': {
@@ -345,16 +340,8 @@ let g:startify_bookmarks = [
 " Tagbar
 let g:tagbar_use_cache = 0
 let g:tagbar_map_showproto = ''
-let g:tagbar_width = max([25, winwidth(0) / 5])
+let g:tagbar_width = max([35, winwidth(0) / 5])
 let g:tagbar_autofocus = 1
 let g:tagbar_show_tag_count = 1
-let g:tagbar_wrap = 2
+let g:tagbar_wrap = 0
 nnoremap <Leader>tt :TagbarToggle<cr>
-autocmd FileType asciidoc :TagbarOpen
-
-" Wiki
-let g:wiki_root = '~/dotfiles/meine_zettlekasten'
-let g:wiki_filetypes = ['adoc', 'wiki']
-let g:wiki_link_extensiono = '.adoc'
-let g:wiki_link_target_type = 'adoc_xref_inline'
-let g:wiki_mappings_use_defaults = 'none'

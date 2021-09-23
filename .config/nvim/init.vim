@@ -5,6 +5,47 @@ source ~/.vimrc
 " LSP
 
 lua << EOF
+-- Setup nvim-cmp.
+local cmp = require'cmp'
+
+cmp.setup({
+  -- snippet = {
+  --   expand = function(args)
+  --     -- For `vsnip` user.
+  --     vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
+  --
+  --     -- For `luasnip` user.
+  --     -- require('luasnip').lsp_expand(args.body)
+  --
+  --     -- For `ultisnips` user.
+  --     -- vim.fn["vsnip#anonymous"](args.body)
+  --   end,
+  -- },
+  mapping = {
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+
+    { name = 'neorg' },
+
+    -- For vsnip user.
+    -- { name = 'vsnip' },
+
+    -- For luasnip user.
+    -- { name = 'luasnip' },
+
+    -- For ultisnips user.
+    -- { name = 'ultisnips' },
+
+    { name = 'buffer' },
+  }
+})
+
 local nvim_lsp = require('lspconfig')
 
 local vuels_setup = {
@@ -92,4 +133,63 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup { on_attach = on_attach }
   end
 end
+
+
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+
+parser_configs.norg = {
+    install_info = {
+        url = "https://github.com/nvim-neorg/tree-sitter-norg",
+        files = { "src/parser.c", "src/scanner.cc" },
+        branch = "main"
+    },
+}
+
+require('neorg').setup {
+  -- Tell Neorg what modules to load
+  load = {
+    ["core.defaults"] = {}, -- Load all the default modules
+    ["core.norg.concealer"] = {}, -- Allows for use of icons
+    ["core.norg.dirman"] = { -- Manage your directories with Neorg
+    config = {
+      workspaces = {
+        my_workspace = "~/neorg"
+        }
+      }
+    },
+  ["core.norg.completion"] = {
+    config = {
+      engine = "nvim-cmp"
+      }
+    },
+  },
+  hook = function()
+    -- This sets the leader for all Neorg keybinds. It is separate from the regular <Leader>,
+    -- And allows you to shove every Neorg keybind under one "umbrella".
+    local neorg_leader = "<Leader>" -- You may also want to set this to <Leader>o for "organization"
+
+    -- Require the user callbacks module, which allows us to tap into the core of Neorg
+    local neorg_callbacks = require('neorg.callbacks')
+
+    -- Listen for the enable_keybinds event, which signals a "ready" state meaning we can bind keys.
+    -- This hook will be called several times, e.g. whenever the Neorg Mode changes or an event that
+    -- needs to reevaluate all the bound keys is invoked
+    neorg_callbacks.on_event("core.keybinds.events.enable_keybinds", function(_, keybinds)
+
+      -- Map all the below keybinds only when the "norg" mode is active
+      keybinds.map_event_to_mode("norg", {
+        n = { -- Bind keys in normal mode
+
+          -- Keys for managing TODO items and setting their states
+          { "gtd", "core.norg.qol.todo_items.todo.task_done" },
+          { "gtu", "core.norg.qol.todo_items.todo.task_undone" },
+          { "gtp", "core.norg.qol.todo_items.todo.task_pending" },
+          { "<C-Space>", "core.norg.qol.todo_items.todo.task_cycle" }
+
+        },
+      }, { silent = true, noremap = true })
+
+    end)
+  end
+}
 EOF

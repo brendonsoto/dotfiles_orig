@@ -23,10 +23,14 @@ if [[ $OSTYPE == darwin* ]]; then
 
   # Ruby
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+fi
 
-  # Rust
+# Rust
+if command -v cargo &>/dev/null
+then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
+
 
 ##########################################
 #             Path Addendums
