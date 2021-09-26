@@ -1,0 +1,29 @@
+:doctype: book
+
+:javascript:
+
+= Chaining Recipe
+
+This is how to create a structure with functions that allows chaining functions together.
+Think promises.
+
+_Why_ is this important?
+Because it allows us to combine OOP and functional programming.
+We preserve the notion of objects that have data and functions set to it but behind a contextual name while communicating immutability by having the functions return new instances.
+This can further be used to create structures that can _time travel_.
+
+The example here will be a simple counter with the ability to increment and decrement.
+
+` const Counter = function(initVal) {   this.val = initVal || 0 } Counter.prototype.inc = function() {   return new Counter(this.val + 1) } Counter.prototype.dec = function() {   return new Counter(this.val - 1) } `
+
+We have a simple object constructor at the type with takes in a value to use as the initial value.
+A default is given in case the given value is not given.
+
+From there two prototype functions are introduced which mirror each other almost exactly.
+Note that both _return a new object_.
+
+Being that the functions are _tied_ to the object, by returning the object we can chain functions.
+
+` const c0 = new Counter() const c1 = c0.inc() const c3 = c1.inc().inc() const c2 = c3.dec() `
+
+This allows us to do

@@ -1,8 +1,0 @@
-:elixir:
-
-# Detecting Bottlenecks
-*NOTE* Requires full erlang to be installed, not erlang-nox (headless)
-
-If you start up a server with iex, `iex -S mix phx.server`, and then in the iex session run `observer.start()` a GUI should appear showing a dashboard of the running applications. This is like the unix command `top` but for Elixir processes.
-
-For **bottlenecks** you want to pay attention to the Message Queue (MsgQ) and make sure it's at a reasonable/low number. A high number may indicate a bottleneck.

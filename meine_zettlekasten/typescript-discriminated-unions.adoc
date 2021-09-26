@@ -1,0 +1,8 @@
+:doctype: book
+
+:typescript:types:
+
+= Abstract Data Types (Discriminated Unions)
+
+Check Microsoft's handbook https://www.typescriptlang.org/docs/handbook/advanced-types.html#discriminated-unions[here].
+Their documentation on it is really good.

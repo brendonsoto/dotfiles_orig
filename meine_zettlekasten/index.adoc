@@ -1,0 +1,452 @@
+= Meine Zettlekasten
+:doctype: book
+:pp: {plus}{plus}
+
+What is zettlekasten?
+https://zettelkasten.de/posts/overview/
+
+From Software Lead Weekly (SWLW) #455 @chrishlad: Grab a notebook.
+Create a section titled "`I Don't Know`".
+Every time you don't understand something, write it down there.
+After a week, you may have 50 concepts or questions.
+1) Google the simple ones 2) Ask a friend for the hard ones.
+This is exponential learning.
+
+= Questions / Things to explore
+
+* Vue:
+ ** state management
+ ** forms
+* Figma
+* Haskell:
+ ** STATE MONAD
+ ** Understand Xmonad
+ ** How to print (hello world)
+ ** How to take std input
+ ** Why can lazy evaluation lead to performance headaches?
+It's touted as a major point of Haskell.
+* Language Server Protocol + Implementation
+* Cross-Site Request Forgery
+* Difference between syntax and grammar?
+For more context, Haskell, why does the syntax not bother people?
+I feel like it's the language, the words to describe functions itself.
+The ideas are clearer to understand, it's more like English.
+But what do you call the words?
+* Haxe?
+
+= Generated Tags
+
+== accessibility
+
+* link:accessibility[accessibility]
+
+== adhd
+
+* link:adhd--sachs[adhd--sachs]
+
+== architecture
+
+* link:micro-frontends[micro-frontends]
+
+== article
+
+* link:article-phoenix-blog[article-phoenix-blog]
+* link:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory[different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory]
+* link:shared-mechanisms-underlie-the-control-of-working-memory-and-attention[shared-mechanisms-underlie-the-control-of-working-memory-and-attention]
+
+== audio-production
+
+* link:attenuation[attenuation]
+* link:compression[compression]
+* link:console-1[console-1]
+* link:riding-faders[riding-faders]
+* link:studio-one[studio-one]
+
+== bitwig
+
+* link:bitwig[bitwig]
+
+== book
+
+* link:agile-web-development-with-rails-6[agile-web-development-with-rails-6]
+* link:art-of-problem-solving-vol-1#Art of Problem Solving Vol 1[Art of Problem Solving Vol 1]
+* link:docker-in-practice#Docker in Practice, Second Edition[Docker in Practice, Second Edition]
+
+== books
+
+* link:a-type-of-programming[a-type-of-programming]
+* link:vimscript-the-hard-way[vimscript-the-hard-way]
+
+== canvas
+
+* link:canvas#Canvas[Canvas]
+
+== cardinality
+
+* link:cardinality[cardinality]
+
+== cognitive-load
+
+* link:effective-mental-models-for-code-and-systems#cognitive-load[cognitive-load]
+
+== course
+
+* link:design-for-developers[design-for-developers]
+
+== css-quirks
+
+* link:spacing#Spacing[Spacing]
+
+== database
+
+* link:postgresql-basics[postgresql-basics]
+* link:postgresql-install[postgresql-install]
+
+== datatypes
+
+* link:parameterized-types#Parameterized Types[Parameterized Types]
+* link:product-types[product-types]
+* link:sum-types[sum-types]
+* link:type-alias[type-alias]
+
+== daw
+
+* link:bitwig[bitwig]
+
+== design
+
+* link:addy-osmani-design-patterns[addy-osmani-design-patterns]
+* link:design-for-developers[design-for-developers]
+
+== digitone
+
+* link:digitone[digitone]
+
+== distillery
+
+* link:elixir-distillery[elixir-distillery]
+
+== docker
+
+* link:docker#Docker[Docker]
+* link:docker-in-practice#Docker in Practice, Second Edition[Docker in Practice, Second Edition]
+
+== elektron
+
+* link:digitone[digitone]
+
+== elixir
+
+* link:ecto[ecto]
+* link:elixir-agents[elixir-agents]
+* link:elixir-applications[elixir-applications]
+* link:elixir-behaviors[elixir-behaviors]
+* link:elixir-detecting-bottlenecks[elixir-detecting-bottlenecks]
+* link:elixir-distillery[elixir-distillery]
+* link:elixir-genServer#elixir[elixir]
+* link:elixir-macros[elixir-macros]
+* link:elixir-otp#OTP[OTP]
+* link:elixir-plug[elixir-plug]
+* link:elixir-pow[elixir-pow]
+* link:elixir-quirks[elixir-quirks]
+* link:elixir-releases[elixir-releases]
+* link:elixir-supervisors[elixir-supervisors]
+* link:elixir-tasks[elixir-tasks]
+* link:elixir-testing-gotchas[elixir-testing-gotchas]
+* link:elixir-to-organize-later[elixir-to-organize-later]
+* link:elixir-umbrella-projects[elixir-umbrella-projects]
+* link:phoenix-conventions[phoenix-conventions]
+* link:phoenix-general[phoenix-general]
+
+== flask
+
+* link:flask#Flask[Flask]
+
+== fonts
+
+* link:install-fonts-unix#fonts[fonts]
+
+== front-end
+
+* link:addy-osmani-design-patterns[addy-osmani-design-patterns]
+* link:computational-vs-presentational-components[computational-vs-presentational-components]
+* link:frontend-masters-vuejs[frontend-masters-vuejs]
+* link:micro-frontends[micro-frontends]
+
+== front-end-masters
+
+* link:frontend-masters-vuejs[frontend-masters-vuejs]
+
+== game-development
+
+* link:creating-a-game-with-javascript#Creating a Game with JavaScript[Creating a Game with JavaScript]
+* link:slime-volleyball#Slime Volleyball[Slime Volleyball]
+
+== guitar
+
+* link:guitar-prac[guitar-prac]
+
+== haskell
+
+* link:a-type-of-programming[a-type-of-programming]
+* link:algebraic-data-types[algebraic-data-types]
+* link:cardinality[cardinality]
+* link:handle[handle]
+* link:haskell[haskell]
+* link:haskell-applicatives[haskell-applicatives]
+* link:haskell-compiling[haskell-compiling]
+* link:haskell-extended-guide[haskell-extended-guide]
+* link:haskell-functors[haskell-functors]
+* link:haskell-installation[haskell-installation]
+* link:haskell-lazy-evaluation[haskell-lazy-evaluation]
+* link:haskell-monoid[haskell-monoid]
+* link:haskell-semigroup[haskell-semigroup]
+* link:haskell-survival-guide[haskell-survival-guide]
+* link:haskell-types[haskell-types]
+* link:ihp[ihp]
+* link:kinds[kinds]
+* link:newtype[newtype]
+* link:parameterized-types#Parameterized Types[Parameterized Types]
+* link:product-types[product-types]
+* link:sum-types[sum-types]
+* link:type-alias[type-alias]
+* link:type-classes[type-classes]
+
+== how-to
+
+* link:how-to--squash-commits[how-to--squash-commits]
+
+== ideas
+
+* link:command-line-dictionary#Command Line Dictionary[Command Line Dictionary]
+* link:daw-idea[daw-idea]
+* link:megaman-tribute#Megaman Tribute[Megaman Tribute]
+* link:whiteboard-app[whiteboard-app]
+
+== javascript
+
+* link:canvas#Canvas[Canvas]
+* link:frontend-masters-production-vue[frontend-masters-production-vue]
+* link:frontend-masters-vuejs[frontend-masters-vuejs]
+* link:frontend-masters-vuejs#javascript[javascript]
+* link:javascript-chaining-recipe[javascript-chaining-recipe]
+* link:js-lock-files[js-lock-files]
+* link:node-gyp-issue[node-gyp-issue]
+* link:socket.io#Socket IO[Socket IO]
+* link:typescript-with-babel[typescript-with-babel]
+* link:vue-school--masterclass[vue-school--masterclass]
+
+== jeopardy
+
+* link:dumb-jeopardy[dumb-jeopardy]
+
+== jinja
+
+* link:jinja#Jinja[Jinja]
+
+== languages
+
+* link:c++#C++[C{pp}]
+* link:elixir#Elixir[Elixir]
+* link:haskell[haskell]
+* link:language-server-protocol[language-server-protocol]
+* link:python#Python[Python]
+
+== lessons-learned
+
+* link:lessons-learned--renting-apartments[lessons-learned--renting-apartments]
+
+== math
+
+* link:conjugate-radical#Conjugate Radical[Conjugate Radical]
+
+== mental-health
+
+* link:adhd--sachs[adhd--sachs]
+* link:vyvanse[vyvanse]
+
+== mental-models
+
+* link:effective-mental-models-for-code-and-systems#mental-models[mental-models]
+
+== music
+
+* link:bitwig[bitwig]
+* link:digitone[digitone]
+* link:guitar-prac[guitar-prac]
+* link:sysex[sysex]
+
+== news
+
+* link:nytimes-trump-taxes[nytimes-trump-taxes]
+
+== nix
+
+* link:niv[niv]
+* link:nix[nix]
+* link:nix--scratchpad[nix--scratchpad]
+* link:nix-env[nix-env]
+* link:nix-shell[nix-shell]
+
+== phoenix
+
+* link:article-phoenix-blog[article-phoenix-blog]
+* link:elixir-pow[elixir-pow]
+* link:phoenix-alter-schema-after-gen[phoenix-alter-schema-after-gen]
+* link:phoenix-authentication[phoenix-authentication]
+* link:phoenix-channels[phoenix-channels]
+* link:phoenix-conventions[phoenix-conventions]
+* link:phoenix-cookbook[phoenix-cookbook]
+* link:phoenix-general[phoenix-general]
+* link:phoenix-liveview[phoenix-liveview]
+* link:phoenix-models[phoenix-models]
+* link:phoenix-protocols[phoenix-protocols]
+* link:phoenix-routes[phoenix-routes]
+* link:phoenix-seeding-data[phoenix-seeding-data]
+* link:phoenix-views[phoenix-views]
+
+== politics
+
+* link:nytimes-trump-taxes[nytimes-trump-taxes]
+
+== postgresql
+
+* link:postgresql-basics[postgresql-basics]
+* link:postgresql-install[postgresql-install]
+
+== problems-and-solutions
+
+* link:ruby--bundler--shared-mime-types[ruby--bundler--shared-mime-types]
+* link:ruby-bundle-dep-version-not-found[ruby-bundle-dep-version-not-found]
+* link:rvm--allow-login-shell[rvm--allow-login-shell]
+
+== programming
+
+* link:c++#C++[C{pp}]
+* link:call-by-value[call-by-value]
+* link:effective-mental-models-for-code-and-systems#programming[programming]
+* link:frontend-masters-vuejs#programming[programming]
+* link:language-server-protocol[language-server-protocol]
+* link:web-app-architecture[web-app-architecture]
+* link:zsh-scripting[zsh-scripting]
+
+== projects
+
+* link:mobile-controllers#Mobile Controllers[Mobile Controllers]
+* link:pass2bitwarden#Pass to Bitwarden[Pass to Bitwarden]
+
+== python
+
+* link:flask#Flask[Flask]
+* link:jinja#Jinja[Jinja]
+* link:python#Python[Python]
+
+== rails
+
+* link:agile-web-development-with-rails-6[agile-web-development-with-rails-6]
+* link:hartl-rails-6-ch1[hartl-rails-6-ch1]
+
+== ruby
+
+* link:agile-web-development-with-rails-6[agile-web-development-with-rails-6]
+* link:hartl-rails-6-ch1[hartl-rails-6-ch1]
+* link:rake[rake]
+* link:ruby--bundler--shared-mime-types[ruby--bundler--shared-mime-types]
+* link:ruby--idioms[ruby--idioms]
+* link:ruby-bundle-dep-version-not-found[ruby-bundle-dep-version-not-found]
+* link:rvm--allow-login-shell[rvm--allow-login-shell]
+
+== science
+
+* link:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory[different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory]
+* link:shared-mechanisms-underlie-the-control-of-working-memory-and-attention[shared-mechanisms-underlie-the-control-of-working-memory-and-attention]
+
+== socket.io
+
+* link:socket.io#Socket IO[Socket IO]
+
+== stupid
+
+* link:dumb-jeopardy[dumb-jeopardy]
+
+== systems
+
+* link:effective-mental-models-for-code-and-systems#systems[systems]
+
+== tech
+
+* link:computational-vs-presentational-components[computational-vs-presentational-components]
+
+== thinking
+
+* link:decision-matrix[decision-matrix]
+* link:second-order-thinking[second-order-thinking]
+
+== to-sort
+
+* link:how-to-speak[how-to-speak]
+
+== types
+
+* link:typescript-casting[typescript-casting]
+* link:typescript-discriminated-unions[typescript-discriminated-unions]
+* link:typescript-intersection-types[typescript-intersection-types]
+* link:typescript-types[typescript-types]
+* link:typescript-union-types[typescript-union-types]
+
+== typescript
+
+* link:typescript-aliases[typescript-aliases]
+* link:typescript-casting[typescript-casting]
+* link:typescript-config[typescript-config]
+* link:typescript-dictionary[typescript-dictionary]
+* link:typescript-discriminated-unions[typescript-discriminated-unions]
+* link:typescript-flags[typescript-flags]
+* link:typescript-good-to-know[typescript-good-to-know]
+* link:typescript-interfaces[typescript-interfaces]
+* link:typescript-intersection-types[typescript-intersection-types]
+* link:typescript-node-modules[typescript-node-modules]
+* link:typescript-object-properties[typescript-object-properties]
+* link:typescript-overloaded-functions[typescript-overloaded-functions]
+* link:typescript-questions[typescript-questions]
+* link:typescript-quickly-get-type[typescript-quickly-get-type]
+* link:typescript-tuple[typescript-tuple]
+* link:typescript-typed-object-keys[typescript-typed-object-keys]
+* link:typescript-types[typescript-types]
+* link:typescript-union-types[typescript-union-types]
+* link:typescript-with-babel[typescript-with-babel]
+
+== unix
+
+* link:install-fonts-unix#unix[unix]
+
+== video-game
+
+* link:creating-a-game-with-javascript#Creating a Game with JavaScript[Creating a Game with JavaScript]
+* link:megaman-tribute#Megaman Tribute[Megaman Tribute]
+* link:mobile-controllers#Mobile Controllers[Mobile Controllers]
+* link:slime-volleyball#Slime Volleyball[Slime Volleyball]
+
+== vim
+
+* link:vim-handy[vim-handy]
+
+== vue
+
+* link:frontend-masters-production-vue[frontend-masters-production-vue]
+* link:frontend-masters-vuejs[frontend-masters-vuejs]
+* link:vue-school--masterclass[vue-school--masterclass]
+* link:vuex[vuex]
+
+== vue-school
+
+* link:vue-school--masterclass[vue-school--masterclass]
+
+== what-to-do
+
+* link:what-to-do--car-crash[what-to-do--car-crash]
+
+== working-memory
+
+* link:different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory[different-states-of-priority-recruit-different-neural-representations-in-visual-working-memory]
+* link:shared-mechanisms-underlie-the-control-of-working-memory-and-attention[shared-mechanisms-underlie-the-control-of-working-memory-and-attention]

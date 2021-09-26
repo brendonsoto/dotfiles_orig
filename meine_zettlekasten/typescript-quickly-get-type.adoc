@@ -1,0 +1,9 @@
+:doctype: book
+
+:typescript:
+
+= How to quickly get the type of something
+
+For context, I was struggling finding the type of `setTimeout` to use for a variable to hold timeout ids.
+I found there's a function called `ReturnType` that can be used to get the type for basically anything.
+So in practice, it looks like `const timeoutId: ReturnType<typeof setTimeout> = setTimeout(myFunc, time)`.

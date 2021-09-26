@@ -1,0 +1,50 @@
+:doctype: book
+
+:phoenix:
+
+= Phoenix Cookbook
+
+= Motivation
+
+I went through a book to learn Phoenix right before getting a job at Brace (2020).
+A few months later I'm trying to get back into it.
+This is both a reflection on my notes as well as an aggregation of them in a more straight-forward way.
+
+= Installation
+
+NOTE: You don't need to do this if phoenix is already installed unless if you want to update it to the next version.
+`mix archive.install hex phx_new`
+
+= Creating a Project
+
+`mix phx.new <project_name>` This will create the project in said directory and print a prompt.
+Follow what's on the prompt.
+
+For file structure see xref:./phoenix-general.adoc[here].
+
+= Adding a Basic User Model
+
+NOTE: In Elixir, think of model as part of a "Context", the term used to define where business logic goes.
+So any mention of "context" below will encapsulate model stuff too.
+`mix phx.gen.context <Context-Name> <Schema-Name> <Schema-table-name> [keyword list of fields and their types]`
+
+This will create the `<Context-Name>` directory in the `lib/<project>` directory with a file named `<Schema-Name>.ex` in it.
+
+= Adding Basic Auth
+
+Add the following: ` # In mix.exs {:pbkdf2_elixir, "~> 1.0"} `
+
+Then run `mix deps.get` to download the dependency
+
+Open `lib/<Project>/<Context>/User.ex` and add the following fields to your User schema: `     field :password, :string, virtual: true     field :password_hash, :string ` The `virtual` part is to not save the plain string itself into the db.
+
+Add the following changeset below the existing one: ` def registration_changeset(user, params)   user   |> changeset(params)   |> validate_required([:password])   |> put_pass_hash() end ` NOTE: The above does not include any extensive password validation.
+To do so will require adding more functions into the chained area
+
+For the `put_pass_hash` function: ```   @doc """   If the given changeset is valid, hash the password and add it   """   def put_pass_hash(changeset) do     case changeset do       %Ecto.Changeset{valid?: true, changes: %{password: pass}} \->         put_change(changeset, :password_hash, Pbkdf2.hash_pwd_salt(pass))
+
+   _ ->
+     changeset
+ end
+
+end ```

@@ -1,8 +1,0 @@
-:thinking:
-
-[Source](https://untools.co/second-order-thinking)
-
-# Second Order Thinking
-First order thinking involves the immediate effects of an action.
-Second order thinking involves the effects of the immediate effects, the second wave of echoes.
-The idea is to repeat thinking of the next layer of effects for however useful it may be.

@@ -1,0 +1,13 @@
+:doctype: book
+
+:postgresql:database:
+
+= How to install
+
+## Linux _This was with Manjaro_ Kudos to https://manjaro.site/how-to-install-postgresql-server-on-manjaro-18-0/
+
+First install via pacman: `sudo pacman -S postgresql`
+
+Then you need to start up the postgresql server But to do that there's one step needed beforehand: ` > sudo su postgres -l > initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data/' > exit ` This will produce more output about file creation
+
+Afterwards start the server: ` sudo systemctl start postgresql sudo systemctl enable postgresql `

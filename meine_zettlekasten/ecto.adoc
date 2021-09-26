@@ -1,0 +1,32 @@
+:doctype: book
+
+:elixir:
+
+= Ecto
+
+Ecto is a framework for managing database transactions and connections using Elixir
+
+== Changesets
+
+A changeset holds all of the changes to be made to a db They handle any _casting_ and _validation_ to the data before it goes to the db Why handle it this way?
+To separate the concerns In Programming Phoenix a really good case against coupling the validation logic to the schema is to prevent having a "one-size-fits-all" solution Different updates requires different contexts Hence the separation
+
+Changesets have an _action_ field This is `nil` when a changeset is first created But if any validation errors occur then the action field will be set
+
+== Migrations
+
+Migrations change a db to reflect the data structure the application uses
+
+To create a migration run the following on the command line: `mix ecto.gen.migration <migration_name>` This will create a file where db modifications can be coded To act on them, run `mix ecto.migrate` Any changes will be made for the _current environment_
+
+== Ecto Types
+
+Consider a situation where you have a reference to something in the database, like a link to a video, but the structure of that data is different from the reference.
+To use the example from Programming Phoenix, say the link to the video uses a string with the format "\{id}-\{title}" but the video's primary key is the `id` field which uses integers.
+Thus clicking a link will error since the `show` function in the controller looks for an integer but is receiving a string.
+This is where custom types help.
+
+An *ecto type* is a way to link a field in a schema to a module representing that field.
+This allows you to manipulate the field however you want in its presentation while still having a way to reference it.
+
+The module must have four functions defined as described https://hexdocs.pm/ecto/Ecto.Type.html[here]

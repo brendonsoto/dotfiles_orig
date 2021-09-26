@@ -1,0 +1,5 @@
+:javascript:
+
+If you see an error related to `node-gyp` along the lines of `No Xcode or CLT version detected` follow this guide: https://medium.com/@mrjohnkilonzi/how-to-resolve-no-xcode-or-clt-version-detected-d0cf2b10a750
+
+The only change would be once you see the proper path (`/Applications/Xcode.app/Contents/Developer`) restart your machine Then `npm rebuild` should be successful.

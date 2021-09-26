@@ -1,0 +1,65 @@
+= Flask
+:doctype: book
+
+:python:flask:
+
+= How to set up a Flask app
+
+``` # in app/*init*.py\...
+from flask import Flask
+
+app = Flask(*name*)
+
+from app import routes
+
+= in top level python file to kick off the app\...
+
+from app import app ``` Then export an environment variable that points to the top level script `export FLASK_APP=toplevel.py` Or use the `python-dotenv` package Command line: `pip install python-dotenv` In `.flaskenv`: `FLASK_APP=toplevel.py`
+
+= How to set up routes
+
+``` # in routes.py\...
+from app import app
+
+@app.route('/') def index():   \...
+```
+
+= How to render a template
+
+`+render_template(template, ...any_data_used_by_the_template)+`
+
+= Function for urls
+
+Instead of hardcoding urls, use `url_for('url_name')`.
+
+= Flask Shell
+
+There's a convenient flask command, `flask shell`, that starts up the REPL and loads in the flask application This can be modified to include more than just the app, like the db or its models, through the `@app.shell_context_processor` decorator
+
+= Flask extensions
+
+Most flask extensions are prefixed using `flask_` For _forms_, `flask_wtf` is handy For _databases/orms_, `flask_sqlalchemy` is great!
+For _logging in_, `flask_login` is great!
+
+== Flask WTF
+
+This package is _fantastic_ for forms.
+It includes the function `hidden_tag` to add an input with the secret key of the application to guard against Cross Site Request Forgery!
+It also models a form via a class which is super convenient and saves from having to write all of the markup.
+
+== Flask SQLAlchemy
+
+The `flask_sqlalchemy` is a package to introduce _SQLAlchemy_ to Flask
+
+It introduces the following commands to the flask CLI: - `flask db init` -- Initializes the db - `flask db migrate -m "my message"` -- Creates a migration script w/ comment - `flask db upgrade` -- Runs through any new migration scripts and applies them - `flask db downgrade` -- Rollsback most recent change
+
+Models are represented as classes
+
+For more info, check out https://flask-sqlalchemy.palletsprojects.com/en/2.x/[the documentation]!
+The quickstart covers a fair amount!
+
+== Flask Login
+
+Flask login includes the following helper functions: - `current_user` -- gets the current user - `login_user` -- registers whether a user is logged in and whether to remember them or not - `logout_user` -- logs out a user - `login_required` -- a decorator for routes to only allow access to logged in users
+
+There's also the helpful `UserMixin` which a class can extend to acquire the required properties the login plugin needs from users

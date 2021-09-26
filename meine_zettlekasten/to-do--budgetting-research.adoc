@@ -1,0 +1,19 @@
+= todo
+:doctype: book
+
+= TODO
+
+* [ ] Read https://www.reddit.com/r/personalfinance/wiki/budgeting#wiki_the_envelope_system[the envelope system] of the r/personalfinance budgeting article
+* [ ] Then read https://www.reddit.com/r/personalfinance/wiki/budgeting#wiki_cutting_your_spending_meaningfully[cutting your spending meaningfully] of the r/personalfinance budgeting article
+* [ ] Revisit designing budgetting app:
+ ** [ ] Check out Plaid / alternatives (you're looking for a way to get your personal spending data across different banks)
+ ** [ ] Look into graph libraries used w/ React Native
+ ** [ ] Look into if there's a sort of local db or sqlite for mobile devices
+ ** [ ] Redraw screens
+
+= Helpful links
+
+* https://www.ally.com/bank/interest-checking-account/[Ally checking]
+* https://www.ally.com/help/bank/bill-pay.html[Ally bill pay]
+* https://www.youneedabudget.com/features/[YNAB]
+* https://lifehacker.com/use-separate-accounts-for-simple-bucket-budgeting-5816641[Separate accounts for bucket budgetting]

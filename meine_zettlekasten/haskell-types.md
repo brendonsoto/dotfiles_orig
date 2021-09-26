@@ -1,7 +1,0 @@
-:haskell:
-
-# Types
-
-## Numbers
-### Natural
-Natural numbers (0 and integers greater than 0)

@@ -1,0 +1,21 @@
+:doctype: book
+
+:elixir:
+
+= Macros
+
+_Never use a macro when you could use a function_ (Programming Elixir, p303)
+
+The two man modules for macros are the _Macro_ and _Code_ modules
+
+Macros are expanded before a program executes
+
+One function handy in creating macros is `quote` It returns the _internal representation_ of its arguments Example: `quote do: (a=1;
+a+a)`
+
+To _undo_ or _revert_ the internal representation, use `unquote` An important note is that `unquote` can _only be used_ within a `quote` block Example: `Oh!
+I forgot to comment to ask in my `histogram` implementation.
+Is it defmacro macro(code) do   quote do     IO.inspect(unquote(code))   end end `
+
+Another way to run an internal representation is by using `Code.eval_quoted` Example: ` fragment = quote do: (a=1;
+a+a) Code.eval_quoted fragment `

@@ -8,8 +8,7 @@ Information in the brain can have different priorities which can determine how t
 
 # Abstract
 The brain represents thoughts/information of different priorities in similar ways.
-
-When given multiple things of different priority, the lesser priority thoughts are rotated (think like rotating a hexagon from one quadrant of a coordinate plane to another)
+When given multiple things of different priority, the lesser priority thoughts are rotated (think like rotating a hexagon from one quadrant of a coordinate plane to another).
 
 # Intro
 Different bits of information at different priority levels can be held in the brain. The highest level of priority info is the focus of attention while the rest of the info is stored in "activated long-term memory" or "region of direct access". Sounds like RAM for a computer to me.
