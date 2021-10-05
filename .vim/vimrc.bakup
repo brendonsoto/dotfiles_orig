@@ -41,10 +41,11 @@ Plug 'adelarsq/vim-matchit'
 
 " Notes
 Plug 'junegunn/goyo.vim'
+Plug 'lervag/wiki.vim/'
 
 " Neovim specific
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-neorg/neorg'
+" Plug 'nvim-neorg/neorg'
 Plug 'neovim/nvim-lspconfig'
 " Auto completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -79,64 +80,64 @@ call plug#end()
 """""""""""""""""""""
 
 " color
-set termguicolors
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
+" set termguicolors
+" if (has("nvim"))
+"   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" endif
 
 filetype plugin indent on " Enable file detection and load any plugins for them
 
 " Colorscheme
-syntax enable
-" Gruvbox specifics
-let g:gruvbox_italic=1
-" modified search based off of gruvbox for readability
-hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
-colorscheme gruvbox
+" syntax enable
+" " Gruvbox specifics
+" let g:gruvbox_italic=1
+" " modified search based off of gruvbox for readability
+" hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
+" colorscheme gruvbox
 
-set autoindent " allow autoindent by default
-set background=dark
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set clipboard+=unnamedplus " Use the clipboard register + in addition to the default
+" set autoindent " allow autoindent by default
+" set background=dark
+" set backspace=indent,eol,start " allow backspacing over everything in insert mode
+" set clipboard+=unnamedplus " Use the clipboard register + in addition to the default
 " Use a popup menu, even if there's one match, show extra info, do not auto-select or auto-insert
-set completeopt=menu,menuone,noselect
-set diffopt=filler,vertical " Diff settings
-set expandtab " maintains # of spaces for a tab in insert mode
-set hidden " don't have to write before opening new buffer
-set history=50 " command line history
-set hlsearch " highlight search terms
-set ignorecase " ignore case when searching
-set incsearch " show matches as you type
-set linebreak " enable word-break without inserting an EOL character
-set nobackup " no backups
-set nowritebackup " no backups
-set nomodeline " For a security thing - https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
-set noswapfile " no backups
-set number " display line number
+" set completeopt=menu,menuone,noselect
+" set diffopt=filler,vertical " Diff settings
+" set expandtab " maintains # of spaces for a tab in insert mode
+" set hidden " don't have to write before opening new buffer
+" set history=50 " command line history
+" set hlsearch " highlight search terms
+" set ignorecase " ignore case when searching
+" set incsearch " show matches as you type
+" set linebreak " enable word-break without inserting an EOL character
+" set nobackup " no backups
+" set nowritebackup " no backups
+" set nomodeline " For a security thing - https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+" set noswapfile " no backups
+" set number " display line number
 " set omnifunc=syntaxcomplete#Complete " Enable omnicompletion
-set path=$PWD/** " Find from current directory
-set ruler " show the cursor position all the time
-set shiftwidth=2 " spaces for auto indent
-set showcmd " display incomplete commands
-set showmatch " show matching parenthesis
-set smartcase " search is case-insensitive when keyword is all lowercase
-set tabstop=2 " set tab to 2 spaces
-set undodir=$HOME/.nvim-undo " undo file for work
-set undofile " Save undo's after file closes
-set undolevels=1000 " How many undos
-set undoreload=1000 " How many lines to save for undo
-set updatetime=300
+" set path=$PWD/** " Find from current directory
+" set ruler " show the cursor position all the time
+" set shiftwidth=2 " spaces for auto indent
+" set showcmd " display incomplete commands
+" set showmatch " show matching parenthesis
+" set smartcase " search is case-insensitive when keyword is all lowercase
+" set tabstop=2 " set tab to 2 spaces
+" set undodir=$HOME/.nvim-undo " undo file for work
+" set undofile " Save undo's after file closes
+" set undolevels=1000 " How many undos
+" set undoreload=1000 " How many lines to save for undo
+" set updatetime=300
 
 " enable mouse for scrolling
-if has("mouse")
-	set mouse=a
-endif
+" if has("mouse")
+" 	set mouse=a
+" endif
 
 " nvim specific stuff
-if (has("nvim"))
-  set inccommand=split " show changes in a split window for search and replace
-endif
+" if (has("nvim"))
+"   set inccommand=split " show changes in a split window for search and replace
+" endif
 
 
 """""""""""""""""""""
@@ -144,67 +145,67 @@ endif
 """""""""""""""""""""
 
 " MapLeader
-let mapleader = "\<Space>"
+" let mapleader = "\<Space>"
 let maplocalleader = "\\"
 
 " Easy open, close, and save
-nnoremap <Leader>e :e<Space>
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>Q :qa<CR>
+" nnoremap <Leader>e :e<Space>
+" nnoremap <Leader>w :w<CR>
+" nnoremap <Leader>q :q<CR>
+" nnoremap <Leader>Q :qa<CR>
 
 " Easy window Navigation
-nnoremap <Leader>h <C-w>h
-nnoremap <Leader>j <C-w>j
-nnoremap <Leader>k <C-w>k
-nnoremap <Leader>l <C-w>l
+" nnoremap <Leader>h <C-w>h
+" nnoremap <Leader>j <C-w>j
+" nnoremap <Leader>k <C-w>k
+" nnoremap <Leader>l <C-w>l
 
 " Easy copy & paste
-noremap <Leader>y "+y
-noremap <Leader>p "+p
+" noremap <Leader>y "+y
+" noremap <Leader>p "+p
 
 " Move line by line even when the line is wrapped
-noremap j gj
-noremap k gk
+" noremap j gj
+" noremap k gk
 
 " Easy window splitting
-noremap <Leader>sh :split<CR>
-noremap <Leader>sv :vs<CR>
-noremap <Leader>st :tab split<CR>
+" noremap <Leader>sh :split<CR>
+" noremap <Leader>sv :vs<CR>
+" noremap <Leader>st :tab split<CR>
 
 " Easy remove highlighting
-noremap <Leader>/ :nohl<CR>
+" noremap <Leader>/ :nohl<CR>
 
 " Easy search for visually selected text
-vnoremap // y/<C-R>"<CR>
+" vnoremap // y/<C-R>"<CR>
 
 " Taken from Tim Pope's unimpaired
-noremap [b :bprevious<CR>
-noremap ]b :bnext<CR>
-noremap [t :tabp<CR>
-noremap ]t :tabn<CR>
+" noremap [b :bprevious<CR>
+" noremap ]b :bnext<CR>
+" noremap [t :tabp<CR>
+" noremap ]t :tabn<CR>
 
 
 """""""""""""""""""""
 "		Autocommands
 """""""""""""""""""""
 
-" Disable auto commenting
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Jump to last known position in a file after opening
-:au BufReadPost *
- \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
- \ |   exe "normal! g`\""
- \ | endif
-
-" Highlight TODO, FIXME, NOTE
-autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
-autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
-
-" Sync syntax highlighting
-" kudos https://vim.fandom.com/wiki/Fix_syntax_highlighting
-autocmd BufEnter * :syntax sync fromstart
+" " Disable auto commenting
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"
+" " Jump to last known position in a file after opening
+" :au BufReadPost *
+"  \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+"  \ |   exe "normal! g`\""
+"  \ | endif
+"
+" " Highlight TODO, FIXME, NOTE
+" autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
+" autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
+"
+" " Sync syntax highlighting
+" " kudos https://vim.fandom.com/wiki/Fix_syntax_highlighting
+" autocmd BufEnter * :syntax sync fromstart
 
 
 """""""""""""""""""""
@@ -212,11 +213,11 @@ autocmd BufEnter * :syntax sync fromstart
 """""""""""""""""""""
 " TODO: Move these to their own files?
 
-" Set .Xmonad-related files to use Haskell syntax highlighting
-autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
-
-" Set JSON-like files to use json syntax highlighting
-autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
+" " Set .Xmonad-related files to use Haskell syntax highlighting
+" autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
+"
+" " Set JSON-like files to use json syntax highlighting
+" autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
 
 " Javascript / JSX
 autocmd FileType javascript,javascript.jsx let b:dispatch = 'npx jest % --colors'
@@ -264,8 +265,8 @@ let g:user_emmet_settings = {
       \}
       \}
 
-" Fugitive - auto-clean fugitive buffers
-autocmd BufReadPost fugitive://* set bufhidden=delete
+" " Fugitive - auto-clean fugitive buffers
+" autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " FZF
 nnoremap <Leader>a :Ag<CR>
@@ -345,3 +346,32 @@ let g:tagbar_autofocus = 1
 let g:tagbar_show_tag_count = 1
 let g:tagbar_wrap = 0
 nnoremap <Leader>tt :TagbarToggle<cr>
+
+" wiki
+let g:wiki_root = '~/dotfiles/meine_zettlekasten'
+let g:wiki_filetypes = ['adoc']
+let g:wiki_link_extension = '.adoc'
+" let g:wiki_cache_persistent = 0
+let g:wiki_link_target_type = 'adoc_xref_bracket'
+let g:wiki_write_on_nav = 1
+let g:wiki_mappings_use_defaults = 'none'
+let g:wiki_mappings_global = {
+      \ '<plug>(wiki-index)': '<Leader>wi',
+      \ '<plug>(wiki-link-follow)': '<Leader>wlf',
+      \ '<plug>(wiki-linkReturn)': '<Leader>wlr',
+      \ '<plug>(wiki-link-show)': '<Leader>wls',
+      \ '<Plug>(wiki-page-toc-local)': '<Leader>wtoc',
+      \ '<plug>(wiki-tag-list)': '<Leader>wtl',
+      \ '<plug>(wiki-fzf-pages)': '<Leader>wfp',
+      \ '<plug>(wiki-fzf-tags)': '<Leader>wft',
+      \ '<plug>(wiki-fzf-toc)': '<Leader>wfi'
+      \}
+" nnoremap <Leader>wi <Plug>(WikiIndex)
+" nnoremap <Leader>wlf <Plug>(WikiLinkFollow)
+" nnoremap <Leader>wlr <Plug>(WikiLinkReturn)
+" nnoremap <Leader>wls <Plug>(WikiLinkShow)
+" nnoremap <Leader>wtoc <Plug>WikiPageToc-(local)
+" nnoremap <Leader>wtl <Plug>(WikiTagList)
+" nnoremap <Leader>wfp <Plug>(WikiFzfPages)
+" nnoremap <Leader>wft <Plug>(WikiFzfTags)
+" nnoremap <Leader>wfi <Plug>(WikiFzfToc)
