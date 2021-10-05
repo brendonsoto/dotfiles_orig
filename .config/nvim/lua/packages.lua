@@ -117,3 +117,6 @@ map('n', '<Leader>tt', ':TagbarToggle<cr>', options) -- options is global -- see
 
 -- Vue
 g.vue_pre_processors = { 'scss', 'typescript' }
+
+-- Neorg
+require('neorg-setup')
