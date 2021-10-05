@@ -1,0 +1,197 @@
+== Random
+Source:
+https://docs.google.com/document/d/1Q6Dj9WAZxlfBhJSyS5on2rw3-if5cOV3oV-dQ3B0AHA/mobilebasic#h.ezu41ko1hydh
+
+* CG method = Curly Girl/Guy
+* sulfates = harsh detergents in shampoo
+** sulfates are used to wash away sillicones
+* CG method focuses on removing sulfates and sillicones
+* gist:
+** wash (conditioner-only or low lather/sulfate-free shampoo)
+** condition (lots + detangle)
+** apply products (scrunch a palm full of gel, mousse, or cream)
+** dry (plop, then air dry or diffuse)
+
+== Step 0: Reset wash
+[Quote]
+====
+Before starting CG, you must wash all the old silicones and product build-up out of your hair with a shampoo that has sulfates but no silicones.
+
+====
+
+They recommend V05 Clarifying Shampoo for the first wash
+This shampoo is for stripping away water-insoluble ingredients from hair
+You won't use it everyday, maybe once every couple of weeks to help with buildup
+
+NOTE: When using a reset wash, 'do not' do step 1.
+
+== Step 1: CO-Wash
+* CO = Conditioner only
+* conditioner replaces shampoo
+* Massage the conditioner into scalp and hair
+** keep doing so while you rinse
+** NOTE: They say "Not everyone can co-wash, particularly wavies. If this doesn't work for you, try a sulfate-free shampoo aka low-poo"
+*** I think this is what I need
+
+== Step 2: Condition and detangle
+* use a lot of conditioner
+** like a handful or more for shoulder-length + longer/thick hair
+* detangle w/ fingers or wide tooth comb while hair has conditioner
+* dont brush/comb hair when dry (makes it poofy)
+* don't use boar bristle brush
+* rinse out most 'but not all' of the conditioner
+
+== Step 3: Style
+* scrunch a large amount (handful/golfball) of gel into your hair
+** the guide mentions mousse too, but recommends gel
+
+== Step 4: Dry
+* Scrunch hair w/ a cotton t-shirt
+* plopping may work
+
+== Step 5: Scrunch
+* "scrunch out the crunch of the gel when your hair is totally dry"
+
+== Beginner routine FAQ
+=== How frequently wash?
+* same schedule, adjust as needed
+** it takes time for the hair to adjust (at least 2 weeks)
+
+=== My hair is very greasy! I'm worried about not using shampoo
+* scalp will adjust in a few weeks
+* always can do a reset wash once a week if needed
+* use low-poo (sulfate-free shampoo)
+
+=== What to do after 2 weeks
+* identify porosity
+** this is more important than curl type
+* fina  leave-in conditioner
+* try other styling products?
+* find a deep conditioner
+
+NOTE: There's a *troubleshooting* section on the wiki/doc
+
+== Troubleshooting
+Just taking a few notes from this section
+
+=== Problem: Frizz
+* frizzy = dry
+* make sure you're getting enough Moisture
+** deep conditioner
+** leave-in conditioners
+** gel << "number one frizz fighter!"
+
+== Top 10 FAQs
+=== 4. How often should I wash my hair?
+Going to just copy the text
+
+====
+Long story short: it's up to you! Some wash every 4-5 days, some do every 2-3 days, some wash every day. (Note: "wash" can mean just water, co-wash, low-poo, or regular shampoo). If you're using CG-approved shampoo or co-washing, you can wash everyday without damage.
+
+====
+
+=== 9. What is the transition period like?
+* if too greasy
+** make sure you did the reset wash
+** if you did, use a low-poo
+* if hair is dry/rough/losing curl/feels like straw
+** too much protein
+** add mor emoisture to hair
+* if hair is straight
+** not Normal
+** may over moisturized
+
+== Additional FAQ
+=== How do I apply products?
+TODO Check out the link
+
+=== How do I Dry my hair?
+TODO check out the link
+
+=== ELI5: How do I apply gel? How much do I use? When do I put it in?
+* handful of gel
+* put into hair when soaking dripping wet
+* plop w/ t-shirt
+* don't touch hair until dry
+* "scrunch out the crunch"
+
+=== What if I have dandruff? Will CG help me?
+TODO Check the link
+
+== General Info and Techniques
+=== Cleansing
+==== How often should I wash my hair?
+'On working out': rinse hair after and co-wash on those days
+Som epeople find hair benefits from getting conditioner every time its wet or else it will dry out
+They mention there's trial and error here
+
+==== On co-washing technique
+* To cowash, emulsify a little conditioner in your hands (moosh your hands together and rub them back and forth so conditioner gets all over your hands).
+* Insert your fingers into the hair, starting at your forehead, and begin to scrub your scalp with your fingertips (no nails!).
+* Move your fingers backwards over the scalp, gently rubbing and scrubbing. You might need more conditioner, so pour out a little more, emulsify again, and this time
+* insert your fingers into the hair starting at your temples. Repeat the gentle scrubbing, moving your hands up and back towards your crown.
+* Now repeat again, this time starting at your neck, and moving up the scalp.
+* By the time you're done, your entire scalp should have gotten scrubbed.
+* Now is the time to rinse - but don't just dunk your head. While rinsing, continue to rub and scrub your scalp to get all the conditioner and dirt and oils off your scalp and out of your hair.
+
+==== On Conditioning
+
+====
+Just to be clear, conditioning is a separate step after co-washing. Cowashing is about scrubbing your scalp to remove oil and dirt. Conditioning is about adding conditioner to the length of your hair to moisturize it!
+
+====
+
+==== On Squish to Condish (S2C)
+The gist is get a lot of water and conditioner in your hair and squish it altogether.
+You know you're doing it right when you hear some sort of sound, like a squelching, or rubber-duck like sound
+
+=== Porosity
+Porosity is the hair's ability to absorb and retain moisture
+Outer layer is the 'cuticle'
+Porosity is determined by how hair cuticle "opens up" in water and how well it "closes" once dry
+
+=== Scalp conditions
+All of this section is good
+
+=== On Swimming
+* get your hair wet before going into the water
+
+== Resources
+* https://www.curlsbot.com/
+** analyzes ingredients in shampoo/conditioners to see if it's curly friendly
+* http://www.isitcg.com/
+** same as above
+** NOTE: Not HTTPS
+
+=== Recommendations
+.reset wash:
+* V05 Clarifying Shampoo
+* Suave Daily Clarifying Shampoo
+* Mane and Tail Original shampoo
+
+.Co-wash:
+* TRESemme Botanique Coconut Nourish Conditioner
+* V05 conditioners
+* Suave Essentials and Naturally Derived conditioners
+* Trader Joe's Tea Tree Tingle Conditioner
+* As I Am Coconut Cowash
+
+.Low poo:
+* Shea Moisture
+** SM African Black Soap Dandruff Control Shampoo
+** SM Raw Shea Butter Moisture Retention shampoo
+* Trader Joe's Tea Tingle SHampoo
+* TRESemme Botanique and Pro Pure shampoos
+
+.Normal/Leave-in conditioner:
+* V05 conditioners
+* Suave Essentials and Naturally Derived conditioners
+* Shea Moisture
+** SM Raw Shea Butter Restorative Conditioner
+** SM African Water Mint & Gniger Detox & Refresh Hair & Scalp conditioner
+
+.Gel/Styling:
+* LA Looks extreme sport gel
+* Aussie Instant Freeze gel
+* kinky-curly curling custard
+* herbal essences totally twisted gel
