@@ -1,0 +1,129 @@
+@document.meta
+	title: graphql
+	description:
+	author: brendonsoto
+	categories:
+	created: 2021-10-08
+	version: 0.1
+@end
+
+* My stream of questions to better understand GraphQL
+ ** What /is/ GraphQL?
+    GraphQL is two things:
+    - a language for querying data
+    - a "runtime" / black box that responds to the queries using existing data sources
+    -- in other words, a centralized place for existing data sources that can respond to queries
+
+    From the site:
+    > GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.
+
+ ** Why was it made? What is is for?
+    - get only the data you ask for
+    -- I'm having difficulty seeing the difference between this and `select column from table`
+    - lumping multiple requests in one without having to make separate network requests
+    - describe endpoints as types, not requests
+    -- so no more `const respData: <TypedResponse>`???
+    - more powerful tooling
+    - no more versioning endpoints
+    - not bound to a single DB
+
+ ** How is GraphQL different from SQL?
+    Ma
+
+ ** Does this mean as long as GraphQL is used as a data layer, the sources can be ignored?
+
+* How to GraphQL
+ ** GraphQL Foundations
+  *** Basics
+      GraphQL = new API standard
+      declarative data fetching (meaning you say/declare what you want)
+      GraphQL exposes only *one* endpoint
+      This is to get around REST
+
+      REST Challenges:
+      - increased mobile usage / data required
+      - variety of frontend frameworks (not quite sure how this impacts)
+      - fast development speed + rapid feature development
+
+      History of GraphQL:
+      - used in 2012 by Fb's apps
+      - made news of it public in 2015
+      - GraphQL can be used by any technology
+      -- Non-React people were slow to adopt since Fb was so React heavy
+      - Netflix had a similar approach called Falcor
+
+  *** GraphQL is the better REST
+      REST is a strict specification
+      - buuuut, people don't necessarily adhere to it
+      using a Blog post to demonstrate differences between GraphQL and REST
+      - REST needs 3 different endpoints probably: user, posts, follower
+      - data may not always be relevant
+      -- i.e. for user, may include other data like contact info, birthday, more than just the first name
+      -- the reason why this is important is because it's more data sent across the wire which can be more expensive to mobile phones
+      To get data from GraphQL:
+      - POST request to GraphQL server
+      - body of post has a query
+      - response would just be JSON
+      -- root property is called `data` and its value, an object, has the data from the query
+
+      GraphQL uses types
+
+  *** Core Concepts
+      SDL = Schema Definition Language
+
+      A `!` after a type means that field is *required*
+      Square brackets `[]` is used to indicate a list of things
+      i.e. `[Movies]`
+
+      *query*: what the client sends to the server to say what data it wants
+      *payload*: what the server sends as a response to the query
+
+      Arguments can be used to further drill down the data to get
+      i.e. (`last:`) argument
+
+      *mutations*: how to interact with data
+      Mutations can update, create, and delete data
+
+      *subscriptions*: a means to establish a steady connection to a server for real-time events
+      subscriptions are like /streams/ of data
+
+      *schema*: contract between server and client
+      lists types
+      query, mutation, and subscription types are default
+
+  *** Big Picture (Architecture)
+      GraphQL is really just a *specification*
+      [spec source](https://facebook.github.io/graphql)
+
+      Use cases:
+      - server w/ connected database
+      -- better for greenfield
+      -- uses single web server that implements graphql
+      -- server resolves queries and constructs responses with data that it fetches from db
+      - serve to integrate existing system
+      -- better for legacy infrastructures w/ different APIs
+      -- use GraphQL to unify them and hide complexity
+      -- doesn't care about data sources
+      - hybrid approach of connected db and integrated with otherso
+
+      It can be used w/ any protocol
+      It can be used w/ any type of DB
+
+      *Resolver function*: a function responsible for fetching the data for a singular field
+      each field in a query/mutation has one resolver
+
+      *GraphQL Clients*: client doesn't need to know where the data is coming from
+      Makes it easy for front-end devs
+      Clients handle storing data
+
+
+  *** Errors
+      Errors are surfaced with a property called `errors`
+
+  *** Questions
+   **** How to normalize GraphQL data?
+
+* Resources
+  - [GraphQL Site](https://graphql.org/)
+  - [LSP tooling and more](https://github.com/graphql/graphiql)
+  - [Learning - How to GraphQL](https://www.howtographql.com/)

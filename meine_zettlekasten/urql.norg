@@ -1,0 +1,41 @@
+@document.meta
+	title: urql
+	description:
+	author: brendonsoto
+	categories:
+	created: 2021-10-11
+	version: 0.1
+@end
+
+* What is URQL
+  A GraphQL client
+
+* Jargon
+  Exchange: idk
+  - similar to /Link/ in Apollo Client
+
+* Notes on learning urql from how-to-graphql
+  [source](https://www.howtographql.com/react-urql/1-getting-started/)
+
+  *Note:* When setting up urql exchanges, the order *matters*
+  dedup first, cache, then fetch
+
+  The `@urql/exchange-graphcache` package is for *normalized caching*
+  This type of caching is what Apollo Client and Relay both use by default
+  The /default/ caching for urql is document-based
+  I'm not really sure what that means but they say its better for content-heavy sites
+
+  Queries, Mutations, and Subscriptions are exposed via *hooks*
+
+  One of the parameters you can pass to a hook is `pause: boolean`
+  (at least for `useQuery`)
+  This can be used for mandating /programmatic/ calling of the mutation
+  So if your mutation has a variable that relies on React state the `pause` property can be used to prevent the query from firing any time that variable changes
+
+
+ ** To give back
+    https://www.howtographql.com/react-urql/5-authentication/
+    remove `LoadingBoundary`
+
+    https://www.howtographql.com/react-urql/6-more-mutations-and-queries/
+    Search does not look like what's posted

@@ -1,0 +1,35 @@
+@document.meta
+  title: hub-and-spoke-topology
+  description:
+  author: brendonsoto
+  categories:
+  created: 2021-10-06
+  version: 0.1
+@end
+
+* What is hub and spoke model mean?
+  Seems like it's a /network topology/
+  Hub = center for data/info/ something central for other things to consume
+  Spokes = consumers
+  Spokes can do things with the data while the Hub simply provides it
+
+  I guess then the idea is that you'd have some network
+  And on this network would live any services and/or databases that multiple other services would need
+  I'm a bit confused on this, what does that exactly mean?
+  Is it like you have the hub provide just basic info, almost like a simple CRUD layer
+  And then the spokes would be like other services that take that data and mangle it some more?
+  Or is this a way of saying "only let service X from spoke 1 access database A in the hub"?
+  But even if that's the case, can't you set up some form of permissions using IP address tables?
+
+  Benefits include:
+  - more granular control over info streams
+  - more security (as a byproduct)
+
+ ** Sources
+    I thought the Oracle link was the most helpful
+    - [Google Cloud](https://cloud.google.com/architecture/deploy-hub-spoke-vpc-network-topology)
+    - [Microsoft](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology)
+    - [Oracle](https://docs.oracle.com/en/solutions/hub-spoke-network/index.html#GUID-8295B649-5AF9-4CBD-A85E-153AB4916532)
+
+* Other notes
+  Another name for this topology is /star/ topology

@@ -1,0 +1,59 @@
+@document.meta
+	title: event-streaming
+	description:
+	author: brendonsoto
+	categories:
+	created: 2021-10-06
+	version: 0.1
+@end
+
+* What is Event Streaming?
+  A process of relaying state changes between services in real-time
+  This is done by having a shared source of data that services consume from and produce to
+  Note the use of /consume/ and /produce/ instead of /read/ and /write/
+
+ ** What it is not
+  It is not a database
+  Event streaming platforms (ESPs) must be able to take in millions of records in a fault-tolerant way /and/ make that data readily available for other services
+
+* What is event streaming used for?
+  Data syncronization across different systems
+
+* Definitions
+  *events* = notifications of state changes
+  - have timestamps
+  - can have an expiration to let the system know they can be deleted
+  -- this is known as *TTL* = Time To Live
+  *event stream* = "unbounded" series of events
+
+* High-level picture
+  An event streaming platform takes in data from various protocols (i.e. HTTP, AMQP)
+  A storage layer saves the data
+  The storage layer also organizes the data into *topics* based on events
+  Topics are further organized into *partitions*, the smallest unit of storage
+  Data can only be /appended/
+  The data is then exposed via *consumer groups*
+
+ ** Notes on naming
+    Topics is used by Kafka
+    Some people use the term *collections* to talk about topics
+    Each platform has its own terminology
+
+    Kinesis refers to partitions as *shards*
+
+ ** A little bit of nitty gritty details
+    Usually these platforms are created by using a distributed system
+
+* Available tools
+  Big name priced tools:
+  - AWS Kinesis
+  - Azure Event Hubs
+  - IBM Event Streams
+  - Confluent Cloud
+
+  Open source tools:
+  - Apache Kafka
+  - Apache Pulsar
+
+* Sources
+  - [Medium article from Owen](https://medium.com/event-driven-utopia/anatomy-of-an-event-streaming-platform-part-1-dc58eb9b2412)
