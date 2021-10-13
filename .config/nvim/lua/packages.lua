@@ -12,54 +12,60 @@ require "paq" {
 
   "dense-analysis/ale";
   "jiangmiao/auto-pairs";
-  "rbgrouleff/bclose.vim";
+  -- "rbgrouleff/bclose.vim";
   "hrsh7th/cmp-buffer";
   "hrsh7th/cmp-nvim-lsp";
   "mattn/emmet-vim";
   "junegunn/goyo.vim";
-  "morhetz/gruvbox";
-  "neovimhaskell/haskell-vim";
-  "sheerun/html5.vim";
+  "ellisonleao/gruvbox.nvim";
+  -- "morhetz/gruvbox";
+  -- "neovimhaskell/haskell-vim";
+  -- "sheerun/html5.vim";
   -- "itchyny/lightline.vim";
+  "rktjmp/lush.nvim";
   "tmhedberg/matchit";
   "vhyrro/neorg";
   "hrsh7th/nvim-cmp";
   "neovim/nvim-lspconfig";
+  "nvim-telescope/telescope.nvim";
+  "nvim-telescope/telescope-fzy-native.nvim";
   {"nvim-treesitter/nvim-treesitter", run="TSUpdate"};
   "savq/paq-nvim";
   "nvim-lua/plenary.nvim";
   "junegunn/rainbow_parentheses.vim";
-  "francoiscabrol/ranger.vim";
+  -- "francoiscabrol/ranger.vim";
   "mtth/scratch.vim";
   "gcmt/taboo.vim";
   "preservim/tagbar";
   "tomtom/tcomment_vim";
-  "leafgarland/typescript-vim";
-  "hail2u/vim-css3-syntax";
+  -- "leafgarland/typescript-vim";
+  -- "hail2u/vim-css3-syntax";
   "easymotion/vim-easymotion";
   "tpope/vim-endwise";
   "tpope/vim-fugitive";
   "airblade/vim-gitgutter";
-  "pangloss/vim-javascript";
-  "elzr/vim-json";
+  -- "pangloss/vim-javascript";
+  -- "elzr/vim-json";
   "adelarsq/vim-matchit";
-  "tpope/vim-rails";
+  -- "tpope/vim-rails";
   "vim-ruby/vim-ruby";
   "mhinz/vim-startify";
   "tpope/vim-surround";
-  "posva/vim-vue";
+  -- "posva/vim-vue";
   {"lervag/vimtex", opt=true};
 
 }
 
 -- Ale
-g.ale_linters = {
-  cucumber = {},
-  javascript = { 'eslint', 'tsserver' },
-  typescript = { 'eslint', 'tsserver' },
-  typescriptreact = { 'eslint', 'tsserver' },
-  vue = { 'vls', 'eslint' },
-}
+-- g.ale_linters = {
+--   cucumber = {},
+--   javascript = { 'eslint', 'tsserver' },
+--   typescript = { 'eslint', 'tsserver' },
+--   typescriptreact = { 'eslint', 'tsserver' },
+--   vue = { 'vls', 'eslint' },
+-- }
+g.ale_linters_explicit = 1
+g.ale_disable_lsp = 1
 g.ale_fixers = {
   ['*'] = { 'remove_trailing_lines', 'trim_whitespace' },
   javascript = { 'prettier' },
@@ -78,14 +84,14 @@ g.user_emmet_settings = {
 }
 
 -- Javascript
-g.javascript_plugin_jsdoc = 1
-g.javascript_plugin_flow = 1
+-- g.javascript_plugin_jsdoc = 1
+-- g.javascript_plugin_flow = 1
 
 -- JSX
-g.jsx_ext_required = 0
+-- g.jsx_ext_required = 0
 
 -- Pangloss Javascript
-g.javascript_plugin_jsdoc = 1
+-- g.javascript_plugin_jsdoc = 1
 
 -- Rainbow Parenthesis
 g['rainbow#pairs'] = {
@@ -95,9 +101,9 @@ g['rainbow#pairs'] = {
 }
 
 -- Ranger
-g.bclose_no_plugin_maps = 1 -- undo bclose <Space>bd mapping
-g.ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-g.ranger_replace_netrw = 1
+-- g.bclose_no_plugin_maps = 1 -- undo bclose <Space>bd mapping
+-- g.ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+-- g.ranger_replace_netrw = 1
 
 -- Startify
 g.startify_bookmarks = {
@@ -119,4 +125,8 @@ map('n', '<Leader>tt', ':TagbarToggle<cr>', options) -- options is global -- see
 g.vue_pre_processors = { 'scss', 'typescript' }
 
 -- Neorg
-require('neorg-setup')
+require('setup.cmp')
+require('setup.lsp')
+require('setup.neorg')
+require('setup.telescope')
+require('setup.treesitter')

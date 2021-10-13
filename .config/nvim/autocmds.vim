@@ -10,8 +10,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
  \ | endif
 
 " Highlight TODO, FIXME, NOTE
-autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
-autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
+" autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
+" autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
 
 " Sync syntax highlighting
 " kudos https://vim.fandom.com/wiki/Fix_syntax_highlighting
