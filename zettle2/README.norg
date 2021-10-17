@@ -1,0 +1,24 @@
+@document.meta
+  title: README
+  description:
+  author: me
+  categories: index readme
+  created: 2021-10-17
+  version: 0.1
+@end
+
+This directory is me experimenting with a different approach to zettlekasten
+My first iteration I was still focused on naming files
+I would search by file names too
+This was problematic when I had multiple files on the same topic but differing in some way (i.e. types in programming languages)
+I resorted to a [BEM](https://www.getbem.com)\-like naming convention; for example `haskell--data-types`
+This also became problematic if I had to make a file expanding on said topic for a more focused note; `haskell--data-types__monad`
+Just recently I remembered the original system just used numbers to link to index cards
+I'm going to try that
+Search is a concern for me
+Since there'll be tags I can search by tags, but need a way to get more information
+Hence, the `categories` metadata property
+However, I'm not super stoked about this
+Well, at least on first glance, not much
+I'm concerned I'd have to create some utility to gather all of them and look them up in some sort of Telescope/FZF style
+But that can be nice
