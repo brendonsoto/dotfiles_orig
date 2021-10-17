@@ -25,6 +25,7 @@ require "paq" {
   "rktjmp/lush.nvim";
   "tmhedberg/matchit";
   "vhyrro/neorg";
+  "luukvbaal/nnn.nvim";
   "hrsh7th/nvim-cmp";
   "neovim/nvim-lspconfig";
   "nvim-telescope/telescope.nvim";
@@ -128,5 +129,6 @@ g.vue_pre_processors = { 'scss', 'typescript' }
 require('setup.cmp')
 require('setup.lsp')
 require('setup.neorg')
+require('setup.nnn')
 require('setup.telescope')
 require('setup.treesitter')
