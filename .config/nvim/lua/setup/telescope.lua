@@ -19,13 +19,13 @@ local new_maker = function(filepath, bufnr, opts)
   end)
 end
 
-telescope.load_extension('fzy_native')
-
 telescope.setup {
   defaults = {
     buffer_previewer_maker = new_maker,
-  }
+  },
 }
+
+telescope.load_extension('fzy_native')
 
 map('n', '<leader>ff', '<cmd>Telescope find_files hidden=true<cr>', options)
 map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', options)
