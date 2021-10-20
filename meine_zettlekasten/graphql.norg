@@ -156,6 +156,87 @@
       Queries can /also/ use `args`
       Like if you're querying for a specific thing
 
+* Serving over HTTP
+  This is from the [GraphQL docs](https://graphql.org/learn/serving-over-http/)
+
+  - only need one endpoint `/graphql`
+  - GraphQL should be the last part of the web pipeline (after any interceptors)
+  - Only need GET and POST commands
+  -- GET: `GET https://www.mysite.com/graphql?query={users{me{name}}}`
+  -- POST: See [here](https://graphql.org/learn/serving-over-http/#post-request)
+  --- It's a little more complicated as there are headers and other cases to think about
+  -- Response should be JSON with the following structure: `{ data: [...], errors: [...] }`
+
+* From Apollo Full-Stack-Tutorial
+  [source](https://www.apollographql.com/docs/tutorial/schema/)
+
+ ** Build Schema
+    *Scalar* types are primitives
+    GraphQL have a few built in
+    You can make your own [custom scalar types](https://www.apollographql.com/docs/apollo-server/schema/scalars-enums/)
+
+    Enums are a thing!
+
+    The `Query` type defines what clients have access to
+
+    The Apollo team recommends special object types just for mutations
+
+ ** Connect to data sources
+    Apollo provides `DataSource` classes to communicate w/ REST APIs and DBs
+    The `RESTDataSource` class has caching built in
+    The `DataSource` class does not, it needs to be added
+    In a `DataSource` class, `this.context` is an object shared w/ /all resolvers/
+
+ ** Write query resolvers
+    Resolver function signature:
+    @code typescript
+    fieldname: (
+      parent, // The return value of the resolver for the parent field
+      args, // GraphQL arguments for the field
+      context, // A namespace to share per-operation state (i.e. auth, data sources)
+      info, // don't worry about it -- it's info "about the execution state of the operation"
+    ) => data
+    @end
+
+ ** Fetch data with queries
+    *fragments* allow you to break up GraphQL queries into smaller parts so you can reuse across a codebase
+    You can use the /spread/ operator to include them
+
+ ** Finished
+    Having finished the course, how do I feel?
+    What have I learned?
+    Have I found out how a mutation is realized in a database?
+    Yes!
+
+    The overall flow (*NOTE:* This is specific to Apollo's toolchain!):
+    - UI sends a /mutation/ via POST to the server's `/graphql` endpoint
+    -- there are React hooks that take care of the request details
+    - The server receives the mutation
+    - The server looks for a /resolver/ for the given mutation
+    - To save to a /database/ the third param can be referenced to get the `dataSources` property
+    -- This `dataSources` property is an interface to any database or external API that may be used by GraphQL (the runtime)
+    -- `dataSources` are defined by extending `DataSource` classes provided by Apollo
+    -- These classes should have methods for interfacing with the database
+    - To save to another /REST API/ the third param can also be used
+    -- For an external API, the `RESTDataSource` class can be extended
+    --- NOTE: I only know how to GET data from the tutorial, not POST, but I'm guessing it's similar
+    It's also recommended to have types just for mutation returns to prevent making breaking changes
+
+    I also learned about Apollo Client
+    It's interface is very similar to urql
+    I still like urql more though
+    Seems slightly simpler
+    And doesn't include /everything/
+    I'm not a fan of Apollo's local state management solution
+    I get it
+    You get to manage things still in GraphQL SDL
+    But it's still different from using resolvers
+
+* Best Practices
+  Keep resolvers "thin" (small)
+  Helps w/ safely refactoring backend logic w/o breaking API
+  [source](https://www.apollographql.com/docs/tutorial/resolvers/#define-top-level-resolvers)(Apollo Full-Stack-Tutorial)
+
 * Resources
   - [GraphQL Site](https://graphql.org/)
   - [LSP tooling and more](https://github.com/graphql/graphiql)
