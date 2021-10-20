@@ -18,10 +18,10 @@ if (empty($TMUX))
 endif
 
 " Gruvbox specifics
-let g:gruvbox_italic=1
-" modified search based off of gruvbox for readability
-
-hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
-
-" colorscheme gruvbox
-autocmd vimenter * ++nested colorscheme gruvbox
+" let g:gruvbox_italic=1
+" " modified search based off of gruvbox for readability
+"
+" hi Search cterm=inverse ctermfg=143 ctermbg=234 gui=bold guifg=#1d2021 guibg=#b8bb26
+"
+" " colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox

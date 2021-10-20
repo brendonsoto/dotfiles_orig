@@ -1,6 +1,7 @@
 local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
 local env = vim.env
 local g = vim.g
+local o = vim.o
 local set = vim.opt -- to set options
 
 vim.api.nvim_exec([[
@@ -44,3 +45,6 @@ set.termguicolors = true
 set.undofile = true
 set.undolevels = 100
 set.undoreload = 1000
+
+o.background = "light"
+cmd([[colorscheme gruvbox]])
