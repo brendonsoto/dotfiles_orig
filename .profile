@@ -31,6 +31,14 @@ then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# NNN
+if command -v nnn &>/dev/null
+then
+  export NNN_PLUG="t:preview-tui;l:!git log"
+  export NNN_FIFO="/tmp/nnn.fifo"
+  alias nnn="nnn -H -E -Pt"
+fi
+
 
 ##########################################
 #             Path Addendums
