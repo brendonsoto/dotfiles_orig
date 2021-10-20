@@ -1,0 +1,125 @@
+@document.meta
+  title: graphql-federation
+  description:
+  author: brendonsoto
+  categories:
+  created: 2021-10-19
+  version: 0.1
+@end
+
+* What is a GraphQL federation?
+
+* From Apollo Docs
+  [source](https://www.apollographql.com/docs/federation/)
+
+  Side: On Apollo's site, they have Apollo Server and Apollo Federation as two distinct sections
+
+  A *federation* is something that can break out a graph into pieces/subgraphs, each with its own service.
+
+ ** Architecture
+    A fedration consists of:
+    - multiple *subraphs*
+    -- (individual query/graph pieces)
+    - a *supergraph schema*
+    -- (made up of the schemas of the subgraphs)
+    - a *gateway* to expose the supgraph schema
+
+ ** Design Principles
+    I really like their [separation of concerns](https://www.apollographql.com/docs/federation/#concern-based-separation) bit
+
+    Normally, I'd think of realizing relationships between different data models by having a property whose values would be of a different type
+    For example:
+
+    @code graphql
+    type Artist {
+      name: String
+      albums: [Album]
+    }
+
+    type Album {
+      name: String
+      year: Number
+      songs: [Song]
+    }
+
+    type Song {
+      name: String
+      length: number
+    }
+    @end
+
+    I would do this because, to me, the links are explicit
+    You can see how one structure relates to another
+
+    The way Apollo recommends would be through extending other types
+    Like so:
+
+    @code graphql
+    # NOTE: Extended types are pseudo-code-y
+    # Artist graph
+    type Artist {
+      name: String
+    }
+
+    # Album graph
+    type Album {
+      name: String
+      year: Number
+    }
+
+    extend type Artist {
+      albums: [Album]
+    }
+
+    # Song graph
+    type Song {
+      name: String
+      length: Number
+      album: Album
+    }
+
+    extend type Album {
+      songs: [Song]
+    }
+    @end
+
+    For the `album` inclusion in the `Song` type, see below in Federated Schemas
+
+ ** Federated Schemas
+    A federated graph is made up of:
+    - subgraph schemas
+    - supergraph schemas
+    -- this has the subgraphs plus some routing mechanisms for what subgraph to use for what query
+    - API schema
+    -- supergraph minus the routing
+
+  *** Subgraphs
+      Their example graphs showed the ability to:
+      - reference a type from another graph (i.e. above, `album` in `Songs`)
+      - extending types from other graphs
+      -- the type being extended *needs* a `@key` directive
+      --- For example:
+          @code graphql
+              # Artist
+              type Artist @key(fields: "name") {
+                name: String!
+              }
+
+              # In Album graph
+              extend type Artist @key(fields: "name") {
+                name: String!
+                albums: [Album]
+              }
+          @end
+
+  *** Supergraph Schema
+      *composition* is the buzzword for creating the supergraph
+      `rover` is a CLI tool that can handle this
+      The result is a schema w/ directives for mapping subgraphs to their services
+
+  *** API Schema
+      The API schema is created /from/ the supergraph schema
+      It's a `.graphql` file like anything else
+
+* From LogRocket
+  [source](https://blog.logrocket.com/the-what-when-why-and-how-of-federated-graphql/)

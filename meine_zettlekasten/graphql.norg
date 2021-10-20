@@ -123,6 +123,39 @@
   *** Questions
    **** How to normalize GraphQL data?
 
+ ** GraphQL and Node
+  *** A simple query
+      Resolvers can be /functions/ that take /four/ arguments
+      - The first is `parent` or `root`
+      -- this refers to the parent data structure holding the current data (i.e. querying from an array or nested object)
+      - Others to be revealed in later chapters
+      If the query is simple (like simple getter functions) you can omit the resolver
+
+  *** A simple mutation
+      Writing mutations follows a similar pattern to Queries
+      - write your mutation
+      - write a resolver for it
+
+      Mutations look like:
+      @code graphql
+      type Mutations {
+        addThing(desc: String!): Thing
+      }
+      @end
+
+      And the corresponding resolvers:
+      @code javascript
+      const resolvers = {
+        ...,
+        Mutation: {
+          addThing: (parent, args) => {...}
+        }
+      }
+      @end
+
+      Queries can /also/ use `args`
+      Like if you're querying for a specific thing
+
 * Resources
   - [GraphQL Site](https://graphql.org/)
   - [LSP tooling and more](https://github.com/graphql/graphiql)

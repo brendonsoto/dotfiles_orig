@@ -1,0 +1,7 @@
+= Postgres Logs
+
+If using MacOS you can find where the logs live by:
+- run `brew services` to find the plist file
+- open the plist file
+- look for something around the lines of `StandardErrorPath`
+- open the file listed there
