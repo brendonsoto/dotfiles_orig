@@ -3,8 +3,12 @@ local map = vim.api.nvim_set_keymap
 local nnn = require("nnn")
 
 nnn.setup({
+  explorer = {
+    cmd = "nnn -Pt -H -E -o",
+    session = "local",
+  },
   picker = {
-    cmd = "tmux new-session -c \"$PWD\" nnn -Pt -H -E",
+    cmd = "tmux new-session -c \"$PWD\" nnn -Pt -H -E -o",
     style = { border = "rounded" },
     session = "local",
   },

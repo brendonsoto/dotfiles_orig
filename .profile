@@ -37,6 +37,7 @@ then
   export NNN_PLUG="t:preview-tui;l:!git log"
   export NNN_FIFO="/tmp/nnn.fifo"
   alias nnn="nnn -H -E -Pt"
+  alias ls="nnn -d"
 fi
 
 
