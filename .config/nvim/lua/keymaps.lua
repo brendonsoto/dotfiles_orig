@@ -38,3 +38,7 @@ map('n', '<leader>/', ':nohl<cr>', options)
 
 -- Easy search for visually selected text
 map('v', '//', 'y/<c-r>"<cr>', options)
+
+-- I mix up different ways to exit insert modes so I'm mapping them all to the same thing
+map('i', '<c-e>', '<c-[>', {})
+map('i', '<c-c>', '<c-[>', {})

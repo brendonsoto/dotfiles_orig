@@ -1,4 +1,5 @@
 local cmp = require'cmp'
+local map = vim.api.nvim_set_keymap
 
 cmp.setup({
   snippet = {
@@ -16,9 +17,14 @@ cmp.setup({
   mapping = {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.close(),
-    -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-Space>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true
+    }),
+    ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+    ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+    ['<Down>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+    ['<Up>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
   },
   sources = {
     { name = 'nvim_lsp' },
@@ -38,6 +44,8 @@ cmp.setup({
     { name = 'buffer' },
   }
 })
+
+-- map('i', '<c-e>', cmp.mapping.close(), {})
 
 -- Setup lspconfig.
 -- require('lspconfig')[%YOUR_LSP_SERVER%].setup {

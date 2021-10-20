@@ -81,9 +81,7 @@ local on_attach = function(client, bufnr)
 
 end
 
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'vuels' }
 
-nvim_lsp['vuels'].setup { on_attach = on_attach, init_options = vuels_setup.init_options }
-nvim_lsp['tsserver'].setup { on_attach = on_attach, filetypes = tsserver_filetypes }
+nvim_lsp.vuels.setup { on_attach = on_attach, init_options = vuels_setup.init_options }
+nvim_lsp.tsserver.setup { on_attach = on_attach, filetypes = tsserver_filetypes }
+nvim_lsp.graphql.setup {}

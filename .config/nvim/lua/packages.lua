@@ -12,7 +12,6 @@ require "paq" {
 
   "dense-analysis/ale";
   "jiangmiao/auto-pairs";
-  -- "rbgrouleff/bclose.vim";
   "hrsh7th/cmp-buffer";
   "hrsh7th/cmp-nvim-lsp";
   "mattn/emmet-vim";
@@ -34,7 +33,6 @@ require "paq" {
   "savq/paq-nvim";
   "nvim-lua/plenary.nvim";
   "junegunn/rainbow_parentheses.vim";
-  -- "francoiscabrol/ranger.vim";
   "mtth/scratch.vim";
   "gcmt/taboo.vim";
   "preservim/tagbar";
