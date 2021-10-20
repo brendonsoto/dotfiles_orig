@@ -14,6 +14,7 @@ require "paq" {
   "jiangmiao/auto-pairs";
   "hrsh7th/cmp-buffer";
   "hrsh7th/cmp-nvim-lsp";
+  "numToStr/Comment.nvim";
   "mattn/emmet-vim";
   "junegunn/goyo.vim";
   "ellisonleao/gruvbox.nvim";
@@ -36,7 +37,7 @@ require "paq" {
   "mtth/scratch.vim";
   "gcmt/taboo.vim";
   "preservim/tagbar";
-  "tomtom/tcomment_vim";
+  -- "tomtom/tcomment_vim";
   -- "leafgarland/typescript-vim";
   -- "hail2u/vim-css3-syntax";
   "easymotion/vim-easymotion";
@@ -124,6 +125,7 @@ map('n', '<Leader>tt', ':TagbarToggle<cr>', options) -- options is global -- see
 g.vue_pre_processors = { 'scss', 'typescript' }
 
 -- Neorg
+require('Comment').setup()
 require('setup.cmp')
 require('setup.lsp')
 require('setup.neorg')
