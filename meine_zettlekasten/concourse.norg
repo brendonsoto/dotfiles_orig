@@ -1,0 +1,23 @@
+@document.meta
+  title: concourse
+  description: From the Stark and Wayne tutorial
+  author: brendonsoto
+  categories:
+  created: 2021-10-22
+  version: 0.1
+@end
+
+[source](https://concoursetutorial.com/)
+
+* Intro
+  `fly` is the command line interface for working w/ Concourse
+  Concourse APIs are saved to `~/.flyrc`
+  Seems like docker is used to start and end Concourse
+
+* Hello World
+  Concourse is for running tasks through the command line or from pipeline jobs
+
+  Stopping tutorial here because it's not working for some reason on my macbook
+
+* Questions
+ ** What is a `Concourse`?
