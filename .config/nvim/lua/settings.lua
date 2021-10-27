@@ -29,7 +29,6 @@ set.modeline = false
 set.mouse = "a"
 set.number = true
 set.path = "$PWD/**"
-set.relativenumber = true
 set.scrolloff = 4
 set.shiftround = true
 set.shiftwidth = 2
@@ -46,5 +45,5 @@ set.undofile = true
 set.undolevels = 100
 set.undoreload = 1000
 
-o.background = "light"
+o.background = "dark"
 cmd([[colorscheme gruvbox]])

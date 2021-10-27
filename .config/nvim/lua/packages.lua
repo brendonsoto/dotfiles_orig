@@ -22,10 +22,10 @@ require "paq" {
   -- "neovimhaskell/haskell-vim";
   -- "sheerun/html5.vim";
   -- "itchyny/lightline.vim";
+  "is0n/fm-nvim";
   "rktjmp/lush.nvim";
   "tmhedberg/matchit";
   "vhyrro/neorg";
-  "luukvbaal/nnn.nvim";
   "hrsh7th/nvim-cmp";
   "neovim/nvim-lspconfig";
   "nvim-telescope/telescope.nvim";
@@ -57,13 +57,13 @@ require "paq" {
 }
 
 -- Ale
--- g.ale_linters = {
---   cucumber = {},
---   javascript = { 'eslint', 'tsserver' },
---   typescript = { 'eslint', 'tsserver' },
---   typescriptreact = { 'eslint', 'tsserver' },
---   vue = { 'vls', 'eslint' },
--- }
+g.ale_linters = {
+  cucumber = {},
+  javascript = { 'eslint' },
+  typescript = { 'eslint' },
+  typescriptreact = { 'eslint' },
+  vue = { 'vls', 'eslint' },
+}
 g.ale_linters_explicit = 1
 g.ale_disable_lsp = 1
 g.ale_fixers = {
@@ -100,11 +100,6 @@ g['rainbow#pairs'] = {
   {'{', '}'}
 }
 
--- Ranger
--- g.bclose_no_plugin_maps = 1 -- undo bclose <Space>bd mapping
--- g.ranger_command_override = 'ranger --cmd "set show_hidden=true"'
--- g.ranger_replace_netrw = 1
-
 -- Startify
 g.startify_bookmarks = {
   {w = '~/vimwiki/index.md'},
@@ -127,8 +122,8 @@ g.vue_pre_processors = { 'scss', 'typescript' }
 -- Neorg
 require('Comment').setup()
 require('setup.cmp')
+require('setup.lf')
 require('setup.lsp')
 require('setup.neorg')
-require('setup.nnn')
 require('setup.telescope')
 require('setup.treesitter')

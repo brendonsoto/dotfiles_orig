@@ -3,6 +3,7 @@ local map = vim.api.nvim_set_keymap
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
 local previewers = require('telescope.previewers')
+local utils = require('telescope.utils')
 
 -- Taken from the Config recipes
 local new_maker = function(filepath, bufnr, opts)
@@ -23,6 +24,13 @@ telescope.setup {
   defaults = {
     buffer_previewer_maker = new_maker,
   },
+  pickers = {
+    file_browser = {
+      cwd = utils.buffer_dir(),
+      depth = 2,
+      hidden = true
+    }
+  },
 }
 
 telescope.load_extension('fzy_native')
@@ -31,4 +39,3 @@ map('n', '<leader>ff', '<cmd>Telescope find_files hidden=true<cr>', options)
 map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', options)
 map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', options)
 map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', options)
-map('n', '<leader>fB', '<cmd>Telescope file_browser hidden=true<cr>', options)
