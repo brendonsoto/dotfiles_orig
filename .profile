@@ -31,13 +31,11 @@ then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-# NNN
-if command -v nnn &>/dev/null
+# LF
+if command -v lf &>/dev/null
 then
-  export NNN_PLUG="t:preview-tui;l:!git log"
-  export NNN_FIFO="/tmp/nnn.fifo"
-  alias nnn="nnn -H -E -Pt"
-  alias ls="nnn -d"
+  # For what the keys mean, check out https://github.com/gokcehan/lf/blob/aebff483a79edbde020a63816acbceb3278ed3e6/icons.go#L79
+  export LF_ICONS="ln=:di=:fi=:ex=:*.html=:*.js=:*.jsx=:*.ts=:*.tsx=:*.json=ﬥ:*.rb=:*.hs=:*.norg=:*.vim=:*.vimrc:*.lua=:*.*rc=:Dockerfile=:"
 fi
 
 
