@@ -1,9 +1,8 @@
 local wk = require("which-key")
 
-
 wk.setup {}
 
--- NON PLUGINS ==========
+
 wk.register({
   ["<leader>"] = {
     name = 'Non-Plugin-Leader stuff ',
@@ -25,8 +24,12 @@ wk.register({
 
     -- Misc
     ['/'] = { ':nohl<cr>', 'Undo highlighting' },
+
+    -- Tagbar
+    t = { ':TagbarToggle<cr>', 'Tagbar toggle' }
   }
 })
+
 
 wk.register({
   name = 'normal mode stuff',
@@ -40,34 +43,19 @@ wk.register({
     t = { ':tab split<cr>', 'Open current pane into tab' },
   },
 
-  -- From T-Pope's Unimpaired
+  -- Inspired by T-Pope's Unimpaired
   ['['] = {
+    a = { ':ALEPreviousWrap<cr>', 'ALE Previous wrap' },
     b = { ':bprev<cr>', 'Previous buffer' },
     t = { ':tabp<cr>', 'Previous tab' },
   },
   [']'] = {
+    a = { ':ALENextWrap<cr>', 'ALE Next wrap' },
     b = { ':bnext<cr>', 'Next buffer' },
     t = { ':tabp<cr>', 'Next tab' },
   },
-})
 
-wk.register({
-  name = 'insert mode stuff',
-  ['<c-'] = {
-    ['-e>'] = { '<c-[>', 'Exit insert mode' },
-    ['-c>'] = { '<c-[>', 'Exit insert mode' },
-  },
-}, { mode = 'i' })
-
-wk.register({
-  name = 'visual mode stuff',
-  ['//'] = { 'y/<c-r>"<cr>', 'Search for visual selection' },
-}, { mode = 'v' })
-
-
--- PLUGINS ==========
-wk.register({
-  name = 'find stuff',
+  -- Find stuff
   f = {
     -- fm-nvim
     m = { ':Lf %:p:h<cr>', 'File browser (using lf)' },
@@ -77,5 +65,20 @@ wk.register({
     g = { '<cmd>Telescope live_grep<cr>', 'Find files' },
     b = { '<cmd>Telescope buffers<cr>', 'Find files' },
     h = { '<cmd>Telescope help_tags<cr>', 'Find files' },
-  }
+  },
 })
+
+
+wk.register({
+  name = 'insert mode stuff',
+  ['<c-'] = {
+    ['-e>'] = { '<c-[>', 'Exit insert mode' },
+    ['-c>'] = { '<c-[>', 'Exit insert mode' },
+  },
+}, { mode = 'i' })
+
+
+wk.register({
+  name = 'visual mode stuff',
+  ['//'] = { 'y/<c-r>"<cr>', 'Search for visual selection' },
+}, { mode = 'v' })

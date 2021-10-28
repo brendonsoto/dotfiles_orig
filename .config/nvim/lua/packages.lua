@@ -1,6 +1,5 @@
 local fn = vim.fn
 local g = vim.g
-local map = vim.api.nvim_set_keymap
 
 local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
 
@@ -77,8 +76,6 @@ g.ale_fixers = {
   elixir = { 'mix_format' }
 }
 g.ale_fix_on_save = 1
-map('n', '[a', ':ALEPreviousWrap<cr>', {})
-map('n', ']a', ':ALENextWrap<cr>', {})
 
 -- Emmet
 g.user_emmet_settings = {
@@ -119,7 +116,6 @@ g.tagbar_width = math.max(35, fn.winwidth(0) / 5)
 g.tagbar_autofocus = 1
 g.tagbar_show_tag_count = 1
 g.tagbar_wrap = 0
-map('n', '<Leader>tt', ':TagbarToggle<cr>', {})
 
 -- Vue
 g.vue_pre_processors = { 'scss', 'typescript' }
@@ -130,7 +126,6 @@ require('setup.cmp')
 require('setup.lf')
 require('setup.lsp')
 require('setup.neorg')
--- require('setup.nest') -- Keymaps! TODO: Rename file
 require('setup.telescope')
 require('setup.treesitter')
-require('setup.which-key')
+require('setup.which-key') -- Keymaps here!
