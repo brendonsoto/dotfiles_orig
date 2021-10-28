@@ -29,4 +29,4 @@ require('fm-nvim').setup {
   }
 }
 
-map('n', '<leader>lf', ':Lf %:p:h<cr>', options)
+-- map('n', '<leader>lf', ':Lf %:p:h<cr>', {})

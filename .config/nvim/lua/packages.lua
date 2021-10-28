@@ -25,6 +25,7 @@ require "paq" {
   "is0n/fm-nvim";
   "rktjmp/lush.nvim";
   "tmhedberg/matchit";
+  -- "LionC/nest.nvim";
   "vhyrro/neorg";
   "hrsh7th/nvim-cmp";
   "neovim/nvim-lspconfig";
@@ -53,6 +54,7 @@ require "paq" {
   "tpope/vim-surround";
   -- "posva/vim-vue";
   {"lervag/vimtex", opt=true};
+  "folke/which-key.nvim";
 
 }
 
@@ -75,13 +77,16 @@ g.ale_fixers = {
   elixir = { 'mix_format' }
 }
 g.ale_fix_on_save = 1
-map('n', '[a', ':ALEPreviousWrap<cr>', options)
-map('n', ']a', ':ALENextWrap<cr>', options)
+map('n', '[a', ':ALEPreviousWrap<cr>', {})
+map('n', ']a', ':ALENextWrap<cr>', {})
 
 -- Emmet
 g.user_emmet_settings = {
   ['javascript.jsx'] = { extends = 'jsx' }
 }
+
+-- GitGutter
+g.gitgutter_map_keys = 0
 
 -- Javascript
 -- g.javascript_plugin_jsdoc = 1
@@ -114,7 +119,7 @@ g.tagbar_width = math.max(35, fn.winwidth(0) / 5)
 g.tagbar_autofocus = 1
 g.tagbar_show_tag_count = 1
 g.tagbar_wrap = 0
-map('n', '<Leader>tt', ':TagbarToggle<cr>', options) -- options is global -- see keymaps.lua
+map('n', '<Leader>tt', ':TagbarToggle<cr>', {})
 
 -- Vue
 g.vue_pre_processors = { 'scss', 'typescript' }
@@ -125,5 +130,7 @@ require('setup.cmp')
 require('setup.lf')
 require('setup.lsp')
 require('setup.neorg')
+-- require('setup.nest') -- Keymaps! TODO: Rename file
 require('setup.telescope')
 require('setup.treesitter')
+require('setup.which-key')

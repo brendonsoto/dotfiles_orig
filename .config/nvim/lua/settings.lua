@@ -4,6 +4,8 @@ local g = vim.g
 local o = vim.o
 local set = vim.opt -- to set options
 
+g.mapleader = ' '
+
 vim.api.nvim_exec([[
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 ]], false)
@@ -41,9 +43,10 @@ set.splitright = true
 set.swapfile = false
 set.tabstop = 2
 set.termguicolors = true
+set.timeoutlen = 500
 set.undofile = true
 set.undolevels = 100
 set.undoreload = 1000
 
-o.background = "dark"
+o.background = "light"
 cmd([[colorscheme gruvbox]])

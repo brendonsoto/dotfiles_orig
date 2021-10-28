@@ -35,7 +35,7 @@ telescope.setup {
 
 telescope.load_extension('fzy_native')
 
-map('n', '<leader>ff', '<cmd>Telescope find_files hidden=true<cr>', options)
-map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', options)
-map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', options)
-map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', options)
+-- map('n', '<leader>ff', '<cmd>Telescope find_files hidden=true<cr>', options)
+-- map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', options)
+-- map('n', '<leader>fb', '<cmd>Telescope buffers<cr>', options)
+-- map('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', options)
