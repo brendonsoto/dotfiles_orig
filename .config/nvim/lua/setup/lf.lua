@@ -28,5 +28,3 @@ require('fm-nvim').setup {
     edit       = "<C-e>"
   }
 }
-
--- map('n', '<leader>lf', ':Lf %:p:h<cr>', {})
