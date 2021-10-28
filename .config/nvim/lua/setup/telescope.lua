@@ -25,10 +25,9 @@ telescope.setup {
     buffer_previewer_maker = new_maker,
   },
   pickers = {
-    file_browser = {
-      cwd = utils.buffer_dir(),
-      depth = 2,
-      hidden = true
+    find_files = {
+      find_command = { 'rg', '--ignore', '--hidden', '--files', '-g', '!.git/*' },
+      follow = true,
     }
   },
 }
