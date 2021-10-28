@@ -48,5 +48,11 @@ set.undofile = true
 set.undolevels = 100
 set.undoreload = 1000
 
-o.background = "light"
+-- Set background depending on time of day
+local current_hour = tonumber(os.date("%H", os.time()))
+local starting_light_hour = 8
+local starting_dark_hour = 12 + 6 -- to use 24 hours
+local is_day_time = starting_light_hour < current_hour and current_hour < starting_dark_hour
+
+o.background = is_day_time and "light "or "dark"
 cmd([[colorscheme gruvbox]])
