@@ -26,8 +26,29 @@ wk.register({
     ['/'] = { ':nohl<cr>', 'Undo highlighting' },
 
     -- Tagbar
-    t = { ':TagbarToggle<cr>', 'Tagbar toggle' }
-  }
+    -- t = { ':TagbarToggle<cr>', 'Tagbar toggle' },
+
+    -- Find stuff
+    f = {
+      -- fm-nvim
+      m = { ':Lf %:p:h<cr>', 'File browser (using lf)' },
+
+      -- telescope
+      f = { '<cmd>Telescope find_files<cr>', 'Find files' },
+      g = { '<cmd>Telescope live_grep<cr>', 'Live grep' },
+      b = { '<cmd>Telescope buffers<cr>', 'Find Buffer' },
+      h = { '<cmd>Telescope help_tags<cr>', 'Find help tag' },
+      ['ts'] = { '<cmd>Telescope treesitter<cr>', 'Telescope Treesitter?' },
+    },
+
+    -- Git stuff
+    g = {
+      b = { '<cmd>Telescope git_branches<cr>', 'Git branches' },
+      c = {
+        b = { '<cmd>Telescope git_bcommits<cr>', 'Git commits for buffer' },
+      },
+    },
+  },
 })
 
 
@@ -53,18 +74,6 @@ wk.register({
     a = { ':ALENextWrap<cr>', 'ALE Next wrap' },
     b = { ':bnext<cr>', 'Next buffer' },
     t = { ':tabp<cr>', 'Next tab' },
-  },
-
-  -- Find stuff
-  f = {
-    -- fm-nvim
-    m = { ':Lf %:p:h<cr>', 'File browser (using lf)' },
-
-    -- telescope
-    f = { '<cmd>Telescope find_files hidden=true<cr>', 'Find files' },
-    g = { '<cmd>Telescope live_grep<cr>', 'Find files' },
-    b = { '<cmd>Telescope buffers<cr>', 'Find files' },
-    h = { '<cmd>Telescope help_tags<cr>', 'Find files' },
   },
 })
 
