@@ -40,7 +40,7 @@ echo "Finished creating ~/.alacritty.yml !"
 # Toggle macOS dark mode
 if [[ `uname` == "Darwin" ]]; then
   echo "Toggling dark mode..."
-  if ([ $current_hour -gt $starting_day_hour ]) && ([ $current_hour -lt $end_day_hour ]); then
+  if ([ $current_hour -ge $starting_day_hour ]) && ([ $current_hour -le $end_day_hour ]); then
     echo "...setting dark mode: OFF"
     osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false"
   else
