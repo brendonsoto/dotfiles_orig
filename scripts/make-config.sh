@@ -3,21 +3,22 @@
 current_hour=$(date +%H)
 starting_day_hour=9
 end_day_hour=18 # 12 + 6 for 24 hour clock
-files_to_concat=("$0:a:h/base.yml")
+alacritty_dir="$0:a:h/../alacritty"
+files_to_concat=("$alacritty_dir/base.yml")
 
 # Add colorscheme for time of day
 # NOTE: How can I make this a higher order function?
 if ([ $current_hour -gt $starting_day_hour ]) && ([ $current_hour -lt $end_day_hour ]); then
-  files_to_concat+=("$0:a:h/gruvbox-light.yml")
+  files_to_concat+=("$alacritty_dir/gruvbox-light.yml")
 else
-  files_to_concat+=("$0:a:h/gruvbox-dark.yml")
+  files_to_concat+=("$alacritty_dir/gruvbox-dark.yml")
 fi
 
 # Add any OS-specific configs + keybindings
 if [[ `uname` == "Darwin" ]]; then
-  files_to_concat+=("$0:a:h/macos.yml")
+  files_to_concat+=("$alacritty_dir/macos.yml")
 else
-  files_to_concat+=("$0:a:h/linux.yml")
+  files_to_concat+=("$alacritty_dir/linux.yml")
 fi
 
 # Toggle macOS dark mode
