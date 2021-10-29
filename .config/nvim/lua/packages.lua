@@ -10,45 +10,44 @@ end
 require "paq" {
 
   "dense-analysis/ale";
-  "jiangmiao/auto-pairs";
+  -- "jiangmiao/auto-pairs";
   "hrsh7th/cmp-buffer";
+  "hrsh7th/cmp-cmdline";
   "hrsh7th/cmp-nvim-lsp";
+  "hrsh7th/cmp-path";
+  "saadparwaiz1/cmp_luasnip";
   "numToStr/Comment.nvim";
-  "mattn/emmet-vim";
+  -- "mattn/emmet-vim";
   "junegunn/goyo.vim";
   "ellisonleao/gruvbox.nvim";
-  -- "morhetz/gruvbox";
   -- "neovimhaskell/haskell-vim";
   -- "sheerun/html5.vim";
   -- "itchyny/lightline.vim";
   "is0n/fm-nvim";
+  "L3MON4D3/LuaSnip";
   "rktjmp/lush.nvim";
-  "tmhedberg/matchit";
-  -- "LionC/nest.nvim";
   "vhyrro/neorg";
+  "windwp/nvim-autopairs";
   "hrsh7th/nvim-cmp";
   "neovim/nvim-lspconfig";
   "nvim-telescope/telescope.nvim";
   "nvim-telescope/telescope-fzy-native.nvim";
   {"nvim-treesitter/nvim-treesitter", run="TSUpdate"};
+  "p00f/nvim-ts-rainbow";
   "savq/paq-nvim";
   "nvim-lua/plenary.nvim";
-  "junegunn/rainbow_parentheses.vim";
-  "mtth/scratch.vim";
   "gcmt/taboo.vim";
-  "preservim/tagbar";
-  -- "tomtom/tcomment_vim";
+  -- "preservim/tagbar";
   -- "leafgarland/typescript-vim";
   -- "hail2u/vim-css3-syntax";
   "easymotion/vim-easymotion";
-  "tpope/vim-endwise";
-  "tpope/vim-fugitive";
+  -- "tpope/vim-endwise";
+  -- "tpope/vim-fugitive";
   "airblade/vim-gitgutter";
   -- "pangloss/vim-javascript";
   -- "elzr/vim-json";
-  "adelarsq/vim-matchit";
   -- "tpope/vim-rails";
-  "vim-ruby/vim-ruby";
+  -- "vim-ruby/vim-ruby";
   "mhinz/vim-startify";
   "tpope/vim-surround";
   -- "posva/vim-vue";
@@ -78,9 +77,9 @@ g.ale_fixers = {
 g.ale_fix_on_save = 1
 
 -- Emmet
-g.user_emmet_settings = {
-  ['javascript.jsx'] = { extends = 'jsx' }
-}
+-- g.user_emmet_settings = {
+--   ['javascript.jsx'] = { extends = 'jsx' }
+-- }
 
 -- GitGutter
 g.gitgutter_map_keys = 0
@@ -96,11 +95,11 @@ g.gitgutter_map_keys = 0
 -- g.javascript_plugin_jsdoc = 1
 
 -- Rainbow Parenthesis
-g['rainbow#pairs'] = {
-  {'(', ')'},
-  {'[', ']'},
-  {'{', '}'}
-}
+-- g['rainbow#pairs'] = {
+--   {'(', ')'},
+--   {'[', ']'},
+--   {'{', '}'}
+-- }
 
 -- Startify
 g.startify_bookmarks = {
@@ -110,18 +109,19 @@ g.startify_bookmarks = {
 }
 
 -- Tagbar
-g.tagbar_use_cache = 0
-g.tagbar_map_showproto = ''
-g.tagbar_width = math.max(35, fn.winwidth(0) / 5)
-g.tagbar_autofocus = 1
-g.tagbar_show_tag_count = 1
-g.tagbar_wrap = 0
+-- g.tagbar_use_cache = 0
+-- g.tagbar_map_showproto = ''
+-- g.tagbar_width = math.max(35, fn.winwidth(0) / 5)
+-- g.tagbar_autofocus = 1
+-- g.tagbar_show_tag_count = 1
+-- g.tagbar_wrap = 0
 
 -- Vue
-g.vue_pre_processors = { 'scss', 'typescript' }
+-- g.vue_pre_processors = { 'scss', 'typescript' }
 
 -- Neorg
 require('Comment').setup()
+require('setup.autopairs')
 require('setup.cmp')
 require('setup.lf')
 require('setup.lsp')

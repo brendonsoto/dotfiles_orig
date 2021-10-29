@@ -54,5 +54,10 @@ local starting_light_hour = 8
 local starting_dark_hour = 12 + 6 -- to use 24 hours
 local is_day_time = starting_light_hour < current_hour and current_hour < starting_dark_hour
 
-o.background = is_day_time and "light "or "dark"
+if (is_day_time)
+then
+  o.background = "light"
+else
+  o.background = "dark"
+end
 cmd([[colorscheme gruvbox]])
