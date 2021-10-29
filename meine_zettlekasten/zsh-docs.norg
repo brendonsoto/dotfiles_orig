@@ -1,0 +1,10 @@
+@document.meta
+  title: zsh-docs
+  description:
+  author: brendonsoto
+  categories:
+  created: 2021-10-29
+  version: 0.1
+@end
+
+https://zsh.sourceforge.io/Doc/Release/index.html
