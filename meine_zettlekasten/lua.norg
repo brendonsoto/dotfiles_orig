@@ -1,0 +1,16 @@
+@document.meta
+  title: Lua
+  description:
+  author: brendonsoto
+  categories: lua
+  created: 2021-10-20
+  version: 0.1
+@end
+
+* How to run Lua programs
+  `lua [opt] [script [args]]`
+  [source](https://www.lua.org/manual/5.4/manual.html#7)
+
+* How to call a UNIX command from a Lua program
+  `os.execute([command])`
+  [source](https://www.lua.org/manual/5.4/manual.html#6.9)
