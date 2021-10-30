@@ -8,3 +8,7 @@
 @end
 
 https://zsh.sourceforge.io/Doc/Release/index.html
+
+Even faster, can't believe I just learned this
+`man zshall`
+or just `man zsh` to not load everything
