@@ -1,6 +1,13 @@
 # Set bash to use vi commands
 set -o vi
 
+# LF
+if command -v lf &>/dev/null
+then
+  # For what the keys mean, check out https://github.com/gokcehan/lf/blob/aebff483a79edbde020a63816acbceb3278ed3e6/icons.go#L79
+  export LF_ICONS="ln=:di=:fi=:ex=:*.html=:*.js=:*.jsx=:*.ts=:*.tsx=:*.json=ﬥ:*.rb=:*.hs=:*.norg=:*.vim=:*.vimrc:*.lua=:*.*rc=:Dockerfile=:"
+fi
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 if [ -s "$NVM_DIR/nvm.sh" ]; then
@@ -30,6 +37,19 @@ if [ -s "$NVM_DIR/nvm.sh" ]; then
   load-nvmrc
 fi
 
+# Rust
+if command -v cargo &>/dev/null
+then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# TMUX
+export TERM="xterm-256color"
+if [ -n "$TMUX" ]; then
+  export TERM="screen-256color"
+fi
+
+
 ##########################################
 #             Mac specific
 ##########################################
@@ -47,19 +67,6 @@ if [[ $OSTYPE == darwin* ]]; then
 
   # Ruby
   export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-fi
-
-# Rust
-if command -v cargo &>/dev/null
-then
-  export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-# LF
-if command -v lf &>/dev/null
-then
-  # For what the keys mean, check out https://github.com/gokcehan/lf/blob/aebff483a79edbde020a63816acbceb3278ed3e6/icons.go#L79
-  export LF_ICONS="ln=:di=:fi=:ex=:*.html=:*.js=:*.jsx=:*.ts=:*.tsx=:*.json=ﬥ:*.rb=:*.hs=:*.norg=:*.vim=:*.vimrc:*.lua=:*.*rc=:Dockerfile=:"
 fi
 
 
