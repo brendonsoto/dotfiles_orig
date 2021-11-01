@@ -1,0 +1,32 @@
+@document.meta
+  title: scratch
+  description:
+  author: brendonsoto
+  categories:
+  created: 2021-10-30
+  version: 0.1
+@end
+
+Random stuff
+
+Neorg:
+- [x] no /italics/ when using Tmux w/ alacritty
+-- KUDOS: https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
+- [ ] concealer seems a bit wonky?
+
+Alacritty/nvim/tmux:
+- [x] cursor not blinking
+-- I forgot to uncomment a parent yml bit
+Is there an alternative to tmux? a better tmux?
+
+Do I even need tmux if I can use some project manager + terminal in Neovim?
+
+Terminal in Vim
+This way, instead of using tmux to open a new pane to run server/tests/etc in I can do it all in vim
+
+* Test 1
+ ** tes 2
+  *** test 3
+   **** test 4
+    ***** test 5
+      ****** Test 6
