@@ -13,7 +13,7 @@ echo "Configuring alacritty and tmux..."
 
 # Add colorscheme for time of day
 # NOTE: How can I make this a higher order function?
-if ([ $current_hour -ge $starting_day_hour ]) && ([ $current_hour -le $end_day_hour ]); then
+if ([ $current_hour -ge $starting_day_hour ]) && ([ $current_hour -l $end_day_hour ]); then
   echo "...adding light colorscheme"
   alacritty_config_files+=("$alacritty_dir/gruvbox-light.yml")
   tmux_config_files+=("$tmux_dir/gruvbox-light.conf")
@@ -50,10 +50,15 @@ echo "...writing tmux file"
 for f in $tmux_config_files; do (cat "${f}"; echo) >> ~/.tmux.conf; done
 echo "Finished creating ~/.tmux.conf !"
 
+# Reload tmux settings
+if [[ -n "$TMUX" ]]; then
+  tmux source-file ~/.tmux.conf
+fi
+
 # Toggle macOS dark mode
 if [[ `uname` == "Darwin" ]]; then
   echo "Toggling dark mode..."
-  if ([ $current_hour -ge $starting_day_hour ]) && ([ $current_hour -le $end_day_hour ]); then
+  if ([ $current_hour -ge $starting_day_hour ]) && ([ $current_hour -l $end_day_hour ]); then
     echo "...setting dark mode: OFF"
     osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false"
   else
