@@ -43,12 +43,6 @@ then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-# TMUX
-export TERM="xterm-256color"
-if [ -n "$TMUX" ]; then
-  export TERM="screen-256color"
-fi
-
 
 ##########################################
 #             Mac specific
@@ -141,6 +135,9 @@ gco() {
 
 # Haskell
 alias ghci="stack ghci"
+
+# Python Simple server in current dir
+alias simp="python -m SimpleHTTPServer 8000"
 
 ##########################################
 #             FZF
