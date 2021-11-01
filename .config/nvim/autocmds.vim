@@ -1,3 +1,5 @@
+" This is not in Lua land since Neovim doesn't have an easy way to load it
+" least not outside of calling vim.api.nvim_exec([[ autocmd ... ]])
 filetype plugin indent on " Enable file detection and load any plugins for them
 
 " Disable auto commenting

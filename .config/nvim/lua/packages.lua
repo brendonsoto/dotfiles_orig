@@ -22,7 +22,6 @@ require "paq" {
   "ellisonleao/gruvbox.nvim";
   -- "neovimhaskell/haskell-vim";
   -- "sheerun/html5.vim";
-  -- "itchyny/lightline.vim";
   "is0n/fm-nvim";
   "L3MON4D3/LuaSnip";
   "rktjmp/lush.nvim";
@@ -36,6 +35,7 @@ require "paq" {
   "p00f/nvim-ts-rainbow";
   "savq/paq-nvim";
   "nvim-lua/plenary.nvim";
+  "ahmedkhalf/project.nvim";
   "gcmt/taboo.vim";
   -- "preservim/tagbar";
   -- "leafgarland/typescript-vim";
@@ -43,7 +43,7 @@ require "paq" {
   "easymotion/vim-easymotion";
   -- "tpope/vim-endwise";
   -- "tpope/vim-fugitive";
-  "airblade/vim-gitgutter";
+  "lewis6991/gitsigns.nvim";
   -- "pangloss/vim-javascript";
   -- "elzr/vim-json";
   -- "tpope/vim-rails";
@@ -81,9 +81,6 @@ g.ale_fix_on_save = 1
 --   ['javascript.jsx'] = { extends = 'jsx' }
 -- }
 
--- GitGutter
-g.gitgutter_map_keys = 0
-
 -- Javascript
 -- g.javascript_plugin_jsdoc = 1
 -- g.javascript_plugin_flow = 1
@@ -101,7 +98,7 @@ g.gitgutter_map_keys = 0
 --   {'{', '}'}
 -- }
 
--- Startify
+-- -- Startify
 g.startify_bookmarks = {
   {w = '~/vimwiki/index.md'},
   {m = '~/dotfiles/my_wiki/index.md'},
@@ -123,9 +120,11 @@ g.startify_bookmarks = {
 require('Comment').setup()
 require('setup.autopairs')
 require('setup.cmp')
+require('setup.gitsigns')
 require('setup.lf')
 require('setup.lsp')
 require('setup.neorg')
+require('setup.project')
 require('setup.telescope')
 require('setup.treesitter')
 require('setup.which-key') -- Keymaps here!

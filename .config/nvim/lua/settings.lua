@@ -6,16 +6,8 @@ local set = vim.opt -- to set options
 
 g.mapleader = ' '
 
-vim.api.nvim_exec([[
-  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-]], false)
-
--- Colours!!
-cmd 'source ~/.config/nvim/theme.vim'
 -- Autoconfig
 cmd 'source ~/.config/nvim/autocmds.vim'
--- Lightline specific
-cmd 'source ~/.config/nvim/lightline.vim'
 
 set.clipboard:append('unnamedplus') -- Use the clipboard register + in addition to the default
 set.completeopt = {'menu', 'menuone', 'noselect'}
@@ -25,6 +17,7 @@ set.history = 50
 set.ignorecase = true
 set.inccommand = "split"
 set.joinspaces = false
+set.lazyredraw = true
 set.linebreak = true
 set.list = true
 set.modeline = false
@@ -48,6 +41,30 @@ set.undofile = true
 set.undolevels = 100
 set.undoreload = 1000
 
+local disabled_built_ins = {
+  "netrw",
+  "netrwPlugin",
+  "netrwSettings",
+  "netrwFileHandlers",
+  "gzip",
+  "zip",
+  "zipPlugin",
+  "tar",
+  "tarPlugin",
+  "getscript",
+  "getscriptPlugin",
+  "vimball",
+  "vimballPlugin",
+  "2html_plugin",
+  "logipat",
+  "rrhelper",
+  "spellfile_plugin",
+}
+
+for _, plugin in pairs(disabled_built_ins) do
+  g["loaded_" .. plugin] = 1
+end
+
 -- Set background depending on time of day
 local current_hour = tonumber(os.date("%H", os.time()))
 local starting_light_hour = 8
@@ -61,3 +78,4 @@ else
   o.background = "dark"
 end
 cmd([[colorscheme gruvbox]])
+cmd([[highlight Comment cterm=italic]])

@@ -25,41 +25,45 @@ require('neorg').setup {
               icon = ""
             },
           },
-          quote = {
-            enabled = true,
-            icon = "|"
-          },
           heading = {
             enabled = true,
 
             level_1 = {
               enabled = true,
               icon = "",
+              -- pattern = "^(%s*)%*%*%*%*%*%s+",
+              -- whitespace_index = 1,
+              -- highlight = "TSBoolean",
+              -- padding_before = 4,
             },
 
             level_2 = {
               enabled = true,
-              icon = "",
+              icon = " ",
             },
 
             level_3 = {
               enabled = true,
-              icon = "",
+              icon = "  ",
             },
 
             level_4 = {
               enabled = true,
-              icon = "",
+              icon = "   ",
             },
 
             level_5 = {
               enabled = true,
-              icon = "",
+              icon = "    ",
+              -- pattern = "^(%s*)%*%*%*%*%*%s+",
+              -- whitespace_index = 1,
+              -- highlight = "TSBoolean",
+              -- padding_before = 4,
             },
 
             level_6 = {
               enabled = true,
-              icon = "",
+              icon = "     ",
             },
           },
           marker = {

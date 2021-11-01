@@ -38,6 +38,7 @@ wk.register({
       g = { '<cmd>Telescope live_grep<cr>', 'Live grep' },
       b = { '<cmd>Telescope buffers<cr>', 'Find Buffer' },
       h = { '<cmd>Telescope help_tags<cr>', 'Find help tag' },
+      p = { '<cmd>Telescope projects<cr>', 'Find projects' },
       ['ts'] = { '<cmd>Telescope treesitter<cr>', 'Telescope Treesitter?' },
     },
 
@@ -73,7 +74,7 @@ wk.register({
   [']'] = {
     a = { ':ALENextWrap<cr>', 'ALE Next wrap' },
     b = { ':bnext<cr>', 'Next buffer' },
-    t = { ':tabp<cr>', 'Next tab' },
+    t = { ':tabn<cr>', 'Next tab' },
   },
 })
 
