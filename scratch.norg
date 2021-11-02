@@ -9,20 +9,39 @@
 
 Random stuff
 
-Neorg:
-- [x] no /italics/ when using Tmux w/ alacritty
--- KUDOS: https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
-- [ ] concealer seems a bit wonky?
+* Neovim
+ ** General
+    Terminal in Vim
+    This way, instead of using tmux to open a new pane to run server/tests/etc in I can do it all in vim
 
-Alacritty/nvim/tmux:
-- [x] cursor not blinking
--- I forgot to uncomment a parent yml bit
-Is there an alternative to tmux? a better tmux?
+    Use Packer instead of Paq
 
-Do I even need tmux if I can use some project manager + terminal in Neovim?
+ ** LSP
+    Auto-close mini window at bottom
 
-Terminal in Vim
-This way, instead of using tmux to open a new pane to run server/tests/etc in I can do it all in vim
+ ** Neorg:
+    - [x] no /italics/ when using Tmux w/ alacritty
+    -- KUDOS: https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
+    - [ ] concealer seems a bit wonky?
+    - [ ] Figure out why keymappings don't work after first one:
+    -- Steps to repro:
+    --- Make todo checkbox
+    --- Mark is as done using `<leader>td`
+    --- UnMark is as done using `<leader>td`
+    --- Mark is as done using `<leader>td`
+    --- Observe second marking not working
+
+ ** Actual playing with it
+    I feel like I should go back to basics and work up there
+    First I'll tag what I  currently have
+
+
+* Alacritty / Tmux
+  - [x] cursor not blinking
+  -- I forgot to uncomment a parent yml bit
+  Is there an alternative to tmux? a better tmux?
+
+  Do I even need tmux if I can use some project manager + terminal in Neovim?
 
 * Test 1
  ** tes 2

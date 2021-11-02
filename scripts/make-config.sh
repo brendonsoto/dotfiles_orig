@@ -51,9 +51,7 @@ for f in $tmux_config_files; do (cat "${f}"; echo) >> ~/.tmux.conf; done
 echo "Finished creating ~/.tmux.conf !"
 
 # Reload tmux settings
-if [[ -n "$TMUX" ]]; then
-  tmux source-file ~/.tmux.conf
-fi
+tmux source-file ~/.tmux.conf
 
 # Toggle macOS dark mode
 if [[ `uname` == "Darwin" ]]; then

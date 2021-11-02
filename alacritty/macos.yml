@@ -1,5 +1,3 @@
-window.decorations: buttonless
-
 # OS X only: use thin stroke font rendering. Thin strokes are suitable
 # for retina displays, but for non-retina you probably want this set to
 # false.

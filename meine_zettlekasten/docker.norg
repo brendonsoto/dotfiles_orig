@@ -1,0 +1,21 @@
+@document.meta
+  title: docker
+  description:
+  author: brendonsoto
+  categories:
+  created: 2021-11-01
+  version: 0.1
+@end
+
+* Survival Guide
+  $ Building a Dockerfile
+  `docker build -t 'name-of-image' .`
+
+  $ Running a docker image
+  `docker run 'name-of-image'`
+
+  $ Running a docker image interactively
+  `docker run -it 'name-of-image' sh`
+  You can use anything other than `sh` as long as it's installed too
+
+* What is Docker
