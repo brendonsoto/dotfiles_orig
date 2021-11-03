@@ -48,6 +48,8 @@ return require('packer').startup(function()
     config = function() require('setup.lsp') end
   }
 
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
   use {
     'vhyrro/neorg',
     requires = { 'nvim-lua/plenary.nvim' },
