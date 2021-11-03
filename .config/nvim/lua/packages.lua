@@ -14,6 +14,19 @@ return require('packer').startup(function()
   }
 
   use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+      'saadparwaiz1/cmp_luasnip',
+    },
+    -- FIXME
+    -- config = function() require('setup.cmp').setup() end
+  }
+
+  use {
     'is0n/fm-nvim',
     config = function() require('setup.lf') end
   }
