@@ -8,6 +8,8 @@ end
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
   use {
     'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
     config = function() require('setup.gitsigns') end
