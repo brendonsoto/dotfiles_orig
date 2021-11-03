@@ -14,6 +14,11 @@ return require('packer').startup(function()
   }
 
   use {
+    'is0n/fm-nvim',
+    config = function() require('setup.lf') end
+  }
+
+  use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
     config = function() require('setup.gitsigns') end
