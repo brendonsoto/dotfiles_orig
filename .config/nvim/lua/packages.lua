@@ -19,6 +19,12 @@ return require('packer').startup(function()
     config = function() require('setup.gitsigns') end
   }
 
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function() require('setup.telescope') end
+  }
+
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Key Maps!
