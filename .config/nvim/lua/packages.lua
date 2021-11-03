@@ -20,12 +20,22 @@ return require('packer').startup(function()
   }
 
   use {
+    'vhyrro/neorg',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function() require('setup.neorg') end
+  }
+
+  use {
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
     config = function() require('setup.telescope') end
   }
 
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function() require('setup.treesitter') end
+  }
 
   -- Key Maps!
   use {
