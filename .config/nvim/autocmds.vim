@@ -11,10 +11,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
  \ |   exe "normal! g`\""
  \ | endif
 
-" Highlight TODO, FIXME, NOTE
-" autocmd Syntax * call matchadd('todo', '\W\zs\(TODO\|FIXME\|XXX\)')
-" autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\)')
-
 " Sync syntax highlighting
 " kudos https://vim.fandom.com/wiki/Fix_syntax_highlighting
 autocmd BufEnter * :syntax sync fromstart
