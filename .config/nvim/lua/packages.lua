@@ -9,6 +9,11 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use {
+    'windwp/nvim-autopairs',
+    -- config = function() require('setup.autopairs').setup() end
+  }
+
+  use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup() end
   }
