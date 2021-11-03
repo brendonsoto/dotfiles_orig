@@ -20,6 +20,12 @@ return require('packer').startup(function()
     config = function() require('Comment').setup() end
   }
 
+  -- Key Maps!
+  use {
+    'folke/which-key.nvim',
+    config = function() require('setup.which-key') end
+  }
+
   -- Automatically set up configuration after cloning packer.nvim
   if packer_bootstrap then
     require('packer').sync()
