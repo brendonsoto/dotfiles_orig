@@ -9,6 +9,11 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use {
+    'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
+    config = function() require('setup.gitsigns') end
+  }
+
+  use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup() end
   }
