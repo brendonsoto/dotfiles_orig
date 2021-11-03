@@ -53,8 +53,6 @@ local disabled_built_ins = {
   "tarPlugin",
   "getscript",
   "getscriptPlugin",
-  "vimball",
-  "vimballPlugin",
   "2html_plugin",
   "logipat",
   "rrhelper",
@@ -77,5 +75,5 @@ then
 else
   o.background = "dark"
 end
-cmd([[colorscheme gruvbox]])
+-- cmd([[colorscheme gruvbox]])
 cmd([[highlight Comment cterm=italic]])
