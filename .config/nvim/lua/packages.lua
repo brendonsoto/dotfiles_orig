@@ -20,6 +20,11 @@ return require('packer').startup(function()
   }
 
   use {
+    'neovim/nvim-lspconfig',
+    config = function() require('setup.lsp') end
+  }
+
+  use {
     'vhyrro/neorg',
     requires = { 'nvim-lua/plenary.nvim' },
     config = function() require('setup.neorg') end
@@ -29,11 +34,6 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
     config = function() require('setup.telescope') end
-  }
-
-  use {
-    'neovim/nvim-lspconfig',
-    config = function() require('setup.lsp') end
   }
 
   use {
