@@ -38,16 +38,8 @@ wk.register({
       g = { '<cmd>Telescope live_grep<cr>', 'Live grep' },
       b = { '<cmd>Telescope buffers<cr>', 'Find Buffer' },
       h = { '<cmd>Telescope help_tags<cr>', 'Find help tag' },
-      p = { '<cmd>Telescope projects<cr>', 'Find projects' },
+      -- p = { '<cmd>Telescope projects<cr>', 'Find projects' },
       ['ts'] = { '<cmd>Telescope treesitter<cr>', 'Telescope Treesitter?' },
-    },
-
-    -- Git stuff
-    g = {
-      b = { '<cmd>Telescope git_branches<cr>', 'Git branches' },
-      c = {
-        b = { '<cmd>Telescope git_bcommits<cr>', 'Git commits for buffer' },
-      },
     },
   },
 })
@@ -67,12 +59,12 @@ wk.register({
 
   -- Inspired by T-Pope's Unimpaired
   ['['] = {
-    a = { ':ALEPreviousWrap<cr>', 'ALE Previous wrap' },
+    -- a = { ':ALEPreviousWrap<cr>', 'ALE Previous wrap' },
     b = { ':bprev<cr>', 'Previous buffer' },
     t = { ':tabp<cr>', 'Previous tab' },
   },
   [']'] = {
-    a = { ':ALENextWrap<cr>', 'ALE Next wrap' },
+    -- a = { ':ALENextWrap<cr>', 'ALE Next wrap' },
     b = { ':bnext<cr>', 'Next buffer' },
     t = { ':tabn<cr>', 'Next tab' },
   },
