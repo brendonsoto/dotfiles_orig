@@ -5,8 +5,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
+-- Packer and any colorscheme related packages at top
+-- Rest are alphabetical (past the /)
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
+
+  use 'folke/tokyonight.nvim'
 
   use {
     'windwp/nvim-autopairs',

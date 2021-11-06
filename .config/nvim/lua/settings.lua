@@ -75,5 +75,5 @@ then
 else
   o.background = "dark"
 end
--- cmd([[colorscheme gruvbox]])
+cmd([[colorscheme tokyonight]])
 cmd([[highlight Comment cterm=italic]])

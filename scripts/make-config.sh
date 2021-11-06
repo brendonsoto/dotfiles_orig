@@ -15,12 +15,12 @@ echo "Configuring alacritty and tmux..."
 # NOTE: How can I make this a higher order function?
 if ([ $current_hour -ge $starting_day_hour ]) && ([ $current_hour -lt $end_day_hour ]); then
   echo "...adding light colorscheme"
-  alacritty_config_files+=("$alacritty_dir/gruvbox-light.yml")
-  tmux_config_files+=("$tmux_dir/gruvbox-light.conf")
+  alacritty_config_files+=("$alacritty_dir/alacritty_tokyonight_day.yml")
+  tmux_config_files+=("$tmux_dir/tmux_tokyonight_day.tmux")
 else
   echo "...adding dark colorscheme"
-  alacritty_config_files+=("$alacritty_dir/gruvbox-dark.yml")
-  tmux_config_files+=("$tmux_dir/gruvbox-dark.conf")
+  alacritty_config_files+=("$alacritty_dir/alacritty_tokyonight_storm.yml")
+  tmux_config_files+=("$tmux_dir/tmux_tokyonight_storm.tmux")
 fi
 
 # Add any OS-specific configs + keybindings
