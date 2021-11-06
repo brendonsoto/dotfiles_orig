@@ -22,5 +22,8 @@ autocmd BufRead,BufNewFile .xmobarrc set filetype=haskell
 " Set JSON-like files to use json syntax highlighting
 autocmd BufRead,BufNewFile *.json,.eslintrc,.babelrc set filetype=json
 
+" Tmux files
+autocmd BufRead,BufNewFile *.tmux set filetype=tmux
+
 " Fugitive - auto-clean fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete

@@ -28,7 +28,7 @@ set-option -g escape-time 0
 set-option -g status-keys vi
 set-option -g visual-bell on
 set-option -g default-terminal "tmux-256color"
-set-option -a terminal-overrides ",alacritty:RGB"
+set-option -sa terminal-overrides ",xterm-256color:RGB"
 
 # Copy mode with vim
 set-window-option -g mode-keys vi

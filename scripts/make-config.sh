@@ -7,7 +7,7 @@ dotfiles_dir="$0:a:h/.."
 alacritty_dir="$dotfiles_dir/alacritty"
 alacritty_config_files=("$alacritty_dir/base.yml")
 tmux_dir="$dotfiles_dir/tmux"
-tmux_config_files=("$tmux_dir/base.conf")
+tmux_config_files=("$tmux_dir/base.tmux")
 
 echo "Configuring alacritty and tmux..."
 
