@@ -28,8 +28,7 @@ return require('packer').startup(function()
       'saadparwaiz1/cmp_luasnip',
       'L3MON4D3/LuaSnip'
     },
-    -- FIXME
-    -- config = function() require('setup.cmp').setup() end
+    config = function() require('setup.cmp') end
   }
 
   use {
