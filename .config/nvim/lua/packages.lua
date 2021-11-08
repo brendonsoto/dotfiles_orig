@@ -12,11 +12,11 @@ return require('packer').startup(function()
 
   use 'folke/tokyonight.nvim'
 
-  -- use {
-  --   'windwp/nvim-autopairs',
-  --   after = 'nvim-cmp',
-  --   config = function() require('setup.autopairs') end
-  -- }
+  use {
+    'windwp/nvim-autopairs',
+    after = 'nvim-cmp',
+    config = function() require('setup.autopairs') end
+  }
 
   use {
     'numToStr/Comment.nvim',
