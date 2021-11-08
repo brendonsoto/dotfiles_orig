@@ -1,9 +1,8 @@
 require('neorg').setup {
   load = {
     ["core.defaults"] = {},
-    -- ["core.integrations.telescope"] = {},
-    -- ["core.integrations.treesitter"] = {},
-    -- ["core.integrations.nvim-cmp"] = {},
+    ["core.integrations.telescope"] = {},
+    ["core.integrations.nvim-cmp"] = {},
     ["core.norg.completion"] = {
       config = {
         engine = "nvim-cmp"
