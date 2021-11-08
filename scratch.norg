@@ -14,7 +14,14 @@ Random stuff
     Terminal in Vim
     This way, instead of using tmux to open a new pane to run server/tests/etc in I can do it all in vim
 
-    Use Packer instead of Paq
+    - [x] Use Packer instead of Paq
+    - [ ] When inside brackets and entering an end bracket character, don't insert that character but instead jump to the existing bracket
+    -- Do I /really/ want this? There have been times where this has bitten me
+    -- Plus I don't have to enter that keystroke then
+
+ ** CMP
+    Think about how to better use it
+    Neorg w/ cmp -- text boxes not auto formatting
 
  ** LSP
     Auto-close mini window at bottom
@@ -22,8 +29,8 @@ Random stuff
  ** Neorg:
     - [x] no /italics/ when using Tmux w/ alacritty
     -- KUDOS: https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
-    - [ ] concealer seems a bit wonky?
-    - [ ] Figure out why keymappings don't work after first one:
+    - [ ] concealer seems a bit wonky? (italics)
+    - [x] Figure out why keymappings don't work after first one:
     -- Steps to repro:
     --- Make todo checkbox
     --- Mark is as done using `<leader>td`
@@ -31,10 +38,30 @@ Random stuff
     --- Mark is as done using `<leader>td`
     --- Observe second marking not working
 
+      I was dumb
+      The reason the keymappings weren't working was because:
+      1. I had omitted the `<leader>` portion
+      2. there is no toggle func, just a cycle one
+
+    - [x] why cmp not working w/ neorg?
+    - [x] why telescope not working?
+
  ** Actual playing with it
     I feel like I should go back to basics and work up there
     First I'll tag what I  currently have
 
+  *** Packages to update or find alts
+      - [ ] ale
+      - [ ] goyo
+      - [ ] taboo
+      - [ ] surround
+      - [ ] startify?
+
+ ** Tmux int
+    Fix error about colors
+
+* ASDF
+  for managing versions of software?
 
 * Alacritty / Tmux
   - [x] cursor not blinking
