@@ -68,6 +68,8 @@ Random stuff
       - [ ] taboo
       - [ ] surround
       - [ ] startify?
+      - [ ] emmet?
+      - [ ] tagbar? << or how can Telescope replace
 
  ** Tmux int
     - [x] Fix error about colors
