@@ -26,7 +26,7 @@ Random stuff
     -- Do I /really/ want this? There have been times where this has bitten me
     -- Plus I don't have to enter that keystroke then
     - [ ] Write about the plugins you use and why you like using them
-    - [ ] Restructure files
+    - [x] Restructure files
 
  ** CMP
     Think about how to better use it
