@@ -9,6 +9,13 @@
 
 Random stuff
 
+* Misc curious stuff
+ ** Humidity
+    - What influences humidity?
+    - How can humidity disperse?
+    -- (I know by air, but does it follow the same path as air? Does it sink more because of density?)
+    - How can we visualize what humidity may look like taking up a space?
+
 * Neovim
  ** General
     Terminal in Vim
@@ -18,6 +25,8 @@ Random stuff
     - [ ] When inside brackets and entering an end bracket character, don't insert that character but instead jump to the existing bracket
     -- Do I /really/ want this? There have been times where this has bitten me
     -- Plus I don't have to enter that keystroke then
+    - [ ] Write about the plugins you use and why you like using them
+    - [ ] Restructure files
 
  ** CMP
     Think about how to better use it
@@ -27,6 +36,11 @@ Random stuff
     Auto-close mini window at bottom
 
  ** Neorg:
+    - [ ] Why does marking todo items as done sometimes interfere with the easy-motion replacement plugin?
+
+    - [x] why cmp not working w/ neorg?
+    - [x] why telescope not working?
+
     - [x] no /italics/ when using Tmux w/ alacritty
     -- KUDOS: https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
     - [ ] concealer seems a bit wonky? (italics)
@@ -43,14 +57,12 @@ Random stuff
       1. I had omitted the `<leader>` portion
       2. there is no toggle func, just a cycle one
 
-    - [x] why cmp not working w/ neorg?
-    - [x] why telescope not working?
-
  ** Actual playing with it
     I feel like I should go back to basics and work up there
     First I'll tag what I  currently have
 
   *** Packages to update or find alts
+      - [ ] easy motion
       - [ ] ale
       - [ ] goyo
       - [ ] taboo
@@ -58,7 +70,7 @@ Random stuff
       - [ ] startify?
 
  ** Tmux int
-    Fix error about colors
+    - [x] Fix error about colors
 
 * ASDF
   for managing versions of software?
@@ -67,6 +79,8 @@ Random stuff
   - [x] cursor not blinking
   -- I forgot to uncomment a parent yml bit
   Is there an alternative to tmux? a better tmux?
+  - [ ] byobu
+  - [ ] customize status line
 
   Do I even need tmux if I can use some project manager + terminal in Neovim?
 

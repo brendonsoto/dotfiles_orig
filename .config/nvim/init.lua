@@ -1,2 +1,2 @@
 require('settings')
-require('packages')
+require('packages.init')
