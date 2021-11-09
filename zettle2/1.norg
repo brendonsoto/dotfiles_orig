@@ -1,0 +1,53 @@
+@document.meta
+  title: Plugin: Packer
+  description: A small write up on why I'm using Packer
+  author: brendonsoto
+  categories: neovim plugins
+  created: 2021-11-09
+  version: 0.1
+@end
+
+[Source](https://github.com/wbthomason/packer.nvim)
+
+#comment
+This is an experiment on writing up vim plugins I use
+On one hand, I'm thinking I should use bullet notes for easy reference and understanding for my future self
+On the other hand, I want to make sure I'm thinking about the tools I'm using and know why they're here
+Because of this, I think the write-up format is appropriate
+
+* What is it?
+  `packer` is a plugin manager for Neovim.
+
+* What makes it special?
+  It allows a lot of flexibility for how you install plugins
+  For instance, you can describe dependencies of plugins to ensure those dependencies are installed before the plugin itself
+
+  Another neat ability is having configuration options to sequence when plugins are installed
+  For example, there's a property for plugin descriptions called `after` that allows you to install the plugin after another
+  This is nice because maybe you don't want to say something is a requirement, but still want the sequencing capabilities
+  I am currently doing this w/ `windwp/nvim-autopairs` and `nvim-cmp`
+  `autopairs` can work with `cmp` but it doesn't make sense to say it's a dependency of `cmp`
+
+  I also love how thorough the documentation is
+
+* What functionality does it have that you're not using and why?
+  - lazy-loading
+  -- don't need it right now. startup time is fine
+  - `use.ft` -- loading plugin for specific file types
+  - `use.event` -- loading plugin for specific events
+  - `use.fn` -- loading plugin for specific functions
+
+* What's functionality you may not need all the time but is still good to know?
+ ** Profiling
+    See `packer-profiling`
+    Or use `:PackerCompile profile=true`
+
+* Any alternatives you checked out?
+  Yeah, before `packer` I was using `paq` ([source](https://github.com/savq/paq-nvim))
+  I liked `paq` because it was simple
+  Adding a plugin was simply adding one line w/ the path of the github repo
+  However, I was concerned about dependencies with it
+  I didn't have a solid understanding of how plugins were installed
+  As a result, I would list dependencies of plugins above the plugin itself
+  This makes sense in the moment, but I know I'll forget over time
+  Plus, I like to alphabetize plugins (least, when I can remember the order of the alphabet lol) so that always urked me a bit
