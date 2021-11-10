@@ -1,0 +1,32 @@
+@document.meta
+  title: Plugin: Neogit
+  description: On using neogit
+  author: brendonsoto
+  categories: neovim plugins
+  created: 2021-11-09
+  version: 0.1
+@end
+
+* What is it?
+  A way to interact w/ Git w/o leaving vim!!
+  It's a wrapper for [magit](https://magit.vc/)
+
+* What makes it special?
+  You can view commits, diffs, basically everything w/o leavin vim
+
+* What functionality does it have that you're not using and why?
+  Not sure how to use the flags for certain commands
+  I.e. commiting
+
+* What's functionality you may not need all the time but is still good to know?
+  - commit maps
+  -- I don't look in the history terribly much
+
+* What's functionality that's not obvious from the docs?
+  When the Neogit buffer appears and you press a character to trigger some action there's a menu w/ other configuration options available
+  I was confused on how to use the switches
+  Literally just enter the characters shown on the left hand side and you'll see the color of the flag on the right toggle
+
+* Any alternatives you checked out?
+  - fugitive
+  -- wound up using this one because Lua
