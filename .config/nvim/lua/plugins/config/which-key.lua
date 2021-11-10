@@ -1,11 +1,12 @@
 local wk = require("which-key")
+local hop = require('hop')
+local hopHint = require('hop.hint')
 
 wk.setup {}
 
-
 wk.register({
   ["<leader>"] = {
-    name = 'Non-Plugin-Leader stuff ',
+    name = 'Leader stuff',
     -- Nav
     l = { "<C-w>l", "Move right" },
     k = { "<C-w>k", "Move up" },
@@ -25,9 +26,6 @@ wk.register({
     -- Misc
     ['/'] = { ':nohl<cr>', 'Undo highlighting' },
 
-    -- Tagbar
-    -- t = { ':TagbarToggle<cr>', 'Tagbar toggle' },
-
     -- Find stuff
     f = {
       -- fm-nvim
@@ -41,6 +39,22 @@ wk.register({
       -- p = { '<cmd>Telescope projects<cr>', 'Find projects' },
       ['ts'] = { '<cmd>Telescope treesitter<cr>', 'Telescope Treesitter?' },
     },
+
+    -- Hop
+    ['<leader>'] = {
+      f = {
+        function()
+          hop.hint_char1({ direction = hopHint.HintDirection.AFTER_CURSOR })
+        end,
+        'Hop forward'
+      },
+      F = {
+        function()
+          hop.hint_char1({ direction = hopHint.HintDirection.BEFORE_CURSOR })
+        end,
+        'Hop Backwards'
+      },
+    }
   },
 })
 
