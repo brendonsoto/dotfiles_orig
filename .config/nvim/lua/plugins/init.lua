@@ -42,8 +42,6 @@ return require('packer').startup({
       config = function() require('plugins.config.lf') end
     }
 
-    use 'ggandor/lightspeed.nvim'
-
     use {
       'lewis6991/gitsigns.nvim',
       requires = { 'nvim-lua/plenary.nvim' },
