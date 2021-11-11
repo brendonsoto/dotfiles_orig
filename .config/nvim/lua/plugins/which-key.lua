@@ -1,7 +1,5 @@
 local wk = require("which-key")
--- local hopConfig = require("plugins.hop")
--- local hop = require('hop')
--- local hopHint = require('hop.hint')
+local hopConfig = require("plugins.hop")
 
 wk.setup {}
 
@@ -42,7 +40,7 @@ wk.register({
     },
 
     -- Hop
-    -- ['<leader>'] = hopConfig.keymappings
+    ['<leader>'] = hopConfig.keymappings
   },
 })
 
