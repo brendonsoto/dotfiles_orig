@@ -16,6 +16,10 @@ Random stuff
     -- (I know by air, but does it follow the same path as air? Does it sink more because of density?)
     - How can we visualize what humidity may look like taking up a space?
 
+* RipGrep
+ ** w/ Neorg
+    How can I search based on `categories` / the `document.meta` tag?
+
 | This Neovim stuff should be in its own norg file
 * Neovim
  ** General
@@ -78,13 +82,13 @@ Random stuff
 * ASDF
   for managing versions of software?
 
-* Alacritty / Tmux
+* Alacritty
   - [x] cursor not blinking
   -- I forgot to uncomment a parent yml bit
   - [ ] add a bit of padding around window?
   - [ ] try out removing buttons? least on mac?
 
-* Alacritty / Tmux
+* Tmux
   - [x] cursor not blinking
   -- I forgot to uncomment a parent yml bit
   Is there an alternative to tmux? a better tmux?
