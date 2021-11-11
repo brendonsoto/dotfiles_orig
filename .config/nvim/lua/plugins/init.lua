@@ -16,7 +16,7 @@ return require('packer').startup({
     use {
       'windwp/nvim-autopairs',
       after = 'nvim-cmp',
-      config = function() require('plugins.config.autopairs') end
+      config = function() require('plugins.autopairs') end
     }
 
     use {
@@ -34,18 +34,18 @@ return require('packer').startup({
         'saadparwaiz1/cmp_luasnip',
         'L3MON4D3/LuaSnip'
       },
-      config = function() require('plugins.config.cmp') end
+      config = function() require('plugins.cmp') end
     }
 
     use {
       'is0n/fm-nvim',
-      config = function() require('plugins.config.lf') end
+      config = function() require('plugins.lf') end
     }
 
     use {
       'lewis6991/gitsigns.nvim',
       requires = { 'nvim-lua/plenary.nvim' },
-      config = function() require('plugins.config.gitsigns') end
+      config = function() require('plugins.gitsigns') end
     }
 
     use {
@@ -56,7 +56,7 @@ return require('packer').startup({
 
     use {
       'neovim/nvim-lspconfig',
-      config = function() require('plugins.config.lsp') end
+      config = function() require('plugins.lsp') end
     }
 
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
@@ -64,25 +64,25 @@ return require('packer').startup({
     use {
       'vhyrro/neorg',
       requires = { 'nvim-lua/plenary.nvim', 'nvim-neorg/neorg-telescope' },
-      config = function() require('plugins.config.neorg') end
+      config = function() require('plugins.neorg') end
     }
 
     use {
       'nvim-telescope/telescope.nvim',
       requires = { 'nvim-lua/plenary.nvim' },
-      config = function() require('plugins.config.telescope') end
+      config = function() require('plugins.telescope') end
     }
 
     use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate',
-      config = function() require('plugins.config.treesitter') end
+      config = function() require('plugins.treesitter') end
     }
 
     -- Key Maps!
     use {
       'folke/which-key.nvim',
-      config = function() require('plugins.config.which-key') end
+      config = function() require('plugins.which-key') end
     }
 
     -- Automatically set up configuration after cloning packer.nvim

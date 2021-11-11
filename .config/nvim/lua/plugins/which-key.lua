@@ -1,6 +1,7 @@
 local wk = require("which-key")
-local hop = require('hop')
-local hopHint = require('hop.hint')
+-- local hopConfig = require("plugins.hop")
+-- local hop = require('hop')
+-- local hopHint = require('hop.hint')
 
 wk.setup {}
 
@@ -41,20 +42,7 @@ wk.register({
     },
 
     -- Hop
-    ['<leader>'] = {
-      f = {
-        function()
-          hop.hint_char1({ direction = hopHint.HintDirection.AFTER_CURSOR })
-        end,
-        'Hop forward'
-      },
-      F = {
-        function()
-          hop.hint_char1({ direction = hopHint.HintDirection.BEFORE_CURSOR })
-        end,
-        'Hop Backwards'
-      },
-    }
+    -- ['<leader>'] = hopConfig.keymappings
   },
 })
 
