@@ -59,6 +59,8 @@ return require('packer').startup({
       config = function() require('plugins.lsp') end
     }
 
+    use { 'williamboman/nvim-lsp-installer' }
+
     use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 
     use {
