@@ -11,7 +11,10 @@ return require('packer').startup({
   function()
     use 'wbthomason/packer.nvim'
 
-    use 'folke/tokyonight.nvim'
+    use {
+      'folke/tokyonight.nvim',
+      config = function() vim.cmd([[colorscheme tokyonight]]) end
+    }
 
     use {
       'windwp/nvim-autopairs',

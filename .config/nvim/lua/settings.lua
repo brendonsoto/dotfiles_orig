@@ -75,5 +75,4 @@ then
 else
   o.background = "dark"
 end
-cmd([[colorscheme tokyonight]])
 cmd([[highlight Comment cterm=italic]])
