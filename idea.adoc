@@ -1,0 +1,11 @@
+= Idea
+
+Make a JSON structure of todo notes
+something with the categories
+- name
+- time
+- dueDate
+- reminders
+- persistent
+
+Then make an app that can consume this information and make reminders on the iphone
