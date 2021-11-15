@@ -72,7 +72,10 @@ return require('packer').startup({
       config = function() require('plugins.neorg') end
     }
 
-    use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+    use {
+      'michaelb/sniprun',
+      run = 'bash ./install.sh',
+    }
 
     use {
       'nvim-telescope/telescope.nvim',

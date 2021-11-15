@@ -1,5 +1,6 @@
 local wk = require("which-key")
 local hopConfig = require("plugins.hop")
+local sniprunConfig = require("plugins.sniprun")
 
 wk.setup {}
 
@@ -68,6 +69,9 @@ wk.register({
     b = { ':bnext<cr>', 'Next buffer' },
     t = { ':tabn<cr>', 'Next tab' },
   },
+
+  -- Sniprun
+  s = sniprunConfig.keymappings.normal.s,
 })
 
 
@@ -83,4 +87,7 @@ wk.register({
 wk.register({
   name = 'visual mode stuff',
   ['//'] = { 'y/<c-r>"<cr>', 'Search for visual selection' },
+
+  -- Sniprun
+  s = sniprunConfig.keymappings.visual.s,
 }, { mode = 'v' })
