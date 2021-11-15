@@ -40,7 +40,7 @@ wk.register({
     },
 
     -- Hop
-    ['<leader>'] = hopConfig.keymappings
+    ['<leader>'] = hopConfig.keymappings,
 
     -- SnipRun
     r = { '<Plug>SnipRun', 'Run line of code' },
