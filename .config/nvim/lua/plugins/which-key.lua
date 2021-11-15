@@ -42,6 +42,9 @@ wk.register({
     -- Hop
     ['<leader>'] = hopConfig.keymappings,
 
+    -- Neogit
+    g = { ':Neogit<cr>', 'Neogit' },
+
     -- SnipRun
     r = { '<Plug>SnipRun', 'Run line of code' },
     R = { '<Plug>SnipClose', 'Close SnipRun displays' },
