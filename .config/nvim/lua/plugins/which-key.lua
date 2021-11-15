@@ -45,6 +45,9 @@ wk.register({
     -- SnipRun
     r = { '<Plug>SnipRun', 'Run line of code' },
     R = { '<Plug>SnipClose', 'Close SnipRun displays' },
+
+    -- ZenMode
+    z = { ':ZenMode<cr>', 'ZenMode' },
   },
 })
 
