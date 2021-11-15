@@ -1,6 +1,5 @@
 local wk = require("which-key")
 local hopConfig = require("plugins.hop")
-local sniprunConfig = require("plugins.sniprun")
 
 wk.setup {}
 
@@ -42,6 +41,10 @@ wk.register({
 
     -- Hop
     ['<leader>'] = hopConfig.keymappings
+
+    -- SnipRun
+    r = { '<Plug>SnipRun', 'Run line of code' },
+    R = { '<Plug>SnipClose', 'Close SnipRun displays' },
   },
 })
 
@@ -69,9 +72,6 @@ wk.register({
     b = { ':bnext<cr>', 'Next buffer' },
     t = { ':tabn<cr>', 'Next tab' },
   },
-
-  -- Sniprun
-  s = sniprunConfig.keymappings.normal.s,
 })
 
 
@@ -89,5 +89,7 @@ wk.register({
   ['//'] = { 'y/<c-r>"<cr>', 'Search for visual selection' },
 
   -- Sniprun
-  s = sniprunConfig.keymappings.visual.s,
+  s = {
+    r = { '<Plug>SnipRun', 'Run block of code' },
+  },
 }, { mode = 'v' })
