@@ -67,7 +67,10 @@ require('neorg').setup {
         workspaces = {
           work = "~/neorg-work",
           zettle = "~/dotfiles/meine_zettlekasten",
-        }
+          zettle2 = "~/dotfiles/zettle2",
+        },
+        autodetect = true,
+        autochdir = true,
       }
     },
   },
