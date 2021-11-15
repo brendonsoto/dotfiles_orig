@@ -11,5 +11,6 @@
 .netrwhist
 .vim/autoload/plug.vim
 node_modules
+packer_compiled.lua
 plug.vim.old
 plugged
