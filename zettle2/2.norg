@@ -26,6 +26,10 @@
   When the Neogit buffer appears and you press a character to trigger some action there's a menu w/ other configuration options available
   I was confused on how to use the switches
   Literally just enter the characters shown on the left hand side and you'll see the color of the flag on the right toggle
+  i.e.
+  - `:Neogit`
+  - `L` to bring up the log
+  - `-`
 
 * Any alternatives you checked out?
   - fugitive

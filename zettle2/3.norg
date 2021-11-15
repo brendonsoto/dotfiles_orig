@@ -1,0 +1,99 @@
+@document.meta
+  title: Neorg
+  description: 
+  author: brendonsoto
+  categories: neovim plugins note-taking
+  created: 2021-11-12
+  version: 0.1
+@end
+
+This document will be different than other plugin docs
+There is a lot to Neorg
+It is also the backbone of my note-taking and I'd like to extend it (i.e. zettlekasten)
+
+Specifically, what I'd like to have is:
+- a command to automatically create a note w/ an ID that is unique for the given workspace
+- search by categories /but/ still have a display showing either the whole `document.meta` tag at the top of pages or pieces of that metadata, like title and/or description and date
+- the ability to use Telescope to show all of the headings in the current doc and nav to one (this might already be implemented)
+- the ability to link to other files easily
+
+I'm going to go through the wiki
+
+#comment
+This was after the "Using Neorg" part
+I realize the wiki's a bit disorganized
+The links paint a particular progression that's different from the sidebar nav
+
+* From the wiki
+  [source](https://github.com/nvim-neorg/neorg/wiki)
+
+ ** Using Neorg
+    [page](https://github.com/nvim-neorg/neorg/wiki/Installation)
+    Neorg's functionality comes from _modules_
+    They can be written by anyone
+    They can interact w/ other modules too and can be hotswappable
+
+    There are _metamodules_ which are collections of modules
+
+ ** User Callbacks
+    [page](https://github.com/nvim-neorg/neorg/wiki/User-Callbacks)
+
+  *** What are User Callbacks?
+      > User Callbacks are ways to react to certain events that Neorg broadcasts throughout the Neorg Environment. Thanks to this it's possible to act upon changes to certain states and to further boost the extensibility of the neorg project.
+
+      It's not explicitly stated, but I'm guessing there's this data structure that holds "events", data about actions, which every module communicates to and from.
+      This is some sort of interface between modules
+
+      In code-land, there's the `neorg.callbacks` module
+      This module has a function, `on_event`, that can be used to react to events
+
+      Callbacks listen for events from:
+      - `core.autocommands.events.bufenter` event
+      - `neorg.events.send_event()` function
+
+      The `on_event` callback takes *two parameters*
+      $ `event`
+      the data about what happened and relevant metadata
+
+      $ `event_content`
+      shorthand for `event.content`
+
+  *** Binding keys with User Callbacks
+      The `core.keybinds` module has a special event called `core.keybinds.events.enable_keybinds`
+      This event is to communicate when keys can be bound to functions
+      At first, this confused me, but when I think about "how can you bind a function that doesn't exist yet?", then it makes more sense
+
+      The /content/ of the event (`event_content` param) provides the following functions:
+
+      $ `map()`
+      A wrapper around `vim.api.nvim_set_keymap` but without knowledge of Neorg modes
+      As a a result, the author advises to use this within an `if` statement
+      NOTE: The fourth parameter in `nvim_set_keymap` is not available here
+      TODO: Make a section about Neorg modes and link it here
+
+      $ `map_to_mode()`
+      Sets keybinds for non-Neorg commands for a specific Neorg mode
+
+      $ `map_event_to_mode()`
+      Sets keybinds for triggering Neorg events for a specific Neorg mode
+
+      The author urges people to use these functions instead of the usual `vim.api.nvim_set_keymap` or other methods because of how Neorg works under the hood
+
+      Here's the [current available keybinds](https://github.com/nvim-neorg/neorg/wiki/User-Keybinds#keybind-megalist) (it's not a lot, just four events for managing items)
+
+* Built in modules
+ ** Dirman
+    [source](https://github.com/nvim-neorg/neorg/wiki/Dirman)
+
+    > manages your directories as workspaces that you can easily jump to
+
+    One way to change workspaces is through `:Neorg workspace <workspace-name>`
+    If `cmp` and the buffer/cmdline extensions are set, you can use tab to find the other available workspaces
+    | I wonder if there's a way to integrate dirman w/ Telescope
+
+
+
+
+
+* TODO
+  - learn more about dirman

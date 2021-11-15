@@ -1,0 +1,22 @@
+@document.meta
+  title: z
+  description: 
+  author: brendonsoto
+  categories: 
+  created: 2021-11-12
+  version: 0.1
+@end
+
+Ignore the weird naming convention
+
+I realize a problem with my perception of note-taking tools is that you cannot tie segments of a note, paragraphs and sentences, to a specific point of time
+You can say "This document was created at..."
+Or jot notes saying "written at ..." or how I would lead a section with the date and/or time
+
+But what if you have a thought at a later point of time that's relevant to a section /physically located/ above another section that was written /at an earlier time/?
+
+One option is to go to that section and add it there
+The context is still grouped together
+But there's no showing the journey
+You can write "back to..."
+but I fear the act of processing that language would be more jarring than just some sort of visual indicator, like a git graph

@@ -41,6 +41,11 @@ Random stuff
     Auto-close mini window at bottom
 
  ** Neorg:
+    - [ ] Can I change the version numbers to whole numbers instead of <Major.Minor>?
+    - [ ] Can I auto-increment the version number when the buffer
+    -- has changed
+    -- has been destroyed? (i.e. quitting vim, closing the document, not sure how to word it)
+    - [ ] When changing workspaces, can all of the buffers from the previous workspace be closed?
     - [ ] Why does marking todo items as done sometimes interfere with the easy-motion replacement plugin?
 
     - [x] why cmp not working w/ neorg?
