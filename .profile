@@ -41,6 +41,7 @@ fi
 if command -v cargo &>/dev/null
 then
   export PATH="$HOME/.cargo/bin:$PATH"
+  source "$HOME/.cargo/env"
 fi
 
 
