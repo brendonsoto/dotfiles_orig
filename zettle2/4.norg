@@ -17,6 +17,8 @@
   Book assumes using _Rust 1.31.0_ or later w/ `edition="2018` in /Cargo.toml/ files
   There have been several big updates to the book to reflect the changes in the 2018 edition
 
+  | I have Rust 1.56.1 at the time
+
 * Acknowledgements
   Nice
 
@@ -87,5 +89,4 @@
     - D: Helpful development tools
     - E: Rust editions explanation
 
-    | NOTE:
     > ...if you’re a particularly meticulous learner who prefers to learn every detail before moving on to the next, you might want to skip Chapter 2 and go straight to Chapter 3, returning to Chapter 2 when you’d like to work on a project applying the details you’ve learned. (p36)
