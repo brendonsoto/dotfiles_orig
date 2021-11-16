@@ -77,6 +77,13 @@ return require('packer').startup({
         use {'michaelb/sniprun', run = 'bash ./install.sh'}
 
         use {
+            'blackCauldron7/surround.nvim',
+            config = function()
+                require('surround').setup {mappings_style = "surround"}
+            end
+        }
+
+        use {
             'nvim-telescope/telescope.nvim',
             requires = {'nvim-lua/plenary.nvim'},
             config = function() require('plugins.telescope') end
