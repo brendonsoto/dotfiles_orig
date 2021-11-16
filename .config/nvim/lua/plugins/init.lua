@@ -20,6 +20,11 @@ return require('packer').startup({
         }
 
         use {
+            'glepnir/dashboard-nvim',
+            config = function() require('plugins.dashboard') end
+        }
+
+        use {
             'windwp/nvim-autopairs',
             after = 'nvim-cmp',
             config = function() require('plugins.autopairs') end
