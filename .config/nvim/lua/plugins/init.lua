@@ -100,6 +100,12 @@ return require('packer').startup({
             config = function() require('plugins.treesitter') end
         }
 
+        use {
+            "folke/trouble.nvim",
+            requires = "kyazdani42/nvim-web-devicons",
+            config = function() require("trouble").setup {} end
+        }
+
         -- Key Maps!
         use {
             'folke/which-key.nvim',
