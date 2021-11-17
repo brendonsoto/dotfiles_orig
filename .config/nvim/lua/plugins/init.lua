@@ -90,7 +90,7 @@ return require('packer').startup({
 
         use {
             'nvim-telescope/telescope.nvim',
-            requires = {'nvim-lua/plenary.nvim'},
+            requires = {'nvim-lua/plenary.nvim', 'cljoly/telescope-repo.nvim'},
             config = function() require('plugins.telescope') end
         }
 
