@@ -1,0 +1,166 @@
+@document.meta
+  title: The Elements of Computing Systems Ch 6 Prep
+  description: Prep notes for the project of chapter 6, building an assembler
+  author: brendonsoto
+  categories: book, tecs, the-elements-of-computing-systems
+  created: 2021-11-17
+  version: 0.1
+@end
+
+Mapping assembly commands to binary codes, easy peasy
+Mapping symbolic references to memory addresses is tricky
+A _symbol table_  is a common data structure for addressing this
+*Assembly* referes to the symbolic language while *assembler* refers to the program that translatees the assembly, symbolic language, to it's binary representation
+
+Things to consider (may be outside of project's scope):
+- memory restrictions
+-- initial example from the book used a 1024 bit memory unit whereas operatin gsystems occupy /much/ more
+- some symbolic commands can occupy multiple lines in its translated form
+-- i.e. if/conditional statements
+- data types can occupy multiple consecutive areas of memory
+-- think of `int` in C (`short`, `double`, `fractional`, etc)
+
+An assembler generally has four main tasks:
+- parse symbolic command into fields
+- generate binary code for each field
+- resolve any symbolic references (replace symbolic references w/ memory addresses)
+- assemble the binary codes into one piece
+
+* For Hack
+ ** Semantics
+    - Files are translated from *.asm -> *.hack
+    - .hack files are 16 bit
+    -- meaning each line is 16 1s and 0s
+    - assembly files have two types of lines:
+    -- instruction
+    --- A-instruction
+    ---- _Address_ instruction
+    --- C-instruction
+    ---- _Compute_ instruction
+    -- Symbol
+    --- binding the symbol to an address in memory just for that symbol
+    - constants are /non-negative/ and are in /decimal/ format
+    - sybols can consist of any letters, digits, underscore, dot (.), dollar sign ($), colon, but doesnt begin w/ a digit
+    - Comments: `//`
+    - white space is ignored
+    - case:
+    -- assembly stuf should be uppercase
+    -- symbols lowercase
+    -- labels uppercase
+
+ ** Instructions
+  *** A-instruction
+      `@value`
+      Binary representation: MSB is 0, rest is value
+      i.e. `0000000001000` for address 8
+
+  *** C-instruction
+      `dest=comp;jump`
+      `dest` or `jump` may be empty
+      if `dest` is empty, omit `=`
+      If `jump` is empty, omit `;`
+      First three digits are `!`
+      7 digits are for `comp`
+      3 for `dest`
+      3 for `jump`
+      See page 109 for table on translations
+      - table's a little weird to read
+      - c1-6 can be the same but have diff results based on `a`
+      Jump commands are testing equality of the given number with /zero/
+
+      | QUESTION: What do M,A,D signify?
+
+ ** Predefined symbols
+    - SP = @0
+    - LCL = @1
+    - ARG = @2
+    - THIS = @3
+    - THAT = @4
+    - R0-R15 = 0-15
+    -- NOTE: 0-15 is /not/ a typo; there is overlap
+    - SCREEN = @16384
+    - KBD = @24576
+    - variables = @16 onwards
+
+ ** Expected usage
+    `$ Assembler Prog.asm`
+    `> Prog.hack`
+
+    Book proposes 4 modules similar to the outline of an assembler they described above
+
+ ** Module API descriptions
+  *** Parser
+      Interface to commanends
+      Removes whitespaces and comments
+
+  *** Code
+      Basically a table of binary commands to their symbolic representations
+
+  *** Side
+      The book recommends building out a 2-stage parser
+      Stage 1: No symbols, just needs Parser and code (and probably last module to put everything together)
+      Stage 2: symbols
+
+      Basically:
+      - open file (.asm)
+      - for each line:
+      -- translate into binary representation
+      -- append to resulting file (.hack)
+
+  *** SymbolTable
+      Basically hash table
+      Labels can be referenced before defined
+
+      There are three types of symbols:
+      - predefined symbols
+      - labels (where to go for `goto` statements)
+      - variables
+      The book recommends a 2 pass assembler
+      - first pass to create symbol table
+      - second pass to actually convert stuff
+      - initial pass would have a symbol table initialized with the predefined symbols in it already
+
+* Gameplan
+  I want to use Rust to get to learn it
+  I need to figure out:
+  - [ ] how to print data/strings to STDOUT
+  - [ ] string data type
+  - [ ] numerical data types (integer)
+  - [ ] iterators / for loop
+  - [ ] how to create and call a function
+  - [ ] how to reference arguments from CLI
+  - [ ] how to create a file
+  - [ ] how to write (implication of overwriting) to a file
+  - [ ] how to append to a file
+  - [ ] how to read a file
+  - [ ] how to make a hash table where keys are strings and values numbers
+  - [ ] how to reference values from a hash table
+  - [ ] how to make modules
+  - [ ] how to import modules
+
+  Then I can:
+  - [ ] make `Main` module (prints hello world for now)
+  - [ ] make `Code` module (basically hash table)
+  - [ ] make `Parser` module
+  -- [ ] read file (print contents to confirm)
+  -- [ ] if file exists, create output file
+  -- [ ] iterate through file's lines
+  -- [ ] make a function to process each line
+  --- [ ] trim whitespace
+  --- [ ] separate words into an array
+  --- [ ] check each word against `Code` module
+  --- [ ] join results
+  --- [ ] append results to file
+  - [ ] make `SymbolTable` module
+  -- [ ] starts off w/ hash table of predefined symbols
+  -- [ ] iterates through lines of input to add other labels/symbols/variables
+
+  If possible, I would like to:
+  - experiment w/ one pass
+  -- when a variable/label is found:
+  --- if there are no user-defined symbols
+  ---- set 16 to the label/variable in the hash table
+  --- otherwise set (index of last used address + 1) = symbol/label/variable
+  -- replace as usual
+  - experiment w/ a TDD approach
+  - experiment w/ file stream instead of file read/write
