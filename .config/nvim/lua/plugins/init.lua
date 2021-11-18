@@ -79,6 +79,13 @@ return require('packer').startup({
             config = function() require('plugins.neorg') end
         }
 
+        use {
+            'sunjon/shade.nvim',
+            config = function()
+                require('shade').setup {overlay_opacity = 40}
+            end
+        }
+
         use {'michaelb/sniprun', run = 'bash ./install.sh'}
 
         use {
