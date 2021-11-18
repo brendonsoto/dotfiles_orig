@@ -88,6 +88,8 @@ return require('packer').startup({
             end
         }
 
+        use {'gcmt/taboo.vim'}
+
         use {
             'nvim-telescope/telescope.nvim',
             requires = {'nvim-lua/plenary.nvim', 'cljoly/telescope-repo.nvim'},

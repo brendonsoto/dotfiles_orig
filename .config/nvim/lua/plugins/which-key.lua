@@ -49,6 +49,9 @@ wk.register({
         r = {'<Plug>SnipRun', 'Run line of code'},
         R = {'<Plug>SnipClose', 'Close SnipRun displays'},
 
+        -- Taboo
+        t = {':TabooRename ', 'Rename tab'},
+
         -- ZenMode
         z = {':ZenMode<cr>', 'ZenMode'}
     }

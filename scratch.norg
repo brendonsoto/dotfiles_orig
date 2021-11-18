@@ -72,12 +72,11 @@ Random stuff
     First I'll tag what I  currently have
 
   *** Packages to update or find alts
-      - [ ] easy motion
-      - [ ] ale
-      - [ ] goyo
-      - [ ] taboo
-      - [ ] surround
-      - [ ] startify?
+      - [x] easy motion
+      - [x] ale
+      - [x] goyo
+      - [x] surround
+      - [x] startify?
       - [ ] emmet?
       - [ ] tagbar? << or how can Telescope replace
 
