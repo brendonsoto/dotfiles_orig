@@ -1,0 +1,213 @@
+@document.meta
+  title: Event Sourcing - Greg Young - GOTO 2014
+  description: Notes on Greg's meeting
+  author: brendonsoto
+  categories: event-sourcing event sourcing programming architecture
+  created: 2021-11-19
+  version: 0.1
+@end
+
+His company went to that place looking for:
+- log
+- ability to do a clear audit
+
+Lots of places do event sourcing already
+Gives example of banks
+Balance is the summation of previous transactions
+Not just a row on a table
+Event sourcing used as a way of proving the results of sets of transactions
+Thinks event-sourcing is natural
+
+"You only store facts"
+"All state is derivitave of facts"
+
+Example of Purchase order w/ line items and shipping info
+- Purchase Order
+-- Line Items
+-- Shipping Info
+
+Talking about shape of state/data
+Talks about migrations not being fun
+Mentioning never will take something down and bring it back up
+
+Brings up concern of bringing system down, bring back up, works for a week, but then errors
+Two options: firefigher hat or cowboy hat (fix fires or code in production)
+
+Alternative way of representing Purchase Order data
+Cart Created -> 3 Items Added -> Shipping info added
+
+All events are transients
+
+For functional programmers, "...current state is a left fold of previous behvaiours"
+Behaviours give you a certain interpretation of data
+
+"What changes more? How you view use cases or use cases?"
+
+There's no concept of update or delete in event streaming
+
+"If I only store data and add to it my data will get really big"
+mentions memory is cheap nowadays
+Cost of storing 1GB or 100 GB of data
+
+Mentions it's like accounting, only add things, not update/delete
+"Full reversal" as example for fixing mistakes
+
+Seems like /intention/ of transactions is a key focus point w/ event sourcing
+Figuring out the intention of why events happened the way they did
+
+Gives question of "is there a difference between:"
+- Cart created -> 3 items added -> 1 item removed -> shipping info added
+- Cart created -> 2 items added (3 added, but updated to remove 1) -> shipping info added
+
+Mentions perspective matters, how you look at the data to derive answers
+Examples given:
+- When given the perspective of what the two look like in the end, they're the same
+- When looking for how many times was an item removed, then they're the same
+
+"Event sourcing does not lose information"
+
+Another example is of a customer who adds an item to their cart, takes it off now, buys it later
+You can tell that story w/ event-sourcing
+
+Projections *must* happen from event 0
+Makes sense
+
+"You can't change the past, but you can change how you /perceive/ it"
+
+Can prevent super-user attack
+
+Avoid snapshots if you can
+Snapshots -- i forgot, check around before 27:00ish
+
+Another example is contracts and addendums
+
+Now talking about the how/tools
+Dbs using event-sourcing already through a transaction log
+
+Kafka - consumer-driven subscription system
+Works like a blog
+When you want to read a blog, send blog author an email to get a channel of communication to get updates
+
+Mentions event-sourcing is more complex than CRUD because you need to know use cases, the perspectives of the data peopl care about
+
+Question of "at what current rate and future rate will we be retaining data?" and how that compares against Moore's law
+Not "how much data"
+
+Mentions most systems use small amounts of transactions, less than 10 transactions a second, saying event-sourcing is great
+
+* Questions
+ ** Definitions
+    - Facts
+    -- Seems like a piece of data
+    - Transient
+    - Book of record
+
+* Super helpful comment
+  > Andreas Melcher
+  > Pinned by GOTO Conferences
+  > Andreas Melcher
+  > 3 years ago (edited)
+  > 00:00 Introduction (it is not a new idea)
+  > 01:00 What brought them towards Event Sourcing
+  > 01:25 Mature businesses like finance, banking, gambling, insurance are all naturally event sourced
+  >
+  > 03:00 Definition of event sourcing - all state is transient, only store facts
+  > 06:46 We never update or delete facts in event sourced systems
+  > 11:52 Event Sourcing is the only model that you can possibly use that does not loose information
+  >
+  > 14:05 Projections - Deriving state off of an event stream
+  > 15:04 Projections must start at event 0
+  > 16:16 Projections can be done for every point in time since the start of the system
+  > 17:09 "You can not change what happened in the past, but you can have a new perception of what happened in the past"
+  >
+  > 17:39 Advantages of event sourcing from a developers point of view
+  > 17:52 It's sequential writing -> fast (~50.000-100.000 requests per sec on a fairly naive system on one node)
+  > 18:39 Go back in the past
+  > 19:19 Easy smoke tests (for me he even describes full regression tests not just smoke tests)
+  > 20:16 Prevent super user attacks
+  >
+  > 24:45 Snapshots
+  > 26:42 Store snapshots off the side and point back to the version of the event log
+  > 27:11 You can also have multiple different folds with different perception of the same version of the event log in parallel
+  > 27:26 Avoid snapshots if you can (state is hard to version)
+  >
+  > 29:53 How do I query a series of events?  You don't. You use read models .
+  > 36:22 Consider a graph database for read models
+  > 37:36 You can have as many read models as you want - they just have to subscribe to your event system
+  >
+  > Wrong statements you hear about event sourcing:
+  >
+  > 38:01 Event sourcing needs a service bus
+  >
+  > 39:12 Problem: if you want to add a new read model you need to replay the former events. With a service bus you would need an additional control channel to ask for events.
+  > Use a consumer driven subscription system like Kafka
+  >
+  > 41:55 Event sourcing is more complex (than CRUD systems)
+  > It seems more complex to people that are used to the CRUD way just because it's another way of dealing with the domain and have to learn it.
+  >
+  > 42:55 What big companies are using Event Sourcing?
+  > Don't decide what to use because of other companies.
+  >
+  > 43:29 Event sourced systems must be slow
+  > They can be really fast and it's used for latency sensitive systems eg for trading
+  >
+  > 44:25 Event Sourced systems must be object oriented
+  > No, it is an inherently functional system. You have an immutable series of events and "left fold" your state out of this series
+  >
+  > 45:12 What is the "bestest" Event Sourcing framework ever?
+  > Probably none.
+  >
+  > 45:51 But what about all my data? With Event Sourcing it must be huge!
+  > Don't think about the amount of data you are going to have but at which current and which future rate you will be retaining data and compare that to moore's law.
+  > If you are slower than moore's law ( < ~5.000 req/sec) your data will get cheaper over time.
+  >
+  > 47:40 CQRS is just a teaching pattern
+  > "CQRS is the dumbest pattern ever written". It was never meant to be a pattern. The main idea is to make people see the benefits of separating the reading and the writing part of the process.
+  >
+  > 49:34 Event Sourcing is not 'enterprisy'
+  > True, thanks.
+  >
+  > Questions
+  >
+  > 50:33 How to know what details to put in an event?
+  > That's an use case analysis problem
+  >
+  > 51:59 How to avoid the big bang release when switching to event sourcing?
+  > Two ways of dealing with migrating data to an event sourced system
+  > - Either migrate all data and transactions of all accounts to the new system
+  > - or just bring in the initial balance
+  > Decide which one to use aggregate by aggregate. Either you can reverse engineer the history or save a snapshot as init-event.
+  > This allows to run the systems side by side. The old system can already raise the events.
+
+* Second pass
+  Doing a second pass because after reading the really helpful summary comment above, I still feel a bit wonky
+
+  What is a fact?
+  If events are transient, how are they stored?
+
+  OHHHHhhh, I wrote the wrong thing.
+  All *state* is transient
+
+  A *projection* is deriving state /from/ the events
+
+  Regarding *snapshots*
+  Not directly related, replaying events (i.e. going from event 0 to event N) isn't terribly time-consuming unless there's /a lot/ of data
+  Snapshots represent the state of events (so a whole replay of events x through y) that can be used as a new reference point
+  This prevents you from having to replay /everything/
+  This is useful for when you have massive amounts of data (think Google level)
+  *Never* store snapshots together with events
+  Thus snapshots should be stored on the side and point at the event stream
+
+  State is hard to version
+
+  How to *query* events
+  Concept of *read models*
+  Mentions Twitter being a basic pub-sub system built w/ RoR and MySQL
+  Turns out they needed lots of SQL servers to keep it up
+  References FailWhale
+  *Graph database* is an option
+
+  How are these "facts", or events, stored in the first place?
+  Or is the idea that this isn't something that is implemented via a tool
+  Like microservices
+  You know, now that I said it out loud (or i guess typed), that makes sense
