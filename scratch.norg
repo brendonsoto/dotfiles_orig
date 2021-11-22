@@ -16,6 +16,10 @@ Random stuff
     -- (I know by air, but does it follow the same path as air? Does it sink more because of density?)
     - How can we visualize what humidity may look like taking up a space?
 
+* Git
+  - [ ] function for auto getting main brain
+  - [ ] Alias `gcm` to auto detect main branch
+
 * RipGrep
  ** w/ Neorg
     How can I search based on `categories` / the `document.meta` tag?
@@ -32,6 +36,7 @@ Random stuff
     -- Plus I don't have to enter that keystroke then
     - [ ] Write about the plugins you use and why you like using them
     - [x] Restructure files
+    - [ ] How can I find more info on errors that have happened w/ plugins?
 
  ** CMP
     Think about how to better use it
@@ -39,6 +44,13 @@ Random stuff
 
  ** LSP
     Auto-close mini window at bottom
+
+ ** Language stuff
+  *** React / JSX
+      Formatting, hot damn...
+
+  *** TypeScript
+      How to integrate eslint?
 
  ** Neorg:
     - [ ] Can I change the version numbers to whole numbers instead of <Major.Minor>?
@@ -98,7 +110,9 @@ Random stuff
   Is there an alternative to tmux? a better tmux?
   - [ ] byobu
   - [ ] customize status line
-  -- Date + Time in middle
+  -- Date + Time on right, no ip
+  --- Date: Day name, Month abbrev, day number
+  --- Time: 12 hour style
   -- What to do then about tabs?
 
   Do I even need tmux if I can use some project manager + terminal in Neovim?
