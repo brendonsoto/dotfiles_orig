@@ -1,0 +1,94 @@
+@document.meta
+  title: the-rust-programming-language-book
+  description: Notes from the book
+  author: brendonsoto
+  categories: rust book
+  created: 2021-11-22
+  version: 0.1
+@end
+
+* Chatper 1: Getting Started
+ ** Summary
+    - To install Rust, you need:
+    -- `rustup` (can download from Rust site)
+    -- A linker (can use one for C/C++)
+    - `rustup` is a:
+    -- version manager
+    - `rustup` helpful commands reference:
+    -- `rustup update`
+    -- `rustup self uninstall`
+    - `rustc` is a compiler for Rust
+    - `cargo` is a:
+    -- dependency manager
+    -- build tool
+
+ ** Primer
+    Chapter covers:
+    - installing Rust
+    - hello world program
+    - using `cargo`
+
+ ** Installation
+    - use `rustup`
+    -- basically is a Rust *version manager* CLI tool
+    -- DL via curl command instead of package manager
+
+    Rust seems backwards compatible (least through the language of the book)
+    > In other words, any newer, stable version of Rust you install using these steps should work as expected with the content of this book.
+
+    A _linker_ is necessary
+    C compilers usually have a linker
+    Some Rust code may dpend on C code
+
+    There's a *Discord* Channel!
+
+    *View documentation* w/ `rustup doc`
+    The documentation includes a link to a local version of the same book!
+
+ ** Hello World
+    It seems like snake_case is the preferred case in Rust-land?
+
+    Use `rustc <file>` to *compile* a Rust file
+
+    The output of `rustc` is just one file, so it's not like C/C++ that outputs multiple files!
+
+    The `main` function is the *first code to run* in a Rust program
+
+    All functions require curly brackets
+
+    `rustfmt` is the *automatic formatter* tool developed by the Rust team
+    - spaces, no tabs
+    - 4 spaces for indentation
+    - running `rustfmt` by itself will basically take in input from STDIN and print out the formatted version on `^D` (exiting the program)
+
+    The `!` at the end of `println` means a *macro* is/was used
+    More on this topic will come at ch 19
+
+    Rust is an *ahead-of-time compiled* language
+    Rust produces binaries
+    You can compile a Rust program and hand the output to someone else to use
+
+ ** Hello Cargo!
+    Use `cargo new <project-path>` to create a new Rust project
+    It does the following:
+    - set up git
+    - set up `.gitignore`
+    - setup `Cargo.toml`
+    -- like `package.json`, a project configuration/details file
+    - `/src` dir w/ 1 file (hello world program)
+
+    To convert a /non-cargo directory to cargo/:
+    - move Rust files into `src/*`
+    - add a `Cargo.toml` file
+
+    Use `cargo build` to build a Rust project
+    - Files are outputted to `target/`
+
+    Use `cargo run` to run the resulting files
+    - You don't have to run `cargo build` before `cargo run`; Cargo will detect if files have changed or not and go from there
+
+    Use `cargo check` to see if code will compile
+    - This is faster than `cargo build` to see if code is fine
+
+    Use `cargo build --release` to build Rust projects /with/ *optimizations*
+    - Code will be outputted into `target/release`
