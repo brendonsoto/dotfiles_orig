@@ -50,7 +50,7 @@ wk.register({
         R = {'<Plug>SnipClose', 'Close SnipRun displays'},
 
         -- Taboo
-        t = {':TabooRename ', 'Rename tab'},
+        -- t = {':TabooRename ', 'Rename tab'},
 
         -- ZenMode
         z = {':ZenMode<cr>', 'ZenMode'}

@@ -97,6 +97,8 @@ return require('packer').startup({
 
         use {'gcmt/taboo.vim'}
 
+        use {'godlygeek/tabular'}
+
         use {
             'nvim-telescope/telescope.nvim',
             requires = {'nvim-lua/plenary.nvim', 'cljoly/telescope-repo.nvim'},
