@@ -57,6 +57,10 @@ if [[ $OSTYPE == darwin* ]]; then
     compinit
   fi
 
+  # GCC
+  alias cc="/usr/local/Cellar/gcc/11.2.0_3"
+  ln -s /usr/local/Cellar/gcc/11.2.0_3/bin/gcc-11 /usr/local/bin/cc
+
   # Python
   export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
