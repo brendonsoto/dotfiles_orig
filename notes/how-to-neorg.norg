@@ -1,0 +1,14 @@
+@document.meta
+  title: neorg-101
+  description: 
+  author: brendonsoto
+  categories: neorg how-to
+  created: 2021-11-27
+  version: 0.1
+@end
+
+* How to Neorg
+ ** How to link to other sections
+    - The *default key binding* is `<C-l>` while in /insert mode/ to add a link to another file
+    - Links aren't to files but to /header sections/ or /markers/
+    -- For example, this is the first chapter of the rust book: [Chapter 1: Getting Started](:notes/the-rust-programming-language-book:*Chapter 1: Getting Started)
