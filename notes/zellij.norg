@@ -7,17 +7,47 @@
   version: 0.1
 @end
 
-I'm trying this out as a tmux replacement
+* Zellij
+  I'm trying this out as a tmux replacement
 
-2021-Nov-22
-One thing that I just caught on to was the concept of *LOCK*
-I would try to make a todo list in norg
+  2021-Nov-22
+  One thing that I just caught on to was the concept of *LOCK*
+  I would try to make a todo list in norg
 
-@code norg
-- [ ] Thing 1
-- [ ] Thing 2
-@end
+  @code norg
+  - [ ] Thing 1
+  - [ ] Thing 2
+  @end
 
-But once at the bracket, `[`, and trying to enter `<C-n>` to get the next item I would accidentally trigger the /RESIZE/ mode
-The *LOCK* mode disables the zellij keybindings until you "un-lock" the mode
-Default key: `<C-g>`
+  But once at the bracket, `[`, and trying to enter `<C-n>` to get the next item I would accidentally trigger the /RESIZE/ mode
+  The *LOCK* mode disables the zellij keybindings until you "un-lock" the mode
+  Default key: `<C-g>`
+
+ ** Colors
+    I'm trying to figure out the color situation for the status bars
+    In the `themes` portion of the config there's the `fg` and `bg` sections
+    but it seems like those aren't used in the tab and status-bars!
+    Let's start with the status bar
+
+  *** Tab bar
+      It looks like it's currently using:
+      - background: cyan
+      - text: fg
+      - tab area: green
+      - tab text: black: bold
+
+  *** Status bar
+      It looks like it's currently using:
+      - background: cyan
+      - text: 
+      - tab area: fg
+      - tab text: black + red: bold
+      - preview section below:
+      -- text: bg
+      -- commands: black + green
+      -- commands desc bg
+
+  *** Temp solution
+      I can probably make the following changes
+      - cyan -> bg
+
